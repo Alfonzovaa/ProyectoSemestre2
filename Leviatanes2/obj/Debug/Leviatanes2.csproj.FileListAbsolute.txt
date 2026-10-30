@@ -1,0 +1,5 @@
+C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csprojResolveAssemblyReference.cache
+C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.exe
+C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.pdb
+C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.exe
+C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.pdb
