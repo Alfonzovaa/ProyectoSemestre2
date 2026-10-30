@@ -67,10 +67,16 @@
     <Compile Include="Batalla5.Designer.cs">
       <DependentUpon>Batalla5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Elemento.cs" />
+    <Compile Include="Clases\Escenario.cs" />
+    <Compile Include="Clases\PerfilJugador.cs" />
+    <Compile Include="Clases\Personaje.cs" />
+    <Compile Include="Clases\SubClasesElementos.cs" />
     <Compile Include="CrearP.cs" />
     <Compile Include="CrearP.Designer.cs">
       <DependentUpon>CrearP.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogicaBat\MotorPartida.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -81,6 +87,10 @@
     <Compile Include="VerPartidas.Designer.cs">
       <DependentUpon>VerPartidas.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clases" />
+    <Folder Include="LogicaBat" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

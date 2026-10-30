@@ -3,3 +3,8 @@ C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.ex
 C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.pdb
 C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.exe
 C:\Users\PERSONAL\Desktop\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.pdb
+F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.exe
+F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.pdb
+F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csprojResolveAssemblyReference.cache
+F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.exe
+F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.pdb
