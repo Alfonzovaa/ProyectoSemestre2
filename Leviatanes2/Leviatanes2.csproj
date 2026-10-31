@@ -47,50 +47,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Batalla1.cs" />
-    <Compile Include="Batalla1.Designer.cs">
-      <DependentUpon>Batalla1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Batalla2.cs" />
-    <Compile Include="Batalla2.Designer.cs">
-      <DependentUpon>Batalla2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Batalla3.cs" />
-    <Compile Include="Batalla3.Designer.cs">
-      <DependentUpon>Batalla3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Batalla4.cs" />
-    <Compile Include="Batalla4.Designer.cs">
-      <DependentUpon>Batalla4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Batalla5.cs" />
-    <Compile Include="Batalla5.Designer.cs">
-      <DependentUpon>Batalla5.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Elemento.cs" />
     <Compile Include="Clases\Escenario.cs" />
     <Compile Include="Clases\PerfilJugador.cs" />
     <Compile Include="Clases\Personaje.cs" />
     <Compile Include="Clases\SubClasesElementos.cs" />
-    <Compile Include="CrearP.cs" />
-    <Compile Include="CrearP.Designer.cs">
-      <DependentUpon>CrearP.cs</DependentUpon>
-    </Compile>
     <Compile Include="LogicaBat\MotorPartida.cs" />
-    <Compile Include="MainForm.cs" />
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VerPartidas.cs" />
-    <Compile Include="VerPartidas.Designer.cs">
+    <Compile Include="Vistas\Batalla1.cs" />
+    <Compile Include="Vistas\Batalla1.Designer.cs">
+      <DependentUpon>Batalla1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Batalla2.cs" />
+    <Compile Include="Vistas\Batalla2.Designer.cs">
+      <DependentUpon>Batalla2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Batalla3.cs" />
+    <Compile Include="Vistas\Batalla3.Designer.cs">
+      <DependentUpon>Batalla3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Batalla4.cs" />
+    <Compile Include="Vistas\Batalla4.Designer.cs">
+      <DependentUpon>Batalla4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Batalla5.cs" />
+    <Compile Include="Vistas\Batalla5.Designer.cs">
+      <DependentUpon>Batalla5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CrearP.cs" />
+    <Compile Include="Vistas\CrearP.Designer.cs">
+      <DependentUpon>CrearP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\MainForm.cs" />
+    <Compile Include="Vistas\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VerPartidas.cs" />
+    <Compile Include="Vistas\VerPartidas.Designer.cs">
       <DependentUpon>VerPartidas.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clases" />
     <Folder Include="LogicaBat" />
+    <Folder Include="Vistas" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
