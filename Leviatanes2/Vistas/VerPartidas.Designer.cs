@@ -36,12 +36,30 @@ namespace Leviatanes2
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.VolverMenu = new System.Windows.Forms.Button();
+			this.SuspendLayout();
+			// 
+			// VolverMenu
+			// 
+			this.VolverMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.VolverMenu.Location = new System.Drawing.Point(1146, 566);
+			this.VolverMenu.Name = "VolverMenu";
+			this.VolverMenu.Size = new System.Drawing.Size(208, 59);
+			this.VolverMenu.TabIndex = 0;
+			this.VolverMenu.Text = "Volver al menú";
+			this.VolverMenu.UseVisualStyleBackColor = true;
+			this.VolverMenu.Click += new System.EventHandler(this.VolverMenuClick);
 			// 
 			// VerPartidas
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "VerPartidas";
+			this.ClientSize = new System.Drawing.Size(1444, 661);
+			this.Controls.Add(this.VolverMenu);
 			this.Name = "VerPartidas";
+			this.Text = "VerPartidas";
+			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button VolverMenu;
 	}
 }

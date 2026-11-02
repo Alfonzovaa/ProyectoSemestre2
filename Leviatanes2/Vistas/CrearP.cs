@@ -28,5 +28,17 @@ namespace Leviatanes2
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+
+		
+		void VolverMenuClick(object sender, EventArgs e)
+		{
+			MainForm abrirVentana = new MainForm();
+            abrirVentana.Show();
+            
+    		abrirVentana.FormClosed += (s, args) => Application.Exit();
+    		
+            this.Hide();
+		}
 	}
 }

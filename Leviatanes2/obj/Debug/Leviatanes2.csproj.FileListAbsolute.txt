@@ -8,3 +8,12 @@ F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.pdb
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csprojResolveAssemblyReference.cache
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.exe
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.pdb
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.exe
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.pdb
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csprojResolveAssemblyReference.cache
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.exe
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.pdb
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.MainForm.resources
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csproj.GenerateResource.Cache
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.CrearP.resources
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.VerPartidas.resources
