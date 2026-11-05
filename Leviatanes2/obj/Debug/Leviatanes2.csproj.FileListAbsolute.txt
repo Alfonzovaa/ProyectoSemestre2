@@ -17,3 +17,5 @@ D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.MainForm.res
 D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csproj.GenerateResource.Cache
 D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.CrearP.resources
 D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.VerPartidas.resources
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Vistas.Historia1.resources
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Vistas.Historia3.resources
