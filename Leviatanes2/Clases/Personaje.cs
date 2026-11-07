@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Leviatanes2.Clases
 {
@@ -156,10 +156,10 @@ namespace Leviatanes2.Clases
 
         protected Personaje(int Id, string NombreCarta, Elemento FaccionCarta, int Vida, int Defensa, int Ataque, int ValorEmpatia, string Especial, string Descripcion)
         {
-            ValidarBalanceCien(Vida, Defensa, Ataque);
-
             IdPersonaje = Id;
             Nombre = NombreCarta;
+            ValidarBalanceCien(Vida, Defensa, Ataque);
+
             Faccion = FaccionCarta;
             VidaMaxima = Vida;
             VidaActual = Vida;

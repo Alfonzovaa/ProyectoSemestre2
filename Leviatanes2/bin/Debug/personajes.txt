@@ -1,0 +1,13 @@
+﻿# ID|Nombre|Faccion|Vida|Defensa|Ataque|Empatia|NombreEspecial|DescripcionEspecial
+1|Ignis Leviatan Pirico|Fuego|45|20|35|40|Llamarada Solar|Ignora el escudo rival e inflige danio perforante.
+2|Vulcano Acorazado|Fuego|55|25|20|65|Erupcion De Magma|Desata magma ardiente que perfora defensas.
+3|Kael Fauces De Ceniza|Fuego|40|20|40|30|Impacto Volcanico|Ataque igneo letal de maxima potencia.
+4|Nereida Del Abismo|Agua|55|25|20|85|Marea Sanadora|Roba 1 energia, cura 25% HP y golpea al rival.
+5|Kraken Del Caribe|Agua|60|25|15|75|Vortice Abisal|Drena energia enemiga y regenera su vitalidad.
+6|Hidra De Coral|Agua|50|20|30|60|Lanza De Salmuera|Absorbe vigor rival y ejecuta embestida marina.
+7|Golem De Basalto|Tierra|60|30|10|90|Muralla Monolitica|Sube su escudo y aplasta sumando ATK + DEF.
+8|Behemoth Del Canion|Tierra|55|25|20|80|Raices Tectonicas|Refuerza su coraza rocosa y sacude el suelo.
+9|Rocco Coloso De Jade|Tierra|50|25|25|70|Martillo Sismico|Impacto pesado potenciado por su armadura.
+10|Cefiro Sierpe Alada|Aire|45|25|30|75|Tormenta Cortante|Ejecuta un doble impacto aereo consecutivo.
+11|Valkiria Del Huracan|Aire|50|20|30|80|Rafaga Ascendente|Dos golpes veloces con cuchillas de viento.
+12|Boreas Soberano Celeste|Aire|40|25|35|50|Ciclon Del Norte|Doble embestida critica desde las alturas.
