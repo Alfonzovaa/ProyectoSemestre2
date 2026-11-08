@@ -1,0 +1,2 @@
+﻿# IdPartida|FechaHora|JugadorUno|JugadorDos|Ganador|Escenario|TotalTurnos|ArchivoBitacora
+1|06/11/2026 18:30:00|JugadorUno|JugadorDos|JugadorUno|Abismo Oceanico|6|Bitacora_ArenaElemental_Demo01.txt

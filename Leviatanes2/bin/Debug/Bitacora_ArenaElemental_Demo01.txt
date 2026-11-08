@@ -1,0 +1,20 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 06/11/2026 18:30:00
+Jugador 1         : JugadorUno
+Jugador 2         : JugadorDos
+Vencedor          : JugadorUno
+Escenario Final   : Abismo Oceanico (+6 Agua / -4 Fuego)
+Total de Turnos   : 6
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (PILA DE EVENTOS):
+----------------------------------------------------------------------
+[T01] [INICIO] Combate en [Abismo Oceanico]. Inicia por sorteo: JugadorUno.
+[T01] Kraken Del Caribe ataca a Ignis Leviatan Pirico (Mult x1.50, Escenario +6): Vida recibe -9 HP.
+[T02] Ignis Leviatan Pirico refuerza su postura defensiva (+9 Escudo -> Total: 29).
+[T03] Kraken Del Caribe invoca [Vortice Abisal]! Roba 1 de energia, se cura +15 HP y causa 15 de danio.
+[T03] [TERREMOTO INVERTIDO - Empatia 75>=65] Kraken Del Caribe armoniza con Abismo Oceanico: +9 HP y +6 Escudo!
+[T04] [TERREMOTO CATASTROFICO] Ignis Leviatan Pirico pierde su escudo y sufre -7 HP por el sismo!
+[T06] [FIN DE PARTIDA] El equipo de JugadorDos fue eliminado! Vencedor: JugadorUno!
+======================================================================

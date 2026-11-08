@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{8F2BAD89-4DB5-458E-86EF-970B3225CA88}</ProjectGuid>
@@ -60,53 +60,17 @@
     <Compile Include="Vistas\Batalla1.Designer.cs">
       <DependentUpon>Batalla1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Batalla2.cs" />
-    <Compile Include="Vistas\Batalla2.Designer.cs">
-      <DependentUpon>Batalla2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Batalla3.cs" />
-    <Compile Include="Vistas\Batalla3.Designer.cs">
-      <DependentUpon>Batalla3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Batalla4.cs" />
-    <Compile Include="Vistas\Batalla4.Designer.cs">
-      <DependentUpon>Batalla4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Batalla5.cs" />
-    <Compile Include="Vistas\Batalla5.Designer.cs">
-      <DependentUpon>Batalla5.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\CrearP.cs" />
     <Compile Include="Vistas\CrearP.Designer.cs">
       <DependentUpon>CrearP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Historia1.cs" />
-    <Compile Include="Vistas\Historia1.Designer.cs">
-      <DependentUpon>Historia1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Historia2.cs" />
-    <Compile Include="Vistas\Historia2.Designer.cs">
-      <DependentUpon>Historia2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Historia3.cs" />
-    <Compile Include="Vistas\Historia3.Designer.cs">
-      <DependentUpon>Historia3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Historia4.cs" />
-    <Compile Include="Vistas\Historia4.Designer.cs">
-      <DependentUpon>Historia4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Historia5.cs" />
-    <Compile Include="Vistas\Historia5.Designer.cs">
-      <DependentUpon>Historia5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Historia6.cs" />
-    <Compile Include="Vistas\Historia6.Designer.cs">
-      <DependentUpon>Historia6.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\MainForm.cs" />
     <Compile Include="Vistas\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\SeleccionModalidad.cs" />
+    <Compile Include="Vistas\SeleccionModalidad.Designer.cs">
+      <DependentUpon>SeleccionModalidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\VerPartidas.cs" />
     <Compile Include="Vistas\VerPartidas.Designer.cs">
@@ -121,12 +85,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Vistas\CrearP.resx">
       <DependentUpon>CrearP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Historia1.resx">
-      <DependentUpon>Historia1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Historia3.resx">
-      <DependentUpon>Historia3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

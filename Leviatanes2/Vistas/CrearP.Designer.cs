@@ -91,6 +91,7 @@ namespace Leviatanes2
 			this.pnlDialogoInterior = new System.Windows.Forms.Panel();
 			this.lblTextoProfesorGba = new System.Windows.Forms.Label();
 			this.lblTituloDialogoGba = new System.Windows.Forms.Label();
+			this.btnIrSeleccionModalidad = new System.Windows.Forms.Button();
 			this.VolverMenu = new System.Windows.Forms.Button();
 			this.pnlHeaderGba.SuspendLayout();
 			this.pnlMarcoIzquierdo.SuspendLayout();
@@ -755,7 +756,7 @@ namespace Leviatanes2
 			this.pnlMarcoDialogoGba.Controls.Add(this.pnlDialogoInterior);
 			this.pnlMarcoDialogoGba.Location = new System.Drawing.Point(12, 548);
 			this.pnlMarcoDialogoGba.Name = "pnlMarcoDialogoGba";
-			this.pnlMarcoDialogoGba.Size = new System.Drawing.Size(752, 80);
+			this.pnlMarcoDialogoGba.Size = new System.Drawing.Size(540, 80);
 			this.pnlMarcoDialogoGba.TabIndex = 5;
 			// 
 			// pnlDialogoInterior
@@ -765,7 +766,7 @@ namespace Leviatanes2
 			this.pnlDialogoInterior.Controls.Add(this.lblTituloDialogoGba);
 			this.pnlDialogoInterior.Location = new System.Drawing.Point(4, 4);
 			this.pnlDialogoInterior.Name = "pnlDialogoInterior";
-			this.pnlDialogoInterior.Size = new System.Drawing.Size(744, 72);
+			this.pnlDialogoInterior.Size = new System.Drawing.Size(532, 72);
 			this.pnlDialogoInterior.TabIndex = 0;
 			// 
 			// lblTituloDialogoGba
@@ -774,31 +775,45 @@ namespace Leviatanes2
 			this.lblTituloDialogoGba.ForeColor = System.Drawing.Color.Gold;
 			this.lblTituloDialogoGba.Location = new System.Drawing.Point(10, 6);
 			this.lblTituloDialogoGba.Name = "lblTituloDialogoGba";
-			this.lblTituloDialogoGba.Size = new System.Drawing.Size(724, 18);
+			this.lblTituloDialogoGba.Size = new System.Drawing.Size(512, 18);
 			this.lblTituloDialogoGba.TabIndex = 0;
-			this.lblTituloDialogoGba.Text = "PROF. LUCENA (CONSOLA GBA): ¡Bienvenido al Laboratorio de Leviatanes!";
+			this.lblTituloDialogoGba.Text = "PROF. LUCENA (CONSOLA GBA): ¡Laboratorio de Leviatanes!";
 			// 
 			// lblTextoProfesorGba
 			// 
-			this.lblTextoProfesorGba.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTextoProfesorGba.Font = new System.Drawing.Font("Consolas", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTextoProfesorGba.ForeColor = System.Drawing.Color.White;
-			this.lblTextoProfesorGba.Location = new System.Drawing.Point(10, 28);
+			this.lblTextoProfesorGba.Location = new System.Drawing.Point(10, 26);
 			this.lblTextoProfesorGba.Name = "lblTextoProfesorGba";
-			this.lblTextoProfesorGba.Size = new System.Drawing.Size(724, 38);
+			this.lblTextoProfesorGba.Size = new System.Drawing.Size(512, 40);
 			this.lblTextoProfesorGba.TabIndex = 1;
 			this.lblTextoProfesorGba.Text = "Reparte exactamente 100 puntos entre Vida (HP), Escudo (DEF) y Ataque (ATK) para " +
 			"registrar tu criatura en personajes.txt ▼";
+			// 
+			// btnIrSeleccionModalidad
+			// 
+			this.btnIrSeleccionModalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(41)))), ((int)(((byte)(18)))));
+			this.btnIrSeleccionModalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnIrSeleccionModalidad.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnIrSeleccionModalidad.ForeColor = System.Drawing.Color.Gold;
+			this.btnIrSeleccionModalidad.Location = new System.Drawing.Point(560, 548);
+			this.btnIrSeleccionModalidad.Name = "btnIrSeleccionModalidad";
+			this.btnIrSeleccionModalidad.Size = new System.Drawing.Size(226, 80);
+			this.btnIrSeleccionModalidad.TabIndex = 6;
+			this.btnIrSeleccionModalidad.Text = "IR A SELECCION DE MODALIDAD >>";
+			this.btnIrSeleccionModalidad.UseVisualStyleBackColor = false;
+			this.btnIrSeleccionModalidad.Click += new System.EventHandler(this.BtnIrSeleccionModalidadClick);
 			// 
 			// VolverMenu
 			// 
 			this.VolverMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(68)))), ((int)(((byte)(90)))));
 			this.VolverMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.VolverMenu.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.VolverMenu.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.VolverMenu.ForeColor = System.Drawing.Color.Gold;
-			this.VolverMenu.Location = new System.Drawing.Point(774, 548);
+			this.VolverMenu.Location = new System.Drawing.Point(794, 548);
 			this.VolverMenu.Name = "VolverMenu";
-			this.VolverMenu.Size = new System.Drawing.Size(174, 80);
-			this.VolverMenu.TabIndex = 6;
+			this.VolverMenu.Size = new System.Drawing.Size(154, 80);
+			this.VolverMenu.TabIndex = 7;
 			this.VolverMenu.Text = "<< VOLVER AL MENU";
 			this.VolverMenu.UseVisualStyleBackColor = false;
 			this.VolverMenu.Click += new System.EventHandler(this.VolverMenuClick);
@@ -809,6 +824,7 @@ namespace Leviatanes2
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(32)))), ((int)(((byte)(52)))));
 			this.ClientSize = new System.Drawing.Size(960, 640);
+			this.Controls.Add(this.btnIrSeleccionModalidad);
 			this.Controls.Add(this.pnlMarcoDialogoGba);
 			this.Controls.Add(this.pnlMarcoCatalogo);
 			this.Controls.Add(this.pnlMarcoCarta);
@@ -890,6 +906,7 @@ namespace Leviatanes2
 		private System.Windows.Forms.Label lblSubtituloGba;
 		private System.Windows.Forms.Label lblTituloGba;
 		private System.Windows.Forms.Panel pnlHeaderGba;
+		private System.Windows.Forms.Button btnIrSeleccionModalidad;
 		private System.Windows.Forms.Button VolverMenu;
 	}
 }

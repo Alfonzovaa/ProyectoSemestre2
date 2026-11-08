@@ -252,5 +252,10 @@ namespace Leviatanes2
 
 			this.Hide();
 		}
+		
+		void DgvHistorialPartidasCellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			
+		}
 	}
 }

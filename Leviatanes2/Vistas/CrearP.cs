@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -439,6 +439,13 @@ namespace Leviatanes2
 				RecargarListaDesdeArchivoTxt();
 				lblTextoProfesorGba.Text = "Catálogo restaurado con las 12 cartas elementales base en personajes.txt. ▼";
 			}
+		}
+
+		void BtnIrSeleccionModalidadClick(object sender, EventArgs e)
+		{
+			SeleccionModalidad VentanaModalidad = new SeleccionModalidad();
+			VentanaModalidad.Show();
+			this.Hide();
 		}
 
 		void VolverMenuClick(object sender, EventArgs e)
