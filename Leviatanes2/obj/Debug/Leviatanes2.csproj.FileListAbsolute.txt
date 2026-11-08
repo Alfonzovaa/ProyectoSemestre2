@@ -21,3 +21,13 @@ F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Cre
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.MainForm.resources
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.VerPartidas.resources
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csproj.GenerateResource.Cache
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.SeleccionModalidad.resources
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Historia.resources
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo2.png
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo1.png
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo3.png
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo4.png
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo5.png
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo6.png
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\leeme.txt
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Batalla.resources

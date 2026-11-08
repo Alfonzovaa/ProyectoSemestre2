@@ -1,4 +1,13 @@
-Carpeta de imágenes en bin\Debug
-Coloca aquí o en la carpeta 'imagenes' de la raíz del proyecto tus imágenes:
-capitulo1.png, capitulo2.png, capitulo3.png, capitulo4.png, capitulo5.png, capitulo6.png
+Carpeta de imágenes del Modo Historia - Leviatanes 2
+=====================================================
+Coloca aquí las imágenes correspondientes a cada capítulo:
 
+Capítulo 1: capitulo1.png  (o capitulo1.jpg / El Despertar en la Fosa.png)
+Capítulo 2: capitulo2.png  (o capitulo2.jpg / Las Aguas Negras.png)
+Capítulo 3: capitulo3.png  (o capitulo3.jpg / El Mar Espejo.png)
+Capítulo 4: capitulo4.png  (o capitulo4.jpg / La Revelación del Origen.png)
+Capítulo 5: capitulo5.png  (o capitulo5.jpg / El Núcleo de la Podredumbre.png)
+Capítulo 6: capitulo6.png  (o capitulo6.jpg / El Limpie del Caribe.png)
+
+El formulario Historia.cs cargará exactamente la imagen que coloques aquí sin filtros ni modificaciones.
+Formatos soportados: .png, .jpg, .jpeg, .bmp, .gif.

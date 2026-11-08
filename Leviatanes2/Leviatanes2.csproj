@@ -88,11 +88,25 @@
     <Folder Include="imagenes" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="imagenes\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vistas\Batalla.resx">
+      <DependentUpon>Batalla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\CrearP.resx">
       <DependentUpon>CrearP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Historia.resx">
+      <DependentUpon>Historia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\SeleccionModalidad.resx">
+      <DependentUpon>SeleccionModalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VerPartidas.resx">
       <DependentUpon>VerPartidas.cs</DependentUpon>

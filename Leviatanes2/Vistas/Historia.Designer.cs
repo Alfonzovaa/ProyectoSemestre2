@@ -54,7 +54,7 @@ namespace Leviatanes2
 			// 
 			this.lblTexto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
 			this.lblTexto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.lblTexto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTexto.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTexto.ForeColor = System.Drawing.Color.White;
 			this.lblTexto.Location = new System.Drawing.Point(30, 78);
 			this.lblTexto.Name = "lblTexto";
@@ -73,14 +73,15 @@ namespace Leviatanes2
 			this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.picImagen.TabIndex = 2;
 			this.picImagen.TabStop = false;
+			this.picImagen.Click += new System.EventHandler(this.PicImagenClick);
 			// 
 			// lblCapitulo
 			// 
 			this.lblCapitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblCapitulo.ForeColor = System.Drawing.Color.Gold;
-			this.lblCapitulo.Location = new System.Drawing.Point(360, 515);
+			this.lblCapitulo.Location = new System.Drawing.Point(300, 515);
 			this.lblCapitulo.Name = "lblCapitulo";
-			this.lblCapitulo.Size = new System.Drawing.Size(260, 40);
+			this.lblCapitulo.Size = new System.Drawing.Size(400, 40);
 			this.lblCapitulo.TabIndex = 3;
 			this.lblCapitulo.Text = "Capítulo 1 de 6";
 			this.lblCapitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,13 +91,13 @@ namespace Leviatanes2
 			this.btnSiguiente.BackColor = System.Drawing.Color.Gold;
 			this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSiguiente.ForeColor = System.Drawing.Color.Black;
-			this.btnSiguiente.Location = new System.Drawing.Point(775, 515);
+			this.btnSiguiente.Location = new System.Drawing.Point(720, 515);
 			this.btnSiguiente.Name = "btnSiguiente";
-			this.btnSiguiente.Size = new System.Drawing.Size(175, 42);
+			this.btnSiguiente.Size = new System.Drawing.Size(230, 42);
 			this.btnSiguiente.TabIndex = 4;
-			this.btnSiguiente.Text = "Siguiente ▶";
+			this.btnSiguiente.Text = "Continuar a Batalla 1 ▶";
 			this.btnSiguiente.UseVisualStyleBackColor = false;
 			this.btnSiguiente.Click += new System.EventHandler(this.BtnSiguienteClick);
 			// 
