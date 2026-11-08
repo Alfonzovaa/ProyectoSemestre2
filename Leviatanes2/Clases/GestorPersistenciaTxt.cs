@@ -5,19 +5,33 @@ using System.Text;
 
 namespace Leviatanes2.Clases
 {
+    public class RegistroPartidaTxt
+    {
+        public int IdPartida { get; set; }
+        public string FechaHora { get; set; }
+        public string JugadorUno { get; set; }
+        public string JugadorDos { get; set; }
+        public string Ganador { get; set; }
+        public string Escenario { get; set; }
+        public int TotalTurnos { get; set; }
+        public string ArchivoBitacora { get; set; }
+    }
+
     /// <summary>
     /// Modulo compartido de persistencia en archivos .TXT planos (reemplazo modular de Base de Datos SQL).
-    /// Maneja: personajes.txt, jugadores.txt y bitacoras de combate .txt.
+    /// Maneja: personajes.txt, jugadores.txt, partidas.txt y bitacoras de combate .txt.
     /// </summary>
     public class GestorPersistenciaTxt
     {
         public static readonly string RutaArchivoPersonajes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "personajes.txt");
         public static readonly string RutaArchivoJugadores = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "jugadores.txt");
+        public static readonly string RutaArchivoPartidas = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "partidas.txt");
 
         public GestorPersistenciaTxt()
         {
             AsegurarCatalogoInicialEnTxt();
             AsegurarJugadoresInicialesEnTxt();
+            AsegurarPartidasInicialesEnTxt();
         }
 
         // =========================================================================
@@ -49,7 +63,7 @@ namespace Leviatanes2.Clases
 
             // 3 de Tierra (HP + DEF + ATK = 100)
             Catalogo.Add(new CartaTierra(7, "Golem De Basalto", 60, 30, 10, 90, "Muralla Monolitica", "Sube su escudo y aplasta sumando ATK + DEF."));
-            Catalogo.Add(new CartaTierra(8, " Behemoth Del Canion", 55, 25, 20, 80, "Raices Tectonicas", "Refuerza su coraza rocosa y sacude el suelo."));
+            Catalogo.Add(new CartaTierra(8, "Behemoth Del Canion", 55, 25, 20, 80, "Raices Tectonicas", "Refuerza su coraza rocosa y sacude el suelo."));
             Catalogo.Add(new CartaTierra(9, "Rocco Coloso De Jade", 50, 25, 25, 70, "Martillo Sismico", "Impacto pesado potenciado por su armadura."));
 
             // 3 de Aire (HP + DEF + ATK = 100)
@@ -149,7 +163,6 @@ namespace Leviatanes2.Clases
             string EspecialLimpio = LimpiarTexto(string.IsNullOrWhiteSpace(NombreEspecial) ? "Furia Ancestral" : NombreEspecial);
             string DescLimpia = LimpiarTexto(string.IsNullOrWhiteSpace(DescripcionEspecial) ? "Tecnica especial del Leviatan." : DescripcionEspecial);
 
-            // Valida automaticamente que Vida + Defensa + Ataque == 100 en el constructor de Personaje
             Personaje Nuevo = InstanciarPorFaccion(NuevoId, NombreLimpio, Faccion, Vida, Defensa, Ataque, Empatia, EspecialLimpio, DescLimpia);
 
             string Linea = FormatearLineaPersonaje(Nuevo);
@@ -216,8 +229,9 @@ namespace Leviatanes2.Clases
 
             List<PerfilJugador> Iniciales = new List<PerfilJugador>
             {
-                new PerfilJugador(1, "JugadorUno", 0, 0, 0),
-                new PerfilJugador(2, "JugadorDos", 0, 0, 0)
+                new PerfilJugador(1, "JugadorUno", 3, 2, 1),
+                new PerfilJugador(2, "JugadorDos", 3, 1, 2),
+                new PerfilJugador(3, "CapitanCaribe", 1, 1, 0)
             };
             GuardarJugadoresEnTxt(Iniciales);
         }
@@ -274,6 +288,260 @@ namespace Leviatanes2.Clases
             }
         }
 
+        public PerfilJugador AutenticarORegistrarJugador(string NombreUsuario)
+        {
+            string NombreLimpio = LimpiarTexto(NombreUsuario);
+            if (string.IsNullOrEmpty(NombreLimpio))
+                NombreLimpio = "JugadorAnonimo";
+
+            List<PerfilJugador> Jugadores = CargarJugadoresDesdeTxt();
+            for (int I = 0; I < Jugadores.Count; I++)
+            {
+                if (string.Equals(Jugadores[I].NombreUsuario, NombreLimpio, StringComparison.OrdinalIgnoreCase))
+                    return Jugadores[I];
+            }
+
+            int NuevoId = 1;
+            for (int I = 0; I < Jugadores.Count; I++)
+            {
+                if (Jugadores[I].IdJugador >= NuevoId)
+                    NuevoId = Jugadores[I].IdJugador + 1;
+            }
+
+            PerfilJugador Nuevo = new PerfilJugador(NuevoId, NombreLimpio, 0, 0, 0);
+            Jugadores.Add(Nuevo);
+            GuardarJugadoresEnTxt(Jugadores);
+            return Nuevo;
+        }
+
+        // =========================================================================
+        // 3. PERSISTENCIA DE HISTORIAL DE PARTIDAS Y BITACORAS (partidas.txt)
+        // Formato: IdPartida|FechaHora|JugadorUno|JugadorDos|Ganador|Escenario|TotalTurnos|ArchivoBitacora
+        // =========================================================================
+        private void AsegurarPartidasInicialesEnTxt()
+        {
+            if (File.Exists(RutaArchivoPartidas))
+                return;
+
+            string NombreBitacoraDemo = "Bitacora_ArenaElemental_Demo01.txt";
+            string RutaBitacoraDemo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, NombreBitacoraDemo);
+
+            if (!File.Exists(RutaBitacoraDemo))
+            {
+                using (StreamWriter EscritorLog = new StreamWriter(RutaBitacoraDemo, false, Encoding.UTF8))
+                {
+                    EscritorLog.WriteLine("======================================================================");
+                    EscritorLog.WriteLine("       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          ");
+                    EscritorLog.WriteLine("======================================================================");
+                    EscritorLog.WriteLine("Fecha y Hora      : 06/11/2026 18:30:00");
+                    EscritorLog.WriteLine("Jugador 1         : JugadorUno");
+                    EscritorLog.WriteLine("Jugador 2         : JugadorDos");
+                    EscritorLog.WriteLine("Vencedor          : JugadorUno");
+                    EscritorLog.WriteLine("Escenario Final   : Abismo Oceanico (+6 Agua / -4 Fuego)");
+                    EscritorLog.WriteLine("Total de Turnos   : 6");
+                    EscritorLog.WriteLine("----------------------------------------------------------------------");
+                    EscritorLog.WriteLine("HISTORIAL CRONOLOGICO DE ACCIONES (PILA DE EVENTOS):");
+                    EscritorLog.WriteLine("----------------------------------------------------------------------");
+                    EscritorLog.WriteLine("[T01] [INICIO] Combate en [Abismo Oceanico]. Inicia por sorteo: JugadorUno.");
+                    EscritorLog.WriteLine("[T01] Kraken Del Caribe ataca a Ignis Leviatan Pirico (Mult x1.50, Escenario +6): Vida recibe -9 HP.");
+                    EscritorLog.WriteLine("[T02] Ignis Leviatan Pirico refuerza su postura defensiva (+9 Escudo -> Total: 29).");
+                    EscritorLog.WriteLine("[T03] Kraken Del Caribe invoca [Vortice Abisal]! Roba 1 de energia, se cura +15 HP y causa 15 de danio.");
+                    EscritorLog.WriteLine("[T03] [TERREMOTO INVERTIDO - Empatia 75>=65] Kraken Del Caribe armoniza con Abismo Oceanico: +9 HP y +6 Escudo!");
+                    EscritorLog.WriteLine("[T04] [TERREMOTO CATASTROFICO] Ignis Leviatan Pirico pierde su escudo y sufre -7 HP por el sismo!");
+                    EscritorLog.WriteLine("[T06] [FIN DE PARTIDA] El equipo de JugadorDos fue eliminado! Vencedor: JugadorUno!");
+                    EscritorLog.WriteLine("======================================================================");
+                }
+            }
+
+            using (StreamWriter Escritor = new StreamWriter(RutaArchivoPartidas, false, Encoding.UTF8))
+            {
+                Escritor.WriteLine("# IdPartida|FechaHora|JugadorUno|JugadorDos|Ganador|Escenario|TotalTurnos|ArchivoBitacora");
+                Escritor.WriteLine(string.Format("1|06/11/2026 18:30:00|JugadorUno|JugadorDos|JugadorUno|Abismo Oceanico|6|{0}", NombreBitacoraDemo));
+            }
+        }
+
+        public List<RegistroPartidaTxt> CargarHistorialPartidasDesdeTxt()
+        {
+            AsegurarPartidasInicialesEnTxt();
+            List<RegistroPartidaTxt> Lista = new List<RegistroPartidaTxt>();
+
+            try
+            {
+                string[] Lineas = File.ReadAllLines(RutaArchivoPartidas, Encoding.UTF8);
+                for (int I = 0; I < Lineas.Length; I++)
+                {
+                    string Linea = Lineas[I];
+                    if (string.IsNullOrWhiteSpace(Linea) || Linea.TrimStart().StartsWith("#"))
+                        continue;
+
+                    string[] Partes = Linea.Split('|');
+                    if (Partes.Length >= 8)
+                    {
+                        RegistroPartidaTxt Reg = new RegistroPartidaTxt();
+                        Reg.IdPartida = int.Parse(Partes[0].Trim());
+                        Reg.FechaHora = Partes[1].Trim();
+                        Reg.JugadorUno = Partes[2].Trim();
+                        Reg.JugadorDos = Partes[3].Trim();
+                        Reg.Ganador = Partes[4].Trim();
+                        Reg.Escenario = Partes[5].Trim();
+                        Reg.TotalTurnos = int.Parse(Partes[6].Trim());
+                        Reg.ArchivoBitacora = Partes[7].Trim();
+                        Lista.Add(Reg);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            return Lista;
+        }
+
+        public string RegistrarPartidaFinalizadaEnTxt(
+            PerfilJugador JugadorUno,
+            PerfilJugador JugadorDos,
+            PerfilJugador Ganador,
+            Escenario EscenarioFinal,
+            int TotalTurnos,
+            Stack<string> PilaEventos)
+        {
+            // 1. Actualizar estadisticas en jugadores.txt
+            List<PerfilJugador> Jugadores = CargarJugadoresDesdeTxt();
+            bool EncontroJ1 = false;
+            bool EncontroJ2 = false;
+            bool GanoJ1 = (Ganador != null && string.Equals(Ganador.NombreUsuario, JugadorUno.NombreUsuario, StringComparison.OrdinalIgnoreCase));
+
+            for (int I = 0; I < Jugadores.Count; I++)
+            {
+                if (string.Equals(Jugadores[I].NombreUsuario, JugadorUno.NombreUsuario, StringComparison.OrdinalIgnoreCase))
+                {
+                    Jugadores[I].RegistrarResultado(GanoJ1);
+                    EncontroJ1 = true;
+                }
+                else if (string.Equals(Jugadores[I].NombreUsuario, JugadorDos.NombreUsuario, StringComparison.OrdinalIgnoreCase))
+                {
+                    Jugadores[I].RegistrarResultado(!GanoJ1);
+                    EncontroJ2 = true;
+                }
+            }
+
+            if (!EncontroJ1)
+            {
+                PerfilJugador NuevoJ1 = new PerfilJugador(Jugadores.Count + 1, JugadorUno.NombreUsuario, 0, 0, 0);
+                NuevoJ1.RegistrarResultado(GanoJ1);
+                Jugadores.Add(NuevoJ1);
+            }
+            if (!EncontroJ2)
+            {
+                PerfilJugador NuevoJ2 = new PerfilJugador(Jugadores.Count + 1, JugadorDos.NombreUsuario, 0, 0, 0);
+                NuevoJ2.RegistrarResultado(!GanoJ1);
+                Jugadores.Add(NuevoJ2);
+            }
+            GuardarJugadoresEnTxt(Jugadores);
+
+            // 2. Generar archivo de bitacora .txt
+            string RutaBitacora = ExportarBitacoraCombateTxt(JugadorUno, JugadorDos, Ganador, EscenarioFinal, TotalTurnos, PilaEventos);
+            string NombreArchivoBitacora = Path.GetFileName(RutaBitacora);
+
+            // 3. Agregar registro en partidas.txt
+            List<RegistroPartidaTxt> Historial = CargarHistorialPartidasDesdeTxt();
+            int NuevoId = Historial.Count + 1;
+            string FechaActual = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            string NombreEscenario = EscenarioFinal != null ? EscenarioFinal.Nombre : "Arena Elemental";
+            string NombreGanador = Ganador != null ? Ganador.NombreUsuario : JugadorUno.NombreUsuario;
+
+            string Linea = string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
+                NuevoId,
+                FechaActual,
+                LimpiarTexto(JugadorUno.NombreUsuario),
+                LimpiarTexto(JugadorDos.NombreUsuario),
+                LimpiarTexto(NombreGanador),
+                LimpiarTexto(NombreEscenario),
+                TotalTurnos,
+                LimpiarTexto(NombreArchivoBitacora));
+
+            using (StreamWriter Escritor = new StreamWriter(RutaArchivoPartidas, true, Encoding.UTF8))
+            {
+                Escritor.WriteLine(Linea);
+            }
+
+            return RutaBitacora;
+        }
+
+        public static string ExportarBitacoraCombateTxt(
+            PerfilJugador JugadorUno,
+            PerfilJugador JugadorDos,
+            PerfilJugador Ganador,
+            Escenario EscenarioFinal,
+            int TotalTurnos,
+            Stack<string> PilaEventos)
+        {
+            string NombreArchivo = string.Format("Bitacora_Leviatanes2_{0}.txt", DateTime.Now.ToString("yyyyMMdd_HHmmss"));
+            string RutaCompleta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, NombreArchivo);
+
+            try
+            {
+                using (StreamWriter Escritor = new StreamWriter(RutaCompleta, false, Encoding.UTF8))
+                {
+                    Escritor.WriteLine("======================================================================");
+                    Escritor.WriteLine("       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          ");
+                    Escritor.WriteLine("======================================================================");
+                    Escritor.WriteLine("Fecha y Hora      : " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+                    Escritor.WriteLine("Jugador 1         : " + JugadorUno.NombreUsuario);
+                    Escritor.WriteLine("Jugador 2         : " + JugadorDos.NombreUsuario);
+                    Escritor.WriteLine("Vencedor          : " + (Ganador != null ? Ganador.NombreUsuario : "N/A"));
+                    Escritor.WriteLine("Escenario Final   : " + (EscenarioFinal != null ? EscenarioFinal.Nombre : "Arena"));
+                    Escritor.WriteLine("Total de Turnos   : " + TotalTurnos);
+                    Escritor.WriteLine("----------------------------------------------------------------------");
+                    Escritor.WriteLine("HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):");
+                    Escritor.WriteLine("----------------------------------------------------------------------");
+
+                    if (PilaEventos != null && PilaEventos.Count > 0)
+                    {
+                        string[] ArregloEventos = PilaEventos.ToArray();
+                        Array.Reverse(ArregloEventos);
+                        for (int Indice = 0; Indice < ArregloEventos.Length; Indice++)
+                        {
+                            Escritor.WriteLine(ArregloEventos[Indice]);
+                        }
+                    }
+
+                    Escritor.WriteLine("======================================================================");
+                    Escritor.WriteLine("ESTADISTICAS ACTUALIZADAS:");
+                    Escritor.WriteLine(string.Format(" - {0}: PJ={1} | V={2} | D={3} | Exito={4:0.00}%",
+                        JugadorUno.NombreUsuario, JugadorUno.PartidasJugadas, JugadorUno.Victorias, JugadorUno.Derrotas, JugadorUno.PorcentajeExito));
+                    Escritor.WriteLine(string.Format(" - {0}: PJ={1} | V={2} | D={3} | Exito={4:0.00}%",
+                        JugadorDos.NombreUsuario, JugadorDos.PartidasJugadas, JugadorDos.Victorias, JugadorDos.Derrotas, JugadorDos.PorcentajeExito));
+                    Escritor.WriteLine("======================================================================");
+                }
+            }
+            catch (Exception Ex)
+            {
+                return "Error al guardar el archivo TXT: " + Ex.Message;
+            }
+
+            return RutaCompleta;
+        }
+
+        public string LeerContenidoBitacora(string NombreArchivoBitacora)
+        {
+            if (string.IsNullOrWhiteSpace(NombreArchivoBitacora))
+                return "No se especifico un archivo de bitacora para esta partida.";
+
+            string Ruta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, NombreArchivoBitacora);
+            if (!File.Exists(Ruta))
+                return "El archivo de bitacora '" + NombreArchivoBitacora + "' no se encuentra en el directorio.";
+
+            try
+            {
+                return File.ReadAllText(Ruta, Encoding.UTF8);
+            }
+            catch (Exception Ex)
+            {
+                return "Error al leer bitacora: " + Ex.Message;
+            }
+        }
+
         public static List<Escenario> ObtenerCatalogoEscenarios()
         {
             List<Escenario> Escenarios = new List<Escenario>();
@@ -292,4 +560,3 @@ namespace Leviatanes2.Clases
         }
     }
 }
-
