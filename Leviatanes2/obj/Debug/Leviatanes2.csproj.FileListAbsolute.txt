@@ -50,3 +50,23 @@ C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\L
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csproj.GenerateResource.Cache
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.exe
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.pdb
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo1.png
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo2.png
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo3.png
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo4.png
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo5.png
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo6.png
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\leeme.txt
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.exe
+C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.pdb
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csprojResolveAssemblyReference.cache
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Batalla.resources
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.CrearP.resources
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Historia.resources
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.MainForm.resources
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.SeleccionModalidad.resources
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.VerPartidas.resources
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csproj.GenerateResource.Cache
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.exe
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.pdb
+C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.calculo.resources

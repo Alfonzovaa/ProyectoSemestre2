@@ -1,0 +1,47 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 08/11/2026 16:54:48
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Black Waters
+Vencedor          : JugadorUno
+Escenario Final   : Black Waters Canyon
+Total de Turnos   : 9
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [START] Battle begins at [Black Waters Canyon]! JugadorUno sends out Zephyr Winged Serpent [AIR] vs CPU - Black Waters with Tar Leviathan [EARTH].
+[T01] Zephyr Winged Serpent [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 25 and deals -22 HP.
+[T01] [CPU SWITCH] CPU withdraws Tar Leviathan due to elemental disadvantage and sends out Oil Well Pyromancer [FIRE]!
+[T02] Zephyr Winged Serpent [AIR] attacks Oil Well Pyromancer [FIRE]! It's not very effective... (Elemental Disadvantage x0.75) Shield absorbs 20 and deals -4 HP.
+[T02] [CPU ATTACK] Oil Well Pyromancer [FIRE] attacks your Zephyr Winged Serpent [AIR]! It's super effective! (CPU Elemental Advantage x1.5) Shield absorbs 25 and you take -32 HP.
+[T03] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T03] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T03] [SPECIAL] Zephyr Winged Serpent unleashes [Slashing Storm] on Oil Well Pyromancer! Deals -34 HP. (With elemental disadvantage x0.75)
+[T03] [CPU DEFEATED #1/3] Enemy Oil Well Pyromancer [FIRE] was defeated!
+[T03] [CPU ENTRY] CPU sends out Corrupted Hydra [WATER].
+[T04] Zephyr Winged Serpent [AIR] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 20 and deals -10 HP.
+[T04] [CPU ATTACK] Corrupted Hydra [WATER] attacks your Zephyr Winged Serpent [AIR]! Neutral hit (x1.0). Shield absorbs 6 and you take -23 HP.
+[T04] [PLAYER KO] Your Zephyr Winged Serpent [AIR] was defeated!
+[T04] [ENTRY] Abyssal Nereid [WATER] enters the battlefield.
+[T05] Abyssal Nereid [WATER] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -18 HP.
+[T05] [CPU SPECIAL] Corrupted Hydra uses [Dark Drain]! Deals -5 HP to Abyssal Nereid.
+[T06] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T06] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T06] [SPECIAL] Abyssal Nereid unleashes [Healing Tide] on Corrupted Hydra! Deals -20 HP.
+[T06] [CPU DEFEND] Corrupted Hydra [WATER] reinforces its armor and gains +9 Shield.
+[T07] Abyssal Nereid [WATER] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 9 and deals -8 HP.
+[T07] [CPU DEFEATED #2/3] Enemy Corrupted Hydra [WATER] was defeated!
+[T07] [CPU ENTRY] CPU sends out Tar Leviathan [EARTH].
+[T08] [SPECIAL] Abyssal Nereid unleashes [Healing Tide] on Tar Leviathan! Deals -20 HP. (With elemental disadvantage x0.75)
+[T08] [CPU DEFEND] Tar Leviathan [EARTH] reinforces its armor and gains +11 Shield.
+[T09] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T09] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T09] Abyssal Nereid [WATER] attacks Tar Leviathan [EARTH]! It's not very effective... (Elemental Disadvantage x0.75) Shield absorbs 0 and deals -12 HP.
+[T09] [CPU DEFEATED #3/3] Enemy Tar Leviathan [EARTH] was defeated!
+[T09] [MATCH OVER] CPU - Black Waters's team was eliminated! Winner: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0,00%
+ - CPU - Black Waters: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

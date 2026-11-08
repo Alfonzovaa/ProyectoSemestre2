@@ -4,3 +4,6 @@
 3|08/11/2026 14:06:57|JugadorUno|CPU - Fosa Abisal|JugadorUno|Abismo Oceanico|13|Bitacora_Leviatanes2_20261108_140657.txt
 4|08/11/2026 14:08:04|JugadorUno|CPU - Black Waters|JugadorUno|Black Waters Canyon|12|Bitacora_Leviatanes2_20261108_140804.txt
 5|08/11/2026 14:22:53|JugadorUno|CPU - Fosa Abisal|JugadorUno|Volcan Activo|14|Bitacora_Leviatanes2_20261108_142253.txt
+6|08/11/2026 16:33:17|JugadorUno|CPU - Fosa Abisal|JugadorUno|Canion Rocoso|13|Bitacora_Leviatanes2_20261108_163317.txt
+7|08/11/2026 16:53:47|JugadorUno|CPU - Fosa Abisal|JugadorUno|Volcan Activo|8|Bitacora_Leviatanes2_20261108_165347.txt
+8|08/11/2026 16:54:48|JugadorUno|CPU - Black Waters|JugadorUno|Black Waters Canyon|9|Bitacora_Leviatanes2_20261108_165448.txt

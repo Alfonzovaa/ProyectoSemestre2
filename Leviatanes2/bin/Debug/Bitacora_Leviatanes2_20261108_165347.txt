@@ -1,0 +1,43 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 08/11/2026 16:53:47
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Volcan Activo
+Total de Turnos   : 8
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [INICIO] ¡Comienza la batalla en [Volcan Activo]! JugadorUno envía a Ignis Leviatan Pirico [Fuego] vs CPU - Fosa Abisal con Leviatán de la Fosa [Agua].
+[T01] ¡Ignis Leviatan Pirico [Fuego] ataca a Leviatán de la Fosa [Agua]! No es muy eficaz... (Desventaja Elemental x0.75) Escudo absorbe 20 y causa -14 HP.
+[T01] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Ignis Leviatan Pirico [Fuego]! ¡Es súper eficaz! (Ventaja Elemental CPU x1.5) Escudo absorbe 20 y recibes -20 HP.
+[T02] ¡Ignis Leviatan Pirico [Fuego] ataca a Leviatán de la Fosa [Agua]! No es muy eficaz... (Desventaja Elemental x0.75) Escudo absorbe 0 y causa -34 HP.
+[T02] [CPU DEFENSA] Leviatán de la Fosa [Agua] refuerza su coraza y gana +9 de Escudo.
+[T03] [TERREMOTO CATASTROFICO] Ignis Leviatan Pirico pierde su escudo y sufre -7 HP por el sismo!
+[T03] [TERREMOTO INVERTIDO - Empatia 75>=70] Leviatán de la Fosa armoniza con Volcan Activo: +8 HP y +6 Escudo!
+[T03] [ESPECIAL] Ignis Leviatan Pirico desata [Llamarada Solar]! Ignora el escudo y causa 38 de danio perforante a Leviatán de la Fosa. (Con desventaja elemental x0.75)
+[T03] [BAJA CPU #1/3] ¡Leviatán de la Fosa [Agua] de la CPU fue derrotado!
+[T03] [ENTRADA CPU] La CPU envía a Ignis De La Grieta [Fuego].
+[T04] ¡Ignis Leviatan Pirico [Fuego] ataca a Ignis De La Grieta [Fuego]! Impacto elemental neutro (x1.0). Escudo absorbe 20 y causa -26 HP.
+[T04] [CPU ATACA] ¡Ignis De La Grieta [Fuego] ataca a tu Ignis Leviatan Pirico [Fuego]! Impacto neutro (x1.0). Escudo absorbe 0 y recibes -50 HP.
+[T04] [BAJA EN TU EQUIPO] ¡Tu Ignis Leviatan Pirico [Fuego] cayó derrotado!
+[T04] [ENTRADA] Entra a combatir Nereida Del Abismo [Agua].
+[T05] ¡Nereida Del Abismo [Agua] ataca a Ignis De La Grieta [Fuego]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 0 y causa -33 HP.
+[T05] [BAJA CPU #2/3] ¡Ignis De La Grieta [Fuego] de la CPU fue derrotado!
+[T05] [ENTRADA CPU] La CPU envía a Sierpe De Remolino [Aire].
+[T06] [TERREMOTO INVERTIDO - Empatia 85>=70] Nereida Del Abismo armoniza con Volcan Activo: +8 HP y +6 Escudo!
+[T06] [TERREMOTO CATASTROFICO] Sierpe De Remolino pierde su escudo y sufre -8 HP por el sismo!
+[T06] [ESPECIAL] Nereida Del Abismo invoca [Marea Sanadora]! Roba 1 de energia, se cura +14 HP y causa 20 de danio a Sierpe De Remolino.
+[T06] [CPU DEFENSA] Sierpe De Remolino [Aire] refuerza su coraza y gana +9 de Escudo.
+[T07] ¡Nereida Del Abismo [Agua] ataca a Sierpe De Remolino [Aire]! Impacto elemental neutro (x1.0). Escudo absorbe 9 y causa -13 HP.
+[T07] [CPU ESPECIAL] Sierpe De Remolino ejecuta [Ráfaga De Fosa]! Doble impacto aereo que inflige 21 HP en total a Nereida Del Abismo.
+[T08] ¡Nereida Del Abismo [Agua] ataca a Sierpe De Remolino [Aire]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -22 HP.
+[T08] [BAJA CPU #3/3] ¡Sierpe De Remolino [Aire] de la CPU fue derrotado!
+[T08] [FIN DE PARTIDA] ¡El equipo de CPU - Fosa Abisal fue eliminado! Vencedor: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=5 | V=5 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

@@ -60,6 +60,10 @@
     <Compile Include="Vistas\Batalla.Designer.cs">
       <DependentUpon>Batalla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\calculo.cs" />
+    <Compile Include="Vistas\calculo.Designer.cs">
+      <DependentUpon>calculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\CrearP.cs" />
     <Compile Include="Vistas\CrearP.Designer.cs">
       <DependentUpon>CrearP.cs</DependentUpon>
@@ -95,6 +99,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Vistas\Batalla.resx">
       <DependentUpon>Batalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\calculo.resx">
+      <DependentUpon>calculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\CrearP.resx">
       <DependentUpon>CrearP.cs</DependentUpon>
