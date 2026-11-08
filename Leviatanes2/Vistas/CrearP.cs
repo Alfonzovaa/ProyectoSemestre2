@@ -128,7 +128,7 @@ namespace Leviatanes2
 		{
 			Color ColorTema = ObtenerColorPorElemento(Fac);
 			lblCartaFaccionBanner.BackColor = ColorTema;
-			lblCartaFaccionBanner.Text = string.Format("VISTA PREVIA GBA :: [{0}]", Fac.ToString().ToUpper());
+			lblCartaFaccionBanner.Text = string.Format("VISTA PREVIA :: [{0}]", Fac.ToString().ToUpper());
 
 			lblCartaNombreVista.Text = NombreCarta;
 			lblCartaHp.Text = string.Format("VIDA   : {0}", Vida);
