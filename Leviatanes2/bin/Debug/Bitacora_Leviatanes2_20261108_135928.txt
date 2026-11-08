@@ -1,0 +1,47 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 08/11/2026 13:59:28
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Cumbre De Viento
+Total de Turnos   : 8
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [INICIO] ¡Comienza la batalla en [Cumbre De Viento]! JugadorUno envía a Ignis Leviatan Pirico [Fuego] vs CPU - Fosa Abisal con Leviatán de la Fosa [Agua].
+[T01] [RELEVO TÁCTICO] ¡Sale Ignis Leviatan Pirico y entra Behemoth Del Canion [Tierra]! ¡VENTAJA ELEMENTAL! TIERRA vence a AGUA (Daño x1,50 - ¡Es súper eficaz!)
+[T01] [CPU RELEVO] ¡La CPU retira a Leviatán de la Fosa por desventaja elemental y envía a Sierpe De Remolino [Aire]!
+[T02] [RELEVO TÁCTICO] ¡Sale Behemoth Del Canion y entra Ignis Leviatan Pirico [Fuego]! ¡VENTAJA ELEMENTAL! FUEGO vence a AIRE (Daño x1,50 - ¡Es súper eficaz!)
+[T02] [CPU ATACA] ¡Sierpe De Remolino [Aire] ataca a tu Ignis Leviatan Pirico [Fuego]! No es muy eficaz... (Desventaja Elemental CPU x0.75) Escudo absorbe 20 y recibes -10 HP.
+[T03] [TERREMOTO CATASTROFICO] Ignis Leviatan Pirico pierde su escudo y sufre -7 HP por el sismo!
+[T03] [TERREMOTO CATASTROFICO] Sierpe De Remolino pierde su escudo y sufre -7 HP por el sismo!
+[T03] ¡Ignis Leviatan Pirico [Fuego] ataca a Sierpe De Remolino [Aire]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 0 y causa -55 HP.
+[T03] [BAJA CPU] Sierpe De Remolino enemigo fue debilitado.
+[T03] [ENTRADA CPU] La CPU envía a Ignis De La Grieta [Fuego].
+[T03] [CPU ATACA] ¡Ignis De La Grieta [Fuego] ataca a tu Ignis Leviatan Pirico [Fuego]! Impacto neutro (x1.0). Escudo absorbe 0 y recibes -37 HP.
+[T03] [BAJA JUGADOR] Ignis Leviatan Pirico cayó en combate.
+[T03] [ENTRADA] Entra al campo Rocco Coloso De Jade [Tierra].
+[T04] ¡Rocco Coloso De Jade [Tierra] ataca a Ignis De La Grieta [Fuego]! Impacto elemental neutro (x1.0). Escudo absorbe 20 y causa -7 HP.
+[T04] [CPU ATACA] ¡Ignis De La Grieta [Fuego] ataca a tu Rocco Coloso De Jade [Tierra]! Impacto neutro (x1.0). Escudo absorbe 25 y recibes -12 HP.
+[T05] ¡Rocco Coloso De Jade [Tierra] ataca a Ignis De La Grieta [Fuego]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -23 HP.
+[T05] [CPU ESPECIAL] Ignis De La Grieta desata [Llamarada Submarina]! Ignora el escudo y causa 51 de danio perforante a Rocco Coloso De Jade.
+[T05] [BAJA JUGADOR] Rocco Coloso De Jade cayó en combate.
+[T05] [ENTRADA] Entra al campo Cefiro Sierpe Alada [Aire].
+[T06] [TERREMOTO INVERTIDO - Empatia 75>=70] Cefiro Sierpe Alada armoniza con Cumbre De Viento: +7 HP y +6 Escudo!
+[T06] [TERREMOTO CATASTROFICO] Ignis De La Grieta pierde su escudo y sufre -7 HP por el sismo!
+[T06] ¡Cefiro Sierpe Alada [Aire] ataca a Ignis De La Grieta [Fuego]! No es muy eficaz... (Desventaja Elemental x0.75) Escudo absorbe 0 y causa -30 HP.
+[T06] [BAJA CPU] Ignis De La Grieta enemigo fue debilitado.
+[T06] [ENTRADA CPU] La CPU envía a Leviatán de la Fosa [Agua].
+[T06] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Cefiro Sierpe Alada [Aire]! Impacto neutro (x1.0). Escudo absorbe 25 y recibes -0 HP.
+[T07] ¡Cefiro Sierpe Alada [Aire] ataca a Leviatán de la Fosa [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 20 y causa -19 HP.
+[T07] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Cefiro Sierpe Alada [Aire]! Impacto neutro (x1.0). Escudo absorbe 6 y recibes -19 HP.
+[T08] ¡Cefiro Sierpe Alada [Aire] ataca a Leviatán de la Fosa [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -39 HP.
+[T08] [BAJA CPU] Leviatán de la Fosa enemigo fue debilitado.
+[T08] [FIN DE PARTIDA] ¡El equipo de CPU - Fosa Abisal fue eliminado! Vencedor: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

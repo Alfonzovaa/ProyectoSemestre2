@@ -1,0 +1,59 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 08/11/2026 14:22:53
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Volcan Activo
+Total de Turnos   : 14
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [INICIO] ¡Comienza la batalla en [Volcan Activo]! JugadorUno envía a Ignis Leviatan Pirico [Fuego] vs CPU - Fosa Abisal con Leviatán de la Fosa [Agua].
+[T01] [CAMBIO DE PERSONAJE] ¡Regresa Ignis Leviatan Pirico a la banca y entra Golem De Basalto [Tierra] al combate! ¡VENTAJA ELEMENTAL! TIERRA vence a AGUA (Daño x1,50 - ¡Es súper eficaz!)
+[T01] [CPU RELEVO] ¡La CPU retira a Leviatán de la Fosa por desventaja elemental y envía a Sierpe De Remolino [Aire]!
+[T02] [CAMBIO DE PERSONAJE] ¡Regresa Golem De Basalto a la banca y entra Ignis Leviatan Pirico [Fuego] al combate! ¡VENTAJA ELEMENTAL! FUEGO vence a AIRE (Daño x1,50 - ¡Es súper eficaz!)
+[T02] [CPU ATACA] ¡Sierpe De Remolino [Aire] ataca a tu Ignis Leviatan Pirico [Fuego]! No es muy eficaz... (Desventaja Elemental CPU x0.75) Escudo absorbe 20 y recibes -0 HP.
+[T03] [TERREMOTO CATASTROFICO] Ignis Leviatan Pirico pierde su escudo y sufre -7 HP por el sismo!
+[T03] [TERREMOTO CATASTROFICO] Sierpe De Remolino pierde su escudo y sufre -7 HP por el sismo!
+[T03] ¡Ignis Leviatan Pirico [Fuego] ataca a Sierpe De Remolino [Aire]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 0 y causa -61 HP.
+[T03] [BAJA CPU #1/3] ¡Sierpe De Remolino [Aire] de la CPU fue derrotado!
+[T03] [ENTRADA CPU] La CPU envía a Ignis De La Grieta [Fuego].
+[T04] [CAMBIO DE PERSONAJE] ¡Regresa Ignis Leviatan Pirico a la banca y entra Gyarados Del Caribe [Agua] al combate! ¡VENTAJA ELEMENTAL! AGUA vence a FUEGO (Daño x1,50 - ¡Es súper eficaz!)
+[T04] [CPU ATACA] ¡Ignis De La Grieta [Fuego] ataca a tu Gyarados Del Caribe [Agua]! No es muy eficaz... (Desventaja Elemental CPU x0.75) Escudo absorbe 25 y recibes -10 HP.
+[T05] ¡Gyarados Del Caribe [Agua] ataca a Ignis De La Grieta [Fuego]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 20 y causa -21 HP.
+[T05] [CPU ESPECIAL] Ignis De La Grieta desata [Llamarada Submarina]! Ignora el escudo y causa 38 de danio perforante a Gyarados Del Caribe. (No muy eficaz x0.75)
+[T06] [TERREMOTO INVERTIDO - Empatia 75>=70] Gyarados Del Caribe armoniza con Volcan Activo: +8 HP y +6 Escudo!
+[T06] [TERREMOTO CATASTROFICO] Ignis De La Grieta pierde su escudo y sufre -7 HP por el sismo!
+[T06] ¡Gyarados Del Caribe [Agua] ataca a Ignis De La Grieta [Fuego]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 0 y causa -41 HP.
+[T06] [BAJA CPU #2/3] ¡Ignis De La Grieta [Fuego] de la CPU fue derrotado!
+[T06] [ENTRADA CPU] La CPU envía a Leviatán de la Fosa [Agua].
+[T07] [CAMBIO DE PERSONAJE] ¡Regresa Gyarados Del Caribe a la banca y entra Golem De Basalto [Tierra] al combate! ¡VENTAJA ELEMENTAL! TIERRA vence a AGUA (Daño x1,50 - ¡Es súper eficaz!)
+[T07] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Golem De Basalto [Tierra]! No es muy eficaz... (Desventaja Elemental CPU x0.75) Escudo absorbe 20 y recibes -0 HP.
+[T08] ¡Golem De Basalto [Tierra] ataca a Leviatán de la Fosa [Agua]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 18 y causa -0 HP.
+[T08] [CPU ESPECIAL] Leviatán de la Fosa invoca [Pulso Abisal]! Roba 1 de energia, se cura +14 HP y causa 15 de danio a Golem De Basalto. (No muy eficaz x0.75)
+[T09] [TERREMOTO INVERTIDO - Empatia 90>=70] Golem De Basalto armoniza con Volcan Activo: +9 HP y +6 Escudo!
+[T09] [TERREMOTO INVERTIDO - Empatia 75>=70] Leviatán de la Fosa armoniza con Volcan Activo: +9 HP y +6 Escudo!
+[T09] ¡Golem De Basalto [Tierra] ataca a Leviatán de la Fosa [Agua]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 8 y causa -9 HP.
+[T09] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Golem De Basalto [Tierra]! No es muy eficaz... (Desventaja Elemental CPU x0.75) Escudo absorbe 6 y recibes -14 HP.
+[T10] ¡Golem De Basalto [Tierra] ataca a Leviatán de la Fosa [Agua]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 0 y causa -16 HP.
+[T10] [CPU ESPECIAL] Leviatán de la Fosa invoca [Pulso Abisal]! Roba 1 de energia, se cura +14 HP y causa 25 de danio a Golem De Basalto. (No muy eficaz x0.75)
+[T11] ¡Golem De Basalto [Tierra] ataca a Leviatán de la Fosa [Agua]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 0 y causa -15 HP.
+[T11] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Golem De Basalto [Tierra]! No es muy eficaz... (Desventaja Elemental CPU x0.75) Escudo absorbe 0 y recibes -20 HP.
+[T11] [BAJA EN TU EQUIPO] ¡Tu Golem De Basalto [Tierra] cayó derrotado!
+[T11] [ENTRADA] Entra a combatir Nereida Del Abismo [Agua].
+[T12] [TERREMOTO INVERTIDO - Empatia 85>=70] Nereida Del Abismo armoniza con Volcan Activo: +9 HP y +6 Escudo!
+[T12] [TERREMOTO INVERTIDO - Empatia 75>=70] Leviatán de la Fosa armoniza con Volcan Activo: +9 HP y +6 Escudo!
+[T12] ¡Nereida Del Abismo [Agua] ataca a Leviatán de la Fosa [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 6 y causa -16 HP.
+[T12] [CPU ESPECIAL] Leviatán de la Fosa invoca [Pulso Abisal]! Roba 1 de energia, se cura +14 HP y causa 0 de danio a Nereida Del Abismo.
+[T13] ¡Nereida Del Abismo [Agua] ataca a Leviatán de la Fosa [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -21 HP.
+[T13] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Nereida Del Abismo [Agua]! Impacto neutro (x1.0). Escudo absorbe 6 y recibes -20 HP.
+[T14] [ESPECIAL] Nereida Del Abismo invoca [Marea Sanadora]! Roba 1 de energia, se cura +14 HP y causa 20 de danio a Leviatán de la Fosa.
+[T14] [BAJA CPU #3/3] ¡Leviatán de la Fosa [Agua] de la CPU fue derrotado!
+[T14] [FIN DE PARTIDA] ¡El equipo de CPU - Fosa Abisal fue eliminado! Vencedor: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=3 | V=3 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

@@ -11,3 +11,4 @@
 10|Cefiro Sierpe Alada|Aire|45|25|30|75|Tormenta Cortante|Ejecuta un doble impacto aereo consecutivo.
 11|Valkiria Del Huracan|Aire|50|20|30|80|Rafaga Ascendente|Dos golpes veloces con cuchillas de viento.
 12|Boreas Soberano Celeste|Aire|40|25|35|50|Ciclon Del Norte|Doble embestida critica desde las alturas.
+13|Gyarados Del Caribe|Agua|50|25|25|75|Maremoto Abisal|Invoca un tsunami colosal que drena 1 punto de energia enemiga y restaura 25% HP.

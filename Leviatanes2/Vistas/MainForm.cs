@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -108,6 +108,7 @@ namespace Leviatanes2
 
 		void Button3Click(object sender, EventArgs e)
 		{
+			SeleccionModalidad.ModoContraCpu = true;
 			Historia abrirVentana = new Historia();
 			abrirVentana.Show();
 

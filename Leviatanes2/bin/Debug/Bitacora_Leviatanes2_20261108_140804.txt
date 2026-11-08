@@ -1,0 +1,61 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 08/11/2026 14:08:04
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Black Waters
+Vencedor          : JugadorUno
+Escenario Final   : Black Waters Canyon
+Total de Turnos   : 12
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [START] Battle begins at [Black Waters Canyon]! JugadorUno sends out Zephyr Winged Serpent [AIR] vs CPU - Black Waters with Tar Leviathan [EARTH].
+[T01] [SWITCH] Zephyr Winged Serpent returns to bench and Hurricane Valkyrie [AIR] enters battle! ELEMENTAL ADVANTAGE! AIR beats EARTH (Damage x1,50 - It's super effective!)
+[T01] [CPU ATTACK] Tar Leviathan [EARTH] attacks your Hurricane Valkyrie [AIR]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 20 and you take -6 HP.
+[T02] Hurricane Valkyrie [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 25 and deals -24 HP.
+[T02] [CPU ATTACK] Tar Leviathan [EARTH] attacks your Hurricane Valkyrie [AIR]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 0 and you take -22 HP.
+[T03] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T03] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T03] Hurricane Valkyrie [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -49 HP.
+[T03] [CPU KO] Enemy Tar Leviathan fainted.
+[T03] [CPU ENTRY] CPU sends out Oil Well Pyromancer [FIRE].
+[T03] [CPU ATTACK] Oil Well Pyromancer [FIRE] attacks your Hurricane Valkyrie [AIR]! It's super effective! (CPU Elemental Advantage x1.5) Shield absorbs 6 and you take -49 HP.
+[T03] [PLAYER KO] Hurricane Valkyrie fainted in battle.
+[T03] [ENTRY] Abyssal Nereid [WATER] enters the battlefield.
+[T04] [SWITCH] Abyssal Nereid returns to bench and Ignis Pyric Leviathan [FIRE] enters battle! NEUTRAL ELEMENT: FIRE vs FIRE (Normal Damage x1.00)
+[T04] [CPU ATTACK] Oil Well Pyromancer [FIRE] attacks your Ignis Pyric Leviathan [FIRE]! Neutral hit (x1.0). Shield absorbs 20 and you take -17 HP.
+[T05] Ignis Pyric Leviathan [FIRE] attacks Oil Well Pyromancer [FIRE]! Neutral elemental hit (x1.0). Shield absorbs 20 and deals -18 HP.
+[T05] [CPU SPECIAL] Oil Well Pyromancer uses [Crude Ignition]! Deals -28 HP to Ignis Pyric Leviathan.
+[T05] [PLAYER KO] Ignis Pyric Leviathan fainted in battle.
+[T05] [ENTRY] Basalt Golem [EARTH] enters the battlefield.
+[T06] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T06] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T06] Basalt Golem [EARTH] attacks Oil Well Pyromancer [FIRE]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -22 HP.
+[T06] [CPU KO] Enemy Oil Well Pyromancer fainted.
+[T06] [CPU ENTRY] CPU sends out Corrupted Hydra [WATER].
+[T06] [CPU ATTACK] Corrupted Hydra [WATER] attacks your Basalt Golem [EARTH]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 20 and you take -0 HP.
+[T07] Basalt Golem [EARTH] attacks Corrupted Hydra [WATER]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 20 and deals -4 HP.
+[T07] [CPU ATTACK] Corrupted Hydra [WATER] attacks your Basalt Golem [EARTH]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 16 and you take -4 HP.
+[T08] [SWITCH] Basalt Golem returns to bench and Abyssal Nereid [WATER] enters battle! NEUTRAL ELEMENT: WATER vs WATER (Normal Damage x1.00)
+[T08] [CPU SPECIAL] Corrupted Hydra uses [Dark Drain]! Deals -5 HP to Abyssal Nereid.
+[T09] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T09] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T09] Abyssal Nereid [WATER] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -17 HP.
+[T09] [CPU ATTACK] Corrupted Hydra [WATER] attacks your Abyssal Nereid [WATER]! Neutral hit (x1.0). Shield absorbs 6 and you take -22 HP.
+[T10] Abyssal Nereid [WATER] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -17 HP.
+[T10] [CPU SPECIAL] Corrupted Hydra uses [Dark Drain]! Deals -30 HP to Abyssal Nereid.
+[T11] Abyssal Nereid [WATER] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -16 HP.
+[T11] [CPU ATTACK] Corrupted Hydra [WATER] attacks your Abyssal Nereid [WATER]! Neutral hit (x1.0). Shield absorbs 0 and you take -28 HP.
+[T11] [PLAYER KO] Abyssal Nereid fainted in battle.
+[T11] [ENTRY] Zephyr Winged Serpent [AIR] enters the battlefield.
+[T12] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T12] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T12] Zephyr Winged Serpent [AIR] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -32 HP.
+[T12] [CPU KO] Enemy Corrupted Hydra fainted.
+[T12] [MATCH OVER] CPU - Black Waters's team was eliminated! Winner: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0,00%
+ - CPU - Black Waters: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

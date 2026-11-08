@@ -1,0 +1,65 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 08/11/2026 14:06:57
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Abismo Oceanico
+Total de Turnos   : 13
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [INICIO] ¡Comienza la batalla en [Abismo Oceanico]! JugadorUno envía a Ignis Leviatan Pirico [Fuego] vs CPU - Fosa Abisal con Leviatán de la Fosa [Agua].
+[T01] [CAMBIO DE PERSONAJE] ¡Regresa Ignis Leviatan Pirico a la banca y entra Golem De Basalto [Tierra] al combate! ¡VENTAJA ELEMENTAL! TIERRA vence a AGUA (Daño x1,50 - ¡Es súper eficaz!)
+[T01] [CPU RELEVO] ¡La CPU retira a Leviatán de la Fosa por desventaja elemental y envía a Sierpe De Remolino [Aire]!
+[T02] ¡Golem De Basalto [Tierra] ataca a Sierpe De Remolino [Aire]! No es muy eficaz... (Desventaja Elemental x0.75) Escudo absorbe 12 y causa -0 HP.
+[T02] [CPU ATACA] ¡Sierpe De Remolino [Aire] ataca a tu Golem De Basalto [Tierra]! ¡Es súper eficaz! (Ventaja Elemental CPU x1.5) Escudo absorbe 30 y recibes -19 HP.
+[T03] [TERREMOTO INVERTIDO - Empatia 90>=65] Golem De Basalto armoniza con Abismo Oceanico: +9 HP y +6 Escudo!
+[T03] [TERREMOTO INVERTIDO - Empatia 65>=65] Sierpe De Remolino armoniza con Abismo Oceanico: +7 HP y +6 Escudo!
+[T03] ¡Golem De Basalto [Tierra] ataca a Sierpe De Remolino [Aire]! No es muy eficaz... (Desventaja Elemental x0.75) Escudo absorbe 9 y causa -0 HP.
+[T03] [CPU ESPECIAL] Sierpe De Remolino ejecuta [Ráfaga De Fosa]! Doble impacto aereo que inflige 70 HP en total a Golem De Basalto. ¡Súper eficaz (x1.5)!
+[T03] [BAJA JUGADOR] Golem De Basalto cayó en combate.
+[T03] [ENTRADA] Entra al campo Nereida Del Abismo [Agua].
+[T04] ¡Nereida Del Abismo [Agua] ataca a Sierpe De Remolino [Aire]! Impacto elemental neutro (x1.0). Escudo absorbe 5 y causa -23 HP.
+[T04] [CPU ATACA] ¡Sierpe De Remolino [Aire] ataca a tu Nereida Del Abismo [Agua]! Impacto neutro (x1.0). Escudo absorbe 25 y recibes -7 HP.
+[T05] [CAMBIO DE PERSONAJE] ¡Regresa Nereida Del Abismo a la banca y entra Ignis Leviatan Pirico [Fuego] al combate! ¡VENTAJA ELEMENTAL! FUEGO vence a AIRE (Daño x1,50 - ¡Es súper eficaz!)
+[T05] [CPU ESPECIAL] Sierpe De Remolino ejecuta [Ráfaga De Fosa]! Doble impacto aereo que inflige 18 HP en total a Ignis Leviatan Pirico. (No muy eficaz x0.75)
+[T06] [TERREMOTO CATASTROFICO] Ignis Leviatan Pirico pierde su escudo y sufre -7 HP por el sismo!
+[T06] [TERREMOTO INVERTIDO - Empatia 65>=65] Sierpe De Remolino armoniza con Abismo Oceanico: +8 HP y +6 Escudo!
+[T06] ¡Ignis Leviatan Pirico [Fuego] ataca a Sierpe De Remolino [Aire]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 6 y causa -54 HP.
+[T06] [BAJA CPU] Sierpe De Remolino enemigo fue debilitado.
+[T06] [ENTRADA CPU] La CPU envía a Ignis De La Grieta [Fuego].
+[T06] [CPU ATACA] ¡Ignis De La Grieta [Fuego] ataca a tu Ignis Leviatan Pirico [Fuego]! Impacto neutro (x1.0). Escudo absorbe 0 y recibes -33 HP.
+[T06] [BAJA JUGADOR] Ignis Leviatan Pirico cayó en combate.
+[T06] [ENTRADA] Entra al campo Cefiro Sierpe Alada [Aire].
+[T07] [CAMBIO DE PERSONAJE] ¡Regresa Cefiro Sierpe Alada a la banca y entra Gyarados Del Caribe [Agua] al combate! ¡VENTAJA ELEMENTAL! AGUA vence a FUEGO (Daño x1,50 - ¡Es súper eficaz!)
+[T07] [CPU ATACA] ¡Ignis De La Grieta [Fuego] ataca a tu Gyarados Del Caribe [Agua]! No es muy eficaz... (Desventaja Elemental CPU x0.75) Escudo absorbe 24 y recibes -0 HP.
+[T08] ¡Gyarados Del Caribe [Agua] ataca a Ignis De La Grieta [Fuego]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 20 y causa -27 HP.
+[T08] [CPU ESPECIAL] Ignis De La Grieta desata [Llamarada Submarina]! Ignora el escudo y causa 38 de danio perforante a Gyarados Del Caribe. (No muy eficaz x0.75)
+[T09] [TERREMOTO INVERTIDO - Empatia 75>=65] Gyarados Del Caribe armoniza con Abismo Oceanico: +8 HP y +6 Escudo!
+[T09] [TERREMOTO CATASTROFICO] Ignis De La Grieta pierde su escudo y sufre -7 HP por el sismo!
+[T09] ¡Gyarados Del Caribe [Agua] ataca a Ignis De La Grieta [Fuego]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 0 y causa -47 HP.
+[T09] [BAJA CPU] Ignis De La Grieta enemigo fue debilitado.
+[T09] [ENTRADA CPU] La CPU envía a Leviatán de la Fosa [Agua].
+[T09] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Gyarados Del Caribe [Agua]! Impacto neutro (x1.0). Escudo absorbe 7 y recibes -24 HP.
+[T09] [BAJA JUGADOR] Gyarados Del Caribe cayó en combate.
+[T09] [ENTRADA] Entra al campo Nereida Del Abismo [Agua].
+[T10] ¡Nereida Del Abismo [Agua] ataca a Leviatán de la Fosa [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 20 y causa -8 HP.
+[T10] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Nereida Del Abismo [Agua]! Impacto neutro (x1.0). Escudo absorbe 0 y recibes -31 HP.
+[T11] ¡Nereida Del Abismo [Agua] ataca a Leviatán de la Fosa [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -28 HP.
+[T11] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Nereida Del Abismo [Agua]! Impacto neutro (x1.0). Escudo absorbe 0 y recibes -31 HP.
+[T11] [BAJA JUGADOR] Nereida Del Abismo cayó en combate.
+[T11] [ENTRADA] Entra al campo Cefiro Sierpe Alada [Aire].
+[T12] [TERREMOTO INVERTIDO - Empatia 75>=65] Cefiro Sierpe Alada armoniza con Abismo Oceanico: +7 HP y +6 Escudo!
+[T12] [TERREMOTO INVERTIDO - Empatia 75>=65] Leviatán de la Fosa armoniza con Abismo Oceanico: +9 HP y +6 Escudo!
+[T12] ¡Cefiro Sierpe Alada [Aire] ataca a Leviatán de la Fosa [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 6 y causa -27 HP.
+[T12] [CPU ATACA] ¡Leviatán de la Fosa [Agua] ataca a tu Cefiro Sierpe Alada [Aire]! Impacto neutro (x1.0). Escudo absorbe 31 y recibes -0 HP.
+[T13] ¡Cefiro Sierpe Alada [Aire] ataca a Leviatán de la Fosa [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -33 HP.
+[T13] [BAJA CPU] Leviatán de la Fosa enemigo fue debilitado.
+[T13] [FIN DE PARTIDA] ¡El equipo de CPU - Fosa Abisal fue eliminado! Vencedor: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=1 | V=1 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

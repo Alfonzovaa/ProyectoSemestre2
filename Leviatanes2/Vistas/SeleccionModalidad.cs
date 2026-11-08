@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -495,9 +495,10 @@ namespace Leviatanes2
 
             Perfil.MazoSeleccionado.Clear();
             int TotalCatalogo = CatalogoDisponible.Count;
+            // Seleccionar saltando de 3 en 3 para incluir siempre los 4 elementos (Fuego, Agua, Tierra, Aire)
             for (int I = 0; I < 5 && I < TotalCatalogo; I++)
             {
-                int Indice = (DesplazamientoInicial + I) % TotalCatalogo;
+                int Indice = (DesplazamientoInicial + (I * 3)) % TotalCatalogo;
                 Perfil.MazoSeleccionado.Add(CatalogoDisponible[Indice].ClonarParaBatalla());
             }
         }
@@ -549,6 +550,18 @@ namespace Leviatanes2
         // =====================================================================
         private void BtnIrBatallaClick(object sender, EventArgs e)
         {
+            // Validar que solo se pueda entrar a la batalla en modo Jugador vs CPU
+            if (!rbModoCpu.Checked)
+            {
+                MessageBox.Show(
+                    "Esta batalla del Modo Historia está habilitada únicamente para la modalidad Jugador vs CPU.\n\n" +
+                    "Por favor selecciona la opción 'MODO ENTRENAMIENTO (Jugador 1 vs CPU IA)' para continuar.",
+                    "Modalidad Jugador vs CPU Requerida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
             // Sincronizar nombres escritos en las cajas de texto antes de validar
             CargarPerfilesEntrenadoresDesdeTxt(false);
 
