@@ -444,8 +444,15 @@ namespace Leviatanes2
 		void BtnIrSeleccionModalidadClick(object sender, EventArgs e)
 		{
 			SeleccionModalidad VentanaModalidad = new SeleccionModalidad();
+			VentanaModalidad.FormClosed += (s, args) => Application.Exit();
 			VentanaModalidad.Show();
 			this.Hide();
+		}
+
+		protected override void OnFormClosed(FormClosedEventArgs e)
+		{
+			base.OnFormClosed(e);
+			Application.Exit();
 		}
 
 		void VolverMenuClick(object sender, EventArgs e)

@@ -606,6 +606,7 @@ namespace Leviatanes2
                 MessageBoxIcon.Information);
 
             Batalla1 VentanaBatalla = new Batalla1();
+            VentanaBatalla.FormClosed += (s, args) => Application.Exit();
             VentanaBatalla.Show();
             this.Hide();
         }
@@ -614,8 +615,15 @@ namespace Leviatanes2
         {
             CerrarConexionesLanPrevias();
             MainForm MenuPrincipal = new MainForm();
+            MenuPrincipal.FormClosed += (s, args) => Application.Exit();
             MenuPrincipal.Show();
             this.Hide();
+        }
+
+        private void SeleccionModalidadFormClosed(object sender, FormClosedEventArgs e)
+        {
+            CerrarConexionesLanPrevias();
+            Application.Exit();
         }
     }
 }

@@ -832,6 +832,7 @@ namespace Leviatanes2
 			this.Name = "SeleccionModalidad";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Arena Elemental GBA - Seleccion de Modalidad y Equipos";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SeleccionModalidadFormClosed);
 			this.pnlHeaderGba.ResumeLayout(false);
 			this.pnlMarcoModalidad.ResumeLayout(false);
 			this.pnlInteriorModalidad.ResumeLayout(false);

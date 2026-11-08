@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: Alfonzovaa
  * Date: 30/10/2026
@@ -251,6 +251,12 @@ namespace Leviatanes2
 			abrirVentana.FormClosed += (s, args) => Application.Exit();
 
 			this.Hide();
+		}
+
+		protected override void OnFormClosed(FormClosedEventArgs e)
+		{
+			base.OnFormClosed(e);
+			Application.Exit();
 		}
 		
 		void DgvHistorialPartidasCellContentClick(object sender, DataGridViewCellEventArgs e)
