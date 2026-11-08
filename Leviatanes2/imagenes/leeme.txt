@@ -1,0 +1,12 @@
+Carpeta de imágenes del proyecto Leviatanes 2
+==============================================
+Coloca aquí las imágenes correspondientes a cada capítulo de la historia:
+- capitulo1.png
+- capitulo2.png
+- capitulo3.png
+- capitulo4.png
+- capitulo5.png
+- capitulo6.png
+
+Las dimensiones recomendadas son aproximadamente 400x350 píxeles o superior (formato PNG o JPG).
+

@@ -1,0 +1,4 @@
+Carpeta de imágenes en bin\Debug
+Coloca aquí o en la carpeta 'imagenes' de la raíz del proyecto tus imágenes:
+capitulo1.png, capitulo2.png, capitulo3.png, capitulo4.png, capitulo5.png, capitulo6.png
+

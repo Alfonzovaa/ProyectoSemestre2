@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -605,9 +605,9 @@ namespace Leviatanes2
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
-            Batalla1 VentanaBatalla = new Batalla1();
-            VentanaBatalla.FormClosed += (s, args) => Application.Exit();
-            VentanaBatalla.Show();
+            Historia VentanaHistoria = new Historia();
+            VentanaHistoria.FormClosed += (s, args) => Application.Exit();
+            VentanaHistoria.Show();
             this.Hide();
         }
 

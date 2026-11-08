@@ -108,7 +108,12 @@ namespace Leviatanes2
 
 		void Button3Click(object sender, EventArgs e)
 		{
-			Application.Exit();
+			Historia abrirVentana = new Historia();
+			abrirVentana.Show();
+
+			abrirVentana.FormClosed += (s, args) => Application.Exit();
+
+			this.Hide();
 		}
 	}
 }

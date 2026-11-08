@@ -1,14 +1,14 @@
 ﻿/*
- * Created by SharpDevelop.
- * User: Alfonzovaa
- * Date: 30/10/2026
- * Time: 11:05 a. m.
+ * Creado por SharpDevelop.
+ * Usuario: Alfonzo
+ * Fecha: 11/8/2026
+ * Hora: 10:33 AM
  * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 namespace Leviatanes2
 {
-	partial class Batalla1
+	partial class Batalla
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -37,11 +37,11 @@ namespace Leviatanes2
 		private void InitializeComponent()
 		{
 			// 
-			// Batalla1
+			// Batalla
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "Batalla1";
-			this.Name = "Batalla1";
+			this.Text = "Batalla";
+			this.Name = "Batalla";
 		}
 	}
 }
