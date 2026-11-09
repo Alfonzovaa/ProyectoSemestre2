@@ -79,14 +79,16 @@ namespace Leviatanes2
 					break;
 
 				case 3:
-					lblTitulo.Text = "RETO 3: INDETERMINACIÓN 0/0";
-					lblEnunciado.Text = "Reto 3: Indeterminación 0/0\n\n" +
-					                    "Cuando la sustitución directa produce 0/0, factoriza la diferencia de cuadrados para simplificar:\n\n" +
-					                    "    Calcula:  lim (x -> 2) de (x² - 4) / (x - 2)\n\n" +
-					                    "Nota: Escribe el resultado numérico en la casilla y presiona Comprobar.";
-					respuestaCorrectaTexto = "4";
-					ActualizarImagen("Ejercicio3");
-					break;
+					lblTitulo.Text = "CHALLENGE 3: INDETERMINATE FORM 0/0";
+					lblEnunciado.Text = "Challenge 3: Indeterminate form 0/0\n\n" +
+                                        "When direct substitution yields 0/0, factor the difference of squares to simplify:\n\n" +
+                                        "    Calculate:  lim (x -> 2) of (x² - 4) / (x - 2)\n\n" +
+                                        "Note: Type the numerical result in the box and press Check.";
+                    respuestaCorrectaTexto = "4";
+                    ActualizarImagen("Ejercicio3");
+
+                    break;
+
 
 				case 4:
 					lblTitulo.Text = "RETO 4: DERIVADA (REGLA DE LA POTENCIA)";

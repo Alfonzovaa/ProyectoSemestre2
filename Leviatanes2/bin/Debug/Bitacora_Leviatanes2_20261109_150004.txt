@@ -1,0 +1,70 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 09/11/2026 15:00:04
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Núcleo Primordial
+Vencedor          : JugadorUno
+Escenario Final   : Pozo Primordial Activo
+Total de Turnos   : 16
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [INICIO] ¡Comienza la batalla en [Pozo Primordial Activo]! JugadorUno envía a Ignis Leviatan Pirico [Fuego] vs CPU - Núcleo Primordial con Leviatán Primordial [Fuego].
+[T01] ¡Ignis Leviatan Pirico [Fuego] ataca a Leviatán Primordial [Fuego]! Impacto elemental neutro (x1.0). Escudo absorbe 20 y causa -23 HP.
+[T01] [CPU ATACA] ¡Leviatán Primordial [Fuego] ataca a tu Ignis Leviatan Pirico [Fuego]! Impacto neutro (x1.0). Escudo absorbe 20 y recibes -28 HP.
+[T02] ¡Ignis Leviatan Pirico [Fuego] ataca a Leviatán Primordial [Fuego]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -48 HP.
+[T02] [BAJA CPU #1/4] ¡Leviatán Primordial [Fuego] de la CPU fue derrotado!
+[T02] [ENTRADA CPU] La CPU envía a Titán Del Pozo Negro [Tierra].
+[T03] [TERREMOTO CATASTROFICO] Ignis Leviatan Pirico pierde su escudo y sufre -7 HP por el sismo!
+[T03] [TERREMOTO INVERTIDO - Empatia 80>=70] Titán Del Pozo Negro armoniza con Pozo Primordial Activo: +8 HP y +6 Escudo!
+[T03] ¡Ignis Leviatan Pirico [Fuego] ataca a Titán Del Pozo Negro [Tierra]! Impacto elemental neutro (x1.0). Escudo absorbe 31 y causa -17 HP.
+[T03] [CPU ATACA] ¡Titán Del Pozo Negro [Tierra] ataca a tu Ignis Leviatan Pirico [Fuego]! Impacto neutro (x1.0). Escudo absorbe 0 y recibes -22 HP.
+[T03] [BAJA EN TU EQUIPO] ¡Tu Ignis Leviatan Pirico [Fuego] cayó derrotado!
+[T03] [ENTRADA] Entra a combatir Nereida Del Abismo [Agua].
+[T04] ¡Nereida Del Abismo [Agua] ataca a Titán Del Pozo Negro [Tierra]! No es muy eficaz... (Desventaja Elemental x0.75) Escudo absorbe 0 y causa -16 HP.
+[T04] [CPU ESPECIAL] Titán Del Pozo Negro activa [Aplastamiento Abisal]! Sube su escudo a 25 y aplasta a Nereida Del Abismo causando 43 de danio neto. ¡Súper eficaz (x1.5)!
+[T05] [ESPECIAL] Nereida Del Abismo invoca [Marea Sanadora]! Roba 1 de energia, se cura +14 HP y causa 0 de danio a Titán Del Pozo Negro. (Con desventaja elemental x0.75)
+[T05] [CPU ATACA] ¡Titán Del Pozo Negro [Tierra] ataca a tu Nereida Del Abismo [Agua]! ¡Es súper eficaz! (Ventaja Elemental CPU x1.5) Escudo absorbe 0 y recibes -31 HP.
+[T05] [BAJA EN TU EQUIPO] ¡Tu Nereida Del Abismo [Agua] cayó derrotado!
+[T05] [ENTRADA] Entra a combatir Golem De Basalto [Tierra].
+[T06] [TERREMOTO INVERTIDO - Empatia 90>=70] Golem De Basalto armoniza con Pozo Primordial Activo: +9 HP y +6 Escudo!
+[T06] [TERREMOTO INVERTIDO - Empatia 80>=70] Titán Del Pozo Negro armoniza con Pozo Primordial Activo: +8 HP y +6 Escudo!
+[T06] ¡Golem De Basalto [Tierra] ataca a Titán Del Pozo Negro [Tierra]! Impacto elemental neutro (x1.0). Escudo absorbe 11 y causa -5 HP.
+[T06] [CPU ATACA] ¡Titán Del Pozo Negro [Tierra] ataca a tu Golem De Basalto [Tierra]! Impacto neutro (x1.0). Escudo absorbe 20 y recibes -0 HP.
+[T07] ¡Golem De Basalto [Tierra] ataca a Titán Del Pozo Negro [Tierra]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -13 HP.
+[T07] [CPU DEFENSA] Titán Del Pozo Negro [Tierra] refuerza su coraza y gana +11 de Escudo.
+[T08] [ESPECIAL] Golem De Basalto activa [Muralla Monolitica]! Sube su escudo a 46 y aplasta a Titán Del Pozo Negro causando 29 de danio neto.
+[T08] [BAJA CPU #2/4] ¡Titán Del Pozo Negro [Tierra] de la CPU fue derrotado!
+[T08] [ENTRADA CPU] La CPU envía a Kraken De Aguas Negras [Agua].
+[T09] [TERREMOTO INVERTIDO - Empatia 90>=70] Golem De Basalto armoniza con Pozo Primordial Activo: +9 HP y +6 Escudo!
+[T09] [TERREMOTO INVERTIDO - Empatia 75>=70] Kraken De Aguas Negras armoniza con Pozo Primordial Activo: +9 HP y +6 Escudo!
+[T09] ¡Golem De Basalto [Tierra] ataca a Kraken De Aguas Negras [Agua]! ¡Es súper eficaz! (Ventaja Elemental x1.5) Escudo absorbe 24 y causa -0 HP.
+[T09] [CPU RELEVO] ¡La CPU retira a Kraken De Aguas Negras por desventaja elemental y envía a Heraldo Del Huracán [Aire]!
+[T10] [ESPECIAL] Golem De Basalto activa [Muralla Monolitica]! Sube su escudo a 60 y aplasta a Heraldo Del Huracán causando 10 de danio neto. (Con desventaja elemental x0.75)
+[T10] [CPU ATACA] ¡Heraldo Del Huracán [Aire] ataca a tu Golem De Basalto [Tierra]! ¡Es súper eficaz! (Ventaja Elemental CPU x1.5) Escudo absorbe 53 y recibes -0 HP.
+[T11] ¡Golem De Basalto [Tierra] ataca a Heraldo Del Huracán [Aire]! No es muy eficaz... (Desventaja Elemental x0.75) Escudo absorbe 0 y causa -8 HP.
+[T11] [CPU ESPECIAL] Heraldo Del Huracán ejecuta [Doble Vendaval]! Doble impacto aereo que inflige 83 HP en total a Golem De Basalto. ¡Súper eficaz (x1.5)!
+[T11] [BAJA EN TU EQUIPO] ¡Tu Golem De Basalto [Tierra] cayó derrotado!
+[T11] [ENTRADA] Entra a combatir Cefiro Sierpe Alada [Aire].
+[T12] [TERREMOTO INVERTIDO - Empatia 75>=70] Cefiro Sierpe Alada armoniza con Pozo Primordial Activo: +7 HP y +6 Escudo!
+[T12] [TERREMOTO INVERTIDO - Empatia 70>=70] Heraldo Del Huracán armoniza con Pozo Primordial Activo: +7 HP y +6 Escudo!
+[T12] ¡Cefiro Sierpe Alada [Aire] ataca a Heraldo Del Huracán [Aire]! Impacto elemental neutro (x1.0). Escudo absorbe 6 y causa -23 HP.
+[T12] [CPU ATACA] ¡Heraldo Del Huracán [Aire] ataca a tu Cefiro Sierpe Alada [Aire]! Impacto neutro (x1.0). Escudo absorbe 31 y recibes -2 HP.
+[T13] ¡Cefiro Sierpe Alada [Aire] ataca a Heraldo Del Huracán [Aire]! Impacto elemental neutro (x1.0). Escudo absorbe 0 y causa -29 HP.
+[T13] [BAJA CPU #3/4] ¡Heraldo Del Huracán [Aire] de la CPU fue derrotado!
+[T13] [ENTRADA CPU] La CPU envía a Kraken De Aguas Negras [Agua].
+[T14] ¡Cefiro Sierpe Alada [Aire] ataca a Kraken De Aguas Negras [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 2 y causa -27 HP.
+[T14] [CPU ESPECIAL] Kraken De Aguas Negras invoca [Marea Corrupta]! Roba 1 de energia, se cura +14 HP y causa 25 de danio a Cefiro Sierpe Alada.
+[T15] [TERREMOTO INVERTIDO - Empatia 75>=70] Cefiro Sierpe Alada armoniza con Pozo Primordial Activo: +7 HP y +6 Escudo!
+[T15] [TERREMOTO INVERTIDO - Empatia 75>=70] Kraken De Aguas Negras armoniza con Pozo Primordial Activo: +9 HP y +6 Escudo!
+[T15] ¡Cefiro Sierpe Alada [Aire] ataca a Kraken De Aguas Negras [Agua]! Impacto elemental neutro (x1.0). Escudo absorbe 6 y causa -22 HP.
+[T15] [CPU ATACA] ¡Kraken De Aguas Negras [Agua] ataca a tu Cefiro Sierpe Alada [Aire]! Impacto neutro (x1.0). Escudo absorbe 6 y recibes -21 HP.
+[T16] [ESPECIAL] Cefiro Sierpe Alada ejecuta [Tormenta Cortante]! Doble impacto aereo que inflige 52 HP en total a Kraken De Aguas Negras.
+[T16] [BAJA CPU #4/4] ¡Kraken De Aguas Negras [Agua] de la CPU fue derrotado!
+[T16] [FIN DE PARTIDA] ¡El equipo de CPU - Núcleo Primordial fue eliminado! Vencedor: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=18 | V=18 | D=0 | Exito=100,00%
+ - CPU - Núcleo Primordial: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

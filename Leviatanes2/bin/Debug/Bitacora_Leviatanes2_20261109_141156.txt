@@ -1,0 +1,49 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 09/11/2026 14:11:56
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Black Waters
+Vencedor          : JugadorUno
+Escenario Final   : Black Waters Canyon
+Total de Turnos   : 11
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [START] Battle begins at [Black Waters Canyon]! JugadorUno sends out Zephyr Winged Serpent [AIR] vs CPU - Black Waters with Tar Leviathan [EARTH].
+[T01] Zephyr Winged Serpent [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 25 and deals -22 HP.
+[T01] [CPU SWITCH] CPU withdraws Tar Leviathan due to elemental disadvantage and sends out Oil Well Pyromancer [FIRE]!
+[T02] Zephyr Winged Serpent [AIR] attacks Oil Well Pyromancer [FIRE]! It's not very effective... (Elemental Disadvantage x0.75) Shield absorbs 20 and deals -4 HP.
+[T02] [CPU ATTACK] Oil Well Pyromancer [FIRE] attacks your Zephyr Winged Serpent [AIR]! It's super effective! (CPU Elemental Advantage x1.5) Shield absorbs 25 and you take -32 HP.
+[T03] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T03] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T03] [SWITCH] Zephyr Winged Serpent returns to bench and Abyssal Nereid [WATER] enters battle! ELEMENTAL ADVANTAGE! WATER beats FIRE (Damage x1,50 - It's super effective!)
+[T03] [CPU SPECIAL] Oil Well Pyromancer uses [Crude Ignition]! Deals -38 HP to Abyssal Nereid. (Not very effective x0.75)
+[T04] Abyssal Nereid [WATER] attacks Oil Well Pyromancer [FIRE]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -29 HP.
+[T04] [CPU DEFEND] Oil Well Pyromancer [FIRE] reinforces its armor and gains +9 Shield.
+[T05] Abyssal Nereid [WATER] attacks Oil Well Pyromancer [FIRE]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 9 and deals -20 HP.
+[T05] [CPU DEFEATED #1/3] Enemy Oil Well Pyromancer [FIRE] was defeated!
+[T05] [CPU ENTRY] CPU sends out Corrupted Hydra [WATER].
+[T06] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T06] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T06] [SWITCH] Abyssal Nereid returns to bench and Basalt Golem [EARTH] enters battle! ELEMENTAL ADVANTAGE! EARTH beats WATER (Damage x1,50 - It's super effective!)
+[T06] [CPU ATTACK] Corrupted Hydra [WATER] attacks your Basalt Golem [EARTH]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 20 and you take -0 HP.
+[T07] Basalt Golem [EARTH] attacks Corrupted Hydra [WATER]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -24 HP.
+[T07] [CPU SPECIAL] Corrupted Hydra uses [Dark Drain]! Deals -20 HP to Basalt Golem. (Not very effective x0.75)
+[T08] Basalt Golem [EARTH] attacks Corrupted Hydra [WATER]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -22 HP.
+[T08] [CPU DEFEND] Corrupted Hydra [WATER] reinforces its armor and gains +9 Shield.
+[T09] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T09] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T09] Basalt Golem [EARTH] attacks Corrupted Hydra [WATER]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -23 HP.
+[T09] [CPU DEFEATED #2/3] Enemy Corrupted Hydra [WATER] was defeated!
+[T09] [CPU ENTRY] CPU sends out Tar Leviathan [EARTH].
+[T10] [SWITCH] Basalt Golem returns to bench and Hurricane Valkyrie [AIR] enters battle! ELEMENTAL ADVANTAGE! AIR beats EARTH (Damage x1,50 - It's super effective!)
+[T10] [CPU ATTACK] Tar Leviathan [EARTH] attacks your Hurricane Valkyrie [AIR]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 20 and you take -2 HP.
+[T11] Hurricane Valkyrie [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -49 HP.
+[T11] [CPU DEFEATED #3/3] Enemy Tar Leviathan [EARTH] was defeated!
+[T11] [MATCH OVER] CPU - Black Waters's team was eliminated! Winner: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0,00%
+ - CPU - Black Waters: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

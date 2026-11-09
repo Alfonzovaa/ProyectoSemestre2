@@ -1,0 +1,43 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 09/11/2026 14:56:09
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Black Waters
+Vencedor          : JugadorUno
+Escenario Final   : Black Waters Canyon
+Total de Turnos   : 8
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [START] Battle begins at [Black Waters Canyon]! JugadorUno sends out Zephyr Winged Serpent [AIR] vs CPU - Black Waters with Tar Leviathan [EARTH].
+[T01] Zephyr Winged Serpent [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 25 and deals -22 HP.
+[T01] [CPU ATTACK] Tar Leviathan [EARTH] attacks your Zephyr Winged Serpent [AIR]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 22 and you take -0 HP.
+[T02] Zephyr Winged Serpent [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -47 HP.
+[T02] [CPU DEFEATED #1/3] Enemy Tar Leviathan [EARTH] was defeated!
+[T02] [CPU ENTRY] CPU sends out Oil Well Pyromancer [FIRE].
+[T03] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T03] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T03] [SWITCH] Zephyr Winged Serpent returns to bench and Abyssal Nereid [WATER] enters battle! ELEMENTAL ADVANTAGE! WATER beats FIRE (Damage x1,50 - It's super effective!)
+[T03] [CPU ATTACK] Oil Well Pyromancer [FIRE] attacks your Abyssal Nereid [WATER]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 25 and you take -4 HP.
+[T04] Abyssal Nereid [WATER] attacks Oil Well Pyromancer [FIRE]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -29 HP.
+[T04] [CPU SPECIAL] Oil Well Pyromancer uses [Crude Ignition]! Deals -38 HP to Abyssal Nereid. (Not very effective x0.75)
+[T05] [SPECIAL] Abyssal Nereid unleashes [Healing Tide] on Oil Well Pyromancer! Deals -9 HP, heals +14 HP. With ELEMENTAL ADVANTAGE (x1.5)!
+[T05] [CPU DEFEATED #2/3] Enemy Oil Well Pyromancer [FIRE] was defeated!
+[T05] [CPU ENTRY] CPU sends out Corrupted Hydra [WATER].
+[T06] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T06] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T06] Abyssal Nereid [WATER] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -18 HP.
+[T06] [CPU ATTACK] Corrupted Hydra [WATER] attacks your Abyssal Nereid [WATER]! Neutral hit (x1.0). Shield absorbs 6 and you take -23 HP.
+[T07] Abyssal Nereid [WATER] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -18 HP.
+[T07] [CPU SPECIAL] Corrupted Hydra uses [Dark Drain]! Deals -12 HP to Abyssal Nereid.
+[T07] [PLAYER KO] Your Abyssal Nereid [WATER] was defeated!
+[T07] [ENTRY] Basalt Golem [EARTH] enters the battlefield.
+[T08] Basalt Golem [EARTH] attacks Corrupted Hydra [WATER]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -26 HP.
+[T08] [CPU DEFEATED #3/3] Enemy Corrupted Hydra [WATER] was defeated!
+[T08] [MATCH OVER] CPU - Black Waters's team was eliminated! Winner: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0,00%
+ - CPU - Black Waters: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================
