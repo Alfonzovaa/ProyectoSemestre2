@@ -1,7 +1,8 @@
-Carpeta de imágenes del Modo Historia - Leviatanes 2
-=====================================================
-Coloca aquí las imágenes correspondientes a cada capítulo:
+Carpeta de imágenes de Leviatanes 2 (Historia y Retos de Cálculo)
+===================================================================
+Coloca aquí las imágenes correspondientes a los capítulos y ejercicios:
 
+--- MODO HISTORIA ---
 Capítulo 1: capitulo1.png  (o capitulo1.jpg / El Despertar en la Fosa.png)
 Capítulo 2: capitulo2.png  (o capitulo2.jpg / Las Aguas Negras.png)
 Capítulo 3: capitulo3.png  (o capitulo3.jpg / El Mar Espejo.png)
@@ -9,5 +10,11 @@ Capítulo 4: capitulo4.png  (o capitulo4.jpg / La Revelación del Origen.png)
 Capítulo 5: capitulo5.png  (o capitulo5.jpg / El Núcleo de la Podredumbre.png)
 Capítulo 6: capitulo6.png  (o capitulo6.jpg / El Limpie del Caribe.png)
 
-El formulario Historia.cs cargará exactamente la imagen que coloques aquí sin filtros ni modificaciones.
+--- RETOS DE CÁLCULO (después de cada batalla) ---
+Ejercicio 1: Ejercicio1.png (o Ejercicio1.jpg)
+Ejercicio 2: Ejercicio2.png (o Ejercicio2.jpg)
+Ejercicio 3: Ejercicio3.png (o Ejercicio3.jpg)
+Ejercicio 4: Ejercicio4.png (o Ejercicio4.jpg)
+Ejercicio 5: Ejercicio5.png (o Ejercicio5.jpg)
+
 Formatos soportados: .png, .jpg, .jpeg, .bmp, .gif.

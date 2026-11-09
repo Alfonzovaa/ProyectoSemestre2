@@ -237,18 +237,17 @@ namespace Leviatanes2
 
 			if (this.button1 != null)
 			{
-				int siguienteCapitulo = this.numeroBatalla + 1;
 				this.button1.Enabled = true;
 				this.button1.BackColor = Color.Gold;
 				this.button1.ForeColor = Color.Black;
 
 				if (this.esIngles)
 				{
-					this.button1.Text = "Continue to Chapter " + siguienteCapitulo + " ▶";
+					this.button1.Text = "Continue to Challenge " + this.numeroBatalla + " ▶";
 				}
 				else
 				{
-					this.button1.Text = "Continuar al Cap. " + siguienteCapitulo + " ▶";
+					this.button1.Text = "Continuar a Reto " + this.numeroBatalla + " ▶";
 				}
 			}
 		}
@@ -1127,13 +1126,12 @@ namespace Leviatanes2
 			tmrTurnoCpu.Stop();
 			tmrPausaDerrota.Stop();
 
-			int siguienteCapitulo = this.numeroBatalla + 1;
-
-			if (siguienteCapitulo <= 6)
+			// Después de cada batalla (1 a 5), se abre el formulario Calculo correspondiente
+			if (this.numeroBatalla >= 1 && this.numeroBatalla <= 5)
 			{
-				Historia ventanaHistoria = new Historia(siguienteCapitulo);
-				ventanaHistoria.FormClosed += (s, args) => Application.Exit();
-				ventanaHistoria.Show();
+				Calculo ventanaCalculo = new Calculo(this.numeroBatalla);
+				ventanaCalculo.FormClosed += (s, args) => Application.Exit();
+				ventanaCalculo.Show();
 				this.Hide();
 			}
 			else

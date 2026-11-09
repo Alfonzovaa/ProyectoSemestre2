@@ -1,0 +1,39 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 09/11/2026 10:35:15
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Black Waters
+Vencedor          : JugadorUno
+Escenario Final   : Black Waters Canyon
+Total de Turnos   : 7
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+[T01] [START] Battle begins at [Black Waters Canyon]! JugadorUno sends out Zephyr Winged Serpent [AIR] vs CPU - Black Waters with Tar Leviathan [EARTH].
+[T01] [SWITCH] Zephyr Winged Serpent returns to bench and Hurricane Valkyrie [AIR] enters battle! ELEMENTAL ADVANTAGE! AIR beats EARTH (Damage x1.50 - It's super effective!)
+[T01] [CPU ATTACK] Tar Leviathan [EARTH] attacks your Hurricane Valkyrie [AIR]! Not very effective... (CPU Elemental Disadvantage x0.75) Shield absorbs 20 and you take -6 HP.
+[T02] Hurricane Valkyrie [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 25 and deals -24 HP.
+[T02] [CPU SWITCH] CPU withdraws Tar Leviathan due to elemental disadvantage and sends out Oil Well Pyromancer [FIRE]!
+[T03] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T03] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T03] Hurricane Valkyrie [AIR] attacks Oil Well Pyromancer [FIRE]! It's not very effective... (Elemental Disadvantage x0.75) Shield absorbs 0 and deals -24 HP.
+[T03] [CPU DEFEND] Oil Well Pyromancer [FIRE] reinforces its armor and gains +9 Shield.
+[T04] Hurricane Valkyrie [AIR] attacks Oil Well Pyromancer [FIRE]! It's not very effective... (Elemental Disadvantage x0.75) Shield absorbs 9 and deals -15 HP.
+[T04] [CPU DEFEATED #1/3] Enemy Oil Well Pyromancer [FIRE] was defeated!
+[T04] [CPU ENTRY] CPU sends out Corrupted Hydra [WATER].
+[T05] Hurricane Valkyrie [AIR] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 20 and deals -13 HP.
+[T05] [CPU ATTACK] Corrupted Hydra [WATER] attacks your Hurricane Valkyrie [AIR]! Neutral hit (x1.0). Shield absorbs 6 and you take -23 HP.
+[T06] [EARTHQUAKE EVENT] Seismic wave hits the arena!
+[T06] [EARTHQUAKE EVENT] CPU is shaken by the tremor!
+[T06] Hurricane Valkyrie [AIR] attacks Corrupted Hydra [WATER]! Neutral elemental hit (x1.0). Shield absorbs 0 and deals -33 HP.
+[T06] [CPU DEFEATED #2/3] Enemy Corrupted Hydra [WATER] was defeated!
+[T06] [CPU ENTRY] CPU sends out Tar Leviathan [EARTH].
+[T07] Hurricane Valkyrie [AIR] attacks Tar Leviathan [EARTH]! It's super effective! (Elemental Advantage x1.5) Shield absorbs 0 and deals -49 HP.
+[T07] [CPU DEFEATED #3/3] Enemy Tar Leviathan [EARTH] was defeated!
+[T07] [MATCH OVER] CPU - Black Waters's team was eliminated! Winner: JugadorUno.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0.00%
+ - CPU - Black Waters: PJ=0 | V=0 | D=0 | Exito=0.00%
+======================================================================

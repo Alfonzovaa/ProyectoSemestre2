@@ -1,6 +1,9 @@
 ﻿# IdJugador|NombreUsuario|PartidasJugadas|Victorias|Derrotas|PorcentajeExito
-1|JugadorUno|7|7|0|100,00
-2|JugadorDos|0|0|0|0,00
-3|CPU_Leviatan|0|0|0|0,00
-4|CPU - Fosa Abisal|5|0|5|0,00
-5|CPU - Black Waters|2|0|2|0,00
+1|JugadorUno|15|15|0|100.00
+2|JugadorDos|0|0|0|0.00
+3|CPU_Leviatan|0|0|0|0.00
+4|CPU - Fosa Abisal|9|0|9|0.00
+5|CPU - Black Waters|3|0|3|0.00
+6|CPU - Mar Espejo|1|0|1|0.00
+7|CPU - Tormenta Ácida|1|0|1|0.00
+8|CPU - Núcleo Primordial|1|0|1|0.00

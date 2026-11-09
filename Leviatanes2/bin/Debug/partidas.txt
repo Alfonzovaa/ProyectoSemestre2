@@ -7,3 +7,11 @@
 6|08/11/2026 16:33:17|JugadorUno|CPU - Fosa Abisal|JugadorUno|Canion Rocoso|13|Bitacora_Leviatanes2_20261108_163317.txt
 7|08/11/2026 16:53:47|JugadorUno|CPU - Fosa Abisal|JugadorUno|Volcan Activo|8|Bitacora_Leviatanes2_20261108_165347.txt
 8|08/11/2026 16:54:48|JugadorUno|CPU - Black Waters|JugadorUno|Black Waters Canyon|9|Bitacora_Leviatanes2_20261108_165448.txt
+9|09/11/2026 08:41:49|JugadorUno|CPU - Fosa Abisal|JugadorUno|Canion Rocoso|13|Bitacora_Leviatanes2_20261109_084149.txt
+10|09/11/2026 10:33:45|JugadorUno|CPU - Fosa Abisal|JugadorUno|Cumbre De Viento|11|Bitacora_Leviatanes2_20261109_103344.txt
+11|09/11/2026 10:35:15|JugadorUno|CPU - Black Waters|JugadorUno|Black Waters Canyon|7|Bitacora_Leviatanes2_20261109_103515.txt
+12|09/11/2026 10:36:04|JugadorUno|CPU - Mar Espejo|JugadorUno|Mar Espejo Brumoso|14|Bitacora_Leviatanes2_20261109_103604.txt
+13|09/11/2026 10:36:48|JugadorUno|CPU - Tormenta Ácida|JugadorUno|Cumbre De Tormentas|11|Bitacora_Leviatanes2_20261109_103648.txt
+14|09/11/2026 10:38:05|JugadorUno|CPU - Núcleo Primordial|JugadorUno|Pozo Primordial Activo|23|Bitacora_Leviatanes2_20261109_103805.txt
+15|09/11/2026 11:26:40|JugadorUno|CPU - Fosa Abisal|JugadorUno|Volcan Activo|7|Bitacora_Leviatanes2_20261109_112640.txt
+16|09/11/2026 11:31:09|JugadorUno|CPU - Fosa Abisal|JugadorUno|Canion Rocoso|11|Bitacora_Leviatanes2_20261109_113109.txt

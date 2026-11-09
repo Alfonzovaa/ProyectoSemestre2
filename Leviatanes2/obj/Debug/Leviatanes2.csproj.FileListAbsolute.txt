@@ -70,3 +70,5 @@ C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.csproj.GenerateR
 C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.exe
 C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.pdb
 C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.calculo.resources
+D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.calculo.resources
+D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio1.jpg

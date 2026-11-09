@@ -1,15 +1,6 @@
-﻿using System.Windows.Forms;
-/*
- * Created by SharpDevelop.
- * User: alexa
- * Date: 8/11/2026
- * Time: 1:15 p. m.
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
 namespace Leviatanes2
 {
-	public partial class calculo : Form
+	partial class Calculo
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -30,7 +21,6 @@ namespace Leviatanes2
 			base.Dispose(disposing);
 		}
 		
-		
 		/// <summary>
 		/// This method is required for Windows Forms designer support.
 		/// Do not change the method contents inside the source code editor. The Forms designer might
@@ -40,11 +30,14 @@ namespace Leviatanes2
 		{
 			this.lblTitulo = new System.Windows.Forms.Label();
 			this.lblEnunciado = new System.Windows.Forms.Label();
-			this.btnSiguiente = new System.Windows.Forms.Button();
-			this.btnComprobar = new System.Windows.Forms.Button();
-			this.panel1 = new System.Windows.Forms.Panel();
+			this.lblInstruccion = new System.Windows.Forms.Label();
 			this.txtRespuesta = new System.Windows.Forms.TextBox();
-			this.panel1.SuspendLayout();
+			this.btnComprobar = new System.Windows.Forms.Button();
+			this.lblFeedback = new System.Windows.Forms.Label();
+			this.picImagen = new System.Windows.Forms.PictureBox();
+			this.btnVolver = new System.Windows.Forms.Button();
+			this.btnSiguiente = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.picImagen)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblTitulo
@@ -57,94 +50,147 @@ namespace Leviatanes2
 			this.lblTitulo.Name = "lblTitulo";
 			this.lblTitulo.Size = new System.Drawing.Size(920, 48);
 			this.lblTitulo.TabIndex = 0;
-			this.lblTitulo.Text = "calculo";
+			this.lblTitulo.Text = "LABORATORIO ELEMENTAL - RETO DE CÁLCULO";
 			this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblEnunciado
 			// 
 			this.lblEnunciado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
 			this.lblEnunciado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.lblEnunciado.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblEnunciado.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblEnunciado.ForeColor = System.Drawing.Color.White;
-			this.lblEnunciado.Location = new System.Drawing.Point(20, 11);
+			this.lblEnunciado.Location = new System.Drawing.Point(30, 78);
 			this.lblEnunciado.Name = "lblEnunciado";
-			this.lblEnunciado.Padding = new System.Windows.Forms.Padding(18);
-			this.lblEnunciado.Size = new System.Drawing.Size(417, 294);
+			this.lblEnunciado.Padding = new System.Windows.Forms.Padding(16);
+			this.lblEnunciado.Size = new System.Drawing.Size(445, 270);
 			this.lblEnunciado.TabIndex = 1;
-			this.lblEnunciado.Text = "Anunciado";
+			this.lblEnunciado.Text = "Enunciado del ejercicio...";
+			// 
+			// lblInstruccion
+			// 
+			this.lblInstruccion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInstruccion.ForeColor = System.Drawing.Color.Gold;
+			this.lblInstruccion.Location = new System.Drawing.Point(30, 360);
+			this.lblInstruccion.Name = "lblInstruccion";
+			this.lblInstruccion.Size = new System.Drawing.Size(200, 22);
+			this.lblInstruccion.TabIndex = 2;
+			this.lblInstruccion.Text = "Escribe tu respuesta:";
+			// 
+			// txtRespuesta
+			// 
+			this.txtRespuesta.BackColor = System.Drawing.Color.White;
+			this.txtRespuesta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtRespuesta.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtRespuesta.ForeColor = System.Drawing.Color.Black;
+			this.txtRespuesta.Location = new System.Drawing.Point(30, 386);
+			this.txtRespuesta.Name = "txtRespuesta";
+			this.txtRespuesta.Size = new System.Drawing.Size(225, 31);
+			this.txtRespuesta.TabIndex = 3;
+			this.txtRespuesta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtRespuesta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRespuestaKeyDown);
+			// 
+			// btnComprobar
+			// 
+			this.btnComprobar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+			this.btnComprobar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnComprobar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnComprobar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnComprobar.ForeColor = System.Drawing.Color.White;
+			this.btnComprobar.Location = new System.Drawing.Point(265, 383);
+			this.btnComprobar.Name = "btnComprobar";
+			this.btnComprobar.Size = new System.Drawing.Size(210, 38);
+			this.btnComprobar.TabIndex = 4;
+			this.btnComprobar.Text = "✔ Comprobar";
+			this.btnComprobar.UseVisualStyleBackColor = false;
+			this.btnComprobar.Click += new System.EventHandler(this.BtnComprobarClick);
+			// 
+			// lblFeedback
+			// 
+			this.lblFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+			this.lblFeedback.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.lblFeedback.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFeedback.ForeColor = System.Drawing.Color.Gold;
+			this.lblFeedback.Location = new System.Drawing.Point(30, 432);
+			this.lblFeedback.Name = "lblFeedback";
+			this.lblFeedback.Padding = new System.Windows.Forms.Padding(8);
+			this.lblFeedback.Size = new System.Drawing.Size(445, 66);
+			this.lblFeedback.TabIndex = 5;
+			this.lblFeedback.Text = "Ingresa tu respuesta y presiona Comprobar.";
+			this.lblFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// picImagen
+			// 
+			this.picImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(16)))), ((int)(((byte)(28)))));
+			this.picImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.picImagen.Location = new System.Drawing.Point(505, 78);
+			this.picImagen.Name = "picImagen";
+			this.picImagen.Size = new System.Drawing.Size(445, 420);
+			this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.picImagen.TabIndex = 6;
+			this.picImagen.TabStop = false;
+			// 
+			// btnVolver
+			// 
+			this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(90)))));
+			this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnVolver.ForeColor = System.Drawing.Color.White;
+			this.btnVolver.Location = new System.Drawing.Point(30, 515);
+			this.btnVolver.Name = "btnVolver";
+			this.btnVolver.Size = new System.Drawing.Size(140, 42);
+			this.btnVolver.TabIndex = 7;
+			this.btnVolver.Text = "◄ Salir";
+			this.btnVolver.UseVisualStyleBackColor = false;
+			this.btnVolver.Click += new System.EventHandler(this.BtnVolverClick);
 			// 
 			// btnSiguiente
 			// 
 			this.btnSiguiente.BackColor = System.Drawing.Color.Gold;
 			this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSiguiente.ForeColor = System.Drawing.Color.Black;
-			this.btnSiguiente.Location = new System.Drawing.Point(423, 511);
+			this.btnSiguiente.Location = new System.Drawing.Point(705, 515);
 			this.btnSiguiente.Name = "btnSiguiente";
-			this.btnSiguiente.Size = new System.Drawing.Size(175, 42);
-			this.btnSiguiente.TabIndex = 4;
-			this.btnSiguiente.Text = "Siguiente ▶";
+			this.btnSiguiente.Size = new System.Drawing.Size(245, 42);
+			this.btnSiguiente.TabIndex = 8;
+			this.btnSiguiente.Text = "Continuar a la Historia ▶";
 			this.btnSiguiente.UseVisualStyleBackColor = false;
-			this.btnSiguiente.Click += new System.EventHandler(this.BtnsiguienteClick);
+			this.btnSiguiente.Click += new System.EventHandler(this.BtnSiguienteClick);
 			// 
-			// btnComprobar
-			// 
-			this.btnComprobar.BackColor = System.Drawing.Color.Chartreuse;
-			this.btnComprobar.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnComprobar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnComprobar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnComprobar.ForeColor = System.Drawing.Color.Black;
-			this.btnComprobar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.btnComprobar.Location = new System.Drawing.Point(147, 363);
-			this.btnComprobar.Name = "btnComprobar";
-			this.btnComprobar.Size = new System.Drawing.Size(175, 42);
-			this.btnComprobar.TabIndex = 6;
-			this.btnComprobar.Text = "        Comprobar                     ";
-			this.btnComprobar.UseVisualStyleBackColor = false;
-			this.btnComprobar.Click += new System.EventHandler(this.BtnComprobarClick);
-			// 
-			// panel1
-			// 
-			this.panel1.Controls.Add(this.txtRespuesta);
-			this.panel1.Controls.Add(this.btnComprobar);
-			this.panel1.Controls.Add(this.lblEnunciado);
-			this.panel1.Location = new System.Drawing.Point(276, 66);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(450, 420);
-			this.panel1.TabIndex = 7;
-			// 
-			// txtRespuesta
-			// 
-			this.txtRespuesta.Location = new System.Drawing.Point(147, 318);
-			this.txtRespuesta.Multiline = true;
-			this.txtRespuesta.Name = "txtRespuesta";
-			this.txtRespuesta.Size = new System.Drawing.Size(175, 23);
-			this.txtRespuesta.TabIndex = 7;
-			// 
-			// calculo
+			// Calculo
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(20)))), ((int)(((byte)(42)))));
 			this.ClientSize = new System.Drawing.Size(980, 580);
-			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btnSiguiente);
+			this.Controls.Add(this.btnVolver);
+			this.Controls.Add(this.picImagen);
+			this.Controls.Add(this.lblFeedback);
+			this.Controls.Add(this.btnComprobar);
+			this.Controls.Add(this.txtRespuesta);
+			this.Controls.Add(this.lblInstruccion);
+			this.Controls.Add(this.lblEnunciado);
 			this.Controls.Add(this.lblTitulo);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
-			this.Name = "calculo";
+			this.Name = "Calculo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Modo Historia - Leviatanes del Caribe 2";
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
+			this.Text = "Reto de Cálculo - Leviatanes del Caribe 2";
+			((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 		}
-		private System.Windows.Forms.TextBox txtRespuesta;
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Button btnComprobar;
 		
 		private System.Windows.Forms.Label lblTitulo;
 		private System.Windows.Forms.Label lblEnunciado;
+		private System.Windows.Forms.Label lblInstruccion;
+		private System.Windows.Forms.TextBox txtRespuesta;
+		private System.Windows.Forms.Button btnComprobar;
+		private System.Windows.Forms.Label lblFeedback;
+		private System.Windows.Forms.PictureBox picImagen;
+		private System.Windows.Forms.Button btnVolver;
 		private System.Windows.Forms.Button btnSiguiente;
 	}
 }

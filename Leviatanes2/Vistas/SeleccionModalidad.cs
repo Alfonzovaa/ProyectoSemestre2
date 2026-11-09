@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -618,9 +618,9 @@ namespace Leviatanes2
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
-            Historia VentanaHistoria = new Historia();
-            VentanaHistoria.FormClosed += (s, args) => Application.Exit();
-            VentanaHistoria.Show();
+            Calculo VentanaCalculo = new Calculo();
+            VentanaCalculo.FormClosed += (s, args) => Application.Exit();
+            VentanaCalculo.Show();
             this.Hide();
         }
 

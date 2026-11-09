@@ -57,8 +57,6 @@ namespace Leviatanes2
 					break;
 
 				case 2:
-					
-					 AbrirCalculo(1);
 					lblCapitulo.Text = "Capítulo 2 de 6";
 					lblTexto.Text = "2. Las Aguas Negras (El Rastro del Petróleo)\n\n" +
 					                "Al adentrarse en mar abierto buscando respuestas, el barco cruza una enorme mancha de petróleo abandonada. Las cartas de navegación antiguas mostraban yacimientos activos, pero ahora los pozos están secos. La tripulación empieza a encajar piezas: el petróleo no se agotó por arte de magia, sino por una sobreexplotación desmedida que pudrió el lecho marino.\n\n" +
@@ -68,8 +66,6 @@ namespace Leviatanes2
 					break;
 
 				case 3:
-					
-					 AbrirCalculo(2);
 					lblCapitulo.Text = "Capítulo 3 de 6";
 					lblTexto.Text = "3. El Mar Espejo (La Culpa Colectiva)\n\n" +
 					                "Navegando entre plataformas petroleras abandonadas y residuos flotantes, la nave entra en una zona de aguas muertas. La superficie refleja la basura acumulada y la ambición humana que destruyó las costas. El capitán y los marineros enfrentan el peso de la culpa: los monstruos no aparecieron por maldición, sino como respuesta de la naturaleza a la contaminación del hombre.\n\n" +
@@ -79,8 +75,6 @@ namespace Leviatanes2
 					break;
 
 				case 4:
-					
-					 AbrirCalculo(3);
 					lblCapitulo.Text = "Capítulo 4 de 6";
 					lblTexto.Text = "4. La Revelación del Origen (Voluntad contra la Ruina)\n\n" +
 					                "Atrapados en una tormenta ácida cerca del epicentro del desastre ambiental, la tripulación descubre la verdad definitiva: la contaminación tóxica y el drenaje de petróleo mutaron a la vida marina, convirtiéndola en los leviatanes que amenazan con destruir todo. La tripulación entiende que la tormenta no los va a perdonar, pero deciden tomar firmemente el timón para corregir los errores del pasado.\n\n" +
@@ -90,8 +84,6 @@ namespace Leviatanes2
 					break;
 
 				case 5:
-					
-					 AbrirCalculo(4);
 					lblCapitulo.Text = "Capítulo 5 de 6";
 					lblTexto.Text = "5. El Núcleo de la Podredumbre (El Abismo Final)\n\n" +
 					                "En el corazón del Caribe yace el pozo original, donde la gema perdida encajó directamente en el cuerpo del primer leviatán, alimentándose de la contaminación acumulada durante décadas. Para detener el nacimiento de más monstruos, no basta con luchar: hay que destruir el núcleo del desecho tóxico antes de que consuma todo el océano.\n\n" +
@@ -101,8 +93,6 @@ namespace Leviatanes2
 					break;
 
 				case 6:
-					
-					 AbrirCalculo(5);
 					lblCapitulo.Text = "Capítulo 6 de 6 (Final)";
 					lblTexto.Text = "6. El Limpie del Caribe (Final)\n\n" +
 					                "Con la criatura primordial vencida y la gema recuperada, la fuente de la contaminación se neutraliza. Las aguas negras comienzan a aclararse y el ciclo de mutaciones se detiene definitivamente: no volverán a nacer más leviatanes. El mar recupera su cauce natural y la tripulación navega hacia un horizonte limpio, habiendo detenido la amenaza y devolviéndole el equilibrio al Caribe.";
@@ -124,19 +114,6 @@ namespace Leviatanes2
 		/// - En el capítulo 6 (final): lleva de vuelta al formulario principal (MainForm).
 		/// - Al final de la evaluación se incrementa capitulo++.
 		/// </summary>
-		/// 
-		
-		private void AbrirCalculo(int ejercicioNumero)
-{
-    this.Hide(); // Oculta la historia
-
-    calculo formCalculo = new calculo(ejercicioNumero); // Le pasamos el número del ejercicio que queremos mostrar
-    formCalculo.ShowDialog(); // Espera a que el usuario resuelva y cierre el cálculo
-
-    this.Show(); // Vuelve a mostrar la historia
-}
-		
-		
 		public void AvanzarCapitulo()
 		{
 			// =========================================================================
@@ -497,6 +474,7 @@ namespace Leviatanes2
 
 		void BtnSiguienteClick(object sender, EventArgs e)
 		{
+			
 			AvanzarCapitulo();
 		}
 
