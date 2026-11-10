@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -42,57 +42,72 @@ namespace Leviatanes2
 		{
 			this.capitulo = numCapitulo;
 
+			if (this.capitulo == 2)
+			{
+				MessageBox.Show(
+					"Error de software: este capitulo sera en ingles hasta que podamos solucionar",
+					"Error de Software",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Warning);
+			}
+
 			// =========================================================================
 			// CONDICIONAL SWITCH CASE (Capítulos 1 al 6)
 			// =========================================================================
 			switch (capitulo)
 			{
 				case 1:
+					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 1 de 6";
 					lblTexto.Text = "1. El Despertar en la Fosa (La Falsa Victoria)\n\n" +
 					                "Tras la batalla final del primer juego, una de las gemas cayó al fondo del mar. La tripulación festejaba pensando que todos los leviatanes habían muerto para siempre. Pero la gema liberó un pulso de energía en las profundidades de la fosa, alterando las aguas y haciendo que la cubierta vuelva a temblar. El pánico regresa: la victoria era una ilusión nacida de la ignorancia.\n\n" +
 					                "Batalla 1: Leviatán de la Fosa, una mole acorazada que emerge furiosa del grieta donde cayó la gema.";
 					ActualizarImagen(1, "El Despertar en la Fosa");
-					btnSiguiente.Text = "Ir a la Batalla 1 ▶";
+					btnSiguiente.Text = "Continuar al Ejercicio 1 ▶";
 					break;
 
 				case 2:
-					lblCapitulo.Text = "Capítulo 2 de 6";
-					lblTexto.Text = "2. Las Aguas Negras (El Rastro del Petróleo)\n\n" +
-					                "Al adentrarse en mar abierto buscando respuestas, el barco cruza una enorme mancha de petróleo abandonada. Las cartas de navegación antiguas mostraban yacimientos activos, pero ahora los pozos están secos. La tripulación empieza a encajar piezas: el petróleo no se agotó por arte de magia, sino por una sobreexplotación desmedida que pudrió el lecho marino.\n\n" +
-					                "Batalla 2: Leviatán del Alquitrán, una bestia mutada y ciega que habita en las aguas densas por los viejos derrames industriales.";
+					this.Text = "Story Mode - Leviathans of the Caribbean 2";
+					lblCapitulo.Text = "Chapter 2 of 6";
+					lblTexto.Text = "2. The Black Waters (The Oil Trail)\n\n" +
+					                "Venturing into open sea in search of answers, the ship crosses a massive abandoned oil slick. Ancient navigation charts showed active oil fields, but now the wells are dry. The crew begins to piece things together: the oil did not vanish by magic, but through reckless overexploitation that rotted the seabed.\n\n" +
+					                "Battle 2: Leviathan of Tar, a mutated and blind beast lurking in dense waters polluted by old industrial spills.";
 					ActualizarImagen(2, "Las Aguas Negras");
-					btnSiguiente.Text = "Ir a la Batalla 2 ▶";
+					btnSiguiente.Text = "Continue to Exercise 2 ▶";
 					break;
 
 				case 3:
+					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 3 de 6";
 					lblTexto.Text = "3. El Mar Espejo (La Culpa Colectiva)\n\n" +
 					                "Navegando entre plataformas petroleras abandonadas y residuos flotantes, la nave entra en una zona de aguas muertas. La superficie refleja la basura acumulada y la ambición humana que destruyó las costas. El capitán y los marineros enfrentan el peso de la culpa: los monstruos no aparecieron por maldición, sino como respuesta de la naturaleza a la contaminación del hombre.\n\n" +
 					                "Batalla 3: Leviatán Espectral, un monstruo hecho de sombras y residuos tóxicos que toma la forma del daño provocado al océano.";
 					ActualizarImagen(3, "El Mar Espejo");
-					btnSiguiente.Text = "Ir a la Batalla 3 ▶";
+					btnSiguiente.Text = "Continuar al Ejercicio 3 ▶";
 					break;
 
 				case 4:
+					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 4 de 6";
 					lblTexto.Text = "4. La Revelación del Origen (Voluntad contra la Ruina)\n\n" +
 					                "Atrapados en una tormenta ácida cerca del epicentro del desastre ambiental, la tripulación descubre la verdad definitiva: la contaminación tóxica y el drenaje de petróleo mutaron a la vida marina, convirtiéndola en los leviatanes que amenazan con destruir todo. La tripulación entiende que la tormenta no los va a perdonar, pero deciden tomar firmemente el timón para corregir los errores del pasado.\n\n" +
 					                "Batalla 4: Leviatán de las Tormentas Ácidas, la criatura que alimenta los vientos tóxicos que asfixian los mares.";
 					ActualizarImagen(4, "La Revelacion del Origen");
-					btnSiguiente.Text = "Ir a la Batalla 4 ▶";
+					btnSiguiente.Text = "Continuar al Ejercicio 4 ▶";
 					break;
 
 				case 5:
+					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 5 de 6";
 					lblTexto.Text = "5. El Núcleo de la Podredumbre (El Abismo Final)\n\n" +
 					                "En el corazón del Caribe yace el pozo original, donde la gema perdida encajó directamente en el cuerpo del primer leviatán, alimentándose de la contaminación acumulada durante décadas. Para detener el nacimiento de más monstruos, no basta con luchar: hay que destruir el núcleo del desecho tóxico antes de que consuma todo el océano.\n\n" +
 					                "Batalla 5: Leviatán Primordial del Petróleo, la bestia colosal engendrada por la contaminación extrema, fortalecida por el poder de la gema.";
 					ActualizarImagen(5, "El Nucleo de la Podredumbre");
-					btnSiguiente.Text = "Ir a la Batalla 5 ▶";
+					btnSiguiente.Text = "Continuar al Ejercicio 5 ▶";
 					break;
 
 				case 6:
+					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 6 de 6 (Final)";
 					lblTexto.Text = "6. El Limpie del Caribe (Final)\n\n" +
 					                "Con la criatura primordial vencida y la gema recuperada, la fuente de la contaminación se neutraliza. Las aguas negras comienzan a aclararse y el ciclo de mutaciones se detiene definitivamente: no volverán a nacer más leviatanes. El mar recupera su cauce natural y la tripulación navega hacia un horizonte limpio, habiendo detenido la amenaza y devolviéndole el equilibrio al Caribe.";
@@ -110,14 +125,13 @@ namespace Leviatanes2
 
 		/// <summary>
 		/// Avanza el flujo de juego cuando el usuario presiona 'Continuar':
-		/// - Del capítulo 1 al 5: pasa a la Batalla correspondiente (Batalla 1 a 5).
+		/// - Del capítulo 1 al 5: muestra el error de PC y pasa al Reto de Cálculo (1 a 5).
 		/// - En el capítulo 6 (final): lleva de vuelta al formulario principal (MainForm).
-		/// - Al final de la evaluación se incrementa capitulo++.
 		/// </summary>
 		public void AvanzarCapitulo()
 		{
 			// =========================================================================
-			// CONDICIONAL SWITCH CASE PARA EL FLUJO HACIA BATALLA O MAINFORM
+			// CONDICIONAL SWITCH CASE PARA EL FLUJO HACIA EJERCICIO DE CÁLCULO O MAINFORM
 			// =========================================================================
 			switch (capitulo)
 			{
@@ -126,10 +140,16 @@ namespace Leviatanes2
 				case 3:
 				case 4:
 				case 5:
-					// Pasar a la ventana de Batalla para la batalla actual
-					Batalla ventanaBatalla = new Batalla(capitulo);
-					ventanaBatalla.FormClosed += (s, args) => Application.Exit();
-					ventanaBatalla.Show();
+					// Antes de mostrar cada ejercicio se presenta el aviso de error en la PC
+					MessageBox.Show(
+						"error en la PC, deber resolver este problema para poder continuar a la batalla",
+						"Error en la PC",
+						MessageBoxButtons.OK,
+						MessageBoxIcon.Warning);
+
+					Calculo ventanaCalculo = new Calculo(capitulo);
+					ventanaCalculo.FormClosed += (s, args) => Application.Exit();
+					ventanaCalculo.Show();
 					this.Hide();
 					break;
 
@@ -150,7 +170,6 @@ namespace Leviatanes2
 			}
 
 			capitulo++;
-	
 		}
 
 		/// <summary>

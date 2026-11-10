@@ -1,0 +1,42 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 12:17:39
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Black Waters
+Vencedor          : JugadorUno
+Escenario Final   : Black Waters Canyon
+Total de Turnos   : 10
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Battle starts: Zephyr Serpent vs Tar Leviathan.
+⚔ Zephyr Serpent attacks Tar Leviathan: -22 HP (-25 Shield). Super effective!
+⚔ CPU Tar Leviathan attacks: -0 HP (-22 Shield).
+🌋 RANDOM EARTHQUAKE! Zephyr Serpent [Air: immune] | Tar Leviathan: -13 HP
+⚔ Zephyr Serpent attacks Tar Leviathan: -47 HP. Super effective!
+⚠ CPU sends out Oil Well Pyromancer! Your turn.
+⚔ Zephyr Serpent attacks Oil Well Pyromancer: -4 HP (-20 Shield). Not very effective.
+⚔ CPU Oil Well Pyromancer attacks: -54 HP (-3 Shield).
+⚡ Abyssal Nereid enters the battle! Your turn.
+⚔ Abyssal Nereid attacks Oil Well Pyromancer: -29 HP. Super effective!
+⚡ CPU Oil Well Pyromancer uses Crude Ignition: -38 HP!
+⚔ Abyssal Nereid attacks Oil Well Pyromancer: -29 HP. Super effective!
+⚠ CPU sends out Corrupted Hydra! Your turn.
+🌋 RANDOM EARTHQUAKE! Abyssal Nereid: -13 HP | Corrupted Hydra: -8 HP
+🔄 Abyssal Nereid switches out. Go, Basalt Golem!
+⚔ CPU Corrupted Hydra attacks: -0 HP (-20 Shield).
+⚔ Basalt Golem attacks Corrupted Hydra: -4 HP (-20 Shield). Super effective!
+⚡ CPU Corrupted Hydra uses Dark Drain: -20 HP!
+⚔ Basalt Golem attacks Corrupted Hydra: -22 HP. Super effective!
+⚔ CPU Corrupted Hydra attacks: -20 HP.
+⚔ Basalt Golem attacks Corrupted Hydra: -22 HP. Super effective!
+⚡ CPU Corrupted Hydra uses Dark Drain: -20 HP!
+⚡ Ignis Leviathan enters the battle! Your turn.
+🌋 RANDOM EARTHQUAKE! Ignis Leviathan: -14 HP | Corrupted Hydra: -13 HP
+⚔ Ignis Leviathan attacks Corrupted Hydra: -29 HP. Not very effective.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0.00%
+ - CPU - Black Waters: PJ=0 | V=0 | D=0 | Exito=0.00%
+======================================================================

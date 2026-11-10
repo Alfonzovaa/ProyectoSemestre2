@@ -1,0 +1,42 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 10:44:34
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Canion Rocoso
+Total de Turnos   : 10
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán de la Fosa.
+🔄 Sale Ignis Leviatan Pirico y entra Golem De Basalto.
+🔄 La CPU cambia a Sierpe De Remolino.
+⚔ Golem De Basalto ataca a Sierpe De Remolino: -0 HP (-18 Escudo). Poco eficaz.
+⚔ CPU Sierpe De Remolino ataca: -19 HP (-30 Escudo).
+⚔ Golem De Basalto ataca a Sierpe De Remolino: -12 HP (-2 Escudo). Poco eficaz.
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -41 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -10 HP | Sierpe De Remolino [Aire: inmune]
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -18 HP.
+🛡 CPU Sierpe De Remolino se defiende (+9 Escudo).
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -9 HP (-9 Escudo).
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -27 HP.
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -18 HP.
+⚠ ¡La CPU envía a Ignis De La Grieta! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -9 HP | Ignis De La Grieta: -18 HP
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -9 HP (-20 Escudo). ¡Súper eficaz!
+⚔ CPU Ignis De La Grieta ataca: -33 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Ignis De La Grieta: -24 HP. Poco eficaz.
+⚠ ¡La CPU envía a Leviatán de la Fosa! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Leviatán de la Fosa: -13 HP (-20 Escudo).
+⚔ CPU Leviatán de la Fosa ataca: -0 HP (-22 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Cefiro Sierpe Alada [Aire: inmune] | Leviatán de la Fosa: -11 HP
+⚔ Cefiro Sierpe Alada ataca a Leviatán de la Fosa: -33 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=28 | V=28 | D=0 | Exito=100.00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0.00%
+======================================================================

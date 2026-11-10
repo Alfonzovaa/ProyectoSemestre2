@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
@@ -49,9 +49,30 @@ namespace Leviatanes2
 		{
 			respuestaValidada = false;
 			btnSiguiente.Enabled = false;
-			lblFeedback.Text = "Escribe tu respuesta y presiona el botón '✔ Comprobar'.";
-			lblFeedback.ForeColor = Color.Gold;
 			txtRespuesta.Clear();
+
+			bool esIngles = (ejercicioSolicitado == 2);
+
+			if (esIngles)
+			{
+				this.Text = "Math Challenge - Leviathans of the Caribbean 2";
+				lblInstruccion.Text = "Type your answer:";
+				btnComprobar.Text = "✔ Check";
+				btnVolver.Text = "◄ Exit";
+				btnSiguiente.Text = "Continue to Battle 2 ▶";
+				lblFeedback.Text = "Type your answer and press the '✔ Check' button.";
+				lblFeedback.ForeColor = Color.Gold;
+			}
+			else
+			{
+				this.Text = "Reto de Cálculo - Leviatanes del Caribe 2";
+				lblInstruccion.Text = "Escribe tu respuesta:";
+				btnComprobar.Text = "✔ Comprobar";
+				btnVolver.Text = "◄ Salir";
+				btnSiguiente.Text = string.Format("Ir a la Batalla {0} ▶", ejercicioSolicitado);
+				lblFeedback.Text = "Escribe tu respuesta y presiona el botón '✔ Comprobar'.";
+				lblFeedback.ForeColor = Color.Gold;
+			}
 
 			switch (ejercicioSolicitado)
 			{
@@ -69,33 +90,31 @@ namespace Leviatanes2
 					break;
 
 				case 2:
-					lblTitulo.Text = "RETO 2: LÍMITES DIRECTOS";
-					lblEnunciado.Text = "Reto 2: Límites Directos\n\n" +
-					                    "El límite de una función cuando x tiende a 'a' consiste en evaluar la función en dicho punto si no genera indeterminación:\n\n" +
-					                    "    Calcula:  lim (x -> 3) de (2x + 4)\n\n" +
-					                    "Nota: Escribe el valor numérico obtenido en la casilla y presiona Comprobar.";
+					lblTitulo.Text = "CHALLENGE 2: DIRECT LIMITS";
+					lblEnunciado.Text = "Challenge 2: Direct Limits\n\n" +
+					                    "The limit of a function as x approaches 'a' consists of evaluating the function at that point if it does not produce an indeterminacy:\n\n" +
+					                    "    Calculate:  lim (x -> 3) of (2x + 4)\n\n" +
+					                    "Note: Type the numerical result in the box and press Check.";
 					respuestaCorrectaTexto = "10";
 					ActualizarImagen("Ejercicio2");
 					break;
 
 				case 3:
-					lblTitulo.Text = "CHALLENGE 3: INDETERMINATE FORM 0/0";
-					lblEnunciado.Text = "Challenge 3: Indeterminate form 0/0\n\n" +
-                                        "When direct substitution yields 0/0, factor the difference of squares to simplify:\n\n" +
-                                        "    Calculate:  lim (x -> 2) of (x² - 4) / (x - 2)\n\n" +
-                                        "Note: Type the numerical result in the box and press Check.";
-                    respuestaCorrectaTexto = "4";
-                    ActualizarImagen("Ejercicio3");
-
-                    break;
-
+					lblTitulo.Text = "RETO 3: FORMA INDETERMINADA 0/0";
+					lblEnunciado.Text = "Reto 3: Forma Indeterminada 0/0\n\n" +
+					                    "Cuando la sustitución directa produce 0/0, factoriza la diferencia de cuadrados para simplificar:\n\n" +
+					                    "    Calcula:  lim (x -> 2) de (x² - 4) / (x - 2)\n\n" +
+					                    "Nota: Escribe el valor numérico obtenido en la casilla y presiona Comprobar.";
+					respuestaCorrectaTexto = "4";
+					ActualizarImagen("Ejercicio3");
+					break;
 
 				case 4:
 					lblTitulo.Text = "RETO 4: DERIVADA (REGLA DE LA POTENCIA)";
 					lblEnunciado.Text = "Reto 4: Derivada (Regla de la Potencia)\n\n" +
 					                    "Para derivar f(x) = x^n se multiplica por el exponente y se disminuye en 1 su grado: f'(x) = n · x^(n - 1).\n\n" +
 					                    "    Calcula la derivada de:  f(x) = x⁴\n\n" +
-					                    "Nota: Escribe tu respuesta como 4x^3 en la casilla y presiona Comprobar.";
+						 				"Ejemplo: 7x^3";
 					respuestaCorrectaTexto = "4x^3";
 					ActualizarImagen("Ejercicio4");
 					break;
@@ -105,7 +124,7 @@ namespace Leviatanes2
 					lblEnunciado.Text = "Reto 5: Derivada (Constante por Función)\n\n" +
 					                    "La derivada de una constante multiplicada por una función es c · f'(x):\n\n" +
 					                    "    Calcula la derivada de:  f(x) = 3x²\n\n" +
-					                    "Nota: Escribe tu respuesta como 6x en la casilla y presiona Comprobar.";
+					                    "Ejemplo: 4x";
 					respuestaCorrectaTexto = "6x";
 					ActualizarImagen("Ejercicio5");
 					break;
@@ -200,11 +219,14 @@ namespace Leviatanes2
 
 		private void BtnComprobarClick(object sender, EventArgs e)
 		{
+			bool esIngles = (ejercicioSolicitado == 2);
 			string input = txtRespuesta.Text.Trim();
 			if (string.IsNullOrEmpty(input))
 			{
 				lblFeedback.ForeColor = Color.Gold;
-				lblFeedback.Text = "Por favor, escribe un resultado en la casilla antes de comprobar.";
+				lblFeedback.Text = esIngles
+					? "Please type a result in the box before checking."
+					: "Por favor, escribe un resultado en la casilla antes de comprobar.";
 				return;
 			}
 
@@ -226,7 +248,9 @@ namespace Leviatanes2
 			{
 				respuestaValidada = true;
 				lblFeedback.ForeColor = Color.LightGreen;
-				lblFeedback.Text = "✔ ¡Respuesta correcta! Haz clic en 'Continuar a la Historia' para avanzar.";
+				lblFeedback.Text = esIngles
+					? "✔ Correct answer! Click 'Continue to Battle 2' to advance."
+					: string.Format("✔ ¡Respuesta correcta! Haz clic en 'Ir a la Batalla {0}' para avanzar.", ejercicioSolicitado);
 				btnSiguiente.Enabled = true;
 				btnSiguiente.Focus();
 			}
@@ -236,22 +260,23 @@ namespace Leviatanes2
 				if (ejercicioSolicitado != 1 || !lblFeedback.Text.Contains("Atención:"))
 				{
 					lblFeedback.ForeColor = Color.Salmon;
-					lblFeedback.Text = "✘ Respuesta incorrecta. Revisa tus cálculos e inténtalo de nuevo.";
+					lblFeedback.Text = esIngles
+						? "✘ Incorrect answer. Check your calculations and try again."
+						: "✘ Respuesta incorrecta. Revisa tus cálculos e inténtalo de nuevo.";
 				}
 			}
 		}
 
 		private void BtnSiguienteClick(object sender, EventArgs e)
 		{
-			// Después del Reto de Cálculo N (1 al 5), se muestra la Historia N correspondiente,
-			// la cual tiene el botón para ir a la Batalla N.
-			int capituloHistoria = this.ejercicioSolicitado;
+			// Después del Ejercicio N (1 al 5), se abre directamente la Batalla N correspondiente
+			int numBatalla = this.ejercicioSolicitado;
 
-			if (capituloHistoria >= 1 && capituloHistoria <= 6)
+			if (numBatalla >= 1 && numBatalla <= 5)
 			{
-				Historia ventanaHistoria = new Historia(capituloHistoria);
-				ventanaHistoria.FormClosed += (s, args) => Application.Exit();
-				ventanaHistoria.Show();
+				Batalla ventanaBatalla = new Batalla(numBatalla);
+				ventanaBatalla.FormClosed += (s, args) => Application.Exit();
+				ventanaBatalla.Show();
 				this.Hide();
 			}
 			else
@@ -265,9 +290,13 @@ namespace Leviatanes2
 
 		private void BtnVolverClick(object sender, EventArgs e)
 		{
+			bool esIngles = (ejercicioSolicitado == 2);
+			string pregunta = esIngles ? "Do you want to return to the Main Menu?" : "¿Deseas salir al Menú Principal?";
+			string titulo = esIngles ? "Math Challenge" : "Reto de Cálculo";
+
 			DialogResult resultado = MessageBox.Show(
-				"¿Deseas salir al Menú Principal?",
-				"Reto de Cálculo",
+				pregunta,
+				titulo,
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Question);
 

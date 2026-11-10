@@ -1,0 +1,43 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 12:22:36
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Tormenta Ácida
+Vencedor          : JugadorUno
+Escenario Final   : Cumbre De Tormentas
+Total de Turnos   : 11
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán Tormenta Ácida.
+⚔ Ignis Leviatan Pirico ataca a Leviatán Tormenta Ácida: -35 HP (-20 Escudo). ¡Súper eficaz!
+🔄 La CPU cambia a Vórtice De Salmuera.
+⚔ Ignis Leviatan Pirico ataca a Vórtice De Salmuera: -8 HP (-20 Escudo). Poco eficaz.
+⚔ CPU Vórtice De Salmuera ataca: -21 HP (-20 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -8 HP | Vórtice De Salmuera: -11 HP
+🔄 Sale Ignis Leviatan Pirico y entra Golem De Basalto.
+⚡ CPU Vórtice De Salmuera usa Tifón Drenante: -0 HP.
+⚔ Golem De Basalto ataca a Vórtice De Salmuera: -13 HP. ¡Súper eficaz!
+⚔ CPU Vórtice De Salmuera ataca: -15 HP (-5 Escudo).
+⚔ Golem De Basalto ataca a Vórtice De Salmuera: -12 HP. ¡Súper eficaz!
+⚡ CPU Vórtice De Salmuera usa Tifón Drenante: -25 HP.
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -15 HP | Vórtice De Salmuera: -18 HP
+⚔ Golem De Basalto ataca a Vórtice De Salmuera: -11 HP. ¡Súper eficaz!
+🛡 CPU Vórtice De Salmuera se defiende (+9 Escudo).
+⚔ Golem De Basalto ataca a Vórtice De Salmuera: -2 HP (-9 Escudo). ¡Súper eficaz!
+⚡ CPU Vórtice De Salmuera usa Tifón Drenante: -5 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+⚔ Nereida Del Abismo ataca a Vórtice De Salmuera: -22 HP.
+⚠ ¡La CPU envía a Centella Sulfúrica! Tu turno.
+⚔ Nereida Del Abismo ataca a Centella Sulfúrica: -13 HP (-20 Escudo). ¡Súper eficaz!
+⚔ CPU Centella Sulfúrica ataca: -8 HP (-25 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -9 HP | Centella Sulfúrica: -15 HP
+⚡ Nereida Del Abismo usa Marea Sanadora: -12 HP a Centella Sulfúrica (+14 HP curados).
+⚠ ¡La CPU envía a Leviatán Tormenta Ácida! Tu turno.
+⚔ Nereida Del Abismo ataca a Leviatán Tormenta Ácida: -22 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=31 | V=31 | D=0 | Exito=100.00%
+ - CPU - Tormenta Ácida: PJ=0 | V=0 | D=0 | Exito=0.00%
+======================================================================

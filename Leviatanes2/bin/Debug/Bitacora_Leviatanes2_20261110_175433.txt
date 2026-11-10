@@ -1,0 +1,35 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 17:54:33
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Volcan Activo
+Total de Turnos   : 7
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán de la Fosa.
+⚔ Ignis Leviatan Pirico ataca a Leviatán de la Fosa: -14 HP (-20 Escudo). Poco eficaz.
+⚔ CPU Leviatán de la Fosa ataca: -20 HP (-20 Escudo).
+⚔ Ignis Leviatan Pirico ataca a Leviatán de la Fosa: -34 HP. Poco eficaz.
+🛡 CPU Leviatán de la Fosa se defiende (+9 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -7 HP | Leviatán de la Fosa: -9 HP
+⚔ Ignis Leviatan Pirico ataca a Leviatán de la Fosa: -29 HP (-9 Escudo). Poco eficaz.
+⚠ ¡La CPU envía a Ignis De La Grieta! Tu turno.
+⚔ Ignis Leviatan Pirico ataca a Ignis De La Grieta: -28 HP (-20 Escudo).
+🛡 CPU Ignis De La Grieta se defiende (+9 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -14 HP | Ignis De La Grieta: -9 HP
+⚡ Ignis Leviatan Pirico usa Llamarada Solar: -8 HP a Ignis De La Grieta.
+⚠ ¡La CPU envía a Sierpe De Remolino! Tu turno.
+⚔ Ignis Leviatan Pirico ataca a Sierpe De Remolino: -46 HP (-20 Escudo). ¡Súper eficaz!
+⚔ CPU Sierpe De Remolino ataca: -20 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -15 HP | Sierpe De Remolino [Aire: inmune]
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -22 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=28 | V=28 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

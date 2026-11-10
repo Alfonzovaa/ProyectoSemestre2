@@ -1,0 +1,46 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 12:19:44
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Mar Espejo
+Vencedor          : JugadorUno
+Escenario Final   : Mar Espejo Brumoso
+Total de Turnos   : 12
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán Espectral.
+⚔ Ignis Leviatan Pirico ataca a Leviatán Espectral: -30 HP (-25 Escudo). ¡Súper eficaz!
+🔄 La CPU cambia a Espectro Del Arrecife.
+⚔ Ignis Leviatan Pirico ataca a Espectro Del Arrecife: -8 HP (-20 Escudo). Poco eficaz.
+⚔ CPU Espectro Del Arrecife ataca: -21 HP (-20 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -10 HP | Espectro Del Arrecife: -17 HP
+🔄 Sale Ignis Leviatan Pirico y entra Golem De Basalto.
+⚡ CPU Espectro Del Arrecife usa Eco Abisal: -0 HP.
+⚔ Golem De Basalto ataca a Espectro Del Arrecife: -13 HP. ¡Súper eficaz!
+🔄 La CPU cambia a Leviatán Espectral.
+⚔ Golem De Basalto ataca a Leviatán Espectral: -5 HP. Poco eficaz.
+⚔ CPU Leviatán Espectral ataca: -48 HP (-5 Escudo).
+⚔ Golem De Basalto ataca a Leviatán Espectral: -4 HP. Poco eficaz.
+⚡ CPU Leviatán Espectral usa Niebla Tóxica Doble: -12 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -7 HP | Leviatán Espectral [Aire: inmune]
+⚔ Nereida Del Abismo ataca a Leviatán Espectral: -22 HP.
+⚠ ¡La CPU envía a Coloso De Chatarra! Tu turno.
+⚔ Nereida Del Abismo ataca a Coloso De Chatarra: -0 HP (-16 Escudo). Poco eficaz.
+⚔ CPU Coloso De Chatarra ataca: -5 HP (-25 Escudo).
+⚔ Nereida Del Abismo ataca a Coloso De Chatarra: -7 HP (-9 Escudo). Poco eficaz.
+⚡ CPU Coloso De Chatarra usa Muro Oxidado: -43 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Coloso De Chatarra: -30 HP (-25 Escudo). ¡Súper eficaz!
+⚔ CPU Coloso De Chatarra ataca: -0 HP (-12 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Cefiro Sierpe Alada [Aire: inmune] | Coloso De Chatarra: -17 HP
+⚔ Cefiro Sierpe Alada ataca a Coloso De Chatarra: -55 HP. ¡Súper eficaz!
+⚠ ¡La CPU envía a Espectro Del Arrecife! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Espectro Del Arrecife: -39 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=31 | V=31 | D=0 | Exito=100.00%
+ - CPU - Mar Espejo: PJ=0 | V=0 | D=0 | Exito=0.00%
+======================================================================

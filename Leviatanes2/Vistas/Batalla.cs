@@ -198,12 +198,12 @@ namespace Leviatanes2
 				if (this.numeroBatalla < 5)
 				{
 					this.button1.Text = this.esIngles
-						? "Next Challenge ▶"
-						: "Ir a Reto " + (this.numeroBatalla + 1) + " ▶";
+						? "Continue to Chapter " + (this.numeroBatalla + 1) + " ▶"
+						: "Continuar al Capítulo " + (this.numeroBatalla + 1) + " ▶";
 				}
 				else
 				{
-					this.button1.Text = "Ver Final ▶";
+					this.button1.Text = "Ver Final (Capítulo 6) ▶";
 				}
 			}
 		}
@@ -826,20 +826,13 @@ namespace Leviatanes2
 			tmrPausaDerrota.Stop();
 
 			// Flujo ordenado:
-			// Batallas 1 a 4 -> abren el siguiente Reto de Cálculo (2 a 5), que luego lleva a su Historia y Batalla.
+			// Batallas 1 a 4 -> abren el siguiente Capítulo de Historia (2 a 5), que luego lleva a su Ejercicio y Batalla.
 			// Batalla 5 (final) -> abre el Capítulo 6 (Final de la Historia).
-			if (this.numeroBatalla >= 1 && this.numeroBatalla < 5)
+			if (this.numeroBatalla >= 1 && this.numeroBatalla <= 5)
 			{
-				Calculo ventanaCalculo = new Calculo(this.numeroBatalla + 1);
-				ventanaCalculo.FormClosed += (s, args) => Application.Exit();
-				ventanaCalculo.Show();
-				this.Hide();
-			}
-			else if (this.numeroBatalla == 5)
-			{
-				Historia ventanaFinal = new Historia(6);
-				ventanaFinal.FormClosed += (s, args) => Application.Exit();
-				ventanaFinal.Show();
+				Historia ventanaHistoria = new Historia(this.numeroBatalla + 1);
+				ventanaHistoria.FormClosed += (s, args) => Application.Exit();
+				ventanaHistoria.Show();
 				this.Hide();
 			}
 			else
