@@ -1,0 +1,47 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 19:36:24
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Núcleo Primordial
+Vencedor          : JugadorUno
+Escenario Final   : Pozo Primordial Activo
+Total de Turnos   : 12
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán Primordial.
+⚔ Ignis Leviatan Pirico ataca a Leviatán Primordial: -23 HP (-20 Escudo).
+⚔ CPU Leviatán Primordial ataca: -28 HP (-20 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -17 HP | Leviatán Primordial: -16 HP
+⚔ Ignis Leviatan Pirico ataca a Leviatán Primordial: -48 HP.
+⚠ ¡La CPU envía a Titán Del Pozo Negro! Tu turno.
+⚡ Ignis Leviatan Pirico usa Llamarada Solar: -51 HP a Titán Del Pozo Negro.
+⚔ CPU Titán Del Pozo Negro ataca: -26 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+⚔ Nereida Del Abismo ataca a Titán Del Pozo Negro: -0 HP (-16 Escudo). Poco eficaz.
+⚡ CPU Titán Del Pozo Negro usa Aplastamiento Abisal: -43 HP.
+⚡ Nereida Del Abismo usa Marea Sanadora: -0 HP a Titán Del Pozo Negro (+14 HP curados).
+⚔ CPU Titán Del Pozo Negro ataca: -32 HP.
+⚡ ¡Golem De Basalto entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -14 HP | Titán Del Pozo Negro: -11 HP
+⚔ Golem De Basalto ataca a Titán Del Pozo Negro: -1 HP (-14 Escudo).
+⚠ ¡La CPU envía a Kraken De Aguas Negras! Tu turno.
+⚡ Golem De Basalto usa Muralla Monolitica: -40 HP a Kraken De Aguas Negras.
+🔄 La CPU cambia a Heraldo Del Huracán.
+⚔ Golem De Basalto ataca a Heraldo Del Huracán: -0 HP (-17 Escudo). Poco eficaz.
+⚔ CPU Heraldo Del Huracán ataca: -0 HP (-53 Escudo).
+⚔ Golem De Basalto ataca a Heraldo Del Huracán: -6 HP (-3 Escudo). Poco eficaz.
+⚡ CPU Heraldo Del Huracán usa Doble Vendaval: -46 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Cefiro Sierpe Alada [Aire: inmune] | Heraldo Del Huracán [Aire: inmune]
+⚔ Cefiro Sierpe Alada ataca a Heraldo Del Huracán: -29 HP.
+⚔ CPU Heraldo Del Huracán ataca: -8 HP (-25 Escudo).
+⚔ Cefiro Sierpe Alada ataca a Heraldo Del Huracán: -29 HP.
+⚠ ¡La CPU envía a Kraken De Aguas Negras! Tu turno.
+⚡ Cefiro Sierpe Alada usa Tormenta Cortante: -15 HP a Kraken De Aguas Negras.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=36 | V=36 | D=0 | Exito=100,00%
+ - CPU - Núcleo Primordial: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

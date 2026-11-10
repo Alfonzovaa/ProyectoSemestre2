@@ -1,0 +1,45 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 19:32:27
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Mar Espejo
+Vencedor          : JugadorUno
+Escenario Final   : Mar Espejo Brumoso
+Total de Turnos   : 11
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán Espectral.
+⚔ Ignis Leviatan Pirico ataca a Leviatán Espectral: -30 HP (-25 Escudo). ¡Súper eficaz!
+⚔ CPU Leviatán Espectral ataca: -10 HP (-20 Escudo).
+⚔ Ignis Leviatan Pirico ataca a Leviatán Espectral: -55 HP. ¡Súper eficaz!
+⚠ ¡La CPU envía a Espectro Del Arrecife! Tu turno.
+⚔ Ignis Leviatan Pirico ataca a Espectro Del Arrecife: -8 HP (-20 Escudo). Poco eficaz.
+⚔ CPU Espectro Del Arrecife ataca: -41 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -6 HP | Espectro Del Arrecife: -11 HP
+⚔ Nereida Del Abismo ataca a Espectro Del Arrecife: -22 HP.
+⚡ CPU Espectro Del Arrecife usa Eco Abisal: -0 HP.
+⚔ Nereida Del Abismo ataca a Espectro Del Arrecife: -21 HP.
+⚔ CPU Espectro Del Arrecife ataca: -27 HP.
+⚔ Nereida Del Abismo ataca a Espectro Del Arrecife: -21 HP.
+⚠ ¡La CPU envía a Coloso De Chatarra! Tu turno.
+⚔ Nereida Del Abismo ataca a Coloso De Chatarra: -0 HP (-16 Escudo). Poco eficaz.
+⚔ CPU Coloso De Chatarra ataca: -30 HP.
+⚡ ¡Golem De Basalto entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -6 HP | Coloso De Chatarra: -11 HP
+⚔ Golem De Basalto ataca a Coloso De Chatarra: -2 HP (-9 Escudo).
+⚡ CPU Coloso De Chatarra usa Muro Oxidado: -15 HP.
+⚡ Golem De Basalto usa Muralla Monolitica: -15 HP a Coloso De Chatarra.
+⚔ CPU Coloso De Chatarra ataca: -0 HP (-17 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -15 HP | Coloso De Chatarra: -8 HP
+⚔ Golem De Basalto ataca a Coloso De Chatarra: -9 HP.
+⚡ CPU Coloso De Chatarra usa Muro Oxidado: -24 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Coloso De Chatarra: -30 HP (-25 Escudo). ¡Súper eficaz!
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=36 | V=36 | D=0 | Exito=100,00%
+ - CPU - Mar Espejo: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

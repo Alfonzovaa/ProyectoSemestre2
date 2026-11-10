@@ -1,0 +1,38 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 19:31:13
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Black Waters
+Vencedor          : JugadorUno
+Escenario Final   : Black Waters Canyon
+Total de Turnos   : 8
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Battle starts: Zephyr Serpent vs Tar Leviathan.
+⚔ Zephyr Serpent attacks Tar Leviathan: -22 HP (-25 Shield). Super effective!
+⚔ CPU Tar Leviathan attacks: -0 HP (-22 Shield).
+⚔ Zephyr Serpent attacks Tar Leviathan: -47 HP. Super effective!
+⚠ CPU sends out Oil Well Pyromancer! Your turn.
+🌋 RANDOM EARTHQUAKE! Zephyr Serpent [Air: immune] | Oil Well Pyromancer: -17 HP
+⚔ Zephyr Serpent attacks Oil Well Pyromancer: -4 HP (-20 Shield). Not very effective.
+⚔ CPU Oil Well Pyromancer attacks: -54 HP (-3 Shield).
+⚡ Abyssal Nereid enters the battle! Your turn.
+⚔ Abyssal Nereid attacks Oil Well Pyromancer: -29 HP. Super effective!
+⚠ CPU sends out Corrupted Hydra! Your turn.
+🌋 RANDOM EARTHQUAKE! Abyssal Nereid: -8 HP | Corrupted Hydra: -8 HP
+⚔ Abyssal Nereid attacks Corrupted Hydra: -0 HP (-18 Shield).
+⚔ CPU Corrupted Hydra attacks: -4 HP (-25 Shield).
+⚔ Abyssal Nereid attacks Corrupted Hydra: -16 HP (-2 Shield).
+⚡ CPU Corrupted Hydra uses Dark Drain: -30 HP!
+⚔ Abyssal Nereid attacks Corrupted Hydra: -17 HP.
+⚔ CPU Corrupted Hydra attacks: -29 HP.
+⚡ Basalt Golem enters the battle! Your turn.
+🌋 RANDOM EARTHQUAKE! Basalt Golem: -5 HP | Corrupted Hydra: -13 HP
+⚔ Basalt Golem attacks Corrupted Hydra: -26 HP. Super effective!
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0,00%
+ - CPU - Black Waters: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

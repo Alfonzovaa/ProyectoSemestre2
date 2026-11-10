@@ -1,0 +1,31 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 19:35:11
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Tormenta Ácida
+Vencedor          : JugadorUno
+Escenario Final   : Cumbre De Tormentas
+Total de Turnos   : 6
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán Tormenta Ácida.
+⚔ Ignis Leviatan Pirico ataca a Leviatán Tormenta Ácida: -35 HP (-20 Escudo). ¡Súper eficaz!
+🛡 CPU Leviatán Tormenta Ácida se defiende (+9 Escudo).
+⚔ Ignis Leviatan Pirico ataca a Leviatán Tormenta Ácida: -46 HP (-9 Escudo). ¡Súper eficaz!
+⚠ ¡La CPU envía a Centella Sulfúrica! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -12 HP | Centella Sulfúrica: -8 HP
+⚔ Ignis Leviatan Pirico ataca a Centella Sulfúrica: -17 HP (-20 Escudo).
+🛡 CPU Centella Sulfúrica se defiende (+9 Escudo).
+⚔ Ignis Leviatan Pirico ataca a Centella Sulfúrica: -28 HP (-9 Escudo).
+⚠ ¡La CPU envía a Vórtice De Salmuera! Tu turno.
+⚔ Ignis Leviatan Pirico ataca a Vórtice De Salmuera: -8 HP (-20 Escudo). Poco eficaz.
+⚔ CPU Vórtice De Salmuera ataca: -21 HP (-20 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -10 HP | Vórtice De Salmuera: -16 HP
+⚔ Ignis Leviatan Pirico ataca a Vórtice De Salmuera: -32 HP. Poco eficaz.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=36 | V=36 | D=0 | Exito=100,00%
+ - CPU - Tormenta Ácida: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

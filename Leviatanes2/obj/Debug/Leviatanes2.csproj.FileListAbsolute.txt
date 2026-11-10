@@ -73,10 +73,6 @@ C:\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.calculo.resource
 D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.calculo.resources
 D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio1.jpg
 C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio1.jpg
-C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio3.png
-C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio2.png
-C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio4.png
-C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio5.png
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio1.jpg
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio2.png
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio3.png
