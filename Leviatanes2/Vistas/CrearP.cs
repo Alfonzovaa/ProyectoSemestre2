@@ -12,6 +12,7 @@ namespace Leviatanes2
 		private GestorPersistenciaTxt GestorTxt;
 		private List<Personaje> ListaCatalogoActual;
 		private bool ActualizandoControlesInternamente;
+		private int IdPersonajeVistaPrevia = 1;
 
 		public CrearP()
 		{
@@ -38,7 +39,14 @@ namespace Leviatanes2
 
 			RecargarListaDesdeArchivoTxt();
 			ActualizarMedidorBalanceCien();
-			ActualizarTarjetaVistaPreviaDesdeFormulario();
+			if (lstPersonajesTxt.Items.Count > 0)
+			{
+				lstPersonajesTxt.SelectedIndex = 0;
+			}
+			else
+			{
+				ActualizarTarjetaVistaPreviaDesdeFormulario();
+			}
 		}
 
 		private void RecargarListaDesdeArchivoTxt()
@@ -219,22 +227,41 @@ namespace Leviatanes2
 				G.DrawEllipse(BordePlataforma, CX - 78, CY + 22, 156, 32);
 			}
 
-			// Orbe / Insignia Elemental del Leviatan
-			using (SolidBrush BrochaExterior = new SolidBrush(ColorElem))
-			using (SolidBrush BrochaNucleo = new SolidBrush(Color.FromArgb(230, 255, 245, 210)))
-			using (Pen BordeOro = new Pen(Color.Gold, 3))
-			using (Font FuenteSimbolo = new Font("Consolas", 11F, FontStyle.Bold))
+			// Orbe / Imagen del Personaje ("personaje 1", "personaje 2", etc. desde la carpeta imagenes)
+			using (Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(IdPersonajeVistaPrevia, lblCartaNombreVista.Text))
 			{
-				G.FillEllipse(BrochaExterior, CX - 42, CY - 46, 84, 84);
-				G.DrawEllipse(BordeOro, CX - 42, CY - 46, 84, 84);
-				G.FillEllipse(BrochaNucleo, CX - 24, CY - 28, 48, 48);
+				if (imgPersonaje != null)
+				{
+					int maxAncho = W - 28;
+					int maxAlto = H - 24;
+					float escala = Math.Min((float)maxAncho / imgPersonaje.Width, (float)maxAlto / imgPersonaje.Height);
+					int anchoDibujo = Math.Max(1, (int)(imgPersonaje.Width * escala));
+					int altoDibujo = Math.Max(1, (int)(imgPersonaje.Height * escala));
+					int posX = (W - anchoDibujo) / 2;
+					int posY = (H - altoDibujo) / 2;
 
-				string Inicial = lblCartaFaccionBanner.Text.Contains("FUEGO") ? "FUEGO" :
-				                 lblCartaFaccionBanner.Text.Contains("TIERRA") ? "TIERRA" :
-				                 lblCartaFaccionBanner.Text.Contains("AIRE") ? "AIRE" : "AGUA";
+					G.InterpolationMode = InterpolationMode.HighQualityBicubic;
+					G.DrawImage(imgPersonaje, new Rectangle(posX, posY, anchoDibujo, altoDibujo));
+				}
+				else
+				{
+					using (SolidBrush BrochaExterior = new SolidBrush(ColorElem))
+					using (SolidBrush BrochaNucleo = new SolidBrush(Color.FromArgb(230, 255, 245, 210)))
+					using (Pen BordeOro = new Pen(Color.Gold, 3))
+					using (Font FuenteSimbolo = new Font("Consolas", 11F, FontStyle.Bold))
+					{
+						G.FillEllipse(BrochaExterior, CX - 42, CY - 46, 84, 84);
+						G.DrawEllipse(BordeOro, CX - 42, CY - 46, 84, 84);
+						G.FillEllipse(BrochaNucleo, CX - 24, CY - 28, 48, 48);
 
-				SizeF TamTexto = G.MeasureString(Inicial, FuenteSimbolo);
-				G.DrawString(Inicial, FuenteSimbolo, Brushes.Black, CX - (TamTexto.Width / 2), CY - 12);
+						string Inicial = lblCartaFaccionBanner.Text.Contains("FUEGO") ? "FUEGO" :
+						                 lblCartaFaccionBanner.Text.Contains("TIERRA") ? "TIERRA" :
+						                 lblCartaFaccionBanner.Text.Contains("AIRE") ? "AIRE" : "AGUA";
+
+						SizeF TamTexto = G.MeasureString(Inicial, FuenteSimbolo);
+						G.DrawString(Inicial, FuenteSimbolo, Brushes.Black, CX - (TamTexto.Width / 2), CY - 12);
+					}
+				}
 			}
 		}
 
@@ -347,6 +374,17 @@ namespace Leviatanes2
 			txtDescripcionEspecial.Text = "Ataque especial elemental.";
 			ActualizandoControlesInternamente = false;
 
+			int siguienteId = 1;
+			if (ListaCatalogoActual != null)
+			{
+				for (int i = 0; i < ListaCatalogoActual.Count; i++)
+				{
+					if (ListaCatalogoActual[i].IdPersonaje >= siguienteId)
+						siguienteId = ListaCatalogoActual[i].IdPersonaje + 1;
+				}
+			}
+			IdPersonajeVistaPrevia = siguienteId;
+
 			ActualizarMedidorBalanceCien();
 			ActualizarTarjetaVistaPreviaDesdeFormulario();
 			lblTextoProfesorGba.Text = "Campos reiniciados. Diseña un nuevo Leviatán y pulsa GUARDAR EN PERSONAJES.TXT ▼";
@@ -359,6 +397,7 @@ namespace Leviatanes2
 				return;
 
 			Personaje Seleccionado = ListaCatalogoActual[Idx];
+			IdPersonajeVistaPrevia = Seleccionado.IdPersonaje;
 			AplicarDatosATarjetaVistaPrevia(
 				Seleccionado.Nombre,
 				Seleccionado.Faccion,

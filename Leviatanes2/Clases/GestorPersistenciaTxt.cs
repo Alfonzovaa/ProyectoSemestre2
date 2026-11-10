@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Leviatanes2.Clases
 {
@@ -557,6 +559,246 @@ namespace Leviatanes2.Clases
             if (string.IsNullOrEmpty(Valor))
                 return string.Empty;
             return Valor.Replace("|", "/").Replace("\r", " ").Replace("\n", " ").Trim();
+        }
+
+        // =========================================================================
+        // 4. CARGA AUTOMÁTICA DE IMÁGENES DE PERSONAJES ("personaje 1", "personaje 2", etc.)
+        // =========================================================================
+        public static Image CargarImagenPersonaje(int idPersonaje, string nombrePersonaje = null)
+        {
+            SincronizarCarpetaImagenes();
+
+            List<string> carpetas = ObtenerCarpetasImagenes();
+            if (carpetas.Count == 0)
+                return null;
+
+            // 1. Buscar imagen exacta para el ID del personaje (ej: "personaje 1", "personaje 2"...)
+            Image imgExacta = BuscarImagenPorNumeroPersonaje(carpetas, idPersonaje, nombrePersonaje);
+            if (imgExacta != null)
+                return imgExacta;
+
+            // 2. Si es un personaje nuevo creado después de los 12 base (ID 13, 14...) y no existe "personaje 13",
+            // probar con el índice relativo (13 -> "personaje 1", 14 -> "personaje 2", etc.)
+            if (idPersonaje > 12 && idPersonaje < 100)
+            {
+                int idRelativo = ((idPersonaje - 1) % 12) + 1;
+                Image imgRelativa = BuscarImagenPorNumeroPersonaje(carpetas, idRelativo, null);
+                if (imgRelativa != null)
+                    return imgRelativa;
+            }
+
+            // 3. Si es un personaje de la CPU en Batalla (IDs 101, 102, 201...) y no tiene "personaje 101",
+            // asignarle una de las imágenes "personaje N" disponibles en la carpeta imagenes
+            if (idPersonaje >= 100)
+            {
+                int slotCpu = (idPersonaje % 100);
+                int batallaNum = (idPersonaje / 100);
+                int idCandidato = ((batallaNum - 1) * 3) + slotCpu;
+                Image imgCpu = BuscarImagenPorNumeroPersonaje(carpetas, idCandidato, null);
+                if (imgCpu != null)
+                    return imgCpu;
+
+                // Si solo hay pocas imágenes (ej. personaje 1, personaje 2, personaje 3), usar slotCpu
+                imgCpu = BuscarImagenPorNumeroPersonaje(carpetas, slotCpu, null);
+                if (imgCpu != null)
+                    return imgCpu;
+            }
+
+            return null;
+        }
+
+        private static Image BuscarImagenPorNumeroPersonaje(List<string> carpetas, int numeroBuscado, string nombrePersonaje)
+        {
+            if (numeroBuscado <= 0)
+                return null;
+
+            string[] extensiones = new string[] { ".png", ".jpg", ".jpeg", ".bmp", ".gif" };
+            string[] variantesNombre = new string[]
+            {
+                "personaje " + numeroBuscado,
+                "personaje" + numeroBuscado,
+                "personaje_" + numeroBuscado,
+                "personaje-" + numeroBuscado,
+                "Personaje " + numeroBuscado,
+                "Personaje" + numeroBuscado,
+                "Personaje_" + numeroBuscado,
+                "Personaje-" + numeroBuscado
+            };
+
+            foreach (string carpeta in carpetas)
+            {
+                if (!Directory.Exists(carpeta))
+                    continue;
+
+                // A. Búsqueda directa por nombre exacto ("personaje 1.png", "personaje 1.jpg", etc.)
+                foreach (string baseName in variantesNombre)
+                {
+                    foreach (string ext in extensiones)
+                    {
+                        string ruta = Path.Combine(carpeta, baseName + ext);
+                        if (File.Exists(ruta))
+                        {
+                            Image img = LeerImagenSinBloquear(ruta);
+                            if (img != null)
+                                return img;
+                        }
+                    }
+                }
+
+                // B. Búsqueda flexible recorriendo los archivos de la carpeta
+                try
+                {
+                    string[] archivos = Directory.GetFiles(carpeta);
+                    foreach (string archivo in archivos)
+                    {
+                        string ext = Path.GetExtension(archivo).ToLowerInvariant();
+                        bool extValida = false;
+                        for (int i = 0; i < extensiones.Length; i++)
+                        {
+                            if (ext == extensiones[i])
+                            {
+                                extValida = true;
+                                break;
+                            }
+                        }
+                        if (!extValida)
+                            continue;
+
+                        string soloNombre = Path.GetFileNameWithoutExtension(archivo).Trim();
+                        int numExtraido = ExtraerNumeroDePersonaje(soloNombre);
+                        if (numExtraido == numeroBuscado)
+                        {
+                            Image img = LeerImagenSinBloquear(archivo);
+                            if (img != null)
+                                return img;
+                        }
+
+                        if (!string.IsNullOrEmpty(nombrePersonaje) &&
+                            string.Equals(soloNombre, nombrePersonaje.Trim(), StringComparison.OrdinalIgnoreCase))
+                        {
+                            Image img = LeerImagenSinBloquear(archivo);
+                            if (img != null)
+                                return img;
+                        }
+                    }
+                }
+                catch
+                {
+                }
+            }
+
+            return null;
+        }
+
+        private static int ExtraerNumeroDePersonaje(string nombreArchivoSinExtension)
+        {
+            if (string.IsNullOrEmpty(nombreArchivoSinExtension))
+                return -1;
+
+            string limpio = nombreArchivoSinExtension.Trim().ToLowerInvariant();
+            if (!limpio.StartsWith("personaje"))
+                return -1;
+
+            int idx = "personaje".Length;
+            while (idx < limpio.Length && (limpio[idx] == ' ' || limpio[idx] == '_' || limpio[idx] == '-'))
+            {
+                idx++;
+            }
+
+            int inicioDigitos = idx;
+            while (idx < limpio.Length && char.IsDigit(limpio[idx]))
+            {
+                idx++;
+            }
+
+            if (idx > inicioDigitos)
+            {
+                string numStr = limpio.Substring(inicioDigitos, idx - inicioDigitos);
+                int resultado;
+                if (int.TryParse(numStr, out resultado))
+                    return resultado;
+            }
+
+            return -1;
+        }
+
+        private static Image LeerImagenSinBloquear(string rutaArchivo)
+        {
+            try
+            {
+                byte[] bytes = File.ReadAllBytes(rutaArchivo);
+                using (MemoryStream ms = new MemoryStream(bytes))
+                {
+                    using (Image original = Image.FromStream(ms))
+                    {
+                        return new Bitmap(original);
+                    }
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private static List<string> ObtenerCarpetasImagenes()
+        {
+            List<string> lista = new List<string>();
+            string[] candidatas = new string[]
+            {
+                Path.Combine(Application.StartupPath, "..", "..", "imagenes"),
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "imagenes"),
+                Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "imagenes"),
+                Path.Combine(Application.StartupPath, "imagenes"),
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "imagenes"),
+                Path.Combine(Directory.GetCurrentDirectory(), "imagenes"),
+                "imagenes"
+            };
+
+            for (int i = 0; i < candidatas.Length; i++)
+            {
+                try
+                {
+                    if (Directory.Exists(candidatas[i]))
+                    {
+                        string full = Path.GetFullPath(candidatas[i]);
+                        if (!lista.Contains(full))
+                            lista.Add(full);
+                    }
+                }
+                catch
+                {
+                }
+            }
+
+            return lista;
+        }
+
+        public static void SincronizarCarpetaImagenes()
+        {
+            try
+            {
+                string rutaProyecto = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", "..", "imagenes"));
+                string rutaSalida = Path.GetFullPath(Path.Combine(Application.StartupPath, "imagenes"));
+
+                if (Directory.Exists(rutaProyecto))
+                {
+                    if (!Directory.Exists(rutaSalida))
+                        Directory.CreateDirectory(rutaSalida);
+
+                    foreach (string archivo in Directory.GetFiles(rutaProyecto))
+                    {
+                        string destino = Path.Combine(rutaSalida, Path.GetFileName(archivo));
+                        if (!File.Exists(destino) || File.GetLastWriteTimeUtc(archivo) > File.GetLastWriteTimeUtc(destino))
+                        {
+                            File.Copy(archivo, destino, true);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+            }
         }
     }
 }

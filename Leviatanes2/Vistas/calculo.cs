@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
@@ -243,12 +243,13 @@ namespace Leviatanes2
 
 		private void BtnSiguienteClick(object sender, EventArgs e)
 		{
-			// Después del ejercicio N de Cálculo, se pasa al capítulo N + 1 de Historia
-			int siguienteCapitulo = this.ejercicioSolicitado + 1;
+			// Después del Reto de Cálculo N (1 al 5), se muestra la Historia N correspondiente,
+			// la cual tiene el botón para ir a la Batalla N.
+			int capituloHistoria = this.ejercicioSolicitado;
 
-			if (siguienteCapitulo <= 6)
+			if (capituloHistoria >= 1 && capituloHistoria <= 6)
 			{
-				Historia ventanaHistoria = new Historia(siguienteCapitulo);
+				Historia ventanaHistoria = new Historia(capituloHistoria);
 				ventanaHistoria.FormClosed += (s, args) => Application.Exit();
 				ventanaHistoria.Show();
 				this.Hide();

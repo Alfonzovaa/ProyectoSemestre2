@@ -358,6 +358,24 @@ namespace Leviatanes2
             if (PersonajeEnVistaPrevia == null)
                 return;
 
+            using (Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(PersonajeEnVistaPrevia.IdPersonaje, PersonajeEnVistaPrevia.Nombre))
+            {
+                if (imgPersonaje != null)
+                {
+                    int maxAncho = Rect.Width - 12;
+                    int maxAlto = Rect.Height - 12;
+                    float escala = Math.Min((float)maxAncho / imgPersonaje.Width, (float)maxAlto / imgPersonaje.Height);
+                    int anchoDibujo = Math.Max(1, (int)(imgPersonaje.Width * escala));
+                    int altoDibujo = Math.Max(1, (int)(imgPersonaje.Height * escala));
+                    int posX = (Rect.Width - anchoDibujo) / 2;
+                    int posY = (Rect.Height - altoDibujo) / 2;
+
+                    G.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                    G.DrawImage(imgPersonaje, new Rectangle(posX, posY, anchoDibujo, altoDibujo));
+                    return;
+                }
+            }
+
             Color ColorElem = ObtenerColorElemento(PersonajeEnVistaPrevia.Faccion);
             int CentroX = Rect.Width / 2;
             int CentroY = Rect.Height / 2;

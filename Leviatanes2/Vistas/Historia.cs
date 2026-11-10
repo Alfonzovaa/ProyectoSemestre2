@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -53,7 +53,7 @@ namespace Leviatanes2
 					                "Tras la batalla final del primer juego, una de las gemas cayó al fondo del mar. La tripulación festejaba pensando que todos los leviatanes habían muerto para siempre. Pero la gema liberó un pulso de energía en las profundidades de la fosa, alterando las aguas y haciendo que la cubierta vuelva a temblar. El pánico regresa: la victoria era una ilusión nacida de la ignorancia.\n\n" +
 					                "Batalla 1: Leviatán de la Fosa, una mole acorazada que emerge furiosa del grieta donde cayó la gema.";
 					ActualizarImagen(1, "El Despertar en la Fosa");
-					btnSiguiente.Text = "Continuar a Batalla 1 ▶";
+					btnSiguiente.Text = "Ir a la Batalla 1 ▶";
 					break;
 
 				case 2:
@@ -62,7 +62,7 @@ namespace Leviatanes2
 					                "Al adentrarse en mar abierto buscando respuestas, el barco cruza una enorme mancha de petróleo abandonada. Las cartas de navegación antiguas mostraban yacimientos activos, pero ahora los pozos están secos. La tripulación empieza a encajar piezas: el petróleo no se agotó por arte de magia, sino por una sobreexplotación desmedida que pudrió el lecho marino.\n\n" +
 					                "Batalla 2: Leviatán del Alquitrán, una bestia mutada y ciega que habita en las aguas densas por los viejos derrames industriales.";
 					ActualizarImagen(2, "Las Aguas Negras");
-					btnSiguiente.Text = "Continuar a Batalla 2 ▶";
+					btnSiguiente.Text = "Ir a la Batalla 2 ▶";
 					break;
 
 				case 3:
@@ -71,7 +71,7 @@ namespace Leviatanes2
 					                "Navegando entre plataformas petroleras abandonadas y residuos flotantes, la nave entra en una zona de aguas muertas. La superficie refleja la basura acumulada y la ambición humana que destruyó las costas. El capitán y los marineros enfrentan el peso de la culpa: los monstruos no aparecieron por maldición, sino como respuesta de la naturaleza a la contaminación del hombre.\n\n" +
 					                "Batalla 3: Leviatán Espectral, un monstruo hecho de sombras y residuos tóxicos que toma la forma del daño provocado al océano.";
 					ActualizarImagen(3, "El Mar Espejo");
-					btnSiguiente.Text = "Continuar a Batalla 3 ▶";
+					btnSiguiente.Text = "Ir a la Batalla 3 ▶";
 					break;
 
 				case 4:
@@ -80,7 +80,7 @@ namespace Leviatanes2
 					                "Atrapados en una tormenta ácida cerca del epicentro del desastre ambiental, la tripulación descubre la verdad definitiva: la contaminación tóxica y el drenaje de petróleo mutaron a la vida marina, convirtiéndola en los leviatanes que amenazan con destruir todo. La tripulación entiende que la tormenta no los va a perdonar, pero deciden tomar firmemente el timón para corregir los errores del pasado.\n\n" +
 					                "Batalla 4: Leviatán de las Tormentas Ácidas, la criatura que alimenta los vientos tóxicos que asfixian los mares.";
 					ActualizarImagen(4, "La Revelacion del Origen");
-					btnSiguiente.Text = "Continuar a Batalla 4 ▶";
+					btnSiguiente.Text = "Ir a la Batalla 4 ▶";
 					break;
 
 				case 5:
@@ -89,7 +89,7 @@ namespace Leviatanes2
 					                "En el corazón del Caribe yace el pozo original, donde la gema perdida encajó directamente en el cuerpo del primer leviatán, alimentándose de la contaminación acumulada durante décadas. Para detener el nacimiento de más monstruos, no basta con luchar: hay que destruir el núcleo del desecho tóxico antes de que consuma todo el océano.\n\n" +
 					                "Batalla 5: Leviatán Primordial del Petróleo, la bestia colosal engendrada por la contaminación extrema, fortalecida por el poder de la gema.";
 					ActualizarImagen(5, "El Nucleo de la Podredumbre");
-					btnSiguiente.Text = "Continuar a Batalla 5 ▶";
+					btnSiguiente.Text = "Ir a la Batalla 5 ▶";
 					break;
 
 				case 6:

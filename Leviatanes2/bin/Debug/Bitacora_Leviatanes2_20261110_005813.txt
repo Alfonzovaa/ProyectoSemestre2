@@ -1,0 +1,48 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 00:58:13
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Black Waters
+Vencedor          : JugadorUno
+Escenario Final   : Black Waters Canyon
+Total de Turnos   : 13
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Battle starts: Zephyr Serpent vs Tar Leviathan.
+🔄 Zephyr Serpent switches out. Go, Hurricane Valkyrie!
+🔄 CPU switches to Oil Well Pyromancer!
+🌋 RANDOM EARTHQUAKE! Hurricane Valkyrie [Air: immune] | Oil Well Pyromancer: -6 HP
+⚔ Hurricane Valkyrie attacks Oil Well Pyromancer: -4 HP (-20 Shield). Not very effective.
+⚔ CPU Oil Well Pyromancer attacks: -37 HP (-20 Shield).
+🔄 Hurricane Valkyrie switches out. Go, Abyssal Nereid!
+⚡ CPU Oil Well Pyromancer uses Crude Ignition: -38 HP!
+⚔ Abyssal Nereid attacks Oil Well Pyromancer: -29 HP. Super effective!
+⚔ CPU Oil Well Pyromancer attacks: -7 HP (-25 Shield).
+⚔ Abyssal Nereid attacks Oil Well Pyromancer: -29 HP. Super effective!
+⚠ CPU sends out Corrupted Hydra! Your turn.
+🌋 RANDOM EARTHQUAKE! Abyssal Nereid: -7 HP | Corrupted Hydra: -6 HP
+🔄 Abyssal Nereid switches out. Go, Basalt Golem!
+⚔ CPU Corrupted Hydra attacks: -0 HP (-20 Shield).
+⚔ Basalt Golem attacks Corrupted Hydra: -4 HP (-20 Shield). Super effective!
+⚡ CPU Corrupted Hydra uses Dark Drain: -20 HP!
+🌋 RANDOM EARTHQUAKE! Basalt Golem: -8 HP | Corrupted Hydra: -12 HP
+⚡ Basalt Golem uses Monolithic Wall: -38 HP to Corrupted Hydra!
+⚠ CPU sends out Tar Leviathan! Your turn.
+🔄 Basalt Golem switches out. Go, Zephyr Serpent!
+⚔ CPU Tar Leviathan attacks: -1 HP (-25 Shield).
+⚔ Zephyr Serpent attacks Tar Leviathan: -22 HP (-25 Shield). Super effective!
+⚡ CPU Tar Leviathan uses Tar Tsunami: -34 HP!
+⚔ Zephyr Serpent attacks Tar Leviathan: -22 HP (-25 Shield). Super effective!
+⚔ CPU Tar Leviathan attacks: -21 HP.
+⚡ Ignis Leviathan enters the battle! Your turn.
+🌋 RANDOM EARTHQUAKE! Ignis Leviathan: -9 HP | Tar Leviathan: -15 HP
+🔄 Ignis Leviathan switches out. Go, Hurricane Valkyrie!
+🛡 CPU Tar Leviathan defends (+11 Shield).
+⚔ Hurricane Valkyrie attacks Tar Leviathan: -38 HP (-11 Shield). Super effective!
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=0 | V=0 | D=0 | Exito=0,00%
+ - CPU - Black Waters: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

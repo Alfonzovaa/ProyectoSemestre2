@@ -1,0 +1,48 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 10/11/2026 00:30:32
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Abismo Oceanico
+Total de Turnos   : 14
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán de la Fosa.
+⚔ Ignis Leviatan Pirico ataca a Leviatán de la Fosa: -4 HP (-20 Escudo). Poco eficaz.
+⚔ CPU Leviatán de la Fosa ataca: -26 HP (-20 Escudo).
+🔄 Sale Ignis Leviatan Pirico y entra Golem De Basalto.
+🔄 La CPU cambia a Sierpe De Remolino.
+⚔ Golem De Basalto ataca a Sierpe De Remolino: -0 HP (-13 Escudo). Poco eficaz.
+⚔ CPU Sierpe De Remolino ataca: -13 HP (-36 Escudo).
+🔄 Sale Golem De Basalto y entra Ignis Leviatan Pirico.
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -19 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -15 HP (-13 Escudo).
+⚔ CPU Sierpe De Remolino ataca: -7 HP (-25 Escudo).
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -22 HP (-6 Escudo).
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -46 HP.
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -28 HP.
+⚠ ¡La CPU envía a Ignis De La Grieta! Tu turno.
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -19 HP (-20 Escudo). ¡Súper eficaz!
+⚔ CPU Ignis De La Grieta ataca: -25 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Ignis De La Grieta: -24 HP. Poco eficaz.
+⚠ ¡La CPU envía a Leviatán de la Fosa! Tu turno.
+🔄 Sale Cefiro Sierpe Alada y entra Golem De Basalto.
+⚡ CPU Leviatán de la Fosa usa Pulso Abisal: -25 HP.
+⚔ Golem De Basalto ataca a Leviatán de la Fosa: -16 HP. ¡Súper eficaz!
+⚔ CPU Leviatán de la Fosa ataca: -26 HP.
+⚡ ¡Gyarados Del Caribe entra al combate! Tu turno.
+⚔ Gyarados Del Caribe ataca a Leviatán de la Fosa: -27 HP (-6 Escudo).
+⚡ CPU Leviatán de la Fosa usa Pulso Abisal: -0 HP.
+⚔ Gyarados Del Caribe ataca a Leviatán de la Fosa: -32 HP.
+⚔ CPU Leviatán de la Fosa ataca: -26 HP (-6 Escudo).
+⚔ Gyarados Del Caribe ataca a Leviatán de la Fosa: -32 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=23 | V=23 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================
