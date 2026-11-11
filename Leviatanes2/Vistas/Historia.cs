@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.IO;
 using System.Windows.Forms;
+using Leviatanes2.Clases;
 
 namespace Leviatanes2
 {
@@ -25,8 +26,10 @@ namespace Leviatanes2
 		public Historia(int capituloInicial)
 		{
 			InitializeComponent();
+			this.ClientSize = new Size(UiResponsiveManager.ANCHO_BASE, UiResponsiveManager.ALTO_BASE);
 			SincronizarCarpetasDeImagenes();
 			MostrarCapitulo(capituloInicial);
+			UiResponsiveManager.ConfigurarFormulario(this);
 		}
 
 		public void MostrarCapitulo(int numCapitulo)
@@ -134,17 +137,13 @@ namespace Leviatanes2
 						"!");
 
 					Calculo ventanaCalculo = new Calculo(capitulo);
-					ventanaCalculo.FormClosed += (s, args) => Application.Exit();
-					ventanaCalculo.Show();
-					this.Hide();
+					UiResponsiveManager.CambiarVentana(this, ventanaCalculo);
 					break;
 
 				case 6:
 				default:
 					MainForm ventanaPrincipal = new MainForm();
-					ventanaPrincipal.FormClosed += (s, args) => Application.Exit();
-					ventanaPrincipal.Show();
-					this.Hide();
+					UiResponsiveManager.CambiarVentana(this, ventanaPrincipal);
 					break;
 			}
 
@@ -600,9 +599,7 @@ namespace Leviatanes2
 		void BtnCerrarClick(object sender, EventArgs e)
 		{
 			MainForm menu = new MainForm();
-			menu.FormClosed += (s, args) => Application.Exit();
-			menu.Show();
-			this.Hide();
+			UiResponsiveManager.CambiarVentana(this, menu);
 		}
 	}
 }

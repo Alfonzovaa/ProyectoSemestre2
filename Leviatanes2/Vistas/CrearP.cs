@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -17,8 +17,10 @@ namespace Leviatanes2
 		public CrearP()
 		{
 			InitializeComponent();
+			this.ClientSize = new Size(UiResponsiveManager.ANCHO_BASE, UiResponsiveManager.ALTO_BASE);
 			ConfigurarListBoxCatalogoModerno();
 			InicializarModuloCrearPersonaje();
+			UiResponsiveManager.ConfigurarFormulario(this);
 		}
 
 		private void ConfigurarListBoxCatalogoModerno()
@@ -638,9 +640,7 @@ namespace Leviatanes2
 		void BtnIrSeleccionModalidadClick(object sender, EventArgs e)
 		{
 			SeleccionModalidad VentanaModalidad = new SeleccionModalidad();
-			VentanaModalidad.FormClosed += (s, args) => Application.Exit();
-			VentanaModalidad.Show();
-			this.Hide();
+			UiResponsiveManager.CambiarVentana(this, VentanaModalidad);
 		}
 
 		protected override void OnFormClosed(FormClosedEventArgs e)
@@ -652,9 +652,7 @@ namespace Leviatanes2
 		void VolverMenuClick(object sender, EventArgs e)
 		{
 			MainForm abrirVentana = new MainForm();
-			abrirVentana.Show();
-			abrirVentana.FormClosed += (s, args) => Application.Exit();
-			this.Hide();
+			UiResponsiveManager.CambiarVentana(this, abrirVentana);
 		}
 		
 		void LblSubtituloGbaClick(object sender, EventArgs e)

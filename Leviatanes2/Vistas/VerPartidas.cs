@@ -30,6 +30,8 @@ namespace Leviatanes2
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
+			this.ClientSize = new Size(UiResponsiveManager.ANCHO_BASE, UiResponsiveManager.ALTO_BASE);
+			UiResponsiveManager.ConfigurarFormulario(this);
 
 			InicializarModuloEstadisticas();
 		}
@@ -246,11 +248,7 @@ namespace Leviatanes2
 		void VolverMenuClick(object sender, EventArgs e)
 		{
 			MainForm abrirVentana = new MainForm();
-			abrirVentana.Show();
-
-			abrirVentana.FormClosed += (s, args) => Application.Exit();
-
-			this.Hide();
+			UiResponsiveManager.CambiarVentana(this, abrirVentana);
 		}
 
 		protected override void OnFormClosed(FormClosedEventArgs e)

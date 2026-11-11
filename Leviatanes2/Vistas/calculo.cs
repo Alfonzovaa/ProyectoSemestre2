@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
+using Leviatanes2.Clases;
 
 namespace Leviatanes2
 {
@@ -36,10 +37,12 @@ namespace Leviatanes2
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
+			this.ClientSize = new Size(UiResponsiveManager.ANCHO_BASE, UiResponsiveManager.ALTO_BASE);
 
 			this.ejercicioSolicitado = numeroEjercicio;
 			SincronizarCarpetasDeImagenes();
 			CargarEjercicio();
+			UiResponsiveManager.ConfigurarFormulario(this);
 		}
 
 		/// <summary>
@@ -275,16 +278,12 @@ namespace Leviatanes2
 			if (numBatalla >= 1 && numBatalla <= 5)
 			{
 				Batalla ventanaBatalla = new Batalla(numBatalla);
-				ventanaBatalla.FormClosed += (s, args) => Application.Exit();
-				ventanaBatalla.Show();
-				this.Hide();
+				UiResponsiveManager.CambiarVentana(this, ventanaBatalla);
 			}
 			else
 			{
 				MainForm ventanaPrincipal = new MainForm();
-				ventanaPrincipal.FormClosed += (s, args) => Application.Exit();
-				ventanaPrincipal.Show();
-				this.Hide();
+				UiResponsiveManager.CambiarVentana(this, ventanaPrincipal);
 			}
 		}
 
@@ -303,9 +302,7 @@ namespace Leviatanes2
 			if (resultado == DialogResult.Yes)
 			{
 				MainForm menu = new MainForm();
-				menu.FormClosed += (s, args) => Application.Exit();
-				menu.Show();
-				this.Hide();
+				UiResponsiveManager.CambiarVentana(this, menu);
 			}
 		}
 

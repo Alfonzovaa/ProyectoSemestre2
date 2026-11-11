@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -83,6 +83,8 @@ namespace Leviatanes2
 		public Batalla(int batalla)
 		{
 			InitializeComponent();
+			this.ClientSize = new Size(UiResponsiveManager.ANCHO_BASE, UiResponsiveManager.ALTO_BASE);
+			UiResponsiveManager.ConfigurarFormulario(this);
 			this.DoubleBuffered = true;
 			this.numeroBatalla = batalla;
 			this.gestorTxt = new GestorPersistenciaTxt();
@@ -1931,16 +1933,12 @@ namespace Leviatanes2
 			if (this.numeroBatalla >= 1 && this.numeroBatalla <= 5)
 			{
 				Historia ventanaHistoria = new Historia(this.numeroBatalla + 1);
-				ventanaHistoria.FormClosed += (s, args) => Application.Exit();
-				ventanaHistoria.Show();
-				this.Hide();
+				UiResponsiveManager.CambiarVentana(this, ventanaHistoria);
 			}
 			else
 			{
 				MainForm ventanaPrincipal = new MainForm();
-				ventanaPrincipal.FormClosed += (s, args) => Application.Exit();
-				ventanaPrincipal.Show();
-				this.Hide();
+				UiResponsiveManager.CambiarVentana(this, ventanaPrincipal);
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: Alfonzovaa
  * Date: 30/10/2026
@@ -101,7 +101,7 @@ namespace Leviatanes2
 			this.pnlHeaderGba.Controls.Add(this.lblTituloGba);
 			this.pnlHeaderGba.Location = new System.Drawing.Point(0, 0);
 			this.pnlHeaderGba.Name = "pnlHeaderGba";
-			this.pnlHeaderGba.Size = new System.Drawing.Size(960, 56);
+			this.pnlHeaderGba.Size = new System.Drawing.Size(1280, 56);
 			this.pnlHeaderGba.TabIndex = 0;
 			// 
 			// lblTituloGba
@@ -110,7 +110,7 @@ namespace Leviatanes2
 			this.lblTituloGba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblTituloGba.Location = new System.Drawing.Point(14, 5);
 			this.lblTituloGba.Name = "lblTituloGba";
-			this.lblTituloGba.Size = new System.Drawing.Size(930, 28);
+			this.lblTituloGba.Size = new System.Drawing.Size(1250, 28);
 			this.lblTituloGba.TabIndex = 0;
 			this.lblTituloGba.Text = "LEVIATANES DEL CARIBE 2 - FORJA Y BESTIARIO ELEMENTAL";
 			// 
@@ -120,25 +120,25 @@ namespace Leviatanes2
 			this.lblSubtituloGba.ForeColor = System.Drawing.Color.White;
 			this.lblSubtituloGba.Location = new System.Drawing.Point(16, 34);
 			this.lblSubtituloGba.Name = "lblSubtituloGba";
-			this.lblSubtituloGba.Size = new System.Drawing.Size(930, 18);
+			this.lblSubtituloGba.Size = new System.Drawing.Size(1250, 18);
 			this.lblSubtituloGba.TabIndex = 1;
-			this.lblSubtituloGba.Text = "BESTIARIO ABISAL DEL CARIBE  |  PERSISTENCIA EN ARCHIVO (.TXT)";
+			this.lblSubtituloGba.Text = "BESTIARIO ABISAL DEL CARIBE  |  PERSISTENCIA EN ARCHIVO (.TXT)  |  [F11: PANTALLA COMPLETA]";
 			// 
 			// pnlFranjaDorada
 			// 
 			this.pnlFranjaDorada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlFranjaDorada.Location = new System.Drawing.Point(0, 56);
 			this.pnlFranjaDorada.Name = "pnlFranjaDorada";
-			this.pnlFranjaDorada.Size = new System.Drawing.Size(960, 4);
+			this.pnlFranjaDorada.Size = new System.Drawing.Size(1280, 4);
 			this.pnlFranjaDorada.TabIndex = 1;
 			// 
 			// pnlMarcoIzquierdo
 			// 
 			this.pnlMarcoIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoIzquierdo.Controls.Add(this.pnlFormularioGba);
-			this.pnlMarcoIzquierdo.Location = new System.Drawing.Point(12, 68);
+			this.pnlMarcoIzquierdo.Location = new System.Drawing.Point(16, 68);
 			this.pnlMarcoIzquierdo.Name = "pnlMarcoIzquierdo";
-			this.pnlMarcoIzquierdo.Size = new System.Drawing.Size(372, 472);
+			this.pnlMarcoIzquierdo.Size = new System.Drawing.Size(440, 526);
 			this.pnlMarcoIzquierdo.TabIndex = 2;
 			// 
 			// pnlFormularioGba
@@ -169,7 +169,7 @@ namespace Leviatanes2
 			this.pnlFormularioGba.Controls.Add(this.lblHeaderFormulario);
 			this.pnlFormularioGba.Location = new System.Drawing.Point(3, 3);
 			this.pnlFormularioGba.Name = "pnlFormularioGba";
-			this.pnlFormularioGba.Size = new System.Drawing.Size(366, 466);
+			this.pnlFormularioGba.Size = new System.Drawing.Size(434, 520);
 			this.pnlFormularioGba.TabIndex = 0;
 			// 
 			// lblHeaderFormulario
@@ -441,9 +441,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoCarta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoCarta.Controls.Add(this.pnlCartaInterior);
-			this.pnlMarcoCarta.Location = new System.Drawing.Point(394, 68);
+			this.pnlMarcoCarta.Location = new System.Drawing.Point(468, 68);
 			this.pnlMarcoCarta.Name = "pnlMarcoCarta";
-			this.pnlMarcoCarta.Size = new System.Drawing.Size(256, 472);
+			this.pnlMarcoCarta.Size = new System.Drawing.Size(360, 526);
 			this.pnlMarcoCarta.TabIndex = 3;
 			// 
 			// pnlCartaInterior
@@ -463,7 +463,7 @@ namespace Leviatanes2
 			this.pnlCartaInterior.Controls.Add(this.lblCartaFaccionBanner);
 			this.pnlCartaInterior.Location = new System.Drawing.Point(3, 3);
 			this.pnlCartaInterior.Name = "pnlCartaInterior";
-			this.pnlCartaInterior.Size = new System.Drawing.Size(250, 466);
+			this.pnlCartaInterior.Size = new System.Drawing.Size(354, 520);
 			this.pnlCartaInterior.TabIndex = 0;
 			// 
 			// lblCartaFaccionBanner
@@ -596,9 +596,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoCatalogo.Controls.Add(this.pnlCatalogoInterior);
-			this.pnlMarcoCatalogo.Location = new System.Drawing.Point(660, 68);
+			this.pnlMarcoCatalogo.Location = new System.Drawing.Point(840, 68);
 			this.pnlMarcoCatalogo.Name = "pnlMarcoCatalogo";
-			this.pnlMarcoCatalogo.Size = new System.Drawing.Size(288, 472);
+			this.pnlMarcoCatalogo.Size = new System.Drawing.Size(424, 526);
 			this.pnlMarcoCatalogo.TabIndex = 4;
 			// 
 			// pnlCatalogoInterior
@@ -612,7 +612,7 @@ namespace Leviatanes2
 			this.pnlCatalogoInterior.Controls.Add(this.lblHeaderCatalogo);
 			this.pnlCatalogoInterior.Location = new System.Drawing.Point(3, 3);
 			this.pnlCatalogoInterior.Name = "pnlCatalogoInterior";
-			this.pnlCatalogoInterior.Size = new System.Drawing.Size(282, 466);
+			this.pnlCatalogoInterior.Size = new System.Drawing.Size(418, 520);
 			this.pnlCatalogoInterior.TabIndex = 0;
 			// 
 			// lblHeaderCatalogo
@@ -695,9 +695,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoDialogoGba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(41)))), ((int)(((byte)(18)))));
 			this.pnlMarcoDialogoGba.Controls.Add(this.pnlDialogoInterior);
-			this.pnlMarcoDialogoGba.Location = new System.Drawing.Point(12, 548);
+			this.pnlMarcoDialogoGba.Location = new System.Drawing.Point(16, 604);
 			this.pnlMarcoDialogoGba.Name = "pnlMarcoDialogoGba";
-			this.pnlMarcoDialogoGba.Size = new System.Drawing.Size(540, 80);
+			this.pnlMarcoDialogoGba.Size = new System.Drawing.Size(740, 100);
 			this.pnlMarcoDialogoGba.TabIndex = 5;
 			// 
 			// pnlDialogoInterior
@@ -707,7 +707,7 @@ namespace Leviatanes2
 			this.pnlDialogoInterior.Controls.Add(this.lblTituloDialogoGba);
 			this.pnlDialogoInterior.Location = new System.Drawing.Point(3, 3);
 			this.pnlDialogoInterior.Name = "pnlDialogoInterior";
-			this.pnlDialogoInterior.Size = new System.Drawing.Size(534, 74);
+			this.pnlDialogoInterior.Size = new System.Drawing.Size(734, 94);
 			this.pnlDialogoInterior.TabIndex = 0;
 			// 
 			// lblTituloDialogoGba
@@ -716,7 +716,7 @@ namespace Leviatanes2
 			this.lblTituloDialogoGba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblTituloDialogoGba.Location = new System.Drawing.Point(10, 6);
 			this.lblTituloDialogoGba.Name = "lblTituloDialogoGba";
-			this.lblTituloDialogoGba.Size = new System.Drawing.Size(512, 18);
+			this.lblTituloDialogoGba.Size = new System.Drawing.Size(714, 20);
 			this.lblTituloDialogoGba.TabIndex = 0;
 			this.lblTituloDialogoGba.Text = "BITACORA DEL CARIBE - FORJA DE LEVIATANES:";
 			// 
@@ -724,9 +724,9 @@ namespace Leviatanes2
 			// 
 			this.lblTextoProfesorGba.Font = new System.Drawing.Font("Consolas", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTextoProfesorGba.ForeColor = System.Drawing.Color.White;
-			this.lblTextoProfesorGba.Location = new System.Drawing.Point(10, 26);
+			this.lblTextoProfesorGba.Location = new System.Drawing.Point(10, 28);
 			this.lblTextoProfesorGba.Name = "lblTextoProfesorGba";
-			this.lblTextoProfesorGba.Size = new System.Drawing.Size(512, 42);
+			this.lblTextoProfesorGba.Size = new System.Drawing.Size(714, 60);
 			this.lblTextoProfesorGba.TabIndex = 1;
 			this.lblTextoProfesorGba.Text = "Reparte exactamente 100 puntos entre Vida (VIT), Escudo (BLI) y Ataque (POD) para" +
 			" registrar tu Leviatan en personajes.txt ▼";
@@ -737,9 +737,9 @@ namespace Leviatanes2
 			this.btnIrSeleccionModalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnIrSeleccionModalidad.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnIrSeleccionModalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
-			this.btnIrSeleccionModalidad.Location = new System.Drawing.Point(560, 548);
+			this.btnIrSeleccionModalidad.Location = new System.Drawing.Point(768, 604);
 			this.btnIrSeleccionModalidad.Name = "btnIrSeleccionModalidad";
-			this.btnIrSeleccionModalidad.Size = new System.Drawing.Size(226, 80);
+			this.btnIrSeleccionModalidad.Size = new System.Drawing.Size(330, 100);
 			this.btnIrSeleccionModalidad.TabIndex = 6;
 			this.btnIrSeleccionModalidad.Text = "IR A SELECCION DE MODALIDAD >>";
 			this.btnIrSeleccionModalidad.UseVisualStyleBackColor = false;
@@ -751,9 +751,9 @@ namespace Leviatanes2
 			this.VolverMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.VolverMenu.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.VolverMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
-			this.VolverMenu.Location = new System.Drawing.Point(794, 548);
+			this.VolverMenu.Location = new System.Drawing.Point(1110, 604);
 			this.VolverMenu.Name = "VolverMenu";
-			this.VolverMenu.Size = new System.Drawing.Size(154, 80);
+			this.VolverMenu.Size = new System.Drawing.Size(154, 100);
 			this.VolverMenu.TabIndex = 7;
 			this.VolverMenu.Text = "<< VOLVER AL MENU";
 			this.VolverMenu.UseVisualStyleBackColor = false;
@@ -764,7 +764,7 @@ namespace Leviatanes2
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(32)))), ((int)(((byte)(52)))));
-			this.ClientSize = new System.Drawing.Size(960, 640);
+			this.ClientSize = new System.Drawing.Size(1280, 720);
 			this.Controls.Add(this.btnIrSeleccionModalidad);
 			this.Controls.Add(this.pnlMarcoDialogoGba);
 			this.Controls.Add(this.pnlMarcoCatalogo);

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -16,11 +16,8 @@ namespace Leviatanes2
 		public MainForm()
 		{
 			InitializeComponent();
-			this.DoubleBuffered = true;
-
-			// Forzar resolucion limpia 960x640 coherente con el resto del juego
-			this.AutoScaleMode = AutoScaleMode.None;
-			this.ClientSize = new Size(960, 640);
+			this.ClientSize = new Size(UiResponsiveManager.ANCHO_BASE, UiResponsiveManager.ALTO_BASE);
+			UiResponsiveManager.ConfigurarFormulario(this);
 
 			CargarLeviatanesInsigniaDelBestiario();
 			AjustarDisenoSimetrico();
@@ -76,42 +73,54 @@ namespace Leviatanes2
 			if (W <= 0 || H <= 0)
 				return;
 
+			float escala = Math.Min((float)W / UiResponsiveManager.ANCHO_BASE, (float)H / UiResponsiveManager.ALTO_BASE);
+			if (escala < 0.2f) escala = 1f;
+
 			// 1. Barras superior e inferior
-			pnlBarraSuperiorNegra.SetBounds(0, 0, W, 42);
-			lblHeaderRomGba.SetBounds(10, 8, W - 20, 26);
-			pnlFranjaOroSup.SetBounds(0, 42, W, 3);
+			int barSupH = (int)(46 * escala);
+			int barInfH = (int)(42 * escala);
+			pnlBarraSuperiorNegra.SetBounds(0, 0, W, barSupH);
+			lblHeaderRomGba.SetBounds(10, Math.Max(0, (barSupH - (int)(26 * escala)) / 2), W - 20, (int)(26 * escala));
+			pnlFranjaOroSup.SetBounds(0, barSupH, W, Math.Max(2, (int)(3 * escala)));
 
-			pnlBarraInferiorNegra.SetBounds(0, H - 40, W, 40);
-			lblFooterCopyrightGba.SetBounds(10, 8, W - 20, 24);
-			pnlFranjaOroInf.SetBounds(0, H - 43, W, 3);
+			pnlBarraInferiorNegra.SetBounds(0, H - barInfH, W, barInfH);
+			lblFooterCopyrightGba.SetBounds(10, Math.Max(0, (barInfH - (int)(24 * escala)) / 2), W - 20, (int)(24 * escala));
+			lblFooterCopyrightGba.Text = "LEVIATANES DEL CARIBE 2 | MOTOR TACTICO GBA | F11 / ALT+ENTER: PANTALLA COMPLETA";
+			pnlFranjaOroInf.SetBounds(0, H - barInfH - Math.Max(2, (int)(3 * escala)), W, Math.Max(2, (int)(3 * escala)));
 
-			// 2. Logo superior centrado (680x136)
-			int LogoW = 680;
-			int LogoH = 136;
-			pnlMarcoLogoOro.SetBounds((W - LogoW) / 2, 56, LogoW, LogoH);
+			// 2. Logo superior centrado (720x140 base)
+			int LogoW = (int)(720 * escala);
+			int LogoH = (int)(140 * escala);
+			int LogoY = barSupH + (int)(14 * escala);
+			pnlMarcoLogoOro.SetBounds((W - LogoW) / 2, LogoY, LogoW, LogoH);
 			pnlInteriorLogo.SetBounds(3, 3, LogoW - 6, LogoH - 6);
 
-			// 3. Menu central estilizado (376x292) dejando 292px libres a cada lado
-			int MenuW = 376;
-			int MenuH = 292;
-			int MenuTop = 212;
+			// 3. Menu central estilizado (420x310 base)
+			int MenuW = (int)(420 * escala);
+			int MenuH = (int)(310 * escala);
+			int MenuTop = LogoY + LogoH + (int)(14 * escala);
 			pnlMarcoMenuGba.SetBounds((W - MenuW) / 2, MenuTop, MenuW, MenuH);
 			pnlInteriorMenuGba.SetBounds(3, 3, MenuW - 6, MenuH - 6);
 
 			int InteriorW = pnlInteriorMenuGba.Width;
-			lblEncabezadoMenu.SetBounds(0, 0, InteriorW, 34);
-			lblEncabezadoMenu.Font = new Font("Consolas", 9.5F, FontStyle.Bold);
+			int headH = (int)(36 * escala);
+			lblEncabezadoMenu.SetBounds(0, 0, InteriorW, headH);
+			lblEncabezadoMenu.Font = new Font("Consolas", Math.Max(7.5f, 9.5F * escala), FontStyle.Bold);
 
-			int BtnW = InteriorW - 36;
-			int BtnH = 68;
-			button1.SetBounds(18, 46, BtnW, BtnH);
-			button2.SetBounds(18, 126, BtnW, BtnH);
-			button3.SetBounds(18, 206, BtnW, BtnH);
+			int BtnW = InteriorW - (int)(36 * escala);
+			int BtnH = (int)(72 * escala);
+			int gap = (int)(10 * escala);
+			int btnStart = headH + (int)(10 * escala);
+			button1.SetBounds((int)(18 * escala), btnStart, BtnW, BtnH);
+			button2.SetBounds((int)(18 * escala), btnStart + BtnH + gap, BtnW, BtnH);
+			button3.SetBounds((int)(18 * escala), btnStart + (BtnH + gap) * 2, BtnW, BtnH);
 
-			// 4. Bitacora inferior centrada y sin cortes
-			int BitacoraW = 760;
-			lblPressStartGba.SetBounds((W - BitacoraW) / 2, 526, BitacoraW, 44);
-			lblPressStartGba.Font = new Font("Consolas", 9F, FontStyle.Bold);
+			// 4. Bitacora inferior centrada
+			int BitacoraW = Math.Min(W - 40, (int)(780 * escala));
+			int BitacoraH = (int)(46 * escala);
+			int BitacoraY = Math.Min(H - barInfH - BitacoraH - 4, MenuTop + MenuH + (int)(12 * escala));
+			lblPressStartGba.SetBounds((W - BitacoraW) / 2, BitacoraY, BitacoraW, BitacoraH);
+			lblPressStartGba.Font = new Font("Consolas", Math.Max(7f, 9F * escala), FontStyle.Bold);
 		}
 
 		// =====================================================================
@@ -616,21 +625,13 @@ namespace Leviatanes2
 		void Button1Click(object sender, EventArgs e)
 		{
 			CrearP abrirVentana = new CrearP();
-			abrirVentana.Show();
-
-			abrirVentana.FormClosed += (s, args) => Application.Exit();
-
-			this.Hide();
+			UiResponsiveManager.CambiarVentana(this, abrirVentana);
 		}
 
 		void Button2Click(object sender, EventArgs e)
 		{
 			VerPartidas abrirVentana = new VerPartidas();
-			abrirVentana.Show();
-
-			abrirVentana.FormClosed += (s, args) => Application.Exit();
-
-			this.Hide();
+			UiResponsiveManager.CambiarVentana(this, abrirVentana);
 		}
 
 		void Button3Click(object sender, EventArgs e)

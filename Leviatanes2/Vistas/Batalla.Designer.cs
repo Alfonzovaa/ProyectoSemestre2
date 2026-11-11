@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Creado por SharpDevelop.
  * Usuario: Alfonzo
  * Fecha: 11/8/2026
@@ -138,9 +138,9 @@ namespace Leviatanes2
 			this.pnlArenaCombate.Controls.Add(this.pnlVentajaElemental);
 			this.pnlArenaCombate.Controls.Add(this.pnlSpriteJugador);
 			this.pnlArenaCombate.Controls.Add(this.pnlHudJugador);
-			this.pnlArenaCombate.Location = new System.Drawing.Point(16, 78);
+			this.pnlArenaCombate.Location = new System.Drawing.Point(16, 76);
 			this.pnlArenaCombate.Name = "pnlArenaCombate";
-			this.pnlArenaCombate.Size = new System.Drawing.Size(860, 404);
+			this.pnlArenaCombate.Size = new System.Drawing.Size(860, 440);
 			this.pnlArenaCombate.TabIndex = 2;
 			this.pnlArenaCombate.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlArenaCombatePaint);
 			// 
@@ -345,9 +345,9 @@ namespace Leviatanes2
 			this.pnlLateralDerecho.Controls.Add(this.lblHeaderBitacora);
 			this.pnlLateralDerecho.Controls.Add(this.lstColaJugador);
 			this.pnlLateralDerecho.Controls.Add(this.lblHeaderCola);
-			this.pnlLateralDerecho.Location = new System.Drawing.Point(886, 78);
+			this.pnlLateralDerecho.Location = new System.Drawing.Point(886, 76);
 			this.pnlLateralDerecho.Name = "pnlLateralDerecho";
-			this.pnlLateralDerecho.Size = new System.Drawing.Size(378, 404);
+			this.pnlLateralDerecho.Size = new System.Drawing.Size(378, 440);
 			this.pnlLateralDerecho.TabIndex = 3;
 			// 
 			// lblHeaderCola
@@ -372,7 +372,7 @@ namespace Leviatanes2
 			this.lstColaJugador.ItemHeight = 17;
 			this.lstColaJugador.Location = new System.Drawing.Point(10, 40);
 			this.lstColaJugador.Name = "lstColaJugador";
-			this.lstColaJugador.Size = new System.Drawing.Size(356, 157);
+			this.lstColaJugador.Size = new System.Drawing.Size(356, 175);
 			this.lstColaJugador.TabIndex = 1;
 			this.lstColaJugador.SelectedIndexChanged += new System.EventHandler(this.LstColaJugadorSelectedIndexChanged);
 			this.lstColaJugador.DoubleClick += new System.EventHandler(this.LstColaJugadorDoubleClick);
@@ -382,7 +382,7 @@ namespace Leviatanes2
 			this.lblHeaderDerrotadosCpu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
 			this.lblHeaderDerrotadosCpu.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
 			this.lblHeaderDerrotadosCpu.ForeColor = System.Drawing.Color.Gold;
-			this.lblHeaderDerrotadosCpu.Location = new System.Drawing.Point(10, 208);
+			this.lblHeaderDerrotadosCpu.Location = new System.Drawing.Point(10, 226);
 			this.lblHeaderDerrotadosCpu.Name = "lblHeaderDerrotadosCpu";
 			this.lblHeaderDerrotadosCpu.Size = new System.Drawing.Size(356, 26);
 			this.lblHeaderDerrotadosCpu.TabIndex = 4;
@@ -396,9 +396,9 @@ namespace Leviatanes2
 			this.lstDerrotadosCpu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(175)))));
 			this.lstDerrotadosCpu.FormattingEnabled = true;
 			this.lstDerrotadosCpu.ItemHeight = 17;
-			this.lstDerrotadosCpu.Location = new System.Drawing.Point(10, 238);
+			this.lstDerrotadosCpu.Location = new System.Drawing.Point(10, 256);
 			this.lstDerrotadosCpu.Name = "lstDerrotadosCpu";
-			this.lstDerrotadosCpu.Size = new System.Drawing.Size(356, 157);
+			this.lstDerrotadosCpu.Size = new System.Drawing.Size(356, 175);
 			this.lstDerrotadosCpu.TabIndex = 5;
 			// 
 			// lblHeaderBitacora
@@ -437,9 +437,9 @@ namespace Leviatanes2
 			this.pnlMenuInferior.Controls.Add(this.btnEspecial);
 			this.pnlMenuInferior.Controls.Add(this.btnAtacar);
 			this.pnlMenuInferior.Controls.Add(this.lblDialogoCombate);
-			this.pnlMenuInferior.Location = new System.Drawing.Point(16, 492);
+			this.pnlMenuInferior.Location = new System.Drawing.Point(16, 526);
 			this.pnlMenuInferior.Name = "pnlMenuInferior";
-			this.pnlMenuInferior.Size = new System.Drawing.Size(1248, 144);
+			this.pnlMenuInferior.Size = new System.Drawing.Size(1248, 180);
 			this.pnlMenuInferior.TabIndex = 4;
 			// 
 			// lblDialogoCombate
@@ -451,7 +451,7 @@ namespace Leviatanes2
 			this.lblDialogoCombate.Location = new System.Drawing.Point(14, 14);
 			this.lblDialogoCombate.Name = "lblDialogoCombate";
 			this.lblDialogoCombate.Padding = new System.Windows.Forms.Padding(14);
-			this.lblDialogoCombate.Size = new System.Drawing.Size(510, 114);
+			this.lblDialogoCombate.Size = new System.Drawing.Size(510, 150);
 			this.lblDialogoCombate.TabIndex = 0;
 			this.lblDialogoCombate.Text = "¡Comienza el combate! Selecciona una acción.";
 			// 
@@ -492,9 +492,9 @@ namespace Leviatanes2
 			this.btnDefender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnDefender.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
 			this.btnDefender.ForeColor = System.Drawing.Color.White;
-			this.btnDefender.Location = new System.Drawing.Point(540, 76);
+			this.btnDefender.Location = new System.Drawing.Point(540, 92);
 			this.btnDefender.Name = "btnDefender";
-			this.btnDefender.Size = new System.Drawing.Size(226, 52);
+			this.btnDefender.Size = new System.Drawing.Size(226, 68);
 			this.btnDefender.TabIndex = 3;
 			this.btnDefender.Text = "🛡 Defender (1 EN)";
 			this.btnDefender.UseVisualStyleBackColor = false;
@@ -507,9 +507,9 @@ namespace Leviatanes2
 			this.btnCambiarLeviatan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnCambiarLeviatan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
 			this.btnCambiarLeviatan.ForeColor = System.Drawing.Color.White;
-			this.btnCambiarLeviatan.Location = new System.Drawing.Point(778, 76);
+			this.btnCambiarLeviatan.Location = new System.Drawing.Point(778, 92);
 			this.btnCambiarLeviatan.Name = "btnCambiarLeviatan";
-			this.btnCambiarLeviatan.Size = new System.Drawing.Size(226, 52);
+			this.btnCambiarLeviatan.Size = new System.Drawing.Size(226, 68);
 			this.btnCambiarLeviatan.TabIndex = 4;
 			this.btnCambiarLeviatan.Text = "🔄 Cambiar";
 			this.btnCambiarLeviatan.UseVisualStyleBackColor = false;
@@ -524,7 +524,7 @@ namespace Leviatanes2
 			this.btnCargarEnergia.ForeColor = System.Drawing.Color.White;
 			this.btnCargarEnergia.Location = new System.Drawing.Point(1018, 14);
 			this.btnCargarEnergia.Name = "btnCargarEnergia";
-			this.btnCargarEnergia.Size = new System.Drawing.Size(214, 36);
+			this.btnCargarEnergia.Size = new System.Drawing.Size(214, 42);
 			this.btnCargarEnergia.TabIndex = 5;
 			this.btnCargarEnergia.Text = "🔋 Cargar (+2 EN)";
 			this.btnCargarEnergia.UseVisualStyleBackColor = false;
@@ -537,9 +537,9 @@ namespace Leviatanes2
 			this.btnReiniciarBatalla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnReiniciarBatalla.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
 			this.btnReiniciarBatalla.ForeColor = System.Drawing.Color.White;
-			this.btnReiniciarBatalla.Location = new System.Drawing.Point(1018, 54);
+			this.btnReiniciarBatalla.Location = new System.Drawing.Point(1018, 62);
 			this.btnReiniciarBatalla.Name = "btnReiniciarBatalla";
-			this.btnReiniciarBatalla.Size = new System.Drawing.Size(214, 32);
+			this.btnReiniciarBatalla.Size = new System.Drawing.Size(214, 42);
 			this.btnReiniciarBatalla.TabIndex = 6;
 			this.btnReiniciarBatalla.Text = "↻ Reiniciar";
 			this.btnReiniciarBatalla.UseVisualStyleBackColor = false;
@@ -552,9 +552,9 @@ namespace Leviatanes2
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
 			this.button1.ForeColor = System.Drawing.Color.Black;
-			this.button1.Location = new System.Drawing.Point(1018, 90);
+			this.button1.Location = new System.Drawing.Point(1018, 112);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(214, 38);
+			this.button1.Size = new System.Drawing.Size(214, 48);
 			this.button1.TabIndex = 0;
 			this.button1.Text = "Continuar ▶";
 			this.button1.UseVisualStyleBackColor = false;
@@ -575,7 +575,9 @@ namespace Leviatanes2
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
-			this.ClientSize = new System.Drawing.Size(1280, 650);
+			this.ClientSize = new System.Drawing.Size(1280, 720);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+			this.MaximizeBox = true;
 			this.Controls.Add(this.pnlMenuInferior);
 			this.Controls.Add(this.pnlLateralDerecho);
 			this.Controls.Add(this.pnlArenaCombate);

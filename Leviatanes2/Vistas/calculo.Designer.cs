@@ -46,9 +46,9 @@ namespace Leviatanes2
 			this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTitulo.ForeColor = System.Drawing.Color.Gold;
-			this.lblTitulo.Location = new System.Drawing.Point(30, 15);
+			this.lblTitulo.Location = new System.Drawing.Point(24, 16);
 			this.lblTitulo.Name = "lblTitulo";
-			this.lblTitulo.Size = new System.Drawing.Size(920, 48);
+			this.lblTitulo.Size = new System.Drawing.Size(1232, 54);
 			this.lblTitulo.TabIndex = 0;
 			this.lblTitulo.Text = "LABORATORIO ELEMENTAL - RETO DE CÁLCULO";
 			this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,22 +57,22 @@ namespace Leviatanes2
 			// 
 			this.lblEnunciado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
 			this.lblEnunciado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.lblEnunciado.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblEnunciado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblEnunciado.ForeColor = System.Drawing.Color.White;
-			this.lblEnunciado.Location = new System.Drawing.Point(30, 78);
+			this.lblEnunciado.Location = new System.Drawing.Point(24, 84);
 			this.lblEnunciado.Name = "lblEnunciado";
-			this.lblEnunciado.Padding = new System.Windows.Forms.Padding(16);
-			this.lblEnunciado.Size = new System.Drawing.Size(445, 270);
+			this.lblEnunciado.Padding = new System.Windows.Forms.Padding(18);
+			this.lblEnunciado.Size = new System.Drawing.Size(600, 310);
 			this.lblEnunciado.TabIndex = 1;
 			this.lblEnunciado.Text = "Enunciado del ejercicio...";
 			// 
 			// lblInstruccion
 			// 
-			this.lblInstruccion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInstruccion.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblInstruccion.ForeColor = System.Drawing.Color.Gold;
-			this.lblInstruccion.Location = new System.Drawing.Point(30, 360);
+			this.lblInstruccion.Location = new System.Drawing.Point(24, 404);
 			this.lblInstruccion.Name = "lblInstruccion";
-			this.lblInstruccion.Size = new System.Drawing.Size(200, 22);
+			this.lblInstruccion.Size = new System.Drawing.Size(240, 26);
 			this.lblInstruccion.TabIndex = 2;
 			this.lblInstruccion.Text = "Escribe tu respuesta:";
 			// 
@@ -82,9 +82,9 @@ namespace Leviatanes2
 			this.txtRespuesta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtRespuesta.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtRespuesta.ForeColor = System.Drawing.Color.Black;
-			this.txtRespuesta.Location = new System.Drawing.Point(30, 386);
+			this.txtRespuesta.Location = new System.Drawing.Point(24, 434);
 			this.txtRespuesta.Name = "txtRespuesta";
-			this.txtRespuesta.Size = new System.Drawing.Size(225, 31);
+			this.txtRespuesta.Size = new System.Drawing.Size(320, 34);
 			this.txtRespuesta.TabIndex = 3;
 			this.txtRespuesta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtRespuesta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRespuestaKeyDown);
@@ -96,9 +96,9 @@ namespace Leviatanes2
 			this.btnComprobar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnComprobar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnComprobar.ForeColor = System.Drawing.Color.White;
-			this.btnComprobar.Location = new System.Drawing.Point(265, 383);
+			this.btnComprobar.Location = new System.Drawing.Point(360, 432);
 			this.btnComprobar.Name = "btnComprobar";
-			this.btnComprobar.Size = new System.Drawing.Size(210, 38);
+			this.btnComprobar.Size = new System.Drawing.Size(264, 38);
 			this.btnComprobar.TabIndex = 4;
 			this.btnComprobar.Text = "✔ Comprobar";
 			this.btnComprobar.UseVisualStyleBackColor = false;
@@ -108,12 +108,12 @@ namespace Leviatanes2
 			// 
 			this.lblFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
 			this.lblFeedback.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.lblFeedback.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFeedback.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblFeedback.ForeColor = System.Drawing.Color.Gold;
-			this.lblFeedback.Location = new System.Drawing.Point(30, 432);
+			this.lblFeedback.Location = new System.Drawing.Point(24, 484);
 			this.lblFeedback.Name = "lblFeedback";
-			this.lblFeedback.Padding = new System.Windows.Forms.Padding(8);
-			this.lblFeedback.Size = new System.Drawing.Size(445, 66);
+			this.lblFeedback.Padding = new System.Windows.Forms.Padding(10);
+			this.lblFeedback.Size = new System.Drawing.Size(600, 124);
 			this.lblFeedback.TabIndex = 5;
 			this.lblFeedback.Text = "Ingresa tu respuesta y presiona Comprobar.";
 			this.lblFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,9 +122,9 @@ namespace Leviatanes2
 			// 
 			this.picImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(16)))), ((int)(((byte)(28)))));
 			this.picImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.picImagen.Location = new System.Drawing.Point(505, 78);
+			this.picImagen.Location = new System.Drawing.Point(640, 84);
 			this.picImagen.Name = "picImagen";
-			this.picImagen.Size = new System.Drawing.Size(445, 420);
+			this.picImagen.Size = new System.Drawing.Size(616, 524);
 			this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.picImagen.TabIndex = 6;
 			this.picImagen.TabStop = false;
@@ -136,9 +136,9 @@ namespace Leviatanes2
 			this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnVolver.ForeColor = System.Drawing.Color.White;
-			this.btnVolver.Location = new System.Drawing.Point(30, 515);
+			this.btnVolver.Location = new System.Drawing.Point(24, 626);
 			this.btnVolver.Name = "btnVolver";
-			this.btnVolver.Size = new System.Drawing.Size(140, 42);
+			this.btnVolver.Size = new System.Drawing.Size(180, 56);
 			this.btnVolver.TabIndex = 7;
 			this.btnVolver.Text = "◄ Salir";
 			this.btnVolver.UseVisualStyleBackColor = false;
@@ -151,9 +151,9 @@ namespace Leviatanes2
 			this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSiguiente.ForeColor = System.Drawing.Color.Black;
-			this.btnSiguiente.Location = new System.Drawing.Point(705, 515);
+			this.btnSiguiente.Location = new System.Drawing.Point(986, 626);
 			this.btnSiguiente.Name = "btnSiguiente";
-			this.btnSiguiente.Size = new System.Drawing.Size(245, 42);
+			this.btnSiguiente.Size = new System.Drawing.Size(270, 56);
 			this.btnSiguiente.TabIndex = 8;
 			this.btnSiguiente.Text = "Continuar a la Historia ▶";
 			this.btnSiguiente.UseVisualStyleBackColor = false;
@@ -163,7 +163,7 @@ namespace Leviatanes2
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(20)))), ((int)(((byte)(42)))));
-			this.ClientSize = new System.Drawing.Size(980, 580);
+			this.ClientSize = new System.Drawing.Size(1280, 720);
 			this.Controls.Add(this.btnSiguiente);
 			this.Controls.Add(this.btnVolver);
 			this.Controls.Add(this.picImagen);
@@ -173,8 +173,8 @@ namespace Leviatanes2
 			this.Controls.Add(this.lblInstruccion);
 			this.Controls.Add(this.lblEnunciado);
 			this.Controls.Add(this.lblTitulo);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-			this.MaximizeBox = false;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+			this.MaximizeBox = true;
 			this.Name = "Calculo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Reto de Cálculo - Leviatanes del Caribe 2";

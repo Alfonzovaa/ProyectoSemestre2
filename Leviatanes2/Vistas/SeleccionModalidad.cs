@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -33,6 +33,7 @@ namespace Leviatanes2
         public SeleccionModalidad()
         {
             InitializeComponent();
+            this.ClientSize = new Size(UiResponsiveManager.ANCHO_BASE, UiResponsiveManager.ALTO_BASE);
             ConfigurarListasModernas();
 
             GestorTxt = new GestorPersistenciaTxt();
@@ -41,6 +42,7 @@ namespace Leviatanes2
             ListaEscenariosDisponibles = GestorPersistenciaTxt.ObtenerCatalogoEscenarios();
 
             InicializarDatosPantalla();
+            UiResponsiveManager.ConfigurarFormulario(this);
         }
 
         // =====================================================================
@@ -721,9 +723,7 @@ namespace Leviatanes2
             MostrarModalSorteoEscenario(EscenarioSorteado, PerfilEntrenador1.NombreUsuario, PerfilEntrenador2.NombreUsuario);
 
             Historia VentanaHistoria = new Historia(1);
-            VentanaHistoria.FormClosed += (s, args) => Application.Exit();
-            VentanaHistoria.Show();
-            this.Hide();
+            UiResponsiveManager.CambiarVentana(this, VentanaHistoria);
         }
 
         // =====================================================================
@@ -990,9 +990,7 @@ namespace Leviatanes2
         private void BtnVolverMenuClick(object sender, EventArgs e)
         {
             MainForm MenuPrincipal = new MainForm();
-            MenuPrincipal.FormClosed += (s, args) => Application.Exit();
-            MenuPrincipal.Show();
-            this.Hide();
+            UiResponsiveManager.CambiarVentana(this, MenuPrincipal);
         }
 
         private void SeleccionModalidadFormClosed(object sender, FormClosedEventArgs e)

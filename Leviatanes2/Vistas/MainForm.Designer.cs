@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: Alfonzovaa
  * Date: 30/10/2026
@@ -296,7 +296,7 @@ namespace Leviatanes2
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-			this.ClientSize = new System.Drawing.Size(1280, 788);
+			this.ClientSize = new System.Drawing.Size(1280, 720);
 			this.Controls.Add(this.lblPressStartGba);
 			this.Controls.Add(this.pnlMarcoMenuGba);
 			this.Controls.Add(this.pnlMarcoLogoOro);

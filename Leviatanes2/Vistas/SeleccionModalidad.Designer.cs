@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: Alfonzovaa
  * Date: 08/11/2026
@@ -97,7 +97,7 @@ namespace Leviatanes2
 			this.pnlHeaderGba.Controls.Add(this.lblTituloGba);
 			this.pnlHeaderGba.Location = new System.Drawing.Point(0, 0);
 			this.pnlHeaderGba.Name = "pnlHeaderGba";
-			this.pnlHeaderGba.Size = new System.Drawing.Size(960, 56);
+			this.pnlHeaderGba.Size = new System.Drawing.Size(1280, 56);
 			this.pnlHeaderGba.TabIndex = 0;
 			// 
 			// lblSubtituloGba
@@ -106,9 +106,9 @@ namespace Leviatanes2
 			this.lblSubtituloGba.ForeColor = System.Drawing.Color.White;
 			this.lblSubtituloGba.Location = new System.Drawing.Point(16, 33);
 			this.lblSubtituloGba.Name = "lblSubtituloGba";
-			this.lblSubtituloGba.Size = new System.Drawing.Size(930, 18);
+			this.lblSubtituloGba.Size = new System.Drawing.Size(1250, 18);
 			this.lblSubtituloGba.TabIndex = 1;
-			this.lblSubtituloGba.Text = "BESTIARIO ABISAL DEL CARIBE | PERSISTENCIA EN ARCHIVO (.TXT)";
+			this.lblSubtituloGba.Text = "BESTIARIO ABISAL DEL CARIBE | PERSISTENCIA EN ARCHIVO (.TXT) | [F11: PANTALLA COMPLETA]";
 			// 
 			// lblTituloGba
 			// 
@@ -116,7 +116,7 @@ namespace Leviatanes2
 			this.lblTituloGba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblTituloGba.Location = new System.Drawing.Point(14, 6);
 			this.lblTituloGba.Name = "lblTituloGba";
-			this.lblTituloGba.Size = new System.Drawing.Size(930, 26);
+			this.lblTituloGba.Size = new System.Drawing.Size(1250, 26);
 			this.lblTituloGba.TabIndex = 0;
 			this.lblTituloGba.Text = "LEVIATANES DEL CARIBE 2 - SELECCION DE MODALIDAD Y EQUIPOS";
 			// 
@@ -125,16 +125,16 @@ namespace Leviatanes2
 			this.pnlFranjaDorada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlFranjaDorada.Location = new System.Drawing.Point(0, 56);
 			this.pnlFranjaDorada.Name = "pnlFranjaDorada";
-			this.pnlFranjaDorada.Size = new System.Drawing.Size(960, 4);
+			this.pnlFranjaDorada.Size = new System.Drawing.Size(1280, 4);
 			this.pnlFranjaDorada.TabIndex = 1;
 			// 
 			// pnlMarcoModalidad
 			// 
 			this.pnlMarcoModalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoModalidad.Controls.Add(this.pnlInteriorModalidad);
-			this.pnlMarcoModalidad.Location = new System.Drawing.Point(12, 70);
+			this.pnlMarcoModalidad.Location = new System.Drawing.Point(16, 68);
 			this.pnlMarcoModalidad.Name = "pnlMarcoModalidad";
-			this.pnlMarcoModalidad.Size = new System.Drawing.Size(360, 120);
+			this.pnlMarcoModalidad.Size = new System.Drawing.Size(420, 126);
 			this.pnlMarcoModalidad.TabIndex = 2;
 			// 
 			// pnlInteriorModalidad
@@ -146,7 +146,7 @@ namespace Leviatanes2
 			this.pnlInteriorModalidad.Controls.Add(this.lblHeaderModalidad);
 			this.pnlInteriorModalidad.Location = new System.Drawing.Point(3, 3);
 			this.pnlInteriorModalidad.Name = "pnlInteriorModalidad";
-			this.pnlInteriorModalidad.Size = new System.Drawing.Size(354, 114);
+			this.pnlInteriorModalidad.Size = new System.Drawing.Size(414, 120);
 			this.pnlInteriorModalidad.TabIndex = 0;
 			// 
 			// lblReglaEscenarioAleatorio
@@ -204,9 +204,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoEntrenadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoEntrenadores.Controls.Add(this.pnlInteriorEntrenadores);
-			this.pnlMarcoEntrenadores.Location = new System.Drawing.Point(384, 70);
+			this.pnlMarcoEntrenadores.Location = new System.Drawing.Point(448, 68);
 			this.pnlMarcoEntrenadores.Name = "pnlMarcoEntrenadores";
-			this.pnlMarcoEntrenadores.Size = new System.Drawing.Size(564, 120);
+			this.pnlMarcoEntrenadores.Size = new System.Drawing.Size(816, 126);
 			this.pnlMarcoEntrenadores.TabIndex = 3;
 			// 
 			// pnlInteriorEntrenadores
@@ -222,7 +222,7 @@ namespace Leviatanes2
 			this.pnlInteriorEntrenadores.Controls.Add(this.lblHeaderEntrenadores);
 			this.pnlInteriorEntrenadores.Location = new System.Drawing.Point(3, 3);
 			this.pnlInteriorEntrenadores.Name = "pnlInteriorEntrenadores";
-			this.pnlInteriorEntrenadores.Size = new System.Drawing.Size(558, 114);
+			this.pnlInteriorEntrenadores.Size = new System.Drawing.Size(810, 120);
 			this.pnlInteriorEntrenadores.TabIndex = 0;
 			// 
 			// btnGuardarNombres
@@ -231,9 +231,9 @@ namespace Leviatanes2
 			this.btnGuardarNombres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnGuardarNombres.Font = new System.Drawing.Font("Consolas", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnGuardarNombres.ForeColor = System.Drawing.Color.White;
-			this.btnGuardarNombres.Location = new System.Drawing.Point(434, 31);
+			this.btnGuardarNombres.Location = new System.Drawing.Point(640, 31);
 			this.btnGuardarNombres.Name = "btnGuardarNombres";
-			this.btnGuardarNombres.Size = new System.Drawing.Size(114, 64);
+			this.btnGuardarNombres.Size = new System.Drawing.Size(156, 64);
 			this.btnGuardarNombres.TabIndex = 7;
 			this.btnGuardarNombres.Text = "SINCRONIZAR\r\nDOMADORES";
 			this.btnGuardarNombres.UseVisualStyleBackColor = false;
@@ -317,9 +317,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoCatalogo.Controls.Add(this.pnlInteriorCatalogo);
-			this.pnlMarcoCatalogo.Location = new System.Drawing.Point(12, 202);
+			this.pnlMarcoCatalogo.Location = new System.Drawing.Point(16, 202);
 			this.pnlMarcoCatalogo.Name = "pnlMarcoCatalogo";
-			this.pnlMarcoCatalogo.Size = new System.Drawing.Size(316, 334);
+			this.pnlMarcoCatalogo.Size = new System.Drawing.Size(320, 394);
 			this.pnlMarcoCatalogo.TabIndex = 4;
 			// 
 			// pnlInteriorCatalogo
@@ -331,7 +331,7 @@ namespace Leviatanes2
 			this.pnlInteriorCatalogo.Controls.Add(this.lblHeaderCatalogo);
 			this.pnlInteriorCatalogo.Location = new System.Drawing.Point(3, 3);
 			this.pnlInteriorCatalogo.Name = "pnlInteriorCatalogo";
-			this.pnlInteriorCatalogo.Size = new System.Drawing.Size(310, 328);
+			this.pnlInteriorCatalogo.Size = new System.Drawing.Size(314, 388);
 			this.pnlInteriorCatalogo.TabIndex = 0;
 			// 
 			// btnAgregarEquipo2
@@ -390,9 +390,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoPreview.Controls.Add(this.pnlInteriorPreview);
-			this.pnlMarcoPreview.Location = new System.Drawing.Point(338, 202);
+			this.pnlMarcoPreview.Location = new System.Drawing.Point(348, 202);
 			this.pnlMarcoPreview.Name = "pnlMarcoPreview";
-			this.pnlMarcoPreview.Size = new System.Drawing.Size(214, 334);
+			this.pnlMarcoPreview.Size = new System.Drawing.Size(300, 394);
 			this.pnlMarcoPreview.TabIndex = 5;
 			// 
 			// pnlInteriorPreview
@@ -405,7 +405,7 @@ namespace Leviatanes2
 			this.pnlInteriorPreview.Controls.Add(this.lblPreviewFaccion);
 			this.pnlInteriorPreview.Location = new System.Drawing.Point(3, 3);
 			this.pnlInteriorPreview.Name = "pnlInteriorPreview";
-			this.pnlInteriorPreview.Size = new System.Drawing.Size(208, 328);
+			this.pnlInteriorPreview.Size = new System.Drawing.Size(294, 388);
 			this.pnlInteriorPreview.TabIndex = 0;
 			// 
 			// lblPreviewEspecial
@@ -471,9 +471,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoEquipo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoEquipo1.Controls.Add(this.pnlInteriorEquipo1);
-			this.pnlMarcoEquipo1.Location = new System.Drawing.Point(562, 202);
+			this.pnlMarcoEquipo1.Location = new System.Drawing.Point(660, 202);
 			this.pnlMarcoEquipo1.Name = "pnlMarcoEquipo1";
-			this.pnlMarcoEquipo1.Size = new System.Drawing.Size(188, 334);
+			this.pnlMarcoEquipo1.Size = new System.Drawing.Size(296, 394);
 			this.pnlMarcoEquipo1.TabIndex = 6;
 			// 
 			// pnlInteriorEquipo1
@@ -485,7 +485,7 @@ namespace Leviatanes2
 			this.pnlInteriorEquipo1.Controls.Add(this.lblHeaderEquipo1);
 			this.pnlInteriorEquipo1.Location = new System.Drawing.Point(3, 3);
 			this.pnlInteriorEquipo1.Name = "pnlInteriorEquipo1";
-			this.pnlInteriorEquipo1.Size = new System.Drawing.Size(182, 328);
+			this.pnlInteriorEquipo1.Size = new System.Drawing.Size(290, 388);
 			this.pnlInteriorEquipo1.TabIndex = 0;
 			// 
 			// btnVaciarEquipo1
@@ -543,9 +543,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoEquipo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoEquipo2.Controls.Add(this.pnlInteriorEquipo2);
-			this.pnlMarcoEquipo2.Location = new System.Drawing.Point(760, 202);
+			this.pnlMarcoEquipo2.Location = new System.Drawing.Point(968, 202);
 			this.pnlMarcoEquipo2.Name = "pnlMarcoEquipo2";
-			this.pnlMarcoEquipo2.Size = new System.Drawing.Size(188, 334);
+			this.pnlMarcoEquipo2.Size = new System.Drawing.Size(296, 394);
 			this.pnlMarcoEquipo2.TabIndex = 7;
 			// 
 			// pnlInteriorEquipo2
@@ -557,7 +557,7 @@ namespace Leviatanes2
 			this.pnlInteriorEquipo2.Controls.Add(this.lblHeaderEquipo2);
 			this.pnlInteriorEquipo2.Location = new System.Drawing.Point(3, 3);
 			this.pnlInteriorEquipo2.Name = "pnlInteriorEquipo2";
-			this.pnlInteriorEquipo2.Size = new System.Drawing.Size(182, 328);
+			this.pnlInteriorEquipo2.Size = new System.Drawing.Size(290, 388);
 			this.pnlInteriorEquipo2.TabIndex = 0;
 			// 
 			// btnVaciarEquipo2
@@ -615,9 +615,9 @@ namespace Leviatanes2
 			// 
 			this.pnlMarcoDialogoGba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(41)))), ((int)(((byte)(18)))));
 			this.pnlMarcoDialogoGba.Controls.Add(this.pnlInteriorDialogoGba);
-			this.pnlMarcoDialogoGba.Location = new System.Drawing.Point(12, 548);
+			this.pnlMarcoDialogoGba.Location = new System.Drawing.Point(16, 606);
 			this.pnlMarcoDialogoGba.Name = "pnlMarcoDialogoGba";
-			this.pnlMarcoDialogoGba.Size = new System.Drawing.Size(460, 78);
+			this.pnlMarcoDialogoGba.Size = new System.Drawing.Size(660, 98);
 			this.pnlMarcoDialogoGba.TabIndex = 8;
 			// 
 			// pnlInteriorDialogoGba
@@ -627,7 +627,7 @@ namespace Leviatanes2
 			this.pnlInteriorDialogoGba.Controls.Add(this.lblTituloDialogoGba);
 			this.pnlInteriorDialogoGba.Location = new System.Drawing.Point(3, 3);
 			this.pnlInteriorDialogoGba.Name = "pnlInteriorDialogoGba";
-			this.pnlInteriorDialogoGba.Size = new System.Drawing.Size(454, 72);
+			this.pnlInteriorDialogoGba.Size = new System.Drawing.Size(654, 92);
 			this.pnlInteriorDialogoGba.TabIndex = 0;
 			// 
 			// lblTextoProfesorGba
@@ -636,7 +636,7 @@ namespace Leviatanes2
 			this.lblTextoProfesorGba.ForeColor = System.Drawing.Color.White;
 			this.lblTextoProfesorGba.Location = new System.Drawing.Point(8, 23);
 			this.lblTextoProfesorGba.Name = "lblTextoProfesorGba";
-			this.lblTextoProfesorGba.Size = new System.Drawing.Size(438, 44);
+			this.lblTextoProfesorGba.Size = new System.Drawing.Size(634, 56);
 			this.lblTextoProfesorGba.TabIndex = 1;
 			this.lblTextoProfesorGba.Text = "Configura la modalidad y arma los equipos de 5 Leviatanes. El escenario inicial s" +
 			"e sorteara al azar ▼";
@@ -647,7 +647,7 @@ namespace Leviatanes2
 			this.lblTituloDialogoGba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblTituloDialogoGba.Location = new System.Drawing.Point(8, 5);
 			this.lblTituloDialogoGba.Name = "lblTituloDialogoGba";
-			this.lblTituloDialogoGba.Size = new System.Drawing.Size(438, 16);
+			this.lblTituloDialogoGba.Size = new System.Drawing.Size(634, 20);
 			this.lblTituloDialogoGba.TabIndex = 0;
 			this.lblTituloDialogoGba.Text = "BITACORA DEL CARIBE:";
 			// 
@@ -657,9 +657,9 @@ namespace Leviatanes2
 			this.btnIrBatalla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnIrBatalla.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnIrBatalla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
-			this.btnIrBatalla.Location = new System.Drawing.Point(480, 548);
+			this.btnIrBatalla.Location = new System.Drawing.Point(688, 606);
 			this.btnIrBatalla.Name = "btnIrBatalla";
-			this.btnIrBatalla.Size = new System.Drawing.Size(310, 78);
+			this.btnIrBatalla.Size = new System.Drawing.Size(380, 98);
 			this.btnIrBatalla.TabIndex = 9;
 			this.btnIrBatalla.Text = "CONTINUAR >>";
 			this.btnIrBatalla.UseVisualStyleBackColor = false;
@@ -671,9 +671,9 @@ namespace Leviatanes2
 			this.btnVolverMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnVolverMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
-			this.btnVolverMenu.Location = new System.Drawing.Point(798, 548);
+			this.btnVolverMenu.Location = new System.Drawing.Point(1080, 606);
 			this.btnVolverMenu.Name = "btnVolverMenu";
-			this.btnVolverMenu.Size = new System.Drawing.Size(150, 78);
+			this.btnVolverMenu.Size = new System.Drawing.Size(184, 98);
 			this.btnVolverMenu.TabIndex = 10;
 			this.btnVolverMenu.Text = "<< VOLVER AL MENU";
 			this.btnVolverMenu.UseVisualStyleBackColor = false;
@@ -684,7 +684,7 @@ namespace Leviatanes2
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(32)))), ((int)(((byte)(47)))));
-			this.ClientSize = new System.Drawing.Size(960, 640);
+			this.ClientSize = new System.Drawing.Size(1280, 720);
 			this.Controls.Add(this.btnVolverMenu);
 			this.Controls.Add(this.btnIrBatalla);
 			this.Controls.Add(this.pnlMarcoDialogoGba);
