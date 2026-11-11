@@ -1,24 +1,15 @@
-/*
+﻿/*
  * Created by SharpDevelop.
  * User: Alfonzovaa
  * Date: 30/10/2026
  * Time: 11:24 a. m.
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 namespace Leviatanes2
 {
 	partial class CrearP
 	{
-		/// <summary>
-		/// Designer variable used to keep track of non-visual components.
-		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		
-		/// <summary>
-		/// Disposes resources used by the form.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing) {
@@ -29,11 +20,6 @@ namespace Leviatanes2
 			base.Dispose(disposing);
 		}
 		
-		/// <summary>
-		/// This method is required for Windows Forms designer support.
-		/// Do not change the method contents inside the source code editor. The Forms designer might
-		/// not be able to load this method if it was changed manually.
-		/// </summary>
 		private void InitializeComponent()
 		{
 			this.pnlHeaderGba = new System.Windows.Forms.Panel();
@@ -110,7 +96,7 @@ namespace Leviatanes2
 			// 
 			// pnlHeaderGba
 			// 
-			this.pnlHeaderGba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(44)))), ((int)(((byte)(32)))));
+			this.pnlHeaderGba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(41)))), ((int)(((byte)(18)))));
 			this.pnlHeaderGba.Controls.Add(this.lblSubtituloGba);
 			this.pnlHeaderGba.Controls.Add(this.lblTituloGba);
 			this.pnlHeaderGba.Location = new System.Drawing.Point(0, 0);
@@ -120,13 +106,13 @@ namespace Leviatanes2
 			// 
 			// lblTituloGba
 			// 
-			this.lblTituloGba.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTituloGba.ForeColor = System.Drawing.Color.Gold;
+			this.lblTituloGba.Font = new System.Drawing.Font("Consolas", 15.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTituloGba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblTituloGba.Location = new System.Drawing.Point(14, 5);
 			this.lblTituloGba.Name = "lblTituloGba";
 			this.lblTituloGba.Size = new System.Drawing.Size(930, 28);
 			this.lblTituloGba.TabIndex = 0;
-			this.lblTituloGba.Text = "POKEDEX ELEMENTAL - CREADOR DE LEVIATANES";
+			this.lblTituloGba.Text = "LEVIATANES DEL CARIBE 2 - FORJA Y BESTIARIO ELEMENTAL";
 			// 
 			// lblSubtituloGba
 			// 
@@ -136,11 +122,11 @@ namespace Leviatanes2
 			this.lblSubtituloGba.Name = "lblSubtituloGba";
 			this.lblSubtituloGba.Size = new System.Drawing.Size(930, 18);
 			this.lblSubtituloGba.TabIndex = 1;
-			this.lblSubtituloGba.Text = "EDICION ROJO FUEGO GBA  |  PERSISTENCIA EN ARCHIVO (.TXT)";
+			this.lblSubtituloGba.Text = "BESTIARIO ABISAL DEL CARIBE  |  PERSISTENCIA EN ARCHIVO (.TXT)";
 			// 
 			// pnlFranjaDorada
 			// 
-			this.pnlFranjaDorada.BackColor = System.Drawing.Color.Gold;
+			this.pnlFranjaDorada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlFranjaDorada.Location = new System.Drawing.Point(0, 56);
 			this.pnlFranjaDorada.Name = "pnlFranjaDorada";
 			this.pnlFranjaDorada.Size = new System.Drawing.Size(960, 4);
@@ -148,7 +134,7 @@ namespace Leviatanes2
 			// 
 			// pnlMarcoIzquierdo
 			// 
-			this.pnlMarcoIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(176)))), ((int)(((byte)(48)))));
+			this.pnlMarcoIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoIzquierdo.Controls.Add(this.pnlFormularioGba);
 			this.pnlMarcoIzquierdo.Location = new System.Drawing.Point(12, 68);
 			this.pnlMarcoIzquierdo.Name = "pnlMarcoIzquierdo";
@@ -181,21 +167,21 @@ namespace Leviatanes2
 			this.pnlFormularioGba.Controls.Add(this.txtNombre);
 			this.pnlFormularioGba.Controls.Add(this.lblNombre);
 			this.pnlFormularioGba.Controls.Add(this.lblHeaderFormulario);
-			this.pnlFormularioGba.Location = new System.Drawing.Point(4, 4);
+			this.pnlFormularioGba.Location = new System.Drawing.Point(3, 3);
 			this.pnlFormularioGba.Name = "pnlFormularioGba";
-			this.pnlFormularioGba.Size = new System.Drawing.Size(364, 464);
+			this.pnlFormularioGba.Size = new System.Drawing.Size(366, 466);
 			this.pnlFormularioGba.TabIndex = 0;
 			// 
 			// lblHeaderFormulario
 			// 
-			this.lblHeaderFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(56)))), ((int)(((byte)(88)))));
+			this.lblHeaderFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(84)))));
 			this.lblHeaderFormulario.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblHeaderFormulario.ForeColor = System.Drawing.Color.Gold;
+			this.lblHeaderFormulario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblHeaderFormulario.Location = new System.Drawing.Point(0, 0);
 			this.lblHeaderFormulario.Name = "lblHeaderFormulario";
-			this.lblHeaderFormulario.Size = new System.Drawing.Size(364, 30);
+			this.lblHeaderFormulario.Size = new System.Drawing.Size(366, 30);
 			this.lblHeaderFormulario.TabIndex = 0;
-			this.lblHeaderFormulario.Text = " 1. REGISTRAR NUEVO LEVIATAN";
+			this.lblHeaderFormulario.Text = " 1. FORJAR NUEVO LEVIATAN";
 			this.lblHeaderFormulario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblNombre
@@ -206,7 +192,7 @@ namespace Leviatanes2
 			this.lblNombre.Name = "lblNombre";
 			this.lblNombre.Size = new System.Drawing.Size(110, 20);
 			this.lblNombre.TabIndex = 1;
-			this.lblNombre.Text = "NOMBRE CARTA:";
+			this.lblNombre.Text = "NOMBRE BESTIA:";
 			// 
 			// txtNombre
 			// 
@@ -216,7 +202,7 @@ namespace Leviatanes2
 			this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(35)))));
 			this.txtNombre.Location = new System.Drawing.Point(122, 39);
 			this.txtNombre.Name = "txtNombre";
-			this.txtNombre.Size = new System.Drawing.Size(230, 23);
+			this.txtNombre.Size = new System.Drawing.Size(232, 23);
 			this.txtNombre.TabIndex = 2;
 			this.txtNombre.Text = "Gyarados Del Caribe";
 			this.txtNombre.TextChanged += new System.EventHandler(this.CamposVistaPreviaChanged);
@@ -229,7 +215,7 @@ namespace Leviatanes2
 			this.lblFaccion.Name = "lblFaccion";
 			this.lblFaccion.Size = new System.Drawing.Size(80, 20);
 			this.lblFaccion.TabIndex = 3;
-			this.lblFaccion.Text = "FACCION:";
+			this.lblFaccion.Text = "ELEMENTO:";
 			// 
 			// cmbFaccion
 			// 
@@ -250,37 +236,30 @@ namespace Leviatanes2
 			this.lblEmpatia.Name = "lblEmpatia";
 			this.lblEmpatia.Size = new System.Drawing.Size(72, 20);
 			this.lblEmpatia.TabIndex = 5;
-			this.lblEmpatia.Text = "EMPATIA:";
+			this.lblEmpatia.Text = "VINCULO:";
 			// 
 			// numEmpatia
 			// 
 			this.numEmpatia.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.numEmpatia.Location = new System.Drawing.Point(290, 73);
-			this.numEmpatia.Maximum = new decimal(new int[] {
-									100,
-									0,
-									0,
-									0});
+			this.numEmpatia.Maximum = new decimal(new int[] { 100, 0, 0, 0 });
 			this.numEmpatia.Name = "numEmpatia";
-			this.numEmpatia.Size = new System.Drawing.Size(62, 23);
+			this.numEmpatia.Size = new System.Drawing.Size(64, 23);
 			this.numEmpatia.TabIndex = 6;
-			this.numEmpatia.Value = new decimal(new int[] {
-									75,
-									0,
-									0,
-									0});
+			this.numEmpatia.Value = new decimal(new int[] { 75, 0, 0, 0 });
 			this.numEmpatia.ValueChanged += new System.EventHandler(this.CamposVistaPreviaChanged);
 			// 
 			// lblReglaCien
 			// 
 			this.lblReglaCien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(220)))), ((int)(((byte)(184)))));
+			this.lblReglaCien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.lblReglaCien.Font = new System.Drawing.Font("Consolas", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblReglaCien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(35)))), ((int)(((byte)(25)))));
 			this.lblReglaCien.Location = new System.Drawing.Point(10, 106);
 			this.lblReglaCien.Name = "lblReglaCien";
-			this.lblReglaCien.Size = new System.Drawing.Size(342, 22);
+			this.lblReglaCien.Size = new System.Drawing.Size(344, 22);
 			this.lblReglaCien.TabIndex = 7;
-			this.lblReglaCien.Text = "ATRIBUTOS BASE (REGLA: HP + DEF + ATK = 100)";
+			this.lblReglaCien.Text = "ATRIBUTOS BASE (REGLA: VIT + BLI + POD = 100)";
 			this.lblReglaCien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblVida
@@ -297,24 +276,12 @@ namespace Leviatanes2
 			// 
 			this.numVida.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.numVida.Location = new System.Drawing.Point(54, 135);
-			this.numVida.Maximum = new decimal(new int[] {
-									98,
-									0,
-									0,
-									0});
-			this.numVida.Minimum = new decimal(new int[] {
-									1,
-									0,
-									0,
-									0});
+			this.numVida.Maximum = new decimal(new int[] { 98, 0, 0, 0 });
+			this.numVida.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
 			this.numVida.Name = "numVida";
 			this.numVida.Size = new System.Drawing.Size(54, 23);
 			this.numVida.TabIndex = 9;
-			this.numVida.Value = new decimal(new int[] {
-									50,
-									0,
-									0,
-									0});
+			this.numVida.Value = new decimal(new int[] { 50, 0, 0, 0 });
 			this.numVida.ValueChanged += new System.EventHandler(this.AtributosCienChanged);
 			// 
 			// lblDefensa
@@ -331,24 +298,12 @@ namespace Leviatanes2
 			// 
 			this.numDefensa.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.numDefensa.Location = new System.Drawing.Point(180, 135);
-			this.numDefensa.Maximum = new decimal(new int[] {
-									98,
-									0,
-									0,
-									0});
-			this.numDefensa.Minimum = new decimal(new int[] {
-									1,
-									0,
-									0,
-									0});
+			this.numDefensa.Maximum = new decimal(new int[] { 98, 0, 0, 0 });
+			this.numDefensa.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
 			this.numDefensa.Name = "numDefensa";
 			this.numDefensa.Size = new System.Drawing.Size(54, 23);
 			this.numDefensa.TabIndex = 11;
-			this.numDefensa.Value = new decimal(new int[] {
-									25,
-									0,
-									0,
-									0});
+			this.numDefensa.Value = new decimal(new int[] { 25, 0, 0, 0 });
 			this.numDefensa.ValueChanged += new System.EventHandler(this.AtributosCienChanged);
 			// 
 			// lblAtaque
@@ -365,24 +320,12 @@ namespace Leviatanes2
 			// 
 			this.numAtaque.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.numAtaque.Location = new System.Drawing.Point(298, 135);
-			this.numAtaque.Maximum = new decimal(new int[] {
-									98,
-									0,
-									0,
-									0});
-			this.numAtaque.Minimum = new decimal(new int[] {
-									1,
-									0,
-									0,
-									0});
+			this.numAtaque.Maximum = new decimal(new int[] { 98, 0, 0, 0 });
+			this.numAtaque.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
 			this.numAtaque.Name = "numAtaque";
-			this.numAtaque.Size = new System.Drawing.Size(54, 23);
+			this.numAtaque.Size = new System.Drawing.Size(56, 23);
 			this.numAtaque.TabIndex = 13;
-			this.numAtaque.Value = new decimal(new int[] {
-									25,
-									0,
-									0,
-									0});
+			this.numAtaque.Value = new decimal(new int[] { 25, 0, 0, 0 });
 			this.numAtaque.ValueChanged += new System.EventHandler(this.AtributosCienChanged);
 			// 
 			// pbBalanceCien
@@ -415,7 +358,7 @@ namespace Leviatanes2
 			this.btnAjustarCien.ForeColor = System.Drawing.Color.White;
 			this.btnAjustarCien.Location = new System.Drawing.Point(254, 168);
 			this.btnAjustarCien.Name = "btnAjustarCien";
-			this.btnAjustarCien.Size = new System.Drawing.Size(98, 52);
+			this.btnAjustarCien.Size = new System.Drawing.Size(100, 52);
 			this.btnAjustarCien.TabIndex = 16;
 			this.btnAjustarCien.Text = "AJUSTAR A 100";
 			this.btnAjustarCien.UseVisualStyleBackColor = false;
@@ -429,7 +372,7 @@ namespace Leviatanes2
 			this.lblEspecial.Name = "lblEspecial";
 			this.lblEspecial.Size = new System.Drawing.Size(110, 20);
 			this.lblEspecial.TabIndex = 17;
-			this.lblEspecial.Text = "HAB. ESPECIAL:";
+			this.lblEspecial.Text = "ARTE ABISAL:";
 			// 
 			// txtNombreEspecial
 			// 
@@ -438,7 +381,7 @@ namespace Leviatanes2
 			this.txtNombreEspecial.Font = new System.Drawing.Font("Consolas", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtNombreEspecial.Location = new System.Drawing.Point(122, 231);
 			this.txtNombreEspecial.Name = "txtNombreEspecial";
-			this.txtNombreEspecial.Size = new System.Drawing.Size(230, 22);
+			this.txtNombreEspecial.Size = new System.Drawing.Size(232, 22);
 			this.txtNombreEspecial.TabIndex = 18;
 			this.txtNombreEspecial.Text = "Maremoto Abisal";
 			this.txtNombreEspecial.TextChanged += new System.EventHandler(this.CamposVistaPreviaChanged);
@@ -461,7 +404,7 @@ namespace Leviatanes2
 			this.txtDescripcionEspecial.Location = new System.Drawing.Point(10, 286);
 			this.txtDescripcionEspecial.Multiline = true;
 			this.txtDescripcionEspecial.Name = "txtDescripcionEspecial";
-			this.txtDescripcionEspecial.Size = new System.Drawing.Size(342, 92);
+			this.txtDescripcionEspecial.Size = new System.Drawing.Size(344, 92);
 			this.txtDescripcionEspecial.TabIndex = 20;
 			this.txtDescripcionEspecial.Text = "Invoca un tsunami colosal que drena 1 punto de energia enemiga y restaura 25% HP.";
 			this.txtDescripcionEspecial.TextChanged += new System.EventHandler(this.CamposVistaPreviaChanged);
@@ -488,7 +431,7 @@ namespace Leviatanes2
 			this.btnLimpiarCampos.ForeColor = System.Drawing.Color.White;
 			this.btnLimpiarCampos.Location = new System.Drawing.Point(254, 392);
 			this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-			this.btnLimpiarCampos.Size = new System.Drawing.Size(98, 56);
+			this.btnLimpiarCampos.Size = new System.Drawing.Size(100, 56);
 			this.btnLimpiarCampos.TabIndex = 22;
 			this.btnLimpiarCampos.Text = "LIMPIAR";
 			this.btnLimpiarCampos.UseVisualStyleBackColor = false;
@@ -496,7 +439,7 @@ namespace Leviatanes2
 			// 
 			// pnlMarcoCarta
 			// 
-			this.pnlMarcoCarta.BackColor = System.Drawing.Color.Gold;
+			this.pnlMarcoCarta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoCarta.Controls.Add(this.pnlCartaInterior);
 			this.pnlMarcoCarta.Location = new System.Drawing.Point(394, 68);
 			this.pnlMarcoCarta.Name = "pnlMarcoCarta";
@@ -518,9 +461,9 @@ namespace Leviatanes2
 			this.pnlCartaInterior.Controls.Add(this.lblCartaNombreVista);
 			this.pnlCartaInterior.Controls.Add(this.pnlSpriteArte);
 			this.pnlCartaInterior.Controls.Add(this.lblCartaFaccionBanner);
-			this.pnlCartaInterior.Location = new System.Drawing.Point(4, 4);
+			this.pnlCartaInterior.Location = new System.Drawing.Point(3, 3);
 			this.pnlCartaInterior.Name = "pnlCartaInterior";
-			this.pnlCartaInterior.Size = new System.Drawing.Size(248, 464);
+			this.pnlCartaInterior.Size = new System.Drawing.Size(250, 466);
 			this.pnlCartaInterior.TabIndex = 0;
 			// 
 			// lblCartaFaccionBanner
@@ -530,9 +473,9 @@ namespace Leviatanes2
 			this.lblCartaFaccionBanner.ForeColor = System.Drawing.Color.White;
 			this.lblCartaFaccionBanner.Location = new System.Drawing.Point(0, 0);
 			this.lblCartaFaccionBanner.Name = "lblCartaFaccionBanner";
-			this.lblCartaFaccionBanner.Size = new System.Drawing.Size(248, 30);
+			this.lblCartaFaccionBanner.Size = new System.Drawing.Size(250, 30);
 			this.lblCartaFaccionBanner.TabIndex = 0;
-			this.lblCartaFaccionBanner.Text = "VISTA PREVIA :: [AGUA]";
+			this.lblCartaFaccionBanner.Text = "BESTIARIO :: [AGUA]";
 			this.lblCartaFaccionBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// pnlSpriteArte
@@ -541,17 +484,17 @@ namespace Leviatanes2
 			this.pnlSpriteArte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnlSpriteArte.Location = new System.Drawing.Point(12, 38);
 			this.pnlSpriteArte.Name = "pnlSpriteArte";
-			this.pnlSpriteArte.Size = new System.Drawing.Size(224, 140);
+			this.pnlSpriteArte.Size = new System.Drawing.Size(226, 140);
 			this.pnlSpriteArte.TabIndex = 1;
 			this.pnlSpriteArte.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlSpriteArtePaint);
 			// 
 			// lblCartaNombreVista
 			// 
 			this.lblCartaNombreVista.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCartaNombreVista.ForeColor = System.Drawing.Color.Gold;
+			this.lblCartaNombreVista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblCartaNombreVista.Location = new System.Drawing.Point(8, 184);
 			this.lblCartaNombreVista.Name = "lblCartaNombreVista";
-			this.lblCartaNombreVista.Size = new System.Drawing.Size(232, 24);
+			this.lblCartaNombreVista.Size = new System.Drawing.Size(234, 24);
 			this.lblCartaNombreVista.TabIndex = 2;
 			this.lblCartaNombreVista.Text = "Gyarados Del Caribe";
 			this.lblCartaNombreVista.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -571,7 +514,7 @@ namespace Leviatanes2
 			this.pbCartaHp.Location = new System.Drawing.Point(110, 217);
 			this.pbCartaHp.Maximum = 100;
 			this.pbCartaHp.Name = "pbCartaHp";
-			this.pbCartaHp.Size = new System.Drawing.Size(126, 14);
+			this.pbCartaHp.Size = new System.Drawing.Size(128, 14);
 			this.pbCartaHp.TabIndex = 4;
 			this.pbCartaHp.Value = 50;
 			// 
@@ -590,7 +533,7 @@ namespace Leviatanes2
 			this.pbCartaDef.Location = new System.Drawing.Point(110, 241);
 			this.pbCartaDef.Maximum = 100;
 			this.pbCartaDef.Name = "pbCartaDef";
-			this.pbCartaDef.Size = new System.Drawing.Size(126, 14);
+			this.pbCartaDef.Size = new System.Drawing.Size(128, 14);
 			this.pbCartaDef.TabIndex = 6;
 			this.pbCartaDef.Value = 25;
 			// 
@@ -609,7 +552,7 @@ namespace Leviatanes2
 			this.pbCartaAtk.Location = new System.Drawing.Point(110, 265);
 			this.pbCartaAtk.Maximum = 100;
 			this.pbCartaAtk.Name = "pbCartaAtk";
-			this.pbCartaAtk.Size = new System.Drawing.Size(126, 14);
+			this.pbCartaAtk.Size = new System.Drawing.Size(128, 14);
 			this.pbCartaAtk.TabIndex = 8;
 			this.pbCartaAtk.Value = 25;
 			// 
@@ -619,9 +562,9 @@ namespace Leviatanes2
 			this.lblCartaEmp.ForeColor = System.Drawing.Color.Plum;
 			this.lblCartaEmp.Location = new System.Drawing.Point(12, 290);
 			this.lblCartaEmp.Name = "lblCartaEmp";
-			this.lblCartaEmp.Size = new System.Drawing.Size(224, 18);
+			this.lblCartaEmp.Size = new System.Drawing.Size(226, 18);
 			this.lblCartaEmp.TabIndex = 9;
-			this.lblCartaEmp.Text = "EMPATIA: 75/100 | ENERGIA: 2";
+			this.lblCartaEmp.Text = "VINCULO SISMICO: 75/100 | EN: 2";
 			// 
 			// lblCartaPasiva
 			// 
@@ -632,7 +575,7 @@ namespace Leviatanes2
 			this.lblCartaPasiva.Location = new System.Drawing.Point(12, 314);
 			this.lblCartaPasiva.Name = "lblCartaPasiva";
 			this.lblCartaPasiva.Padding = new System.Windows.Forms.Padding(4);
-			this.lblCartaPasiva.Size = new System.Drawing.Size(224, 58);
+			this.lblCartaPasiva.Size = new System.Drawing.Size(226, 58);
 			this.lblCartaPasiva.TabIndex = 10;
 			this.lblCartaPasiva.Text = "CLASE: CartaAgua (Roba 1 Energia, cura 25% HP y ataca).";
 			// 
@@ -645,13 +588,13 @@ namespace Leviatanes2
 			this.lblCartaEspecialVista.Location = new System.Drawing.Point(12, 378);
 			this.lblCartaEspecialVista.Name = "lblCartaEspecialVista";
 			this.lblCartaEspecialVista.Padding = new System.Windows.Forms.Padding(4);
-			this.lblCartaEspecialVista.Size = new System.Drawing.Size(224, 74);
+			this.lblCartaEspecialVista.Size = new System.Drawing.Size(226, 76);
 			this.lblCartaEspecialVista.TabIndex = 11;
-			this.lblCartaEspecialVista.Text = "[Maremoto Abisal]: Invoca un tsunami colosal.";
+			this.lblCartaEspecialVista.Text = "ARTE ABISAL [Maremoto Abisal]:\r\nInvoca un tsunami colosal.";
 			// 
 			// pnlMarcoCatalogo
 			// 
-			this.pnlMarcoCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(176)))), ((int)(((byte)(48)))));
+			this.pnlMarcoCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.pnlMarcoCatalogo.Controls.Add(this.pnlCatalogoInterior);
 			this.pnlMarcoCatalogo.Location = new System.Drawing.Point(660, 68);
 			this.pnlMarcoCatalogo.Name = "pnlMarcoCatalogo";
@@ -667,21 +610,21 @@ namespace Leviatanes2
 			this.pnlCatalogoInterior.Controls.Add(this.lblTotalRegistrados);
 			this.pnlCatalogoInterior.Controls.Add(this.lstPersonajesTxt);
 			this.pnlCatalogoInterior.Controls.Add(this.lblHeaderCatalogo);
-			this.pnlCatalogoInterior.Location = new System.Drawing.Point(4, 4);
+			this.pnlCatalogoInterior.Location = new System.Drawing.Point(3, 3);
 			this.pnlCatalogoInterior.Name = "pnlCatalogoInterior";
-			this.pnlCatalogoInterior.Size = new System.Drawing.Size(280, 464);
+			this.pnlCatalogoInterior.Size = new System.Drawing.Size(282, 466);
 			this.pnlCatalogoInterior.TabIndex = 0;
 			// 
 			// lblHeaderCatalogo
 			// 
-			this.lblHeaderCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(56)))), ((int)(((byte)(88)))));
-			this.lblHeaderCatalogo.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblHeaderCatalogo.ForeColor = System.Drawing.Color.Gold;
+			this.lblHeaderCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(84)))));
+			this.lblHeaderCatalogo.Font = new System.Drawing.Font("Consolas", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblHeaderCatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblHeaderCatalogo.Location = new System.Drawing.Point(0, 0);
 			this.lblHeaderCatalogo.Name = "lblHeaderCatalogo";
-			this.lblHeaderCatalogo.Size = new System.Drawing.Size(280, 30);
+			this.lblHeaderCatalogo.Size = new System.Drawing.Size(282, 30);
 			this.lblHeaderCatalogo.TabIndex = 0;
-			this.lblHeaderCatalogo.Text = " 2. CATALOGO EN PERSONAJES.TXT";
+			this.lblHeaderCatalogo.Text = " 2. CODICE EN PERSONAJES.TXT";
 			this.lblHeaderCatalogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lstPersonajesTxt
@@ -690,11 +633,9 @@ namespace Leviatanes2
 			this.lstPersonajesTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.lstPersonajesTxt.Font = new System.Drawing.Font("Consolas", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lstPersonajesTxt.ForeColor = System.Drawing.Color.White;
-			this.lstPersonajesTxt.HorizontalScrollbar = true;
-			this.lstPersonajesTxt.ItemHeight = 14;
 			this.lstPersonajesTxt.Location = new System.Drawing.Point(10, 38);
 			this.lstPersonajesTxt.Name = "lstPersonajesTxt";
-			this.lstPersonajesTxt.Size = new System.Drawing.Size(260, 324);
+			this.lstPersonajesTxt.Size = new System.Drawing.Size(262, 322);
 			this.lstPersonajesTxt.TabIndex = 1;
 			this.lstPersonajesTxt.SelectedIndexChanged += new System.EventHandler(this.LstPersonajesTxtSelectedIndexChanged);
 			// 
@@ -704,9 +645,9 @@ namespace Leviatanes2
 			this.lblTotalRegistrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
 			this.lblTotalRegistrados.Location = new System.Drawing.Point(10, 368);
 			this.lblTotalRegistrados.Name = "lblTotalRegistrados";
-			this.lblTotalRegistrados.Size = new System.Drawing.Size(260, 18);
+			this.lblTotalRegistrados.Size = new System.Drawing.Size(262, 18);
 			this.lblTotalRegistrados.TabIndex = 2;
-			this.lblTotalRegistrados.Text = "Cartas en personajes.txt: 12";
+			this.lblTotalRegistrados.Text = "Leviatanes registrados: 12";
 			// 
 			// btnCargarEnEditor
 			// 
@@ -728,7 +669,7 @@ namespace Leviatanes2
 			this.btnEliminarDeTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminarDeTxt.Font = new System.Drawing.Font("Consolas", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminarDeTxt.ForeColor = System.Drawing.Color.White;
-			this.btnEliminarDeTxt.Location = new System.Drawing.Point(99, 392);
+			this.btnEliminarDeTxt.Location = new System.Drawing.Point(100, 392);
 			this.btnEliminarDeTxt.Name = "btnEliminarDeTxt";
 			this.btnEliminarDeTxt.Size = new System.Drawing.Size(82, 56);
 			this.btnEliminarDeTxt.TabIndex = 4;
@@ -742,7 +683,7 @@ namespace Leviatanes2
 			this.btnRestaurarBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRestaurarBase.Font = new System.Drawing.Font("Consolas", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRestaurarBase.ForeColor = System.Drawing.Color.White;
-			this.btnRestaurarBase.Location = new System.Drawing.Point(188, 392);
+			this.btnRestaurarBase.Location = new System.Drawing.Point(190, 392);
 			this.btnRestaurarBase.Name = "btnRestaurarBase";
 			this.btnRestaurarBase.Size = new System.Drawing.Size(82, 56);
 			this.btnRestaurarBase.TabIndex = 5;
@@ -752,7 +693,7 @@ namespace Leviatanes2
 			// 
 			// pnlMarcoDialogoGba
 			// 
-			this.pnlMarcoDialogoGba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(44)))), ((int)(((byte)(32)))));
+			this.pnlMarcoDialogoGba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(41)))), ((int)(((byte)(18)))));
 			this.pnlMarcoDialogoGba.Controls.Add(this.pnlDialogoInterior);
 			this.pnlMarcoDialogoGba.Location = new System.Drawing.Point(12, 548);
 			this.pnlMarcoDialogoGba.Name = "pnlMarcoDialogoGba";
@@ -764,20 +705,20 @@ namespace Leviatanes2
 			this.pnlDialogoInterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(62)))));
 			this.pnlDialogoInterior.Controls.Add(this.lblTextoProfesorGba);
 			this.pnlDialogoInterior.Controls.Add(this.lblTituloDialogoGba);
-			this.pnlDialogoInterior.Location = new System.Drawing.Point(4, 4);
+			this.pnlDialogoInterior.Location = new System.Drawing.Point(3, 3);
 			this.pnlDialogoInterior.Name = "pnlDialogoInterior";
-			this.pnlDialogoInterior.Size = new System.Drawing.Size(532, 72);
+			this.pnlDialogoInterior.Size = new System.Drawing.Size(534, 74);
 			this.pnlDialogoInterior.TabIndex = 0;
 			// 
 			// lblTituloDialogoGba
 			// 
 			this.lblTituloDialogoGba.Font = new System.Drawing.Font("Consolas", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTituloDialogoGba.ForeColor = System.Drawing.Color.Gold;
+			this.lblTituloDialogoGba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.lblTituloDialogoGba.Location = new System.Drawing.Point(10, 6);
 			this.lblTituloDialogoGba.Name = "lblTituloDialogoGba";
 			this.lblTituloDialogoGba.Size = new System.Drawing.Size(512, 18);
 			this.lblTituloDialogoGba.TabIndex = 0;
-			this.lblTituloDialogoGba.Text = "PROF. LUCENA (CONSOLA GBA): ¡Laboratorio de Leviatanes!";
+			this.lblTituloDialogoGba.Text = "BITACORA DEL CARIBE - FORJA DE LEVIATANES:";
 			// 
 			// lblTextoProfesorGba
 			// 
@@ -785,17 +726,17 @@ namespace Leviatanes2
 			this.lblTextoProfesorGba.ForeColor = System.Drawing.Color.White;
 			this.lblTextoProfesorGba.Location = new System.Drawing.Point(10, 26);
 			this.lblTextoProfesorGba.Name = "lblTextoProfesorGba";
-			this.lblTextoProfesorGba.Size = new System.Drawing.Size(512, 40);
+			this.lblTextoProfesorGba.Size = new System.Drawing.Size(512, 42);
 			this.lblTextoProfesorGba.TabIndex = 1;
-			this.lblTextoProfesorGba.Text = "Reparte exactamente 100 puntos entre Vida (HP), Escudo (DEF) y Ataque (ATK) para " +
-			"registrar tu criatura en personajes.txt ▼";
+			this.lblTextoProfesorGba.Text = "Reparte exactamente 100 puntos entre Vida (VIT), Escudo (BLI) y Ataque (POD) para" +
+			" registrar tu Leviatan en personajes.txt ▼";
 			// 
 			// btnIrSeleccionModalidad
 			// 
 			this.btnIrSeleccionModalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(41)))), ((int)(((byte)(18)))));
 			this.btnIrSeleccionModalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnIrSeleccionModalidad.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnIrSeleccionModalidad.ForeColor = System.Drawing.Color.Gold;
+			this.btnIrSeleccionModalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.btnIrSeleccionModalidad.Location = new System.Drawing.Point(560, 548);
 			this.btnIrSeleccionModalidad.Name = "btnIrSeleccionModalidad";
 			this.btnIrSeleccionModalidad.Size = new System.Drawing.Size(226, 80);
@@ -809,7 +750,7 @@ namespace Leviatanes2
 			this.VolverMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(68)))), ((int)(((byte)(90)))));
 			this.VolverMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.VolverMenu.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.VolverMenu.ForeColor = System.Drawing.Color.Gold;
+			this.VolverMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(203)))), ((int)(((byte)(66)))));
 			this.VolverMenu.Location = new System.Drawing.Point(794, 548);
 			this.VolverMenu.Name = "VolverMenu";
 			this.VolverMenu.Size = new System.Drawing.Size(154, 80);
@@ -834,7 +775,7 @@ namespace Leviatanes2
 			this.Controls.Add(this.VolverMenu);
 			this.Name = "CrearP";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "CrearP - Pokedex Elemental GBA";
+			this.Text = "Leviatanes del Caribe 2 - Forja y Bestiario";
 			this.pnlHeaderGba.ResumeLayout(false);
 			this.pnlMarcoIzquierdo.ResumeLayout(false);
 			this.pnlFormularioGba.ResumeLayout(false);

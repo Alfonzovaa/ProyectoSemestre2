@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Net;
-using System.Net.Sockets;
 using System.Windows.Forms;
 using Leviatanes2.Clases;
 
@@ -19,9 +17,6 @@ namespace Leviatanes2
         public static Escenario EscenarioInicialSorteado { get; set; }
         public static List<Escenario> CatalogoEscenariosArena { get; set; }
         public static bool ModoContraCpu { get; set; }
-        public static bool ModoRedLan { get; set; }
-        public static TcpListener ListenerServidorLan { get; set; }
-        public static TcpClient ClienteTcpLan { get; set; }
 
         // =====================================================================
         // CAMPOS INTERNOS DE LA VENTANA
@@ -37,6 +32,7 @@ namespace Leviatanes2
         public SeleccionModalidad()
         {
             InitializeComponent();
+            ConfigurarListasModernas();
 
             GestorTxt = new GestorPersistenciaTxt();
             GeneradorAzar = new Random();
@@ -46,15 +42,178 @@ namespace Leviatanes2
             InicializarDatosPantalla();
         }
 
+        // =====================================================================
+        // 0. RENDERIZADO MODERNO DE TARJETAS EN LISTBOX (SIN SCROLL HORIZONTAL)
+        // =====================================================================
+        private void ConfigurarListasModernas()
+        {
+            // Catalogo principal con tarjetas de 2 lineas
+            lstCatalogo.DrawMode = DrawMode.OwnerDrawFixed;
+            lstCatalogo.ItemHeight = 40;
+            lstCatalogo.HorizontalScrollbar = false;
+            lstCatalogo.BackColor = Color.FromArgb(16, 24, 36);
+            lstCatalogo.DrawItem += new DrawItemEventHandler(LstCatalogoDrawItem);
+
+            // Equipos J1 y J2 con tarjetas de 2 lineas (Rol + Nombre/Elemento)
+            lstEquipo1.DrawMode = DrawMode.OwnerDrawFixed;
+            lstEquipo1.ItemHeight = 42;
+            lstEquipo1.HorizontalScrollbar = false;
+            lstEquipo1.DrawItem += new DrawItemEventHandler(LstEquipoDrawItem);
+
+            lstEquipo2.DrawMode = DrawMode.OwnerDrawFixed;
+            lstEquipo2.ItemHeight = 42;
+            lstEquipo2.HorizontalScrollbar = false;
+            lstEquipo2.DrawItem += new DrawItemEventHandler(LstEquipoDrawItem);
+        }
+
+        private void LstCatalogoDrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0 || CatalogoDisponible == null || e.Index >= CatalogoDisponible.Count)
+                return;
+
+            Graphics G = e.Graphics;
+            G.SmoothingMode = SmoothingMode.AntiAlias;
+            G.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+
+            bool Seleccionado = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+            Rectangle RectFila = e.Bounds;
+            Personaje Carta = CatalogoDisponible[e.Index];
+            Color ColorElem = ObtenerColorElemento(Carta.Faccion);
+
+            // 1. Fondo alternado o iluminado al seleccionar
+            Color ColorFondo = Seleccionado
+                ? Color.FromArgb(36, 54, 82)
+                : (e.Index % 2 == 0 ? Color.FromArgb(18, 26, 40) : Color.FromArgb(23, 33, 50));
+
+            using (SolidBrush BrochaFondo = new SolidBrush(ColorFondo))
+            {
+                G.FillRectangle(BrochaFondo, RectFila);
+            }
+
+            // 2. Barra lateral izquierda del color elemental
+            using (SolidBrush BrochaBarra = new SolidBrush(ColorElem))
+            {
+                G.FillRectangle(BrochaBarra, RectFila.X, RectFila.Y + 2, 5, RectFila.Height - 4);
+            }
+
+            // 3. Pastilla / Badge del Elemento
+            string TextoElem = Carta.Faccion.ToString().ToUpper();
+            Rectangle RectBadge = new Rectangle(RectFila.X + 10, RectFila.Y + 5, 50, 15);
+            using (SolidBrush BrochaBadge = new SolidBrush(ColorElem))
+            {
+                G.FillRectangle(BrochaBadge, RectBadge);
+            }
+
+            using (Font FuenteBadge = new Font("Consolas", 7F, FontStyle.Bold))
+            using (SolidBrush BrochaBlanca = new SolidBrush(Color.White))
+            {
+                StringFormat FormatoCentro = new StringFormat
+                {
+                    Alignment = StringAlignment.Center,
+                    LineAlignment = StringAlignment.Center
+                };
+                G.DrawString(TextoElem, FuenteBadge, BrochaBlanca, RectBadge, FormatoCentro);
+            }
+
+            // 4. Linea 1: #ID + Nombre del Leviatan
+            string Titulo = string.Format("#{0:00} {1}", Carta.IdPersonaje, Carta.Nombre);
+            using (Font FuenteTitulo = new Font("Consolas", 9F, FontStyle.Bold))
+            using (SolidBrush BrochaTitulo = new SolidBrush(Seleccionado ? Color.FromArgb(245, 203, 66) : Color.White))
+            {
+                G.DrawString(Titulo, FuenteTitulo, BrochaTitulo, RectFila.X + 66, RectFila.Y + 4);
+            }
+
+            // 5. Linea 2: Estadisticas completas
+            string Subtitulo = string.Format("VIT:{0}  |  BLI:{1}  |  POD:{2}  |  VINC:{3}",
+                Carta.VidaMaxima, Carta.DefensaBase, Carta.AtaqueBase, Carta.Empatia);
+            using (Font FuenteStats = new Font("Consolas", 7.5F, FontStyle.Bold))
+            using (SolidBrush BrochaStats = new SolidBrush(Seleccionado ? Color.LightCyan : Color.FromArgb(150, 175, 205)))
+            {
+                G.DrawString(Subtitulo, FuenteStats, BrochaStats, RectFila.X + 10, RectFila.Y + 22);
+            }
+
+            // 6. Marco dorado si esta seleccionado o linea divisoria
+            if (Seleccionado)
+            {
+                using (Pen BordeSeleccion = new Pen(Color.FromArgb(245, 203, 66), 1.5f))
+                {
+                    G.DrawRectangle(BordeSeleccion, RectFila.X + 1, RectFila.Y + 1, RectFila.Width - 3, RectFila.Height - 3);
+                }
+            }
+            else
+            {
+                using (Pen LineaSep = new Pen(Color.FromArgb(30, 255, 255, 255), 1))
+                {
+                    G.DrawLine(LineaSep, RectFila.X, RectFila.Bottom - 1, RectFila.Right, RectFila.Bottom - 1);
+                }
+            }
+        }
+
+        private void LstEquipoDrawItem(object sender, DrawItemEventArgs e)
+        {
+            ListBox Lista = sender as ListBox;
+            if (e.Index < 0 || Lista == null)
+                return;
+
+            PerfilJugador Perfil = (Lista == lstEquipo1) ? PerfilEntrenador1 : PerfilEntrenador2;
+            if (Perfil == null || e.Index >= Perfil.MazoSeleccionado.Count)
+                return;
+
+            Graphics G = e.Graphics;
+            G.SmoothingMode = SmoothingMode.AntiAlias;
+            G.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+
+            Personaje P = Perfil.MazoSeleccionado[e.Index];
+            Color ColorElem = ObtenerColorElemento(P.Faccion);
+            Rectangle RectFila = e.Bounds;
+            bool EsLider = (e.Index == 0);
+
+            Color FondoBase = (Lista == lstEquipo1)
+                ? (EsLider ? Color.FromArgb(28, 52, 38) : Color.FromArgb(18, 30, 24))
+                : (EsLider ? Color.FromArgb(54, 28, 34) : Color.FromArgb(32, 18, 22));
+
+            using (SolidBrush BrochaFondo = new SolidBrush(FondoBase))
+            {
+                G.FillRectangle(BrochaFondo, RectFila);
+            }
+
+            using (SolidBrush BrochaBarra = new SolidBrush(ColorElem))
+            {
+                G.FillRectangle(BrochaBarra, RectFila.X, RectFila.Y + 2, 4, RectFila.Height - 4);
+            }
+
+            string Rol = EsLider
+                ? string.Format("★ LIDER [{0}]", P.Faccion.ToString().ToUpper())
+                : string.Format("COLA #{0} [{1}]", e.Index, P.Faccion.ToString().ToUpper());
+            Color ColorRol = EsLider ? Color.FromArgb(245, 203, 66) : Color.FromArgb(170, 195, 215);
+
+            using (Font FuenteRol = new Font("Consolas", 7.5F, FontStyle.Bold))
+            using (SolidBrush BrochaRol = new SolidBrush(ColorRol))
+            {
+                G.DrawString(Rol, FuenteRol, BrochaRol, RectFila.X + 8, RectFila.Y + 4);
+            }
+
+            using (Font FuenteNombre = new Font("Consolas", 8.5F, FontStyle.Bold))
+            using (SolidBrush BrochaNombre = new SolidBrush(Color.White))
+            {
+                G.DrawString(P.Nombre, FuenteNombre, BrochaNombre, RectFila.X + 8, RectFila.Y + 20);
+            }
+
+            using (Pen LineaSep = new Pen(Color.FromArgb(35, 255, 255, 255), 1))
+            {
+                G.DrawLine(LineaSep, RectFila.X, RectFila.Bottom - 1, RectFila.Right, RectFila.Bottom - 1);
+            }
+        }
+
         private void InicializarDatosPantalla()
         {
             // 1. Cargar o registrar perfiles desde jugadores.txt
             CargarPerfilesEntrenadoresDesdeTxt(false);
 
-            // 2. Cargar catalogo de criaturas desde personajes.txt
+            // 2. Cargar catalogo de Leviatanes desde personajes.txt
             CargarCatalogoPersonajesDesdeTxt();
 
-            // 3. Autocompletar equipos iniciales de 5 cartas para facilitar pruebas rapidas
+            // 3. Autocompletar equipos iniciales de 5 cartas
             AutocompletarEquipo(PerfilEntrenador1, 0);
             AutocompletarEquipo(PerfilEntrenador2, 5);
             RefrescarListasDeEquipos();
@@ -64,7 +223,7 @@ namespace Leviatanes2
         }
 
         // =====================================================================
-        // 1. MODALIDAD Y RED LAN (CABLE LINK TCP/IP)
+        // 1. MODALIDAD DE COMBATE (HISTORIA/CPU vs DUELO LOCAL)
         // =====================================================================
         private void ModalidadCheckedChanged(object sender, EventArgs e)
         {
@@ -77,140 +236,27 @@ namespace Leviatanes2
 
         private void ActualizarControlesPorModalidad()
         {
-            bool EsLan = rbModoRedLan.Checked;
             bool EsCpu = rbModoCpu.Checked;
-
-            txtIp.Enabled = EsLan;
-            txtPuerto.Enabled = EsLan;
-            btnHospedar.Enabled = EsLan;
-            btnUnirse.Enabled = EsLan;
 
             if (EsCpu)
             {
                 txtEntrenador2.Text = "CPU_Leviatan";
                 txtEntrenador2.ReadOnly = true;
-                lblEstadoRed.ForeColor = Color.Khaki;
-                lblEstadoRed.Text = "Modo Entrenamiento IA: El Entrenador 2 es controlado por la CPU.";
-                lblTextoProfesorGba.Text = "PROF. LUCENA: En Modo CPU IA puedes armarle su mazo de 5 cartas o dejar que se autocomplete al iniciar ▼";
-            }
-            else if (EsLan)
-            {
-                txtEntrenador2.ReadOnly = false;
-                if (txtEntrenador2.Text == "CPU_Leviatan")
-                    txtEntrenador2.Text = "JugadorDos";
-                lblEstadoRed.ForeColor = Color.Cyan;
-                lblEstadoRed.Text = "Cable Link TCP activo: Usa HOSPEDAR SALA o UNIRSE SALA en la red LAN.";
-                lblTextoProfesorGba.Text = "PROF. LUCENA: Configura la IP y Puerto (ej. 5000) para enlazar dos consolas por Sockets TCP/IP ▼";
+                lblTextoProfesorGba.Text = "PROF. LUCENA: En Modo Historia/IA puedes armarle el mazo a la CPU o dejar que se autocomplete ▼";
             }
             else
             {
                 txtEntrenador2.ReadOnly = false;
                 if (txtEntrenador2.Text == "CPU_Leviatan")
                     txtEntrenador2.Text = "JugadorDos";
-                lblEstadoRed.ForeColor = Color.Aquamarine;
-                lblEstadoRed.Text = "Estado Cable Link: Modo Duelo Local activo (1v1 en la misma PC).";
-                lblTextoProfesorGba.Text = "PROF. LUCENA: Modo Duelo Local seleccionado. Ambos entrenadores eligen sus 5 cartas (1 Lider + 4 en Cola) ▼";
+                lblTextoProfesorGba.Text = "PROF. LUCENA: Duelo Local activo. Ambos domadores eligen sus 5 Leviatanes (1 Lider + 4 en Cola) ▼";
             }
 
             CargarPerfilesEntrenadoresDesdeTxt(false);
         }
 
-        private void BtnHospedarClick(object sender, EventArgs e)
-        {
-            int Puerto;
-            if (!int.TryParse(txtPuerto.Text.Trim(), out Puerto) || Puerto < 1024 || Puerto > 65535)
-            {
-                MessageBox.Show("Ingresa un puerto TCP valido entre 1024 y 65535 (ej. 5000).",
-                    "Puerto Invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                CerrarConexionesLanPrevias();
-                ListenerServidorLan = new TcpListener(IPAddress.Any, Puerto);
-                ListenerServidorLan.Start();
-
-                lblEstadoRed.ForeColor = Color.LightGreen;
-                lblEstadoRed.Text = string.Format("Sala hospedada en puerto {0}. Esperando jugador remoto...", Puerto);
-                lblTextoProfesorGba.Text = string.Format("PROF. LUCENA: Servidor TCP escuchando en el puerto {0}. ¡Listo para iniciar combate! ▼", Puerto);
-            }
-            catch (Exception Ex)
-            {
-                lblEstadoRed.ForeColor = Color.Salmon;
-                lblEstadoRed.Text = "Error al hospedar sala: " + Ex.Message;
-            }
-        }
-
-        private void BtnUnirseClick(object sender, EventArgs e)
-        {
-            string IpDestino = txtIp.Text.Trim();
-            int Puerto;
-            if (string.IsNullOrEmpty(IpDestino) || !int.TryParse(txtPuerto.Text.Trim(), out Puerto) || Puerto < 1024 || Puerto > 65535)
-            {
-                MessageBox.Show("Verifica la direccion IP y el puerto TCP (1024 - 65535).",
-                    "Datos de Red Invalidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                CerrarConexionesLanPrevias();
-                ClienteTcpLan = new TcpClient();
-                IAsyncResult Resultado = ClienteTcpLan.BeginConnect(IpDestino, Puerto, null, null);
-                bool Conectado = Resultado.AsyncWaitHandle.WaitOne(TimeSpan.FromMilliseconds(1200));
-
-                if (Conectado && ClienteTcpLan.Connected)
-                {
-                    ClienteTcpLan.EndConnect(Resultado);
-                    lblEstadoRed.ForeColor = Color.LightGreen;
-                    lblEstadoRed.Text = string.Format("Conectado exitosamente al anfitrion {0}:{1}.", IpDestino, Puerto);
-                    lblTextoProfesorGba.Text = "PROF. LUCENA: ¡Cable Link conectado con exito! Presiona IR A LA BATALLA 1 para combatir ▼";
-                }
-                else
-                {
-                    ClienteTcpLan.Close();
-                    ClienteTcpLan = null;
-                    lblEstadoRed.ForeColor = Color.Khaki;
-                    lblEstadoRed.Text = string.Format("Sin respuesta inmediata en {0}:{1}. Puedes iniciar en modo simulacion LAN.", IpDestino, Puerto);
-                }
-            }
-            catch (Exception Ex)
-            {
-                lblEstadoRed.ForeColor = Color.Khaki;
-                lblEstadoRed.Text = "Aviso Cable Link: " + Ex.Message;
-            }
-        }
-
-        private void CerrarConexionesLanPrevias()
-        {
-            try
-            {
-                if (ClienteTcpLan != null)
-                {
-                    ClienteTcpLan.Close();
-                    ClienteTcpLan = null;
-                }
-            }
-            catch (Exception)
-            {
-            }
-
-            try
-            {
-                if (ListenerServidorLan != null)
-                {
-                    ListenerServidorLan.Stop();
-                    ListenerServidorLan = null;
-                }
-            }
-            catch (Exception)
-            {
-            }
-        }
-
         // =====================================================================
-        // 2. ENTRENADORES Y ESTADISTICAS EN jugadores.txt
+        // 2. DOMADORES Y ESTADISTICAS EN jugadores.txt
         // =====================================================================
         private void BtnGuardarNombresClick(object sender, EventArgs e)
         {
@@ -249,13 +295,13 @@ namespace Leviatanes2
             PerfilEntrenador1.MazoSeleccionado = MazoPrevio1;
             PerfilEntrenador2.MazoSeleccionado = MazoPrevio2;
 
-            lblStatsEntrenador1.Text = string.Format("PJ: {0} | V: {1} | D: {2} | Exito: {3:0.00}%",
+            lblStatsEntrenador1.Text = string.Format("PJ:{0} V:{1} D:{2} ({3:0.0}%)",
                 PerfilEntrenador1.PartidasJugadas,
                 PerfilEntrenador1.Victorias,
                 PerfilEntrenador1.Derrotas,
                 PerfilEntrenador1.PorcentajeExito);
 
-            lblStatsEntrenador2.Text = string.Format("PJ: {0} | V: {1} | D: {2} | Exito: {3:0.00}%",
+            lblStatsEntrenador2.Text = string.Format("PJ:{0} V:{1} D:{2} ({3:0.0}%)",
                 PerfilEntrenador2.PartidasJugadas,
                 PerfilEntrenador2.Victorias,
                 PerfilEntrenador2.Derrotas,
@@ -265,13 +311,13 @@ namespace Leviatanes2
 
             if (MostrarConfirmacion)
             {
-                lblTextoProfesorGba.Text = string.Format("PROF. LUCENA: Perfiles '{0}' y '{1}' sincronizados en jugadores.txt ▼",
+                lblTextoProfesorGba.Text = string.Format("PROF. LUCENA: Domadores '{0}' y '{1}' sincronizados en jugadores.txt ▼",
                     PerfilEntrenador1.NombreUsuario, PerfilEntrenador2.NombreUsuario);
             }
         }
 
         // =====================================================================
-        // 3. CATALOGO ELEMENTAL (personajes.txt) Y VISTA PREVIA POKEDEX GBA
+        // 3. CATALOGO DE LEVIATANES Y BESTIARIO DEL CARIBE
         // =====================================================================
         private void CargarCatalogoPersonajesDesdeTxt()
         {
@@ -312,19 +358,20 @@ namespace Leviatanes2
             if (Carta == null)
                 return;
 
-            lblPreviewFaccion.Text = string.Format("POKEDEX :: [{0}]", Carta.Faccion.ToString().ToUpper());
+            lblPreviewFaccion.Text = string.Format("BESTIARIO :: [{0}]", Carta.Faccion.ToString().ToUpper());
             lblPreviewFaccion.BackColor = ObtenerColorElemento(Carta.Faccion);
             lblPreviewNombre.Text = Carta.Nombre;
 
             int Suma = Carta.VidaMaxima + Carta.DefensaBase + Carta.AtaqueBase;
-            lblPreviewStats.Text = string.Format("HP: {0} | DEF: {1} | ATK: {2}\r\nEMPATIA: {3} | SUMA: {4}/100",
+            lblPreviewStats.Text = string.Format(
+                "VIT: {0} | BLI: {1} | POD: {2}\r\nVINCULO: {3} | PODER: {4}/100",
                 Carta.VidaMaxima,
                 Carta.DefensaBase,
                 Carta.AtaqueBase,
                 Carta.Empatia,
                 Suma);
 
-            lblPreviewEspecial.Text = string.Format("[{0}]: {1}",
+            lblPreviewEspecial.Text = string.Format("ARTE ABISAL [{0}]:\r\n{1}",
                 Carta.NombreEspecial,
                 Carta.DescripcionEspecial);
 
@@ -337,17 +384,19 @@ namespace Leviatanes2
             G.SmoothingMode = SmoothingMode.AntiAlias;
 
             Rectangle Rect = pnlPreviewSprite.ClientRectangle;
+
+            // 1. Fondo abisal con degradado profundo
             using (LinearGradientBrush Fondo = new LinearGradientBrush(
                 Rect,
-                Color.FromArgb(14, 22, 36),
-                Color.FromArgb(30, 46, 70),
+                Color.FromArgb(10, 16, 28),
+                Color.FromArgb(24, 38, 60),
                 LinearGradientMode.Vertical))
             {
                 G.FillRectangle(Fondo, Rect);
             }
 
-            // Rejilla tactica GBA
-            using (Pen LapizRejilla = new Pen(Color.FromArgb(35, 255, 255, 255), 1))
+            // 2. Rejilla de escaneo del Bestiario
+            using (Pen LapizRejilla = new Pen(Color.FromArgb(28, 180, 220, 255), 1))
             {
                 for (int X = 0; X < Rect.Width; X += 16)
                     G.DrawLine(LapizRejilla, X, 0, X, Rect.Height);
@@ -355,20 +404,61 @@ namespace Leviatanes2
                     G.DrawLine(LapizRejilla, 0, Y, Rect.Width, Y);
             }
 
+            int CentroX = Rect.Width / 2;
+            int CentroY = (Rect.Height / 2) + 6;
+
+            // 3. Anillo de sonar / radar abisal
+            using (Pen LapizSonar = new Pen(Color.FromArgb(45, 245, 203, 66), 1f))
+            {
+                LapizSonar.DashStyle = DashStyle.Dash;
+                G.DrawEllipse(LapizSonar, CentroX - 42, CentroY - 38, 84, 76);
+            }
+
+            // 4. Esquinas de enfoque doradas
+            using (Pen LapizMarco = new Pen(Color.FromArgb(190, 245, 203, 66), 2f))
+            {
+                int M = 5;
+                int L = 10;
+                G.DrawLine(LapizMarco, M, M + 14, M + L, M + 14);
+                G.DrawLine(LapizMarco, M, M + 14, M, M + 14 + L);
+                G.DrawLine(LapizMarco, Rect.Width - M - L, M + 14, Rect.Width - M, M + 14);
+                G.DrawLine(LapizMarco, Rect.Width - M, M + 14, Rect.Width - M, M + 14 + L);
+                G.DrawLine(LapizMarco, M, Rect.Height - M, M + L, Rect.Height - M);
+                G.DrawLine(LapizMarco, M, Rect.Height - M - L, M, Rect.Height - M);
+                G.DrawLine(LapizMarco, Rect.Width - M - L, Rect.Height - M, Rect.Width - M, Rect.Height - M);
+                G.DrawLine(LapizMarco, Rect.Width - M, Rect.Height - M - L, Rect.Width - M, Rect.Height - M);
+            }
+
             if (PersonajeEnVistaPrevia == null)
                 return;
 
+            // 5. Franja superior de clasificacion del Leviatan
+            Color ColorElem = ObtenerColorElemento(PersonajeEnVistaPrevia.Faccion);
+            using (SolidBrush BrochaTop = new SolidBrush(Color.FromArgb(160, 10, 14, 22)))
+            {
+                G.FillRectangle(BrochaTop, 0, 0, Rect.Width, 16);
+            }
+
+            string Linaje = ObtenerTituloLinaje(PersonajeEnVistaPrevia.Faccion);
+            string TextoRegistro = string.Format("CODICE #{0:00} // {1}", PersonajeEnVistaPrevia.IdPersonaje, Linaje);
+            using (Font FuenteReg = new Font("Consolas", 7.5F, FontStyle.Bold))
+            using (SolidBrush BrochaReg = new SolidBrush(Color.FromArgb(245, 203, 66)))
+            {
+                G.DrawString(TextoRegistro, FuenteReg, BrochaReg, 5, 2);
+            }
+
+            // 6. Dibujar PNG del Leviatan si existe imagen en disco
             using (Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(PersonajeEnVistaPrevia.IdPersonaje, PersonajeEnVistaPrevia.Nombre))
             {
                 if (imgPersonaje != null)
                 {
-                    int maxAncho = Rect.Width - 12;
-                    int maxAlto = Rect.Height - 12;
+                    int maxAncho = Rect.Width - 20;
+                    int maxAlto = Rect.Height - 28;
                     float escala = Math.Min((float)maxAncho / imgPersonaje.Width, (float)maxAlto / imgPersonaje.Height);
                     int anchoDibujo = Math.Max(1, (int)(imgPersonaje.Width * escala));
                     int altoDibujo = Math.Max(1, (int)(imgPersonaje.Height * escala));
                     int posX = (Rect.Width - anchoDibujo) / 2;
-                    int posY = (Rect.Height - altoDibujo) / 2;
+                    int posY = 18 + ((Rect.Height - 22 - altoDibujo) / 2);
 
                     G.InterpolationMode = InterpolationMode.HighQualityBicubic;
                     G.DrawImage(imgPersonaje, new Rectangle(posX, posY, anchoDibujo, altoDibujo));
@@ -376,28 +466,48 @@ namespace Leviatanes2
                 }
             }
 
-            Color ColorElem = ObtenerColorElemento(PersonajeEnVistaPrevia.Faccion);
-            int CentroX = Rect.Width / 2;
-            int CentroY = Rect.Height / 2;
-
-            using (SolidBrush BrochaAura = new SolidBrush(Color.FromArgb(70, ColorElem)))
+            // 7. Si no hay PNG todavia, dibujar Sello Runico de Leviatan
+            using (SolidBrush BrochaAura = new SolidBrush(Color.FromArgb(65, ColorElem)))
             {
-                G.FillEllipse(BrochaAura, CentroX - 30, CentroY - 28, 60, 56);
+                G.FillEllipse(BrochaAura, CentroX - 34, CentroY - 32, 68, 64);
             }
+
+            Point[] RomboRunico = new Point[]
+            {
+                new Point(CentroX, CentroY - 26),
+                new Point(CentroX + 26, CentroY),
+                new Point(CentroX, CentroY + 26),
+                new Point(CentroX - 26, CentroY)
+            };
 
             using (SolidBrush BrochaNucleo = new SolidBrush(ColorElem))
             using (Pen BordeDorado = new Pen(Color.FromArgb(245, 203, 66), 2f))
             {
-                G.FillEllipse(BrochaNucleo, CentroX - 20, CentroY - 20, 40, 40);
-                G.DrawEllipse(BordeDorado, CentroX - 20, CentroY - 20, 40, 40);
+                G.FillPolygon(BrochaNucleo, RomboRunico);
+                G.DrawPolygon(BordeDorado, RomboRunico);
             }
 
             string Sigla = PersonajeEnVistaPrevia.Faccion.ToString().Substring(0, 2).ToUpper();
-            using (Font FuenteSigla = new Font("Consolas", 11F, FontStyle.Bold))
+            using (Font FuenteSigla = new Font("Consolas", 10.5F, FontStyle.Bold))
             using (SolidBrush BrochaTexto = new SolidBrush(Color.White))
             {
                 SizeF Tam = G.MeasureString(Sigla, FuenteSigla);
                 G.DrawString(Sigla, FuenteSigla, BrochaTexto, CentroX - (Tam.Width / 2f), CentroY - (Tam.Height / 2f));
+            }
+        }
+
+        private static string ObtenerTituloLinaje(Elemento Faccion)
+        {
+            switch (Faccion)
+            {
+                case Elemento.Fuego:
+                    return "DRAKO PIRICO";
+                case Elemento.Agua:
+                    return "BESTIA ABISAL";
+                case Elemento.Tierra:
+                    return "COLOSO LITICO";
+                default:
+                    return "SIERPE CELESTE";
             }
         }
 
@@ -437,14 +547,14 @@ namespace Leviatanes2
             int Indice = lstCatalogo.SelectedIndex;
             if (Indice < 0 || Indice >= CatalogoDisponible.Count)
             {
-                MessageBox.Show("Selecciona primero una criatura del Catalogo Elemental.",
+                MessageBox.Show("Selecciona primero un Leviatan del Catalogo.",
                     "Catalogo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (Perfil.MazoSeleccionado.Count >= 5)
             {
-                MessageBox.Show(string.Format("El {0} ({1}) ya tiene el maximo de 5 cartas (1 Lider + 4 en Cola).\nUsa VACIAR si deseas rearmarlo.",
+                MessageBox.Show(string.Format("El {0} ({1}) ya tiene el maximo de 5 Leviatanes (1 Lider + 4 en Cola).\nUsa VACIAR si deseas rearmarlo.",
                     EtiquetaEquipo, Perfil.NombreUsuario),
                     "Equipo Completo (5/5)", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -455,7 +565,7 @@ namespace Leviatanes2
             {
                 if (string.Equals(Perfil.MazoSeleccionado[I].Nombre, Original.Nombre, StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show(string.Format("'{0}' ya forma parte del {1}. Elige otra carta distinta.",
+                    MessageBox.Show(string.Format("'{0}' ya forma parte del {1}. Elige otro Leviatan distinto.",
                         Original.Nombre, EtiquetaEquipo),
                         "Carta Duplicada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -484,7 +594,7 @@ namespace Leviatanes2
             {
                 PerfilEntrenador1.MazoSeleccionado.Clear();
                 RefrescarListasDeEquipos();
-                lblTextoProfesorGba.Text = "PROF. LUCENA: Se ha vaciado el Equipo 1. Selecciona 5 cartas del catalogo ▼";
+                lblTextoProfesorGba.Text = "PROF. LUCENA: Se ha vaciado el Equipo 1. Selecciona 5 Leviatanes del catalogo ▼";
             }
         }
 
@@ -502,7 +612,7 @@ namespace Leviatanes2
             {
                 PerfilEntrenador2.MazoSeleccionado.Clear();
                 RefrescarListasDeEquipos();
-                lblTextoProfesorGba.Text = "PROF. LUCENA: Se ha vaciado el Equipo 2. Selecciona 5 cartas del catalogo ▼";
+                lblTextoProfesorGba.Text = "PROF. LUCENA: Se ha vaciado el Equipo 2. Selecciona 5 Leviatanes del catalogo ▼";
             }
         }
 
@@ -513,7 +623,6 @@ namespace Leviatanes2
 
             Perfil.MazoSeleccionado.Clear();
             int TotalCatalogo = CatalogoDisponible.Count;
-            // Seleccionar saltando de 3 en 3 para incluir siempre los 4 elementos (Fuego, Agua, Tierra, Aire)
             for (int I = 0; I < 5 && I < TotalCatalogo; I++)
             {
                 int Indice = (DesplazamientoInicial + (I * 3)) % TotalCatalogo;
@@ -568,29 +677,26 @@ namespace Leviatanes2
         // =====================================================================
         private void BtnIrBatallaClick(object sender, EventArgs e)
         {
-            // Validar que solo se pueda entrar a la batalla en modo Jugador vs CPU
             if (!rbModoCpu.Checked)
             {
                 MessageBox.Show(
                     "Esta batalla del Modo Historia está habilitada únicamente para la modalidad Jugador vs CPU.\n\n" +
-                    "Por favor selecciona la opción 'MODO ENTRENAMIENTO (Jugador 1 vs CPU IA)' para continuar.",
+                    "Por favor selecciona la opción 'MODO HISTORIA / IA (J1 vs CPU)' para continuar.",
                     "Modalidad Jugador vs CPU Requerida",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return;
             }
 
-            // Sincronizar nombres escritos en las cajas de texto antes de validar
             CargarPerfilesEntrenadoresDesdeTxt(false);
 
             if (PerfilEntrenador1 == null || PerfilEntrenador1.MazoSeleccionado.Count < 5)
             {
-                MessageBox.Show("El Equipo del Entrenador 1 debe tener exactamente 5 cartas (1 Lider + 4 en Cola de Relevo).",
+                MessageBox.Show("El Equipo del Domador 1 debe tener exactamente 5 Leviatanes (1 Lider + 4 en Cola de Relevo).",
                     "Equipo 1 Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Si es contra la CPU y el Equipo 2 tiene menos de 5 cartas, autocompletar al azar
             if (rbModoCpu.Checked && (PerfilEntrenador2 == null || PerfilEntrenador2.MazoSeleccionado.Count < 5))
             {
                 AutocompletarEquipoAleatorio(PerfilEntrenador2);
@@ -599,12 +705,11 @@ namespace Leviatanes2
 
             if (PerfilEntrenador2 == null || PerfilEntrenador2.MazoSeleccionado.Count < 5)
             {
-                MessageBox.Show("El Equipo del Entrenador 2 debe tener exactamente 5 cartas (1 Lider + 4 en Cola de Relevo).",
+                MessageBox.Show("El Equipo del Domador 2 debe tener exactamente 5 Leviatanes (1 Lider + 4 en Cola de Relevo).",
                     "Equipo 2 Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Sorteo 100% aleatorio del Escenario inicial con Random entre los 4 entornos
             if (ListaEscenariosDisponibles == null || ListaEscenariosDisponibles.Count == 0)
             {
                 ListaEscenariosDisponibles = GestorPersistenciaTxt.ObtenerCatalogoEscenarios();
@@ -613,13 +718,11 @@ namespace Leviatanes2
             int IndiceEscenarioAzar = GeneradorAzar.Next(ListaEscenariosDisponibles.Count);
             Escenario EscenarioSorteado = ListaEscenariosDisponibles[IndiceEscenarioAzar];
 
-            // Guardar configuracion compartida para que Batalla1 la reciba lista
             JugadorUnoConfigurado = PerfilEntrenador1;
             JugadorDosConfigurado = PerfilEntrenador2;
             EscenarioInicialSorteado = EscenarioSorteado;
             CatalogoEscenariosArena = ListaEscenariosDisponibles;
             ModoContraCpu = rbModoCpu.Checked;
-            ModoRedLan = rbModoRedLan.Checked;
 
             MessageBox.Show(
                 string.Format("¡SORTEO DE ESCENARIO COMPLETADO!\n\n" +
@@ -632,7 +735,7 @@ namespace Leviatanes2
                     EscenarioSorteado.UmbralEmpatia,
                     PerfilEntrenador1.NombreUsuario,
                     PerfilEntrenador2.NombreUsuario),
-                "Arena Elemental GBA - Inicio de Batalla 1",
+                "Leviatanes del Caribe 2 - Inicio de Batalla 1",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
@@ -644,7 +747,6 @@ namespace Leviatanes2
 
         private void BtnVolverMenuClick(object sender, EventArgs e)
         {
-            CerrarConexionesLanPrevias();
             MainForm MenuPrincipal = new MainForm();
             MenuPrincipal.FormClosed += (s, args) => Application.Exit();
             MenuPrincipal.Show();
@@ -653,7 +755,6 @@ namespace Leviatanes2
 
         private void SeleccionModalidadFormClosed(object sender, FormClosedEventArgs e)
         {
-            CerrarConexionesLanPrevias();
             Application.Exit();
         }
     }

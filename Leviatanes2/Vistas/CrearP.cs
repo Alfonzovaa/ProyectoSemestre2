@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -17,8 +17,101 @@ namespace Leviatanes2
 		public CrearP()
 		{
 			InitializeComponent();
-
+			ConfigurarListBoxCatalogoModerno();
 			InicializarModuloCrearPersonaje();
+		}
+
+		private void ConfigurarListBoxCatalogoModerno()
+		{
+			lstPersonajesTxt.DrawMode = DrawMode.OwnerDrawFixed;
+			lstPersonajesTxt.ItemHeight = 40;
+			lstPersonajesTxt.HorizontalScrollbar = false;
+			lstPersonajesTxt.BackColor = Color.FromArgb(16, 24, 36);
+			lstPersonajesTxt.DrawItem += new DrawItemEventHandler(LstPersonajesTxtDrawItem);
+		}
+
+		private void LstPersonajesTxtDrawItem(object sender, DrawItemEventArgs e)
+		{
+			if (e.Index < 0 || ListaCatalogoActual == null || e.Index >= ListaCatalogoActual.Count)
+				return;
+
+			Graphics G = e.Graphics;
+			G.SmoothingMode = SmoothingMode.AntiAlias;
+			G.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+
+			bool Seleccionado = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+			Rectangle RectFila = e.Bounds;
+			Personaje Carta = ListaCatalogoActual[e.Index];
+			Color ColorElem = ObtenerColorPorElemento(Carta.Faccion);
+
+			// 1. Fondo de tarjeta
+			Color ColorFondo = Seleccionado
+				? Color.FromArgb(36, 54, 82)
+				: (e.Index % 2 == 0 ? Color.FromArgb(18, 26, 40) : Color.FromArgb(23, 33, 50));
+
+			using (SolidBrush BrochaFondo = new SolidBrush(ColorFondo))
+			{
+				G.FillRectangle(BrochaFondo, RectFila);
+			}
+
+			// 2. Barra lateral de faccion
+			using (SolidBrush BrochaBarra = new SolidBrush(ColorElem))
+			{
+				G.FillRectangle(BrochaBarra, RectFila.X, RectFila.Y + 2, 5, RectFila.Height - 4);
+			}
+
+			// 3. Pastilla del Elemento
+			string TextoElem = Carta.Faccion.ToString().ToUpper();
+			Rectangle RectBadge = new Rectangle(RectFila.X + 9, RectFila.Y + 5, 48, 15);
+			using (SolidBrush BrochaBadge = new SolidBrush(ColorElem))
+			{
+				G.FillRectangle(BrochaBadge, RectBadge);
+			}
+
+			using (Font FuenteBadge = new Font("Consolas", 7F, FontStyle.Bold))
+			using (SolidBrush BrochaBlanca = new SolidBrush(Color.White))
+			{
+				StringFormat FormatoCentro = new StringFormat
+				{
+					Alignment = StringAlignment.Center,
+					LineAlignment = StringAlignment.Center
+				};
+				G.DrawString(TextoElem, FuenteBadge, BrochaBlanca, RectBadge, FormatoCentro);
+			}
+
+			// 4. Linea 1: #ID + Nombre
+			string EtiquetaOrigen = Carta.IdPersonaje <= 12 ? "" : " *";
+			string Titulo = string.Format("#{0:00} {1}{2}", Carta.IdPersonaje, Carta.Nombre, EtiquetaOrigen);
+			using (Font FuenteTitulo = new Font("Consolas", 8.5F, FontStyle.Bold))
+			using (SolidBrush BrochaTitulo = new SolidBrush(Seleccionado ? Color.FromArgb(245, 203, 66) : Color.White))
+			{
+				G.DrawString(Titulo, FuenteTitulo, BrochaTitulo, RectFila.X + 62, RectFila.Y + 4);
+			}
+
+			// 5. Linea 2: Estadisticas completas sin recorte
+			string Subtitulo = string.Format("VIT:{0} | BLI:{1} | POD:{2} | VINC:{3}",
+				Carta.VidaMaxima, Carta.DefensaBase, Carta.AtaqueBase, Carta.Empatia);
+			using (Font FuenteStats = new Font("Consolas", 7.5F, FontStyle.Bold))
+			using (SolidBrush BrochaStats = new SolidBrush(Seleccionado ? Color.LightCyan : Color.FromArgb(150, 175, 205)))
+			{
+				G.DrawString(Subtitulo, FuenteStats, BrochaStats, RectFila.X + 9, RectFila.Y + 22);
+			}
+
+			// 6. Borde de seleccion dorado o divisor sutil
+			if (Seleccionado)
+			{
+				using (Pen BordeSeleccion = new Pen(Color.FromArgb(245, 203, 66), 1.5f))
+				{
+					G.DrawRectangle(BordeSeleccion, RectFila.X + 1, RectFila.Y + 1, RectFila.Width - 3, RectFila.Height - 3);
+				}
+			}
+			else
+			{
+				using (Pen LineaSep = new Pen(Color.FromArgb(30, 255, 255, 255), 1))
+				{
+					G.DrawLine(LineaSep, RectFila.X, RectFila.Bottom - 1, RectFila.Right, RectFila.Bottom - 1);
+				}
+			}
 		}
 
 		private void InicializarModuloCrearPersonaje()
@@ -68,7 +161,7 @@ namespace Leviatanes2
 					C.AtaqueBase));
 			}
 
-			lblTotalRegistrados.Text = string.Format("Cartas registradas en 'personajes.txt': {0}", ListaCatalogoActual.Count);
+			lblTotalRegistrados.Text = string.Format("Leviatanes en personajes.txt: {0}", ListaCatalogoActual.Count);
 		}
 
 		private Elemento ObtenerFaccionSeleccionada()
@@ -118,7 +211,7 @@ namespace Leviatanes2
 			int Def = (int)numDefensa.Value;
 			int Atk = (int)numAtaque.Value;
 			int Emp = (int)numEmpatia.Value;
-			string Especial = string.IsNullOrWhiteSpace(txtNombreEspecial.Text) ? "Ataque Elemental" : txtNombreEspecial.Text.Trim();
+			string Especial = string.IsNullOrWhiteSpace(txtNombreEspecial.Text) ? "Arte Elemental" : txtNombreEspecial.Text.Trim();
 			string Desc = string.IsNullOrWhiteSpace(txtDescripcionEspecial.Text) ? "Sin descripcion." : txtDescripcionEspecial.Text.Trim();
 
 			AplicarDatosATarjetaVistaPrevia(NombreCarta, Fac, Vida, Def, Atk, Emp, Especial, Desc);
@@ -136,7 +229,7 @@ namespace Leviatanes2
 		{
 			Color ColorTema = ObtenerColorPorElemento(Fac);
 			lblCartaFaccionBanner.BackColor = ColorTema;
-			lblCartaFaccionBanner.Text = string.Format("VISTA PREVIA :: [{0}]", Fac.ToString().ToUpper());
+			lblCartaFaccionBanner.Text = string.Format("BESTIARIO :: [{0}]", Fac.ToString().ToUpper());
 
 			lblCartaNombreVista.Text = NombreCarta;
 			lblCartaHp.Text = string.Format("VIDA   : {0}", Vida);
@@ -147,9 +240,9 @@ namespace Leviatanes2
 			pbCartaDef.Value = Math.Min(100, Math.Max(0, Def));
 			pbCartaAtk.Value = Math.Min(100, Math.Max(0, Atk));
 
-			lblCartaEmp.Text = string.Format("EMPATIA SISMICA: {0} / 100  |  ENERGIA: 2", Emp);
+			lblCartaEmp.Text = string.Format("VINCULO SISMICO: {0}/100 | EN: 2", Emp);
 			lblCartaPasiva.Text = ObtenerTextoPasivaSubclase(Fac);
-			lblCartaEspecialVista.Text = string.Format("[{0}]: {1}", Especial, Desc);
+			lblCartaEspecialVista.Text = string.Format("ARTE ABISAL [{0}]:\r\n{1}", Especial, Desc);
 
 			pnlSpriteArte.Invalidate();
 		}
@@ -159,13 +252,28 @@ namespace Leviatanes2
 			switch (Fac)
 			{
 				case Elemento.Fuego:
-					return Color.FromArgb(215, 55, 35);
+					return Color.FromArgb(204, 41, 18);
 				case Elemento.Agua:
-					return Color.FromArgb(35, 115, 210);
+					return Color.FromArgb(28, 108, 196);
 				case Elemento.Tierra:
-					return Color.FromArgb(150, 95, 45);
+					return Color.FromArgb(148, 98, 42);
 				default:
-					return Color.FromArgb(45, 165, 130);
+					return Color.FromArgb(46, 152, 126);
+			}
+		}
+
+		private static string ObtenerTituloLinaje(Elemento Faccion)
+		{
+			switch (Faccion)
+			{
+				case Elemento.Fuego:
+					return "DRAKO PIRICO";
+				case Elemento.Agua:
+					return "BESTIA ABISAL";
+				case Elemento.Tierra:
+					return "COLOSO LITICO";
+				default:
+					return "SIERPE CELESTE";
 			}
 		}
 
@@ -174,13 +282,13 @@ namespace Leviatanes2
 			switch (Fac)
 			{
 				case Elemento.Fuego:
-					return "SUBCLASE CartaFuego: Furia (+15% ATK si HP < 50%). Especial ignora escudo (1.45x).";
+					return "LINAJE CartaFuego: Furia (+15% ATK si HP < 50%). Especial ignora escudo (1.45x).";
 				case Elemento.Agua:
-					return "SUBCLASE CartaAgua: Especial roba 1 Energia al rival, cura +25% HP y ataca.";
+					return "LINAJE CartaAgua: Especial roba 1 Energia al rival, cura +25% HP y ataca.";
 				case Elemento.Tierra:
-					return "SUBCLASE CartaTierra: Bono Roca (+15% Escudo al ATK) y mitiga 50% del Terremoto.";
+					return "LINAJE CartaTierra: Bono Roca (+15% Escudo al ATK) y mitiga 50% del Terremoto.";
 				default:
-					return "SUBCLASE CartaAire: Especial ejecuta doble impacto aereo consecutivo (2 x 0.85x).";
+					return "LINAJE CartaAire: Especial ejecuta doble impacto aereo consecutivo (2 x 0.85x).";
 			}
 		}
 
@@ -189,79 +297,125 @@ namespace Leviatanes2
 			Graphics G = e.Graphics;
 			G.SmoothingMode = SmoothingMode.AntiAlias;
 
-			int W = pnlSpriteArte.Width;
-			int H = pnlSpriteArte.Height;
-			Elemento Fac = ObtenerFaccionSeleccionada();
-
-			// Si el usuario selecciono una carta del catalogo y su faccion difiere, usamos el color del banner actual
+			Rectangle Rect = pnlSpriteArte.ClientRectangle;
 			Color ColorElem = lblCartaFaccionBanner.BackColor;
 
+			// 1. Fondo abisal profundo
 			using (LinearGradientBrush Fondo = new LinearGradientBrush(
-				new Rectangle(0, 0, W, H),
-				Color.FromArgb(16, 24, 38),
-				Color.FromArgb(45, ColorElem.R / 2, ColorElem.G / 2, ColorElem.B / 2),
+				Rect,
+				Color.FromArgb(10, 16, 28),
+				Color.FromArgb(24, 38, 60),
 				LinearGradientMode.Vertical))
 			{
-				G.FillRectangle(Fondo, 0, 0, W, H);
+				G.FillRectangle(Fondo, Rect);
 			}
 
-			// Lineas de escaneo estilo pantalla GBA
-			using (Pen LapizScan = new Pen(Color.FromArgb(25, 255, 255, 255), 1))
+			// 2. Rejilla tactica del Bestiario
+			using (Pen LapizRejilla = new Pen(Color.FromArgb(28, 180, 220, 255), 1))
 			{
-				for (int Y = 0; Y < H; Y += 4)
-				{
-					G.DrawLine(LapizScan, 0, Y, W, Y);
-				}
+				for (int X = 0; X < Rect.Width; X += 16)
+					G.DrawLine(LapizRejilla, X, 0, X, Rect.Height);
+				for (int Y = 0; Y < Rect.Height; Y += 16)
+					G.DrawLine(LapizRejilla, 0, Y, Rect.Width, Y);
 			}
 
-			// Plataforma de combate estilo Pokemon GBA y emblema elemental
-			int CX = W / 2;
-			int CY = H / 2;
+			int CentroX = Rect.Width / 2;
+			int CentroY = (Rect.Height / 2) + 6;
 
-			using (SolidBrush SombraPlataforma = new SolidBrush(Color.FromArgb(110, 0, 0, 0)))
-			using (SolidBrush Plataforma = new SolidBrush(Color.FromArgb(90, ColorElem)))
-			using (Pen BordePlataforma = new Pen(Color.Gold, 2))
+			// 3. Sonar concéntrico y plataforma inferior
+			using (Pen LapizSonar = new Pen(Color.FromArgb(45, 245, 203, 66), 1f))
 			{
-				G.FillEllipse(SombraPlataforma, CX - 82, CY + 26, 164, 34);
-				G.FillEllipse(Plataforma, CX - 78, CY + 22, 156, 32);
-				G.DrawEllipse(BordePlataforma, CX - 78, CY + 22, 156, 32);
+				LapizSonar.DashStyle = DashStyle.Dash;
+				G.DrawEllipse(LapizSonar, CentroX - 48, CentroY - 42, 96, 84);
 			}
 
-			// Orbe / Imagen del Personaje ("personaje 1", "personaje 2", etc. desde la carpeta imagenes)
+			using (SolidBrush SombraPlat = new SolidBrush(Color.FromArgb(90, 0, 0, 0)))
+			using (SolidBrush BrochaPlat = new SolidBrush(Color.FromArgb(65, ColorElem)))
+			using (Pen BordePlat = new Pen(Color.FromArgb(160, 245, 203, 66), 1.5f))
+			{
+				G.FillEllipse(SombraPlat, CentroX - 66, Rect.Height - 28, 132, 20);
+				G.FillEllipse(BrochaPlat, CentroX - 62, Rect.Height - 30, 124, 18);
+				G.DrawEllipse(BordePlat, CentroX - 62, Rect.Height - 30, 124, 18);
+			}
+
+			// 4. Esquinas de enfoque doradas
+			using (Pen LapizMarco = new Pen(Color.FromArgb(190, 245, 203, 66), 2f))
+			{
+				int M = 5;
+				int L = 10;
+				G.DrawLine(LapizMarco, M, M + 14, M + L, M + 14);
+				G.DrawLine(LapizMarco, M, M + 14, M, M + 14 + L);
+				G.DrawLine(LapizMarco, Rect.Width - M - L, M + 14, Rect.Width - M, M + 14);
+				G.DrawLine(LapizMarco, Rect.Width - M, M + 14, Rect.Width - M, M + 14 + L);
+				G.DrawLine(LapizMarco, M, Rect.Height - M, M + L, Rect.Height - M);
+				G.DrawLine(LapizMarco, M, Rect.Height - M - L, M, Rect.Height - M);
+				G.DrawLine(LapizMarco, Rect.Width - M - L, Rect.Height - M, Rect.Width - M, Rect.Height - M);
+				G.DrawLine(LapizMarco, Rect.Width - M, Rect.Height - M - L, Rect.Width - M, Rect.Height - M);
+			}
+
+			// 5. Franja superior del Codice
+			using (SolidBrush BrochaTop = new SolidBrush(Color.FromArgb(160, 10, 14, 22)))
+			{
+				G.FillRectangle(BrochaTop, 0, 0, Rect.Width, 16);
+			}
+
+			Elemento FacActual = lblCartaFaccionBanner.Text.Contains("FUEGO") ? Elemento.Fuego :
+			                     lblCartaFaccionBanner.Text.Contains("TIERRA") ? Elemento.Tierra :
+			                     lblCartaFaccionBanner.Text.Contains("AIRE") ? Elemento.Aire : Elemento.Agua;
+
+			string TextoRegistro = string.Format("CODICE #{0:00} // {1}", IdPersonajeVistaPrevia, ObtenerTituloLinaje(FacActual));
+			using (Font FuenteReg = new Font("Consolas", 7.5F, FontStyle.Bold))
+			using (SolidBrush BrochaReg = new SolidBrush(Color.FromArgb(245, 203, 66)))
+			{
+				G.DrawString(TextoRegistro, FuenteReg, BrochaReg, 5, 2);
+			}
+
+			// 6. Dibujar PNG del Leviatan si existe en la carpeta de imagenes
 			using (Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(IdPersonajeVistaPrevia, lblCartaNombreVista.Text))
 			{
 				if (imgPersonaje != null)
 				{
-					int maxAncho = W - 28;
-					int maxAlto = H - 24;
+					int maxAncho = Rect.Width - 24;
+					int maxAlto = Rect.Height - 28;
 					float escala = Math.Min((float)maxAncho / imgPersonaje.Width, (float)maxAlto / imgPersonaje.Height);
 					int anchoDibujo = Math.Max(1, (int)(imgPersonaje.Width * escala));
 					int altoDibujo = Math.Max(1, (int)(imgPersonaje.Height * escala));
-					int posX = (W - anchoDibujo) / 2;
-					int posY = (H - altoDibujo) / 2;
+					int posX = (Rect.Width - anchoDibujo) / 2;
+					int posY = 18 + ((Rect.Height - 24 - altoDibujo) / 2);
 
 					G.InterpolationMode = InterpolationMode.HighQualityBicubic;
 					G.DrawImage(imgPersonaje, new Rectangle(posX, posY, anchoDibujo, altoDibujo));
+					return;
 				}
-				else
-				{
-					using (SolidBrush BrochaExterior = new SolidBrush(ColorElem))
-					using (SolidBrush BrochaNucleo = new SolidBrush(Color.FromArgb(230, 255, 245, 210)))
-					using (Pen BordeOro = new Pen(Color.Gold, 3))
-					using (Font FuenteSimbolo = new Font("Consolas", 11F, FontStyle.Bold))
-					{
-						G.FillEllipse(BrochaExterior, CX - 42, CY - 46, 84, 84);
-						G.DrawEllipse(BordeOro, CX - 42, CY - 46, 84, 84);
-						G.FillEllipse(BrochaNucleo, CX - 24, CY - 28, 48, 48);
+			}
 
-						string Inicial = lblCartaFaccionBanner.Text.Contains("FUEGO") ? "FUEGO" :
-						                 lblCartaFaccionBanner.Text.Contains("TIERRA") ? "TIERRA" :
-						                 lblCartaFaccionBanner.Text.Contains("AIRE") ? "AIRE" : "AGUA";
+			// 7. Respaldo mientras no tenga PNG: Sello Runico de Leviatan
+			using (SolidBrush BrochaAura = new SolidBrush(Color.FromArgb(65, ColorElem)))
+			{
+				G.FillEllipse(BrochaAura, CentroX - 36, CentroY - 34, 72, 68);
+			}
 
-						SizeF TamTexto = G.MeasureString(Inicial, FuenteSimbolo);
-						G.DrawString(Inicial, FuenteSimbolo, Brushes.Black, CX - (TamTexto.Width / 2), CY - 12);
-					}
-				}
+			Point[] RomboRunico = new Point[]
+			{
+				new Point(CentroX, CentroY - 28),
+				new Point(CentroX + 28, CentroY),
+				new Point(CentroX, CentroY + 28),
+				new Point(CentroX - 28, CentroY)
+			};
+
+			using (SolidBrush BrochaNucleo = new SolidBrush(ColorElem))
+			using (Pen BordeDorado = new Pen(Color.FromArgb(245, 203, 66), 2f))
+			{
+				G.FillPolygon(BrochaNucleo, RomboRunico);
+				G.DrawPolygon(BordeDorado, RomboRunico);
+			}
+
+			string Sigla = FacActual.ToString().Substring(0, 2).ToUpper();
+			using (Font FuenteSigla = new Font("Consolas", 11F, FontStyle.Bold))
+			using (SolidBrush BrochaTexto = new SolidBrush(Color.White))
+			{
+				SizeF Tam = G.MeasureString(Sigla, FuenteSigla);
+				G.DrawString(Sigla, FuenteSigla, BrochaTexto, CentroX - (Tam.Width / 2f), CentroY - (Tam.Height / 2f));
 			}
 		}
 
@@ -305,7 +459,7 @@ namespace Leviatanes2
 			ActualizarMedidorBalanceCien();
 			ActualizarTarjetaVistaPreviaDesdeFormulario();
 
-			lblTextoProfesorGba.Text = "PROF. LUCENA: ¡Atributos ajustados automáticamente para que HP + DEF + ATK sumen exactamente 100! ▼";
+			lblTextoProfesorGba.Text = "PROF. LUCENA: ¡Atributos ajustados automaticamente para que VIT + BLI + POD sumen exactamente 100! ▼";
 		}
 
 		void BtnGuardarPersonajeTxtClick(object sender, EventArgs e)
@@ -315,7 +469,7 @@ namespace Leviatanes2
 				string Nombre = txtNombre.Text.Trim();
 				if (string.IsNullOrEmpty(Nombre))
 				{
-					MessageBox.Show("Debes escribir un nombre para el Leviatán antes de guardarlo.", "Nombre Requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					MessageBox.Show("Debes escribir un nombre para el Leviatan antes de guardarlo.", "Nombre Requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					return;
 				}
 
@@ -344,11 +498,11 @@ namespace Leviatanes2
 				}
 
 				lblTextoProfesorGba.Text = string.Format(
-					"¡REGISTRO EXITOSO EN PERSONAJES.TXT! Se guardó #{0:00} {1} [{2}] (HP:{3} + DEF:{4} + ATK:{5} = 100). ▼",
+					"¡REGISTRO EXITOSO EN PERSONAJES.TXT! Se guardo #{0:00} {1} [{2}] (VIT:{3} + BLI:{4} + POD:{5} = 100). ▼",
 					Nuevo.IdPersonaje, Nuevo.Nombre, Nuevo.Faccion, Nuevo.VidaMaxima, Nuevo.DefensaBase, Nuevo.AtaqueBase);
 
 				MessageBox.Show(
-					string.Format("¡Leviatán guardado exitosamente en 'personajes.txt'!\n\nID: #{0:00}\nNombre: {1}\nFacción: {2}\nBalance: HP({3}) + DEF({4}) + ATK({5}) = 100\nEmpatía: {6}\nEspecial: {7}",
+					string.Format("¡Leviatan guardado exitosamente en 'personajes.txt'!\n\nID: #{0:00}\nNombre: {1}\nElemento: {2}\nBalance: VIT({3}) + BLI({4}) + POD({5}) = 100\nVinculo: {6}\nArte Abisal: {7}",
 						Nuevo.IdPersonaje, Nuevo.Nombre, Nuevo.Faccion, Nuevo.VidaMaxima, Nuevo.DefensaBase, Nuevo.AtaqueBase, Nuevo.Empatia, Nuevo.NombreEspecial),
 					"Guardado en personajes.txt",
 					MessageBoxButtons.OK,
@@ -357,7 +511,7 @@ namespace Leviatanes2
 			catch (Exception Ex)
 			{
 				lblTextoProfesorGba.Text = "ERROR DE BALANCE: " + Ex.Message;
-				MessageBox.Show(Ex.Message, "Regla de Balance (HP + DEF + ATK = 100)", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(Ex.Message, "Regla de Balance (VIT + BLI + POD = 100)", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -370,7 +524,7 @@ namespace Leviatanes2
 			numDefensa.Value = 25;
 			numAtaque.Value = 25;
 			numEmpatia.Value = 70;
-			txtNombreEspecial.Text = "Tecnica Ancestral";
+			txtNombreEspecial.Text = "Arte Ancestral";
 			txtDescripcionEspecial.Text = "Ataque especial elemental.";
 			ActualizandoControlesInternamente = false;
 
@@ -387,7 +541,7 @@ namespace Leviatanes2
 
 			ActualizarMedidorBalanceCien();
 			ActualizarTarjetaVistaPreviaDesdeFormulario();
-			lblTextoProfesorGba.Text = "Campos reiniciados. Diseña un nuevo Leviatán y pulsa GUARDAR EN PERSONAJES.TXT ▼";
+			lblTextoProfesorGba.Text = "Campos reiniciados. Forja un nuevo Leviatan y pulsa GUARDAR EN .TXT ▼";
 		}
 
 		void LstPersonajesTxtSelectedIndexChanged(object sender, EventArgs e)
@@ -409,7 +563,7 @@ namespace Leviatanes2
 				Seleccionado.DescripcionEspecial);
 
 			lblTextoProfesorGba.Text = string.Format(
-				"INSPECCIONANDO #{0:00} {1} [{2}] -> HP:{3} | DEF:{4} | ATK:{5} | EMP:{6} | Especial: {7} ▼",
+				"INSPECCIONANDO #{0:00} {1} [{2}] -> VIT:{3} | BLI:{4} | POD:{5} | VINC:{6} | Arte: {7} ▼",
 				Seleccionado.IdPersonaje,
 				Seleccionado.Nombre,
 				Seleccionado.Faccion,
@@ -427,6 +581,7 @@ namespace Leviatanes2
 				return;
 
 			Personaje C = ListaCatalogoActual[Idx];
+			IdPersonajeVistaPrevia = C.IdPersonaje;
 			ActualizandoControlesInternamente = true;
 			txtNombre.Text = C.Nombre;
 			cmbFaccion.SelectedItem = C.Faccion;
@@ -440,7 +595,7 @@ namespace Leviatanes2
 
 			ActualizarMedidorBalanceCien();
 			ActualizarTarjetaVistaPreviaDesdeFormulario();
-			lblTextoProfesorGba.Text = string.Format("Datos de '{0}' cargados en el editor izquierdo para usarlos como plantilla. ▼", C.Nombre);
+			lblTextoProfesorGba.Text = string.Format("Datos de '{0}' cargados en la forja izquierda para usarlos como plantilla. ▼", C.Nombre);
 		}
 
 		void BtnEliminarDeTxtClick(object sender, EventArgs e)
@@ -452,7 +607,7 @@ namespace Leviatanes2
 			Personaje C = ListaCatalogoActual[Idx];
 			DialogResult Resp = MessageBox.Show(
 				string.Format("¿Deseas eliminar a '{0}' (#{1:00}) del archivo personajes.txt?", C.Nombre, C.IdPersonaje),
-				"Confirmar Eliminación en .TXT",
+				"Confirmar Eliminacion en .TXT",
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Question);
 
@@ -460,15 +615,15 @@ namespace Leviatanes2
 			{
 				GestorTxt.EliminarPersonajeDeTxt(C.IdPersonaje);
 				RecargarListaDesdeArchivoTxt();
-				lblTextoProfesorGba.Text = string.Format("Se eliminó '{0}' del archivo personajes.txt. ▼", C.Nombre);
+				lblTextoProfesorGba.Text = string.Format("Se elimino '{0}' del archivo personajes.txt. ▼", C.Nombre);
 			}
 		}
 
 		void BtnRestaurarBaseClick(object sender, EventArgs e)
 		{
 			DialogResult Resp = MessageBox.Show(
-				"¿Restaurar 'personajes.txt' con las 12 cartas elementales originales del enunciado?",
-				"Restaurar Catálogo Base",
+				"¿Restaurar 'personajes.txt' con los 12 Leviatanes elementales originales?",
+				"Restaurar Catalogo Base",
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Question);
 
@@ -476,7 +631,7 @@ namespace Leviatanes2
 			{
 				GestorTxt.RestaurarCatalogoPorDefecto();
 				RecargarListaDesdeArchivoTxt();
-				lblTextoProfesorGba.Text = "Catálogo restaurado con las 12 cartas elementales base en personajes.txt. ▼";
+				lblTextoProfesorGba.Text = "Catalogo restaurado con los 12 Leviatanes elementales base en personajes.txt. ▼";
 			}
 		}
 
@@ -498,20 +653,16 @@ namespace Leviatanes2
 		{
 			MainForm abrirVentana = new MainForm();
 			abrirVentana.Show();
-
 			abrirVentana.FormClosed += (s, args) => Application.Exit();
-
 			this.Hide();
 		}
 		
 		void LblSubtituloGbaClick(object sender, EventArgs e)
 		{
-			
 		}
 		
 		void CrearPLoad(object sender, EventArgs e)
 		{
-			
 		}
 	}
 }
