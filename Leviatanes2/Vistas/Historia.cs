@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -52,59 +52,64 @@ namespace Leviatanes2
 				case 1:
 					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 1 de 6";
-					lblTexto.Text = "1. El Despertar en la Fosa (La Falsa Victoria)\n\n" +
-					                "Tras la batalla final del primer juego, una de las gemas cayó al fondo del mar. La tripulación festejaba pensando que todos los leviatanes habían muerto para siempre. Pero la gema liberó un pulso de energía en las profundidades de la fosa, alterando las aguas y haciendo que la cubierta vuelva a temblar. El pánico regresa: la victoria era una ilusión nacida de la ignorancia.\n\n" +
-					                "Batalla 1: Leviatán de la Fosa, una mole acorazada que emerge furiosa de la grieta donde cayó la gema.";
-					ActualizarImagen(1, "El Despertar en la Fosa");
+					lblTexto.Text = "1. El Gran Despertar (La Gema en la Fosa)\n\n" +
+					                "la gema descendiendo en silencio hacia el abismo. Al tocar el fondo de la fosa oceánica, no cae sobre roca limpia; se hunde en capas espesas de petróleo crudo y desechos químicos acumulados durante décadas en el lecho marino.\n\n" +
+					                "El poder puro que dejó el cierre del abismo entra en contacto con el veneno humano. La reacción provoca una onda de choque violenta y corrupta que recorre el fondo del océano, deformando y despertando a las bestias abisales que dormían en la oscuridad.\n\n" + 
+						            "En la superficie, el agua tranquila comienza a hervir en círculos oscuros.\n\n";
+					ActualizarImagen(1, "El Gran Despertar");
 					btnSiguiente.Text = "Continuar al Ejercicio 1 ▶";
 					break;
 
 				case 2:
 					this.Text = "Story Mode - Leviathans of the Caribbean 2";
 					lblCapitulo.Text = "Chapter 2 of 6";
-					lblTexto.Text = "2. The Black Waters (The Oil Trail)\n\n" +
-					                "Venturing into open sea in search of answers, the ship crosses a massive abandoned oil slick. Ancient navigation charts showed active oil fields, but now the wells are dry. The crew begins to piece things together: the oil did not vanish by magic, but through reckless overexploitation that rotted the seabed.\n\n" +
-					                "Battle 2: Leviathan of Tar, a mutated and blind beast lurking in dense waters polluted by old industrial spills.";
-					ActualizarImagen(2, "Las Aguas Negras");
+					lblTexto.Text = "2. The Tournament of the Seas (The Chain of Battles)\n\n" +
+					                "The gem buried in the toxic sludge becomes an underwater beacon of energy. Its pulse disrupts the instincts of abyssal creatures across the Caribbean, driving them to the surface. Driven mad by the gem's radiation and the toxicity in their blood, the beasts begin hunting and tearing each other apart in open water to claim the territory.\n\n" +
+					                "From the horizon, the crew watches two colossal silhouettes clash amid the waves, raising walls of water that threaten to sweep away nearby islands.";
+					ActualizarImagen(2, "LThe Tournament of the Seas");
 					btnSiguiente.Text = "Continue to Exercise 2 ▶";
 					break;
 
 				case 3:
 					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 3 de 6";
-					lblTexto.Text = "3. El Mar Espejo (La Culpa Colectiva)\n\n" +
-					                "Navegando entre plataformas petroleras abandonadas y residuos flotantes, la nave entra en una zona de aguas muertas. La superficie refleja la basura acumulada y la ambición humana que destruyó las costas. El capitán y los marineros enfrentan el peso de la culpa: los monstruos no aparecieron por maldición, sino como respuesta de la naturaleza a la contaminación del hombre.\n\n" +
-					                "Batalla 3: Leviatán Espectral, un monstruo hecho de sombras y residuos tóxicos que toma la forma del daño provocado al océano.";
-					ActualizarImagen(3, "El Mar Espejo");
+					lblTexto.Text = "3. El Rastro del Alquitrán (El Origen Humano)\n\n" +
+					                "Siguiendo la corriente de sangre y crudo, el barco se adentra en un cementerio marino de viejas plataformas petroleras oxidadas que se caen a pedazos en mitad del océano. El agua es tan espesa y negra que cuesta maniobrar.\n\n" +
+					                "Entre los restos de una estación hundida a medias, la tripulación recupera antiguos registros marítimos: décadas atrás, cuando el petróleo empezó a escasear, las corporaciones perforaron más profundo de lo permitido y usaron la fosa como vertedero de residuos químicos letales. El veneno no desapareció; se filtró en la fauna abisal, gestando en silencio a las aberraciones que hoy emergen a la luz.";
+					ActualizarImagen(3, "El Rastro del Alquitrán");
 					btnSiguiente.Text = "Continuar al Ejercicio 3 ▶";
 					break;
 
 				case 4:
 					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 4 de 6";
-					lblTexto.Text = "4. La Revelación del Origen (Voluntad contra la Ruina)\n\n" +
-					                "Atrapados en una tormenta ácida cerca del epicentro del desastre ambiental, la tripulación descubre la verdad definitiva: la contaminación tóxica y el drenaje de petróleo mutaron a la vida marina, convirtiéndola en los leviatanes que amenazan con destruir todo. La tripulación entiende que la tormenta no los va a perdonar, pero deciden tomar firmemente el timón para corregir los errores del pasado.\n\n" +
-					                "Batalla 4: Leviatán de las Tormentas Ácidas, la criatura que alimenta los vientos tóxicos que asfixian los mares.";
-					ActualizarImagen(4, "La Revelacion del Origen");
+					lblTexto.Text = "4. La Masacre de las Profundidades (Choque de Bestias)\n\n" +
+					                "los monstruos alcanza su punto más salvaje. Las bestias sobrevivientes convergen hacia el epicentro del Caribe bajo un cielo negro, desatando una batalla campal entre olas gigantescas y relámpagos.\n\n" +
+					                "Para evitar que el macho alfa de las profundidades llegue hasta la fosa y reclame la gema, el Teniente ordena meter el barco directo en el corazón de la tormenta, navegando entre cuerpos titánicos que se embisten a babor y estribor.";
+					ActualizarImagen(4, "La Masacre de las Profundidades");
 					btnSiguiente.Text = "Continuar al Ejercicio 4 ▶";
 					break;
 
 				case 5:
 					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 5 de 6";
-					lblTexto.Text = "5. El Núcleo de la Podredumbre (El Abismo Final)\n\n" +
-					                "En el corazón del Caribe yace el pozo original, donde la gema perdida encajó directamente en el cuerpo del primer leviatán, alimentándose de la contaminación acumulada durante décadas. Para detener el nacimiento de más monstruos, no basta con luchar: hay que destruir el núcleo del desecho tóxico antes de que consuma todo el océano.\n\n" +
-					                "Batalla 5: Leviatán Primordial del Petróleo, la bestia colosal engendrada por la contaminación extrema, fortalecida por el poder de la gema.";
-					ActualizarImagen(5, "El Nucleo de la Podredumbre");
+					lblTexto.Text = "5. El Núcleo del Abismo (La Batalla Suprema)\n\n" +
+					                "Tras sobrevivir a la tormenta, el rastro ardiente de la gema guía a la nave hasta el cráter submarino de la plataforma central: el punto exacto donde ocurrió el primer gran derrame de petróleo décadas atrás.\n\n" +
+					                "El mar se abre en un remolino negro y de las profundidades asciende la criatura más colosal de todas. Lleva la gema incrustada directamente en la carne viva de su lomo, usándola como un corazón expuesto para absorber toda la contaminación del fondo marino y crecer sin límite. Si no destruyen su núcleo orgánico y liberan la gema, la mutación se extenderá por todos los océanos del planeta.";
+					ActualizarImagen(5, "El Núcleo del Abismo");
 					btnSiguiente.Text = "Continuar al Ejercicio 5 ▶";
 					break;
 
 				case 6:
 					this.Text = "Modo Historia - Leviatanes del Caribe 2";
 					lblCapitulo.Text = "Capítulo 6 de 6 (Final)";
-					lblTexto.Text = "6. El Limpie del Caribe (Final)\n\n" +
-					                "Con la criatura primordial vencida y la gema recuperada, la fuente de la contaminación se neutraliza. Las aguas negras comienzan a aclararse y el ciclo de mutaciones se detiene definitivamente: no volverán a nacer más leviatanes. El mar recupera su cauce natural y la tripulación navega hacia un horizonte limpio, habiendo detenido la amenaza y devolviéndole el equilibrio al Caribe.";
-					ActualizarImagen(6, "El Limpie del Caribe");
+					lblTexto.Text = "6. El Fin de la Mutación (Final)\n\n" +
+					                "Tras un combate brutal en aguas abiertas, la tripulación logra abrir una brecha en la coraza de brea de la bestia primordial y arrancar la gema de su lomo. Al separarse del monstruo, la reacción tóxica se rompe de golpe. El coloso lanza un último bramido sordo antes de desmoronarse y hundirse para siempre en la fosa.\n\n" + 
+						            "Sin el poder de la gema alimentando los químicos, el veneno acumulado en el agua comienza a disolverse y el ciclo de mutación se detiene por completo: jamás volverán a nacer nuevos leviatanes.\n\n" +
+						            "El sol rompe las nubes sobre un mar Caribe que, poco a poco, recupera su color azul.\n\n" + 
+						            "Ramírez descansa junto al timón, agotado pero entero. El Teniente observa el horizonte despejado, soltando por fin la tensión de sus hombros. Lucía se acerca a la barandilla y sostiene la gema ya apagada, fría como una piedra común, antes de guardarla.\n\n" +
+						            "Escucha las olas chocar contra la madera del barco. Ya no hay rugidos en lo profundo, ni advertencias, ni dolor. Solo el sonido limpio del mar, en paz, tal como Alvarado quiso dejarlo.";
+					ActualizarImagen(6, "El Fin de la Mutación");
 					btnSiguiente.Text = "Continuar al Menú Principal ▶";
 					break;
 

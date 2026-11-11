@@ -31,12 +31,6 @@ D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo5.png
 D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo6.png
 D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\leeme.txt
 D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Batalla.resources
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo1.png
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo2.png
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo3.png
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo4.png
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo5.png
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo6.png
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\leeme.txt
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.exe
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\Leviatanes2.pdb
@@ -74,10 +68,6 @@ D:\Programacion\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.calculo.reso
 D:\Programacion\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio1.jpg
 C:\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio1.jpg
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio1.jpg
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio2.png
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio3.png
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio4.png
-C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio5.png
 C:\Users\Carlos Silva\Desktop\proyecto\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Calculo.resources
 C:\Users\BOOM\Downloads\proyecto lui\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo1.png
 C:\Users\BOOM\Downloads\proyecto lui\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo2.png

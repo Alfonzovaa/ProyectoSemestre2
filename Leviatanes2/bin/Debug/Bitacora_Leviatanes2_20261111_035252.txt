@@ -1,0 +1,39 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 11/11/2026 03:52:52
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Volcan Activo
+Total de Turnos   : 9
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán de la Fosa.
+🔄 Sale Ignis Leviatan Pirico y entra Golem De Basalto.
+⚔ CPU Leviatán de la Fosa ataca: -0 HP (-20 Escudo).
+⚔ Golem De Basalto ataca a Leviatán de la Fosa: -0 HP (-14 Escudo). ¡Súper eficaz!
+⚔ CPU Leviatán de la Fosa ataca: -10 HP (-10 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -16 HP | Leviatán de la Fosa: -15 HP
+⚡ Golem De Basalto usa Muralla Monolitica: -40 HP a Leviatán de la Fosa.
+⚠ ¡La CPU envía a Ignis De La Grieta! Tu turno.
+🔄 Sale Golem De Basalto y entra Nereida Del Abismo.
+⚔ CPU Ignis De La Grieta ataca: -10 HP (-25 Escudo).
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -19 HP (-20 Escudo). ¡Súper eficaz!
+⚡ CPU Ignis De La Grieta usa Llamarada Submarina: -38 HP.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -9 HP | Ignis De La Grieta: -7 HP
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -39 HP. ¡Súper eficaz!
+⚠ ¡La CPU envía a Sierpe De Remolino! Tu turno.
+🔄 Sale Nereida Del Abismo y entra Ignis Leviatan Pirico.
+⚔ CPU Sierpe De Remolino ataca: -4 HP (-20 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -16 HP | Sierpe De Remolino [Aire: inmune]
+⚔ Ignis Leviatan Pirico ataca a Sierpe De Remolino: -35 HP (-20 Escudo). ¡Súper eficaz!
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -25 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Sierpe De Remolino: -29 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=49 | V=49 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================
