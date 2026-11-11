@@ -1,0 +1,45 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 11/11/2026 01:34:06
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Cumbre De Viento
+Total de Turnos   : 11
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán de la Fosa.
+🔄 Sale Ignis Leviatan Pirico y entra Golem De Basalto.
+⚔ CPU Leviatán de la Fosa ataca: -0 HP (-20 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -5 HP | Leviatán de la Fosa: -16 HP
+⚔ Golem De Basalto ataca a Leviatán de la Fosa: -0 HP (-18 Escudo). ¡Súper eficaz!
+⚔ CPU Leviatán de la Fosa ataca: -10 HP (-10 Escudo).
+⚔ Golem De Basalto ataca a Leviatán de la Fosa: -14 HP (-2 Escudo). ¡Súper eficaz!
+⚡ CPU Leviatán de la Fosa usa Pulso Abisal: -25 HP.
+⚔ Golem De Basalto ataca a Leviatán de la Fosa: -16 HP. ¡Súper eficaz!
+🔄 La CPU cambia a Sierpe De Remolino.
+⚡ Golem De Basalto usa Muralla Monolitica: -10 HP a Sierpe De Remolino.
+⚔ CPU Sierpe De Remolino ataca: -25 HP (-30 Escudo).
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -18 HP | Sierpe De Remolino [Aire: inmune]
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -22 HP.
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -27 HP.
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -22 HP.
+⚠ ¡La CPU envía a Ignis De La Grieta! Tu turno.
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -13 HP (-20 Escudo). ¡Súper eficaz!
+⚔ CPU Ignis De La Grieta ataca: -35 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Ignis De La Grieta: -24 HP. Poco eficaz.
+⚡ CPU Ignis De La Grieta usa Llamarada Submarina: -45 HP.
+⚡ ¡Gyarados Del Caribe entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Gyarados Del Caribe: -9 HP | Ignis De La Grieta: -13 HP
+⚔ Gyarados Del Caribe ataca a Ignis De La Grieta: -37 HP. ¡Súper eficaz!
+⚠ ¡La CPU envía a Leviatán de la Fosa! Tu turno.
+⚔ Gyarados Del Caribe ataca a Leviatán de la Fosa: -27 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=43 | V=43 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

@@ -41,3 +41,6 @@
 40|10/11/2026 19:32:27|JugadorUno|CPU - Mar Espejo|JugadorUno|Mar Espejo Brumoso|11|Bitacora_Leviatanes2_20261110_193227.txt
 41|10/11/2026 19:35:11|JugadorUno|CPU - Tormenta Ácida|JugadorUno|Cumbre De Tormentas|6|Bitacora_Leviatanes2_20261110_193511.txt
 42|10/11/2026 19:36:24|JugadorUno|CPU - Núcleo Primordial|JugadorUno|Pozo Primordial Activo|12|Bitacora_Leviatanes2_20261110_193624.txt
+43|11/11/2026 00:44:07|JugadorUno|CPU - Fosa Abisal|JugadorUno|Abismo Oceanico|9|Bitacora_Leviatanes2_20261111_004407.txt
+44|11/11/2026 00:46:32|JugadorUno|CPU - Black Waters|JugadorUno|Black Waters Canyon|9|Bitacora_Leviatanes2_20261111_004632.txt
+45|11/11/2026 01:34:06|JugadorUno|CPU - Fosa Abisal|JugadorUno|Cumbre De Viento|11|Bitacora_Leviatanes2_20261111_013406.txt

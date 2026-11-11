@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Creado por SharpDevelop.
  * Usuario: Alfonzo
  * Fecha: 11/8/2026

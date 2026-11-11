@@ -1,0 +1,40 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 11/11/2026 00:44:07
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Abismo Oceanico
+Total de Turnos   : 9
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Kraken Del Caribe vs Leviatán de la Fosa.
+⚔ Kraken Del Caribe ataca a Leviatán de la Fosa: -2 HP (-20 Escudo).
+⚔ CPU Leviatán de la Fosa ataca: -7 HP (-25 Escudo).
+⚔ Kraken Del Caribe ataca a Leviatán de la Fosa: -22 HP.
+⚔ CPU Leviatán de la Fosa ataca: -32 HP.
+🌋 ¡TERREMOTO ALEATORIO! Kraken Del Caribe: -11 HP | Leviatán de la Fosa: -5 HP
+⚔ Kraken Del Caribe ataca a Leviatán de la Fosa: -22 HP.
+⚡ CPU Leviatán de la Fosa usa Pulso Abisal: -10 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+⚔ Nereida Del Abismo ataca a Leviatán de la Fosa: -28 HP.
+⚠ ¡La CPU envía a Ignis De La Grieta! Tu turno.
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -19 HP (-20 Escudo). ¡Súper eficaz!
+⚔ CPU Ignis De La Grieta ataca: -0 HP (-25 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -11 HP | Ignis De La Grieta: -18 HP
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -39 HP. ¡Súper eficaz!
+⚠ ¡La CPU envía a Sierpe De Remolino! Tu turno.
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -8 HP (-20 Escudo).
+⚔ CPU Sierpe De Remolino ataca: -33 HP.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -7 HP | Sierpe De Remolino [Aire: inmune]
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -28 HP.
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -4 HP.
+⚡ ¡Hidra De Coral entra al combate! Tu turno.
+⚔ Hidra De Coral ataca a Sierpe De Remolino: -39 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=41 | V=41 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

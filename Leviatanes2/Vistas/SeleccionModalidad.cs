@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Windows.Forms;
 using Leviatanes2.Clases;
 
@@ -47,14 +48,12 @@ namespace Leviatanes2
         // =====================================================================
         private void ConfigurarListasModernas()
         {
-            // Catalogo principal con tarjetas de 2 lineas
             lstCatalogo.DrawMode = DrawMode.OwnerDrawFixed;
             lstCatalogo.ItemHeight = 40;
             lstCatalogo.HorizontalScrollbar = false;
             lstCatalogo.BackColor = Color.FromArgb(16, 24, 36);
             lstCatalogo.DrawItem += new DrawItemEventHandler(LstCatalogoDrawItem);
 
-            // Equipos J1 y J2 con tarjetas de 2 lineas (Rol + Nombre/Elemento)
             lstEquipo1.DrawMode = DrawMode.OwnerDrawFixed;
             lstEquipo1.ItemHeight = 42;
             lstEquipo1.HorizontalScrollbar = false;
@@ -73,14 +72,13 @@ namespace Leviatanes2
 
             Graphics G = e.Graphics;
             G.SmoothingMode = SmoothingMode.AntiAlias;
-            G.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            G.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
 
             bool Seleccionado = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
             Rectangle RectFila = e.Bounds;
             Personaje Carta = CatalogoDisponible[e.Index];
             Color ColorElem = ObtenerColorElemento(Carta.Faccion);
 
-            // 1. Fondo alternado o iluminado al seleccionar
             Color ColorFondo = Seleccionado
                 ? Color.FromArgb(36, 54, 82)
                 : (e.Index % 2 == 0 ? Color.FromArgb(18, 26, 40) : Color.FromArgb(23, 33, 50));
@@ -90,13 +88,11 @@ namespace Leviatanes2
                 G.FillRectangle(BrochaFondo, RectFila);
             }
 
-            // 2. Barra lateral izquierda del color elemental
             using (SolidBrush BrochaBarra = new SolidBrush(ColorElem))
             {
                 G.FillRectangle(BrochaBarra, RectFila.X, RectFila.Y + 2, 5, RectFila.Height - 4);
             }
 
-            // 3. Pastilla / Badge del Elemento
             string TextoElem = Carta.Faccion.ToString().ToUpper();
             Rectangle RectBadge = new Rectangle(RectFila.X + 10, RectFila.Y + 5, 50, 15);
             using (SolidBrush BrochaBadge = new SolidBrush(ColorElem))
@@ -115,7 +111,6 @@ namespace Leviatanes2
                 G.DrawString(TextoElem, FuenteBadge, BrochaBlanca, RectBadge, FormatoCentro);
             }
 
-            // 4. Linea 1: #ID + Nombre del Leviatan
             string Titulo = string.Format("#{0:00} {1}", Carta.IdPersonaje, Carta.Nombre);
             using (Font FuenteTitulo = new Font("Consolas", 9F, FontStyle.Bold))
             using (SolidBrush BrochaTitulo = new SolidBrush(Seleccionado ? Color.FromArgb(245, 203, 66) : Color.White))
@@ -123,7 +118,6 @@ namespace Leviatanes2
                 G.DrawString(Titulo, FuenteTitulo, BrochaTitulo, RectFila.X + 66, RectFila.Y + 4);
             }
 
-            // 5. Linea 2: Estadisticas completas
             string Subtitulo = string.Format("VIT:{0}  |  BLI:{1}  |  POD:{2}  |  VINC:{3}",
                 Carta.VidaMaxima, Carta.DefensaBase, Carta.AtaqueBase, Carta.Empatia);
             using (Font FuenteStats = new Font("Consolas", 7.5F, FontStyle.Bold))
@@ -132,7 +126,6 @@ namespace Leviatanes2
                 G.DrawString(Subtitulo, FuenteStats, BrochaStats, RectFila.X + 10, RectFila.Y + 22);
             }
 
-            // 6. Marco dorado si esta seleccionado o linea divisoria
             if (Seleccionado)
             {
                 using (Pen BordeSeleccion = new Pen(Color.FromArgb(245, 203, 66), 1.5f))
@@ -161,7 +154,7 @@ namespace Leviatanes2
 
             Graphics G = e.Graphics;
             G.SmoothingMode = SmoothingMode.AntiAlias;
-            G.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            G.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
 
             Personaje P = Perfil.MazoSeleccionado[e.Index];
             Color ColorElem = ObtenerColorElemento(P.Faccion);
@@ -207,18 +200,13 @@ namespace Leviatanes2
 
         private void InicializarDatosPantalla()
         {
-            // 1. Cargar o registrar perfiles desde jugadores.txt
             CargarPerfilesEntrenadoresDesdeTxt(false);
-
-            // 2. Cargar catalogo de Leviatanes desde personajes.txt
             CargarCatalogoPersonajesDesdeTxt();
 
-            // 3. Autocompletar equipos iniciales de 5 cartas
             AutocompletarEquipo(PerfilEntrenador1, 0);
             AutocompletarEquipo(PerfilEntrenador2, 5);
             RefrescarListasDeEquipos();
 
-            // 4. Ajustar controles de modalidad inicial
             ActualizarControlesPorModalidad();
         }
 
@@ -385,7 +373,6 @@ namespace Leviatanes2
 
             Rectangle Rect = pnlPreviewSprite.ClientRectangle;
 
-            // 1. Fondo abisal con degradado profundo
             using (LinearGradientBrush Fondo = new LinearGradientBrush(
                 Rect,
                 Color.FromArgb(10, 16, 28),
@@ -395,7 +382,6 @@ namespace Leviatanes2
                 G.FillRectangle(Fondo, Rect);
             }
 
-            // 2. Rejilla de escaneo del Bestiario
             using (Pen LapizRejilla = new Pen(Color.FromArgb(28, 180, 220, 255), 1))
             {
                 for (int X = 0; X < Rect.Width; X += 16)
@@ -407,14 +393,12 @@ namespace Leviatanes2
             int CentroX = Rect.Width / 2;
             int CentroY = (Rect.Height / 2) + 6;
 
-            // 3. Anillo de sonar / radar abisal
             using (Pen LapizSonar = new Pen(Color.FromArgb(45, 245, 203, 66), 1f))
             {
                 LapizSonar.DashStyle = DashStyle.Dash;
                 G.DrawEllipse(LapizSonar, CentroX - 42, CentroY - 38, 84, 76);
             }
 
-            // 4. Esquinas de enfoque doradas
             using (Pen LapizMarco = new Pen(Color.FromArgb(190, 245, 203, 66), 2f))
             {
                 int M = 5;
@@ -432,7 +416,6 @@ namespace Leviatanes2
             if (PersonajeEnVistaPrevia == null)
                 return;
 
-            // 5. Franja superior de clasificacion del Leviatan
             Color ColorElem = ObtenerColorElemento(PersonajeEnVistaPrevia.Faccion);
             using (SolidBrush BrochaTop = new SolidBrush(Color.FromArgb(160, 10, 14, 22)))
             {
@@ -447,7 +430,6 @@ namespace Leviatanes2
                 G.DrawString(TextoRegistro, FuenteReg, BrochaReg, 5, 2);
             }
 
-            // 6. Dibujar PNG del Leviatan si existe imagen en disco
             using (Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(PersonajeEnVistaPrevia.IdPersonaje, PersonajeEnVistaPrevia.Nombre))
             {
                 if (imgPersonaje != null)
@@ -466,7 +448,6 @@ namespace Leviatanes2
                 }
             }
 
-            // 7. Si no hay PNG todavia, dibujar Sello Runico de Leviatan
             using (SolidBrush BrochaAura = new SolidBrush(Color.FromArgb(65, ColorElem)))
             {
                 G.FillEllipse(BrochaAura, CentroX - 34, CentroY - 32, 68, 64);
@@ -547,16 +528,21 @@ namespace Leviatanes2
             int Indice = lstCatalogo.SelectedIndex;
             if (Indice < 0 || Indice >= CatalogoDisponible.Count)
             {
-                MessageBox.Show("Selecciona primero un Leviatan del Catalogo.",
-                    "Catalogo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarModalAvisoTactico(
+                    "CATALOGO DE LEVIATANES",
+                    "SELECCION REQUERIDA",
+                    "Selecciona primero un Leviatán del Catálogo de la izquierda antes de asignarlo a un equipo.",
+                    Color.FromArgb(28, 108, 196));
                 return;
             }
 
             if (Perfil.MazoSeleccionado.Count >= 5)
             {
-                MessageBox.Show(string.Format("El {0} ({1}) ya tiene el maximo de 5 Leviatanes (1 Lider + 4 en Cola).\nUsa VACIAR si deseas rearmarlo.",
-                    EtiquetaEquipo, Perfil.NombreUsuario),
-                    "Equipo Completo (5/5)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarModalAvisoTactico(
+                    "EQUIPO COMPLETO (5/5)",
+                    EtiquetaEquipo.ToUpper() + " AL MAXIMO",
+                    string.Format("El {0} ({1}) ya tiene sus 5 Leviatanes asignados (1 Líder + 4 en Cola).\r\n\r\nUsa el botón VACIAR si deseas rearmarlo.", EtiquetaEquipo, Perfil.NombreUsuario),
+                    Color.FromArgb(148, 98, 42));
                 return;
             }
 
@@ -565,9 +551,11 @@ namespace Leviatanes2
             {
                 if (string.Equals(Perfil.MazoSeleccionado[I].Nombre, Original.Nombre, StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show(string.Format("'{0}' ya forma parte del {1}. Elige otro Leviatan distinto.",
-                        Original.Nombre, EtiquetaEquipo),
-                        "Carta Duplicada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MostrarModalAvisoTactico(
+                        "LEVIATAN DUPLICADO",
+                        Original.Nombre.ToUpper(),
+                        string.Format("'{0}' ya forma parte del {1}.\r\n\r\nElige otro Leviatán distinto del catálogo.", Original.Nombre, EtiquetaEquipo),
+                        Color.FromArgb(204, 41, 18));
                     return;
                 }
             }
@@ -679,12 +667,11 @@ namespace Leviatanes2
         {
             if (!rbModoCpu.Checked)
             {
-                MessageBox.Show(
-                    "Esta batalla del Modo Historia está habilitada únicamente para la modalidad Jugador vs CPU.\n\n" +
-                    "Por favor selecciona la opción 'MODO HISTORIA / IA (J1 vs CPU)' para continuar.",
-                    "Modalidad Jugador vs CPU Requerida",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                MostrarModalAvisoTactico(
+                    "MODALIDAD JUGADOR VS CPU REQUERIDA",
+                    "MODO HISTORIA EXCLUSIVO",
+                    "La campaña del Modo Historia está habilitada únicamente para la modalidad Jugador vs CPU.\r\n\r\nSelecciona 'MODO HISTORIA / IA (J1 vs CPU)' arriba a la izquierda para continuar.",
+                    Color.FromArgb(204, 41, 18));
                 return;
             }
 
@@ -692,8 +679,11 @@ namespace Leviatanes2
 
             if (PerfilEntrenador1 == null || PerfilEntrenador1.MazoSeleccionado.Count < 5)
             {
-                MessageBox.Show("El Equipo del Domador 1 debe tener exactamente 5 Leviatanes (1 Lider + 4 en Cola de Relevo).",
-                    "Equipo 1 Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MostrarModalAvisoTactico(
+                    "EQUIPO 1 INCOMPLETO",
+                    "FALTAN LEVIATANES EN J1",
+                    "El Equipo del Domador 1 debe tener exactamente 5 Leviatanes (1 Líder + 4 en Cola de Relevo).",
+                    Color.FromArgb(204, 41, 18));
                 return;
             }
 
@@ -705,8 +695,11 @@ namespace Leviatanes2
 
             if (PerfilEntrenador2 == null || PerfilEntrenador2.MazoSeleccionado.Count < 5)
             {
-                MessageBox.Show("El Equipo del Domador 2 debe tener exactamente 5 Leviatanes (1 Lider + 4 en Cola de Relevo).",
-                    "Equipo 2 Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MostrarModalAvisoTactico(
+                    "EQUIPO 2 INCOMPLETO",
+                    "FALTAN LEVIATANES EN J2",
+                    "El Equipo del Domador 2 debe tener exactamente 5 Leviatanes (1 Líder + 4 en Cola de Relevo).",
+                    Color.FromArgb(204, 41, 18));
                 return;
             }
 
@@ -724,25 +717,274 @@ namespace Leviatanes2
             CatalogoEscenariosArena = ListaEscenariosDisponibles;
             ModoContraCpu = rbModoCpu.Checked;
 
-            MessageBox.Show(
-                string.Format("¡SORTEO DE ESCENARIO COMPLETADO!\n\n" +
-                              "Entorno Inicial: {0}\n" +
-                              "Regla Elemental: {1}\n" +
-                              "Umbral de Empatia (Terremoto): {2} pts\n\n" +
-                              "{3} vs {4}",
-                    EscenarioSorteado.Nombre,
-                    EscenarioSorteado.Descripcion,
-                    EscenarioSorteado.UmbralEmpatia,
-                    PerfilEntrenador1.NombreUsuario,
-                    PerfilEntrenador2.NombreUsuario),
-                "Leviatanes del Caribe 2 - Inicio de Batalla 1",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            // Mostrar el nuevo Modal Táctico Abisal para el sorteo de escenario
+            MostrarModalSorteoEscenario(EscenarioSorteado, PerfilEntrenador1.NombreUsuario, PerfilEntrenador2.NombreUsuario);
 
             Historia VentanaHistoria = new Historia(1);
             VentanaHistoria.FormClosed += (s, args) => Application.Exit();
             VentanaHistoria.Show();
             this.Hide();
+        }
+
+        // =====================================================================
+        // 6. MODALES TACTICOS ESTILO CODICE ABISAL (REEMPLAZAN MESSAGEBOX)
+        // =====================================================================
+        private void MostrarModalSorteoEscenario(Escenario Esc, string Domador1, string Domador2)
+        {
+            Color ColorEntorno = Color.FromArgb(46, 152, 126);
+            string SiglaEntorno = "AI";
+            string NombreMayus = (Esc.Nombre + " " + Esc.Descripcion).ToUpper();
+
+            if (NombreMayus.Contains("FUEGO") || NombreMayus.Contains("VOLCAN") || NombreMayus.Contains("CALDERA") || NombreMayus.Contains("PIRIC"))
+            {
+                ColorEntorno = Color.FromArgb(204, 41, 18);
+                SiglaEntorno = "FU";
+            }
+            else if (NombreMayus.Contains("AGUA") || NombreMayus.Contains("ABISM") || NombreMayus.Contains("CORAL") || NombreMayus.Contains("MAR"))
+            {
+                ColorEntorno = Color.FromArgb(28, 108, 196);
+                SiglaEntorno = "AG";
+            }
+            else if (NombreMayus.Contains("TIERRA") || NombreMayus.Contains("ROCA") || NombreMayus.Contains("CANION") || NombreMayus.Contains("BASALTO"))
+            {
+                ColorEntorno = Color.FromArgb(148, 98, 42);
+                SiglaEntorno = "TI";
+            }
+
+            using (Form Modal = new Form())
+            {
+                Modal.FormBorderStyle = FormBorderStyle.None;
+                Modal.StartPosition = FormStartPosition.CenterParent;
+                Modal.ClientSize = new Size(510, 314);
+                Modal.BackColor = Color.FromArgb(245, 203, 66);
+                Modal.ShowInTaskbar = false;
+
+                Panel PnlInterior = new Panel();
+                PnlInterior.SetBounds(3, 3, 504, 308);
+                PnlInterior.BackColor = Color.FromArgb(12, 20, 36);
+                Modal.Controls.Add(PnlInterior);
+
+                PnlInterior.Paint += (s, e) =>
+                {
+                    Graphics G = e.Graphics;
+                    G.SmoothingMode = SmoothingMode.AntiAlias;
+                    G.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
+                    Rectangle R = PnlInterior.ClientRectangle;
+
+                    using (LinearGradientBrush Fondo = new LinearGradientBrush(
+                        R,
+                        Color.FromArgb(10, 18, 34),
+                        Color.FromArgb(20, 38, 64),
+                        LinearGradientMode.Vertical))
+                    {
+                        G.FillRectangle(Fondo, R);
+                    }
+
+                    using (Pen LapizGrid = new Pen(Color.FromArgb(18, 140, 210, 255), 1))
+                    {
+                        for (int x = 0; x < R.Width; x += 24)
+                            G.DrawLine(LapizGrid, x, 36, x, R.Height);
+                        for (int y = 36; y < R.Height; y += 24)
+                            G.DrawLine(LapizGrid, 0, y, R.Width, y);
+                    }
+
+                    Rectangle RectHeader = new Rectangle(0, 0, R.Width, 36);
+                    using (SolidBrush BrochaHeader = new SolidBrush(ColorEntorno))
+                    using (Pen LineaOro = new Pen(Color.FromArgb(245, 203, 66), 2))
+                    {
+                        G.FillRectangle(BrochaHeader, RectHeader);
+                        G.DrawLine(LineaOro, 0, 36, R.Width, 36);
+                    }
+
+                    StringFormat Centro = new StringFormat
+                    {
+                        Alignment = StringAlignment.Center,
+                        LineAlignment = StringAlignment.Center
+                    };
+
+                    using (Font FuenteHeader = new Font("Consolas", 10.5F, FontStyle.Bold))
+                    {
+                        G.DrawString("★ SORTEO DE ESCENARIO COMPLETADO ★", FuenteHeader, Brushes.White, RectHeader, Centro);
+                    }
+
+                    Rectangle RectCaja = new Rectangle(18, 52, R.Width - 36, 130);
+                    using (SolidBrush FondoCaja = new SolidBrush(Color.FromArgb(165, 8, 14, 24)))
+                    using (Pen BordeCaja = new Pen(Color.FromArgb(180, 245, 203, 66), 1.5f))
+                    {
+                        G.FillRectangle(FondoCaja, RectCaja);
+                        G.DrawRectangle(BordeCaja, RectCaja);
+                    }
+
+                    int CX = RectCaja.X + 54;
+                    int CY = RectCaja.Y + (RectCaja.Height / 2);
+
+                    using (SolidBrush Aura = new SolidBrush(Color.FromArgb(60, ColorEntorno)))
+                    {
+                        G.FillEllipse(Aura, CX - 36, CY - 36, 72, 72);
+                    }
+
+                    Point[] Rombo = new Point[]
+                    {
+                        new Point(CX, CY - 26),
+                        new Point(CX + 26, CY),
+                        new Point(CX, CY + 26),
+                        new Point(CX - 26, CY)
+                    };
+
+                    using (SolidBrush Nucleo = new SolidBrush(ColorEntorno))
+                    using (Pen BordeRombo = new Pen(Color.FromArgb(245, 203, 66), 2f))
+                    {
+                        G.FillPolygon(Nucleo, Rombo);
+                        G.DrawPolygon(BordeRombo, Rombo);
+                    }
+
+                    using (Font FuenteSigla = new Font("Consolas", 10.5F, FontStyle.Bold))
+                    {
+                        G.DrawString(SiglaEntorno, FuenteSigla, Brushes.White, new RectangleF(CX - 25, CY - 12, 50, 24), Centro);
+                    }
+
+                    int TX = RectCaja.X + 106;
+                    int TW = RectCaja.Width - 116;
+
+                    using (Font FuenteEtiq = new Font("Consolas", 8F, FontStyle.Bold))
+                    using (SolidBrush BrochaCian = new SolidBrush(Color.Aquamarine))
+                    {
+                        G.DrawString("ENTORNO INICIAL SORTEADO:", FuenteEtiq, BrochaCian, TX, RectCaja.Y + 12);
+                    }
+
+                    using (Font FuenteEsc = new Font("Consolas", 13F, FontStyle.Bold))
+                    using (SolidBrush BrochaOro = new SolidBrush(Color.FromArgb(245, 203, 66)))
+                    {
+                        G.DrawString(Esc.Nombre.ToUpper(), FuenteEsc, BrochaOro, TX, RectCaja.Y + 28);
+                    }
+
+                    using (Font FuenteRegla = new Font("Consolas", 8.5F, FontStyle.Bold))
+                    using (SolidBrush BrochaBlanca = new SolidBrush(Color.WhiteSmoke))
+                    {
+                        G.DrawString("Regla Elemental: " + Esc.Descripcion, FuenteRegla, BrochaBlanca, new RectangleF(TX, RectCaja.Y + 56, TW, 38));
+                    }
+
+                    using (Font FuenteUmbral = new Font("Consolas", 8.5F, FontStyle.Bold))
+                    using (SolidBrush BrochaCoral = new SolidBrush(Color.FromArgb(255, 180, 120)))
+                    {
+                        G.DrawString(string.Format("⚡ Umbral de Empatía (Terremoto): {0} pts", Esc.UmbralEmpatia), FuenteUmbral, BrochaCoral, TX, RectCaja.Y + 98);
+                    }
+
+                    Rectangle RectVs = new Rectangle(18, 194, R.Width - 36, 36);
+                    using (SolidBrush FondoVs = new SolidBrush(Color.FromArgb(28, 44, 70)))
+                    using (Pen BordeVs = new Pen(Color.FromArgb(100, 245, 203, 66), 1))
+                    {
+                        G.FillRectangle(FondoVs, RectVs);
+                        G.DrawRectangle(BordeVs, RectVs);
+                    }
+
+                    using (Font FuenteVs = new Font("Consolas", 11F, FontStyle.Bold))
+                    using (SolidBrush BrochaOro = new SolidBrush(Color.FromArgb(245, 203, 66)))
+                    {
+                        string TextoDuelo = string.Format("⚔  {0}   VS   {1}  ⚔", Domador1, Domador2);
+                        G.DrawString(TextoDuelo, FuenteVs, BrochaOro, RectVs, Centro);
+                    }
+                };
+
+                Button BtnAceptar = new Button();
+                BtnAceptar.SetBounds(142, 246, 220, 44);
+                BtnAceptar.FlatStyle = FlatStyle.Flat;
+                BtnAceptar.FlatAppearance.BorderColor = Color.FromArgb(245, 203, 66);
+                BtnAceptar.FlatAppearance.BorderSize = 2;
+                BtnAceptar.BackColor = Color.FromArgb(204, 41, 18);
+                BtnAceptar.ForeColor = Color.FromArgb(245, 203, 66);
+                BtnAceptar.Font = new Font("Consolas", 10.5F, FontStyle.Bold);
+                BtnAceptar.Cursor = Cursors.Hand;
+                BtnAceptar.Text = "¡ZARPAR A LA ARENA! >>";
+                BtnAceptar.DialogResult = DialogResult.OK;
+
+                PnlInterior.Controls.Add(BtnAceptar);
+                Modal.AcceptButton = BtnAceptar;
+
+                Modal.ShowDialog(this);
+            }
+        }
+
+        private void MostrarModalAvisoTactico(string tituloBarra, string subtituloOro, string mensaje, Color colorTema)
+        {
+            using (Form Modal = new Form())
+            {
+                Modal.FormBorderStyle = FormBorderStyle.None;
+                Modal.StartPosition = FormStartPosition.CenterParent;
+                Modal.ClientSize = new Size(460, 240);
+                Modal.BackColor = Color.FromArgb(245, 203, 66);
+                Modal.ShowInTaskbar = false;
+
+                Panel PnlInterior = new Panel();
+                PnlInterior.SetBounds(3, 3, 454, 234);
+                PnlInterior.BackColor = Color.FromArgb(12, 20, 34);
+                Modal.Controls.Add(PnlInterior);
+
+                PnlInterior.Paint += (s, e) =>
+                {
+                    Graphics G = e.Graphics;
+                    G.SmoothingMode = SmoothingMode.AntiAlias;
+                    G.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
+                    Rectangle R = PnlInterior.ClientRectangle;
+
+                    using (LinearGradientBrush Fondo = new LinearGradientBrush(
+                        R,
+                        Color.FromArgb(14, 22, 38),
+                        Color.FromArgb(24, 38, 62),
+                        LinearGradientMode.Vertical))
+                    {
+                        G.FillRectangle(Fondo, R);
+                    }
+
+                    Rectangle RectHeader = new Rectangle(0, 0, R.Width, 34);
+                    using (SolidBrush BrochaHeader = new SolidBrush(colorTema))
+                    using (Pen LineaOro = new Pen(Color.FromArgb(245, 203, 66), 2))
+                    {
+                        G.FillRectangle(BrochaHeader, RectHeader);
+                        G.DrawLine(LineaOro, 0, 34, R.Width, 34);
+                    }
+
+                    StringFormat Centro = new StringFormat
+                    {
+                        Alignment = StringAlignment.Center,
+                        LineAlignment = StringAlignment.Center
+                    };
+
+                    using (Font FuenteHeader = new Font("Consolas", 10F, FontStyle.Bold))
+                    {
+                        G.DrawString("◆ " + tituloBarra + " ◆", FuenteHeader, Brushes.White, RectHeader, Centro);
+                    }
+
+                    using (Font FuenteSub = new Font("Consolas", 10F, FontStyle.Bold))
+                    using (SolidBrush BrochaOro = new SolidBrush(Color.FromArgb(245, 203, 66)))
+                    {
+                        G.DrawString(subtituloOro, FuenteSub, BrochaOro, new RectangleF(20, 46, R.Width - 40, 22), Centro);
+                    }
+
+                    using (Font FuenteMsg = new Font("Consolas", 9F, FontStyle.Bold))
+                    using (SolidBrush BrochaBlanca = new SolidBrush(Color.WhiteSmoke))
+                    {
+                        G.DrawString(mensaje, FuenteMsg, BrochaBlanca, new RectangleF(24, 74, R.Width - 48, 86), Centro);
+                    }
+                };
+
+                Button BtnOk = new Button();
+                BtnOk.SetBounds(137, 174, 180, 42);
+                BtnOk.FlatStyle = FlatStyle.Flat;
+                BtnOk.FlatAppearance.BorderColor = Color.FromArgb(245, 203, 66);
+                BtnOk.FlatAppearance.BorderSize = 2;
+                BtnOk.BackColor = colorTema;
+                BtnOk.ForeColor = Color.Yellow;
+                BtnOk.Font = new Font("Consolas", 10F, FontStyle.Bold);
+                BtnOk.Cursor = Cursors.Hand;
+                BtnOk.Text = "ENTENDIDO";
+                BtnOk.DialogResult = DialogResult.OK;
+
+                PnlInterior.Controls.Add(BtnOk);
+                Modal.AcceptButton = BtnOk;
+
+                Modal.ShowDialog(this);
+            }
         }
 
         private void BtnVolverMenuClick(object sender, EventArgs e)
