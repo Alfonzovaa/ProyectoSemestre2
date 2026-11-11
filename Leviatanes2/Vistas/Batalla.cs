@@ -1,7 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Windows.Forms;
 using Leviatanes2.Clases;
 using Leviatanes2.LogicaBat;
@@ -9,8 +10,7 @@ using Leviatanes2.LogicaBat;
 namespace Leviatanes2
 {
 	/// <summary>
-	/// Ventana de combate por turnos estilo Pokémon (Jugador vs CPU).
-	/// Interfaz simplificada y limpia manteniendo todas las mecánicas de juego.
+	/// Ventana de combate por turnos (Jugador vs CPU).
 	/// </summary>
 	public partial class Batalla : Form
 	{
@@ -50,7 +50,6 @@ namespace Leviatanes2
 				this.numeroBatalla = MaximaBatallaDesbloqueada;
 			}
 
-			// Batalla 2 (case 2) íntegramente en inglés
 			this.esIngles = (this.numeroBatalla == 2);
 			this.batallaGanada = false;
 			this.partidaGuardadaEnTxt = false;
@@ -317,7 +316,6 @@ namespace Leviatanes2
 			int totalEquipoPj = motorCombate.JugadorHumano.MazoSeleccionado.Count;
 			int derrotadosPjCant = motorCombate.DerrotadosJugador.Count;
 
-			// 1. Indicador de Turno
 			if (motorCombate.PartidaTerminada)
 			{
 				bool ganoJugador = (motorCombate.Ganador == motorCombate.JugadorHumano);
@@ -361,7 +359,6 @@ namespace Leviatanes2
 				lblTurnoActual.BackColor = Color.FromArgb(204, 85, 25);
 			}
 
-			// 2. HUD CPU
 			if (cpu != null)
 			{
 				lblNombreCpu.Text = cpu.Nombre + (!cpu.EstaVivo ? " ✖" : "");
@@ -387,7 +384,6 @@ namespace Leviatanes2
 				}
 			}
 
-			// 3. HUD Jugador
 			if (pj != null)
 			{
 				lblNombreJugador.Text = pj.Nombre + (!pj.EstaVivo ? " 💀" : "");
@@ -417,10 +413,8 @@ namespace Leviatanes2
 				pbEspecialJugador.Value = Math.Min(100, Math.Max(0, pj.CargaEspecial));
 			}
 
-			// 4. Banner compacto de Ventaja Elemental
 			ActualizarBannerVentajaElemental(pj, cpu);
 
-			// 5. Banca del Jugador
 			lblHeaderCola.Text = this.esIngles
 				? string.Format(" Your Bench ({0} available)", motorCombate.ColaJugador.Count)
 				: string.Format(" Tu Banca ({0} disponibles)", motorCombate.ColaJugador.Count);
@@ -468,10 +462,8 @@ namespace Leviatanes2
 			}
 			actualizandoListaBanca = false;
 
-			// 6. Estado del equipo CPU
 			ActualizarListaEstadoCpu(totalEquipoCpu, derrotadosCpuCant);
 
-			// 7. Habilitación de botones
 			bool enPausaCaida = motorCombate.EsperandoRelevoJugadorCaido || motorCombate.EsperandoRelevoCpuCaido;
 			bool habilitarComandos = !motorCombate.PartidaTerminada && !enPausaCaida && motorCombate.EsTurnoJugador && pj != null && pj.EstaVivo;
 			btnAtacar.Enabled = habilitarComandos && (pj.EnergiaActual >= Personaje.CostoAtaque);
@@ -724,7 +716,6 @@ namespace Leviatanes2
 
 		private void PnlArenaCombatePaint(object sender, PaintEventArgs e)
 		{
-			// Arena limpia sin líneas de escaneo sobrecargadas
 		}
 
 		private void PnlSpriteCpuPaint(object sender, PaintEventArgs e)
@@ -750,11 +741,19 @@ namespace Leviatanes2
 
 			using (LinearGradientBrush fondo = new LinearGradientBrush(
 				rect,
-				Color.FromArgb(16, 24, 40),
-				Color.FromArgb(45, colorElem.R / 2, colorElem.G / 2, colorElem.B / 2),
+				Color.FromArgb(10, 16, 28),
+				Color.FromArgb(24, 38, 60),
 				LinearGradientMode.Vertical))
 			{
 				g.FillRectangle(fondo, rect);
+			}
+
+			using (Pen lapizGrid = new Pen(Color.FromArgb(22, 180, 220, 255), 1))
+			{
+				for (int x = 0; x < rect.Width; x += 20)
+					g.DrawLine(lapizGrid, x, 0, x, rect.Height);
+				for (int y = 0; y < rect.Height; y += 20)
+					g.DrawLine(lapizGrid, 0, y, rect.Width, y);
 			}
 
 			int cx = rect.Width / 2;
@@ -762,36 +761,65 @@ namespace Leviatanes2
 
 			using (SolidBrush sombra = new SolidBrush(Color.FromArgb(100, 0, 0, 0)))
 			using (SolidBrush plataforma = new SolidBrush(Color.FromArgb(90, colorElem)))
-			using (Pen bordeOro = new Pen(p.EstaVivo ? Color.Gold : Color.Crimson, 2f))
+			using (Pen bordeOro = new Pen(p.EstaVivo ? Color.FromArgb(245, 203, 66) : Color.Crimson, 2f))
 			{
-				g.FillEllipse(sombra, cx - 85, cy + 20, 170, 28);
-				g.FillEllipse(plataforma, cx - 80, cy + 16, 160, 24);
-				g.DrawEllipse(bordeOro, cx - 80, cy + 16, 160, 24);
+				g.FillEllipse(sombra, cx - 85, cy + 24, 170, 28);
+				g.FillEllipse(plataforma, cx - 80, cy + 20, 160, 24);
+				g.DrawEllipse(bordeOro, cx - 80, cy + 20, 160, 24);
 			}
 
 			if (p.EscudoActual > 0 && p.EstaVivo)
 			{
-				using (Pen lapizEscudo = new Pen(Color.FromArgb(160, 100, 220, 255), 2.5f))
+				using (Pen lapizEscudo = new Pen(Color.FromArgb(170, 100, 220, 255), 2.5f))
 				{
-					g.DrawEllipse(lapizEscudo, cx - 44, cy - 44, 88, 84);
+					g.DrawEllipse(lapizEscudo, cx - 48, cy - 44, 96, 88);
 				}
 			}
 
-			using (SolidBrush brochaCuerpo = new SolidBrush(colorElem))
-			using (SolidBrush brochaNucleo = new SolidBrush(p.EstaVivo ? Color.FromArgb(235, 255, 245, 215) : Color.FromArgb(180, 70, 70)))
-			using (Pen bordeBlanco = new Pen(p.EstaVivo ? Color.White : Color.Red, 2f))
-			using (Font fuenteElem = new Font("Segoe UI", 9.5F, FontStyle.Bold))
+			// Cargar PNG del Leviatan si existe en la carpeta imagenes
+			if (p.EstaVivo)
 			{
-				g.FillEllipse(brochaCuerpo, cx - 34, cy - 36, 68, 68);
-				g.DrawEllipse(bordeBlanco, cx - 34, cy - 36, 68, 68);
-				g.FillEllipse(brochaNucleo, cx - 20, cy - 22, 40, 40);
+				using (Image img = GestorPersistenciaTxt.CargarImagenPersonaje(p.IdPersonaje, p.Nombre))
+				{
+					if (img != null)
+					{
+						int maxW = rect.Width - 28;
+						int maxH = rect.Height - 20;
+						float escala = Math.Min((float)maxW / img.Width, (float)maxH / img.Height);
+						int dw = Math.Max(1, (int)(img.Width * escala));
+						int dh = Math.Max(1, (int)(img.Height * escala));
+						int dx = (rect.Width - dw) / 2;
+						int dy = (rect.Height - dh) / 2;
+
+						g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+						g.DrawImage(img, new Rectangle(dx, dy, dw, dh));
+						return;
+					}
+				}
+			}
+
+			// Respaldo: Sello Runico de Leviatan
+			Point[] rombo = new Point[]
+			{
+				new Point(cx, cy - 34),
+				new Point(cx + 34, cy),
+				new Point(cx, cy + 34),
+				new Point(cx - 34, cy)
+			};
+
+			using (SolidBrush brochaCuerpo = new SolidBrush(colorElem))
+			using (Pen bordeOro = new Pen(p.EstaVivo ? Color.FromArgb(245, 203, 66) : Color.Red, 2.5f))
+			using (Font fuenteElem = new Font("Consolas", 11F, FontStyle.Bold))
+			{
+				g.FillPolygon(brochaCuerpo, rombo);
+				g.DrawPolygon(bordeOro, rombo);
 
 				string elemTxt = p.EstaVivo
-					? MotorPartida.FormatearElemento(p.Faccion, this.esIngles)
+					? MotorPartida.FormatearElemento(p.Faccion, this.esIngles).Substring(0, 2).ToUpper()
 					: "KO";
 
 				SizeF tam = g.MeasureString(elemTxt, fuenteElem);
-				g.DrawString(elemTxt, fuenteElem, p.EstaVivo ? Brushes.Black : Brushes.White, cx - (tam.Width / 2f), cy - 10);
+				g.DrawString(elemTxt, fuenteElem, Brushes.White, cx - (tam.Width / 2f), cy - (tam.Height / 2f));
 			}
 		}
 
@@ -810,24 +838,98 @@ namespace Leviatanes2
 			}
 		}
 
+		private void MostrarModalBatallaEnCurso()
+		{
+			using (Form Modal = new Form())
+			{
+				Modal.FormBorderStyle = FormBorderStyle.None;
+				Modal.StartPosition = FormStartPosition.CenterParent;
+				Modal.ClientSize = new Size(460, 230);
+				Modal.BackColor = Color.FromArgb(245, 203, 66);
+				Modal.ShowInTaskbar = false;
+
+				Panel PnlInterior = new Panel();
+				PnlInterior.SetBounds(3, 3, 454, 224);
+				PnlInterior.BackColor = Color.FromArgb(12, 20, 34);
+				Modal.Controls.Add(PnlInterior);
+
+				PnlInterior.Paint += (s, e) =>
+				{
+					Graphics G = e.Graphics;
+					G.SmoothingMode = SmoothingMode.AntiAlias;
+					G.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
+					Rectangle R = PnlInterior.ClientRectangle;
+
+					using (LinearGradientBrush Fondo = new LinearGradientBrush(
+						R,
+						Color.FromArgb(14, 22, 38),
+						Color.FromArgb(24, 38, 62),
+						LinearGradientMode.Vertical))
+					{
+						G.FillRectangle(Fondo, R);
+					}
+
+					Rectangle RectHeader = new Rectangle(0, 0, R.Width, 34);
+					using (SolidBrush BrochaHeader = new SolidBrush(Color.FromArgb(204, 41, 18)))
+					using (Pen LineaOro = new Pen(Color.FromArgb(245, 203, 66), 2))
+					{
+						G.FillRectangle(BrochaHeader, RectHeader);
+						G.DrawLine(LineaOro, 0, 34, R.Width, 34);
+					}
+
+					StringFormat Centro = new StringFormat
+					{
+						Alignment = StringAlignment.Center,
+						LineAlignment = StringAlignment.Center
+					};
+
+					string titulo = this.esIngles ? "🔒 BATTLE IN PROGRESS 🔒" : "🔒 COMBATE EN CURSO 🔒";
+					using (Font FuenteHeader = new Font("Consolas", 10.5F, FontStyle.Bold))
+					{
+						G.DrawString(titulo, FuenteHeader, Brushes.Yellow, RectHeader, Centro);
+					}
+
+					string msg = this.esIngles
+						? "You must defeat all enemy Leviathans before advancing to the next chapter!"
+						: "¡Debes derrotar a todos los Leviatanes enemigos en la arena antes de avanzar al siguiente capítulo!";
+
+					using (Font FuenteMsg = new Font("Consolas", 9.5F, FontStyle.Bold))
+					using (SolidBrush BrochaBlanca = new SolidBrush(Color.WhiteSmoke))
+					{
+						G.DrawString(msg, FuenteMsg, BrochaBlanca, new RectangleF(24, 54, R.Width - 48, 90), Centro);
+					}
+				};
+
+				Button BtnOk = new Button();
+				BtnOk.SetBounds(127, 160, 200, 42);
+				BtnOk.FlatStyle = FlatStyle.Flat;
+				BtnOk.FlatAppearance.BorderColor = Color.FromArgb(245, 203, 66);
+				BtnOk.FlatAppearance.BorderSize = 2;
+				BtnOk.BackColor = Color.FromArgb(204, 41, 18);
+				BtnOk.ForeColor = Color.Yellow;
+				BtnOk.Font = new Font("Consolas", 10F, FontStyle.Bold);
+				BtnOk.Cursor = Cursors.Hand;
+				BtnOk.Text = this.esIngles ? "RETURN TO ARENA" : "VOLVER A LA ARENA";
+				BtnOk.DialogResult = DialogResult.OK;
+
+				PnlInterior.Controls.Add(BtnOk);
+				Modal.AcceptButton = BtnOk;
+
+				Modal.ShowDialog(this);
+			}
+		}
+
 		void Button1Click(object sender, EventArgs e)
 		{
 			if (!this.batallaGanada || motorCombate == null || !motorCombate.PartidaTerminada || motorCombate.Ganador != motorCombate.JugadorHumano)
 			{
-				string msg = this.esIngles
-					? "You must win the battle before advancing!"
-					: "Debes ganar la batalla para poder avanzar.";
-				string titulo = this.esIngles ? "Locked" : "Batalla en curso";
-				MessageBox.Show(msg, titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				MostrarModalBatallaEnCurso();
 				return;
 			}
 
 			tmrTurnoCpu.Stop();
 			tmrPausaDerrota.Stop();
 
-			// Flujo ordenado:
-			// Batallas 1 a 4 -> abren el siguiente Capítulo de Historia (2 a 5), que luego lleva a su Ejercicio y Batalla.
-			// Batalla 5 (final) -> abre el Capítulo 6 (Final de la Historia).
 			if (this.numeroBatalla >= 1 && this.numeroBatalla <= 5)
 			{
 				Historia ventanaHistoria = new Historia(this.numeroBatalla + 1);
