@@ -1,0 +1,61 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 11/11/2026 03:33:50
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Núcleo Primordial
+Vencedor          : JugadorUno
+Escenario Final   : Abismo Oceanico
+Total de Turnos   : 17
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán Primordial.
+⚔ Ignis Leviatan Pirico ataca a Leviatán Primordial: -23 HP (-20 Escudo).
+⚔ CPU Leviatán Primordial ataca: -28 HP (-20 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -10 HP | Leviatán Primordial: -9 HP
+🔄 Sale Ignis Leviatan Pirico y entra Nereida Del Abismo.
+🛡 CPU Leviatán Primordial se defiende (+9 Escudo).
+⚔ Nereida Del Abismo ataca a Leviatán Primordial: -30 HP (-9 Escudo). ¡Súper eficaz!
+⚠ ¡La CPU envía a Titán Del Pozo Negro! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -13 HP | Titán Del Pozo Negro: -8 HP
+⚔ Nereida Del Abismo ataca a Titán Del Pozo Negro: -0 HP (-22 Escudo). Poco eficaz.
+⚔ CPU Titán Del Pozo Negro ataca: -8 HP (-25 Escudo).
+⚡ Nereida Del Abismo usa Marea Sanadora: -17 HP a Titán Del Pozo Negro (+14 HP curados).
+⚡ CPU Titán Del Pozo Negro usa Aplastamiento Abisal: -48 HP.
+⚡ ¡Golem De Basalto entra al combate! Tu turno.
+⚔ Golem De Basalto ataca a Titán Del Pozo Negro: -0 HP (-15 Escudo).
+⚔ CPU Titán Del Pozo Negro ataca: -0 HP (-22 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -10 HP | Titán Del Pozo Negro: -14 HP
+🔄 Sale Golem De Basalto y entra Cefiro Sierpe Alada.
+⚔ CPU Titán Del Pozo Negro ataca: -0 HP (-23 Escudo).
+⚔ Cefiro Sierpe Alada ataca a Titán Del Pozo Negro: -39 HP (-10 Escudo). ¡Súper eficaz!
+⚠ ¡La CPU envía a Kraken De Aguas Negras! Tu turno.
+🔄 Sale Cefiro Sierpe Alada y entra Golem De Basalto.
+⚔ CPU Kraken De Aguas Negras ataca: -12 HP (-8 Escudo).
+⚔ Golem De Basalto ataca a Kraken De Aguas Negras: -0 HP (-16 Escudo). ¡Súper eficaz!
+⚡ CPU Kraken De Aguas Negras usa Marea Corrupta: -25 HP.
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -7 HP | Kraken De Aguas Negras: -8 HP
+⚡ Golem De Basalto usa Muralla Monolitica: -47 HP a Kraken De Aguas Negras.
+⚠ ¡La CPU envía a Heraldo Del Huracán! Tu turno.
+🔄 Sale Golem De Basalto y entra Ignis Leviatan Pirico.
+⚔ CPU Heraldo Del Huracán ataca: -29 HP.
+⚡ ¡Gyarados Del Caribe entra al combate! Tu turno.
+🔄 Sale Gyarados Del Caribe y entra Cefiro Sierpe Alada.
+⚡ CPU Heraldo Del Huracán usa Doble Vendaval: -45 HP.
+⚡ ¡Golem De Basalto entra al combate! Tu turno.
+⚔ Golem De Basalto ataca a Heraldo Del Huracán: -0 HP (-12 Escudo). Poco eficaz.
+⚔ CPU Heraldo Del Huracán ataca: -21 HP (-30 Escudo).
+⚡ ¡Gyarados Del Caribe entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Gyarados Del Caribe: -14 HP | Heraldo Del Huracán [Aire: inmune]
+⚡ Gyarados Del Caribe usa Maremoto Abisal: -17 HP a Heraldo Del Huracán (+12 HP curados).
+⚔ CPU Heraldo Del Huracán ataca: -10 HP (-25 Escudo).
+⚔ Gyarados Del Caribe ataca a Heraldo Del Huracán: -23 HP.
+🛡 CPU Heraldo Del Huracán se defiende (+9 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Gyarados Del Caribe: -13 HP | Heraldo Del Huracán [Aire: inmune]
+⚔ Gyarados Del Caribe ataca a Heraldo Del Huracán: -24 HP (-9 Escudo).
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=44 | V=44 | D=0 | Exito=100,00%
+ - CPU - Núcleo Primordial: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

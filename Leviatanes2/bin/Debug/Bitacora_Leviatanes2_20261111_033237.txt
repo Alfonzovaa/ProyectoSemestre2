@@ -1,0 +1,41 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 11/11/2026 03:32:37
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Tormenta Ácida
+Vencedor          : JugadorUno
+Escenario Final   : Canion Rocoso
+Total de Turnos   : 10
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán Tormenta Ácida.
+⚔ Ignis Leviatan Pirico ataca a Leviatán Tormenta Ácida: -35 HP (-20 Escudo). ¡Súper eficaz!
+⚔ CPU Leviatán Tormenta Ácida ataca: -14 HP (-20 Escudo).
+⚔ Ignis Leviatan Pirico ataca a Leviatán Tormenta Ácida: -55 HP. ¡Súper eficaz!
+⚠ ¡La CPU envía a Centella Sulfúrica! Tu turno.
+⚔ Ignis Leviatan Pirico ataca a Centella Sulfúrica: -17 HP (-20 Escudo).
+⚔ CPU Centella Sulfúrica ataca: -44 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -15 HP | Centella Sulfúrica: -8 HP
+⚔ Nereida Del Abismo ataca a Centella Sulfúrica: -33 HP. ¡Súper eficaz!
+⚠ ¡La CPU envía a Vórtice De Salmuera! Tu turno.
+⚔ Nereida Del Abismo ataca a Vórtice De Salmuera: -0 HP (-18 Escudo).
+⚔ CPU Vórtice De Salmuera ataca: -0 HP (-23 Escudo).
+🔄 Sale Nereida Del Abismo y entra Golem De Basalto.
+⚡ CPU Vórtice De Salmuera usa Tifón Drenante: -0 HP.
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -9 HP | Vórtice De Salmuera: -11 HP
+⚔ Golem De Basalto ataca a Vórtice De Salmuera: -15 HP (-2 Escudo). ¡Súper eficaz!
+⚔ CPU Vórtice De Salmuera ataca: -21 HP (-5 Escudo).
+⚔ Golem De Basalto ataca a Vórtice De Salmuera: -16 HP. ¡Súper eficaz!
+⚡ CPU Vórtice De Salmuera usa Tifón Drenante: -25 HP.
+⚔ Golem De Basalto ataca a Vórtice De Salmuera: -21 HP. ¡Súper eficaz!
+🛡 CPU Vórtice De Salmuera se defiende (+9 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -13 HP | Vórtice De Salmuera: -14 HP
+⚔ Golem De Basalto ataca a Vórtice De Salmuera: -12 HP (-9 Escudo). ¡Súper eficaz!
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=44 | V=44 | D=0 | Exito=100,00%
+ - CPU - Tormenta Ácida: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

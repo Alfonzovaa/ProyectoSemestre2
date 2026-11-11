@@ -373,7 +373,7 @@ namespace Leviatanes2
 			}
 
 			// 6. Dibujar PNG del Leviatan si existe en la carpeta de imagenes
-			using (Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(IdPersonajeVistaPrevia, lblCartaNombreVista.Text))
+			Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(IdPersonajeVistaPrevia, lblCartaNombreVista.Text, false); // cache: no Dispose
 			{
 				if (imgPersonaje != null)
 				{

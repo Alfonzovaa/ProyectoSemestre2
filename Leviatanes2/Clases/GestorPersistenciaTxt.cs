@@ -564,7 +564,194 @@ namespace Leviatanes2.Clases
         // =========================================================================
         // 4. CARGA AUTOMÁTICA DE IMÁGENES DE PERSONAJES ("personaje 1", "personaje 2", etc.)
         // =========================================================================
-        public static Image CargarImagenPersonaje(int idPersonaje, string nombrePersonaje = null)
+        // Cache compartido de sprites. NO hacer Dispose() sobre los Bitmap devueltos.
+        private static readonly Dictionary<string, Bitmap> CacheSprites = new Dictionary<string, Bitmap>(StringComparer.OrdinalIgnoreCase);
+        private static readonly object BloqueoCacheSprites = new object();
+
+        public static Image CargarImagenPersonaje(int idPersonaje, string nombrePersonaje)
+        {
+            return CargarImagenPersonaje(idPersonaje, nombrePersonaje, false);
+        }
+
+        /// <summary>
+        /// Devuelve el sprite (frente o espalda) desde cache. El Bitmap pertenece al cache: no destruir.
+        /// </summary>
+        public static Image CargarImagenPersonaje(int idPersonaje, string nombrePersonaje, bool usarVistaEspalda)
+        {
+            string prefijo = ObtenerPrefijoSprite(idPersonaje, nombrePersonaje);
+            if (prefijo != null)
+            {
+                Bitmap sprite = ObtenerSpriteCacheado(prefijo + (usarVistaEspalda ? "-back" : "-front") + ".png");
+                if (sprite != null)
+                    return sprite;
+            }
+
+            // Respaldo: imagenes antiguas "personaje N" (tambien se guardan en cache)
+            string claveLegacy = "legacy|" + idPersonaje + "|" + nombrePersonaje;
+            lock (BloqueoCacheSprites)
+            {
+                Bitmap cacheado;
+                if (CacheSprites.TryGetValue(claveLegacy, out cacheado))
+                    return cacheado;
+
+                Bitmap bmp = CargarImagenPersonajeLegacy(idPersonaje, nombrePersonaje) as Bitmap;
+                CacheSprites[claveLegacy] = bmp;
+                return bmp;
+            }
+        }
+
+        private static string ObtenerPrefijoSprite(int id, string nombre)
+        {
+            switch (id)
+            {
+                case 1: case 102: case 501: return "Ignis";
+                case 2: case 202: return "Armored";
+                case 3: case 402: return "Kael";
+                case 4: case 302: return "Abyssal-Nereid";
+                case 5: case 101: case 403: case 503: return "Kraken";
+                case 6: case 203: return "Hydra";
+                case 7: case 303: return "Golem";
+                case 8: case 201: return "Canyon";
+                case 9: case 502: return "Colossus";
+                case 10: case 103: return "Zephyr";
+                case 11: case 504: return "valkiria";
+                case 12: case 301: case 401: return "Boreas";
+                case 13: return "Gyrados";
+            }
+
+            if (string.IsNullOrEmpty(nombre))
+                return null;
+            string n = nombre.ToLowerInvariant();
+            if (n.Contains("gyarados") || n.Contains("gyrados")) return "Gyrados";
+            if (n.Contains("ignis")) return "Ignis";
+            if (n.Contains("vulcano")) return "Armored";
+            if (n.Contains("kael")) return "Kael";
+            if (n.Contains("nereida")) return "Abyssal-Nereid";
+            if (n.Contains("kraken")) return "Kraken";
+            if (n.Contains("hidra") || n.Contains("hydra")) return "Hydra";
+            if (n.Contains("golem")) return "Golem";
+            if (n.Contains("behemoth")) return "Canyon";
+            if (n.Contains("rocco") || n.Contains("coloso")) return "Colossus";
+            if (n.Contains("cefiro") || n.Contains("zephyr")) return "Zephyr";
+            if (n.Contains("valkiria")) return "valkiria";
+            if (n.Contains("boreas")) return "Boreas";
+            return null;
+        }
+
+        private static Bitmap ObtenerSpriteCacheado(string nombreArchivo)
+        {
+            lock (BloqueoCacheSprites)
+            {
+                Bitmap cacheado;
+                if (CacheSprites.TryGetValue(nombreArchivo, out cacheado))
+                    return cacheado;
+
+                Bitmap resultado = null;
+                string ruta = BuscarArchivoSprite(nombreArchivo);
+                if (ruta != null)
+                {
+                    resultado = IntentarCargarImagenSinBloqueo(ruta);
+                }
+                CacheSprites[nombreArchivo] = resultado;
+                return resultado;
+            }
+        }
+
+        private static string BuscarArchivoSprite(string nombreArchivo)
+        {
+            string[] bases = new string[]
+            {
+                Application.StartupPath,
+                AppDomain.CurrentDomain.BaseDirectory,
+                Directory.GetCurrentDirectory()
+            };
+            string[] relativas = new string[]
+            {
+                Path.Combine(Path.Combine("..", ".."), Path.Combine("imagenes", "png")),
+                Path.Combine(Path.Combine("..", ".."), "imagenes"),
+                Path.Combine("imagenes", "png"),
+                "imagenes"
+            };
+
+            string encontrada = null;
+            for (int b = 0; b < bases.Length && encontrada == null; b++)
+            {
+                for (int r = 0; r < relativas.Length; r++)
+                {
+                    try
+                    {
+                        string ruta = Path.GetFullPath(Path.Combine(bases[b], relativas[r]));
+                        string candidato = Path.Combine(ruta, nombreArchivo);
+                        if (File.Exists(candidato))
+                        {
+                            encontrada = candidato;
+                            break;
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
+
+            if (encontrada == null)
+                return null;
+
+            // Sincronizar hacia bin\Debug\imagenes\png
+            try
+            {
+                string destinoDir = Path.Combine(Path.Combine(Application.StartupPath, "imagenes"), "png");
+                if (!Directory.Exists(destinoDir))
+                    Directory.CreateDirectory(destinoDir);
+                string destino = Path.Combine(destinoDir, nombreArchivo);
+                if (!string.Equals(Path.GetFullPath(destino), encontrada, StringComparison.OrdinalIgnoreCase) &&
+                    (!File.Exists(destino) || File.GetLastWriteTimeUtc(encontrada) > File.GetLastWriteTimeUtc(destino)))
+                {
+                    File.Copy(encontrada, destino, true);
+                }
+            }
+            catch
+            {
+            }
+
+            return encontrada;
+        }
+
+        private static Bitmap ConvertirBlancoATransparente(Image origen)
+        {
+            Bitmap bmp = new Bitmap(origen.Width, origen.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.DrawImage(origen, 0, 0, origen.Width, origen.Height);
+            }
+
+            System.Drawing.Imaging.BitmapData datos = bmp.LockBits(
+                new Rectangle(0, 0, bmp.Width, bmp.Height),
+                System.Drawing.Imaging.ImageLockMode.ReadWrite,
+                System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            try
+            {
+                int total = Math.Abs(datos.Stride) * bmp.Height;
+                byte[] px = new byte[total];
+                System.Runtime.InteropServices.Marshal.Copy(datos.Scan0, px, 0, total);
+                for (int i = 0; i + 3 < total; i += 4)
+                {
+                    // Formato BGRA
+                    if (px[i + 2] >= 240 && px[i + 1] >= 240 && px[i] >= 240)
+                    {
+                        px[i] = 0; px[i + 1] = 0; px[i + 2] = 0; px[i + 3] = 0;
+                    }
+                }
+                System.Runtime.InteropServices.Marshal.Copy(px, 0, datos.Scan0, total);
+            }
+            finally
+            {
+                bmp.UnlockBits(datos);
+            }
+            return bmp;
+        }
+
+        private static Image CargarImagenPersonajeLegacy(int idPersonaje, string nombrePersonaje)
         {
             SincronizarCarpetaImagenes();
 
@@ -722,23 +909,47 @@ namespace Leviatanes2.Clases
             return -1;
         }
 
-        private static Image LeerImagenSinBloquear(string rutaArchivo)
+        public static Bitmap IntentarCargarImagenSinBloqueo(string rutaArchivo)
         {
             try
             {
+                if (!File.Exists(rutaArchivo))
+                    return null;
+
                 byte[] bytes = File.ReadAllBytes(rutaArchivo);
                 using (MemoryStream ms = new MemoryStream(bytes))
+                using (Image original = Image.FromStream(ms))
                 {
-                    using (Image original = Image.FromStream(ms))
+                    Bitmap copiaSegura = new Bitmap(original.Width, original.Height, System.Drawing.Imaging.PixelFormat.Format32bppPArgb);
+                    using (Graphics g = Graphics.FromImage(copiaSegura))
                     {
-                        return new Bitmap(original);
+                        g.DrawImage(original, 0, 0, original.Width, original.Height);
                     }
+
+                    for (int y = 0; y < copiaSegura.Height; y++)
+                    {
+                        for (int x = 0; x < copiaSegura.Width; x++)
+                        {
+                            Color c = copiaSegura.GetPixel(x, y);
+                            if (c.R >= 240 && c.G >= 240 && c.B >= 240)
+                            {
+                                copiaSegura.SetPixel(x, y, Color.Transparent);
+                            }
+                        }
+                    }
+
+                    return copiaSegura;
                 }
             }
             catch
             {
                 return null;
             }
+        }
+
+        private static Image LeerImagenSinBloquear(string rutaArchivo)
+        {
+            return IntentarCargarImagenSinBloqueo(rutaArchivo);
         }
 
         private static List<string> ObtenerCarpetasImagenes()

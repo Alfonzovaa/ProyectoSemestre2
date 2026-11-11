@@ -276,7 +276,7 @@ namespace Leviatanes2
 
 			// Intentar cargar PNG real del Leviatan si existe
 			bool PngDibujado = false;
-			using (Image Img = GestorPersistenciaTxt.CargarImagenPersonaje(Id, Nombre))
+			Image Img = GestorPersistenciaTxt.CargarImagenPersonaje(Id, Nombre, false); // cache compartido: no Dispose
 			{
 				if (Img != null)
 				{

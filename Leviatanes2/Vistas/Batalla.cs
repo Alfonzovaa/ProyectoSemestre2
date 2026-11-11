@@ -764,9 +764,11 @@ namespace Leviatanes2
 			bool pngDibujado = false;
 			if (p.EstaVivo)
 			{
-				using (Image img = GestorPersistenciaTxt.CargarImagenPersonaje(p.IdPersonaje, p.Nombre))
+				bool esDelJugador = (motorCombate != null && object.ReferenceEquals(p, motorCombate.ActivoJugador));
+				Image img = GestorPersistenciaTxt.CargarImagenPersonaje(p.IdPersonaje, p.Nombre, esDelJugador); // cache compartido: no Dispose
+				if (img != null)
 				{
-					if (img != null)
+					lock (img)
 					{
 						float escala = Math.Min((float)maxAncho / img.Width, (float)maxAlto / img.Height);
 						int dw = Math.Max(1, (int)(img.Width * escala));

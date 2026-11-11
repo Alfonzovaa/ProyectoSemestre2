@@ -1,0 +1,47 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 11/11/2026 03:29:30
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Canion Rocoso
+Total de Turnos   : 12
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán de la Fosa.
+🔄 Sale Ignis Leviatan Pirico y entra Golem De Basalto.
+⚔ CPU Leviatán de la Fosa ataca: -0 HP (-16 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -7 HP | Leviatán de la Fosa: -13 HP
+⚔ Golem De Basalto ataca a Leviatán de la Fosa: -4 HP (-20 Escudo). ¡Súper eficaz!
+🔄 La CPU cambia a Sierpe De Remolino.
+🔄 Sale Golem De Basalto y entra Ignis Leviatan Pirico.
+🔄 La CPU cambia a Leviatán de la Fosa.
+🔄 Sale Ignis Leviatan Pirico y entra Golem De Basalto.
+⚡ CPU Leviatán de la Fosa usa Pulso Abisal: -11 HP.
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -16 HP | Leviatán de la Fosa: -15 HP
+⚔ Golem De Basalto ataca a Leviatán de la Fosa: -12 HP. ¡Súper eficaz!
+🔄 La CPU cambia a Sierpe De Remolino.
+⚡ Golem De Basalto usa Muralla Monolitica: -10 HP a Sierpe De Remolino.
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -26 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -5 HP | Sierpe De Remolino [Aire: inmune]
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -18 HP.
+🛡 CPU Sierpe De Remolino se defiende (+9 Escudo).
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -9 HP (-9 Escudo).
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -27 HP.
+⚡ Nereida Del Abismo usa Marea Sanadora: -13 HP a Sierpe De Remolino (+14 HP curados).
+⚠ ¡La CPU envía a Ignis De La Grieta! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -8 HP | Ignis De La Grieta: -9 HP
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -19 HP (-20 Escudo). ¡Súper eficaz!
+⚔ CPU Ignis De La Grieta ataca: -29 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Ignis De La Grieta: -24 HP. Poco eficaz.
+⚠ ¡La CPU envía a Leviatán de la Fosa! Tu turno.
+⚡ Cefiro Sierpe Alada usa Tormenta Cortante: -25 HP a Leviatán de la Fosa.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=44 | V=44 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

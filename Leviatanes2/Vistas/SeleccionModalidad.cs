@@ -432,7 +432,7 @@ namespace Leviatanes2
                 G.DrawString(TextoRegistro, FuenteReg, BrochaReg, 5, 2);
             }
 
-            using (Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(PersonajeEnVistaPrevia.IdPersonaje, PersonajeEnVistaPrevia.Nombre))
+            Image imgPersonaje = GestorPersistenciaTxt.CargarImagenPersonaje(PersonajeEnVistaPrevia.IdPersonaje, PersonajeEnVistaPrevia.Nombre, false); // cache: no Dispose
             {
                 if (imgPersonaje != null)
                 {
