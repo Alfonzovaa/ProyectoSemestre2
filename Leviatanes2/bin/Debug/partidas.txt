@@ -50,3 +50,4 @@
 49|11/11/2026 03:32:37|JugadorUno|CPU - Tormenta Ácida|JugadorUno|Canion Rocoso|10|Bitacora_Leviatanes2_20261111_033237.txt
 50|11/11/2026 03:33:50|JugadorUno|CPU - Núcleo Primordial|JugadorUno|Abismo Oceanico|17|Bitacora_Leviatanes2_20261111_033350.txt
 51|11/11/2026 03:52:52|JugadorUno|CPU - Fosa Abisal|JugadorUno|Volcan Activo|9|Bitacora_Leviatanes2_20261111_035252.txt
+52|11/11/2026 04:13:03|JugadorUno|CPU - Fosa Abisal|JugadorUno|Abismo Oceanico|10|Bitacora_Leviatanes2_20261111_041303.txt

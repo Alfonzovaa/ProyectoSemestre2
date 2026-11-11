@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -112,7 +112,7 @@ namespace Leviatanes2
 			lienzoArena.BringToFront();
 
 			tmrAnimacionArena = new Timer(this.components);
-			tmrAnimacionArena.Interval = 22; // ~45-50 FPS estables en WinForms
+			tmrAnimacionArena.Interval = 33;
 			tmrAnimacionArena.Tick += new EventHandler(TmrAnimacionArenaTick);
 			tmrAnimacionArena.Start();
 		}

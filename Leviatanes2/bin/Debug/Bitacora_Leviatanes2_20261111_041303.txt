@@ -1,0 +1,43 @@
+﻿======================================================================
+       BITACORA OFICIAL DE COMBATE - LEVIATANES DEL CARIBE 2          
+======================================================================
+Fecha y Hora      : 11/11/2026 04:13:03
+Jugador 1         : JugadorUno
+Jugador 2         : CPU - Fosa Abisal
+Vencedor          : JugadorUno
+Escenario Final   : Abismo Oceanico
+Total de Turnos   : 10
+----------------------------------------------------------------------
+HISTORIAL CRONOLOGICO DE ACCIONES (DESDE EL INICIO HASTA EL FINAL):
+----------------------------------------------------------------------
+Inicia el combate: Ignis Leviatan Pirico vs Leviatán de la Fosa.
+⚔ Ignis Leviatan Pirico ataca a Leviatán de la Fosa: -8 HP (-20 Escudo). Poco eficaz.
+⚔ CPU Leviatán de la Fosa ataca: -20 HP (-20 Escudo).
+⚔ Ignis Leviatan Pirico ataca a Leviatán de la Fosa: -28 HP. Poco eficaz.
+🛡 CPU Leviatán de la Fosa se defiende (+9 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Ignis Leviatan Pirico: -16 HP | Leviatán de la Fosa: -6 HP
+⚔ Ignis Leviatan Pirico ataca a Leviatán de la Fosa: -29 HP (-9 Escudo). Poco eficaz.
+⚠ ¡La CPU envía a Ignis De La Grieta! Tu turno.
+⚔ Ignis Leviatan Pirico ataca a Ignis De La Grieta: -28 HP (-20 Escudo).
+⚔ CPU Ignis De La Grieta ataca: -50 HP.
+⚡ ¡Nereida Del Abismo entra al combate! Tu turno.
+🌋 ¡TERREMOTO ALEATORIO! Nereida Del Abismo: -18 HP | Ignis De La Grieta: -16 HP
+⚔ Nereida Del Abismo ataca a Ignis De La Grieta: -29 HP. ¡Súper eficaz!
+⚠ ¡La CPU envía a Sierpe De Remolino! Tu turno.
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -0 HP (-18 Escudo).
+⚔ CPU Sierpe De Remolino ataca: -8 HP (-25 Escudo).
+⚔ Nereida Del Abismo ataca a Sierpe De Remolino: -20 HP (-2 Escudo).
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -29 HP.
+⚡ ¡Golem De Basalto entra al combate! Tu turno.
+⚔ Golem De Basalto ataca a Sierpe De Remolino: -8 HP. Poco eficaz.
+🛡 CPU Sierpe De Remolino se defiende (+9 Escudo).
+🌋 ¡TERREMOTO ALEATORIO! Golem De Basalto: -15 HP | Sierpe De Remolino [Aire: inmune]
+⚔ Golem De Basalto ataca a Sierpe De Remolino: -3 HP (-9 Escudo). Poco eficaz.
+⚡ CPU Sierpe De Remolino usa Ráfaga De Fosa: -45 HP.
+⚡ ¡Cefiro Sierpe Alada entra al combate! Tu turno.
+⚔ Cefiro Sierpe Alada ataca a Sierpe De Remolino: -33 HP.
+======================================================================
+ESTADISTICAS ACTUALIZADAS:
+ - JugadorUno: PJ=50 | V=50 | D=0 | Exito=100,00%
+ - CPU - Fosa Abisal: PJ=0 | V=0 | D=0 | Exito=0,00%
+======================================================================

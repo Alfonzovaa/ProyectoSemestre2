@@ -119,11 +119,5 @@ F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Bat
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Calculo.resources
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.Historia.resources
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\obj\Debug\Leviatanes2.SeleccionModalidad.resources
-F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo1.png
-F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo2.png
-F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo3.png
-F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo4.png
-F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo5.png
-F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\capitulo6.png
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\Ejercicio1.jpg
 F:\proyecto 2do semestre\ProyectoSemestre2\Leviatanes2\bin\Debug\imagenes\leeme.txt
